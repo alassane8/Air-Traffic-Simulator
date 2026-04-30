@@ -1,0 +1,44 @@
+{
+  "aircrafts": [
+    {
+      "id": "ac-001",
+      "aircraft_code": "A320",
+      "seats": 180,
+      "passengers": 150,
+      "created_at": "2024-01-02T10:00:00Z",
+      "updated_at": "2024-01-02T10:00:00Z"
+    },
+    {
+      "id": "ac-002",
+      "aircraft_code": "B737",
+      "seats": 160,
+      "passengers": 120,
+      "created_at": "2024-01-02T11:00:00Z",
+      "updated_at": "2024-01-02T11:00:00Z"
+    },
+    {
+      "id": "ac-003",
+      "aircraft_code": "A350",
+      "seats": 300,
+      "passengers": 280,
+      "created_at": "2024-01-02T12:00:00Z",
+      "updated_at": "2024-01-02T12:00:00Z"
+    },
+    {
+      "id": "ac-004",
+      "aircraft_code": "B777",
+      "seats": 350,
+      "passengers": 320,
+      "created_at": "2024-01-02T13:00:00Z",
+      "updated_at": "2024-01-02T13:00:00Z"
+    },
+    {
+      "id": "ac-005",
+      "aircraft_code": "A380",
+      "seats": 500,
+      "passengers": 450,
+      "created_at": "2024-01-02T14:00:00Z",
+      "updated_at": "2024-01-02T14:00:00Z"
+    }
+  ]
+}
