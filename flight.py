@@ -6,7 +6,13 @@ from datetime import datetime
 class Flight:
     id: str
     flight_code: str
+    flight_status: str
     aircraft_code: str
+    priority: str  #"URGENCE" | "CARBURANT_CRITIQUE" | "MÉDICAL" | "RETARD" | "NORMAL"
+    estimated_departure_time: datetime = field(default_factory=datetime.now)
+    estimated_arrival_time: datetime = field(default_factory=datetime.now)
+    departure_time: datetime = field(default_factory=datetime.now)
+    arrival_time: datetime = field(default_factory=datetime.now)
     depart_airport_code: str
     depart_terminal_code:str
     depart_gate_code: str
