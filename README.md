@@ -338,8 +338,3 @@ Spécialisé dans les systèmes géospatiaux, la simulation et le logiciel aéro
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Alassane%20Wade-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/alassane-wade)
 [![GitHub](https://img.shields.io/badge/GitHub-alassane8-181717?style=flat&logo=github)](https://github.com/alassane8)
 
----
-
-## 📄 Licence
-
-Ce projet est open-source sous la [licence MIT](LICENSE).
