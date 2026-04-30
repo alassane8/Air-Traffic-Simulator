@@ -6,9 +6,9 @@ from datetime import datetime
 class Flight:
     id: str
     flight_code: str
-    flight_status: str
+    flight_status: str # "PLANIFIÉ" | "EMBARQUEMENT" | "ROULAGE" | "DÉCOLLAGE" | "CROISIÈRE" | "APPROCHE" | "ATTERRISSAGE"
     aircraft_code: str
-    priority: str  #"URGENCE" | "CARBURANT_CRITIQUE" | "MÉDICAL" | "RETARD" | "NORMAL"
+    priority: str  # "URGENCE" | "CARBURANT_CRITIQUE" | "MÉDICAL" | "RETARD" | "NORMAL"
     estimated_departure_time: datetime = field(default_factory=datetime.now)
     estimated_arrival_time: datetime = field(default_factory=datetime.now)
     departure_time: datetime = field(default_factory=datetime.now)
