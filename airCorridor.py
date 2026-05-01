@@ -20,11 +20,11 @@ class AirCorridor:
     air_corridor_code: str
     from_airport: str
     to_airport: str
-    aircrafts: List[Aircraft] = field(default_factory=list)
+    distance: str
     altitude: str
-    distance:str
     direction: CorridorDirection
     status: CorridorStatus
     max_capacity: int
+    aircrafts: List[Aircraft] = field(default_factory=list)
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)

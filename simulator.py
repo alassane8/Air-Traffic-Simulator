@@ -18,8 +18,15 @@ def initializeAircraftsPositions(aircrafts, gates):
 
         selected_gate.status = GateStatus.OCCUPIED
         selected_gate.aircraft_id = selected_aircraft.id
+        # ajouter terminal planes_on_deck si terminal open
 
         print(f"Aircraft {selected_aircraft.id} with {selected_aircraft.passengers} on board placed in {selected_gate.id} ready for takeoff")
 
         del remaining_gates[selected_gate.id]
         del remaining_aircrafts[selected_aircraft.id]
+
+
+
+    #creer un vol a chaque avion dans gate
+    #status planned, aircraft code, priority random avec + de  proba sur normal
+    # choisir estimated  en random

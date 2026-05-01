@@ -1,5 +1,6 @@
 from aircraft import Aircraft
 from airport import Airport
+from airCorridor import AirCorridor
 from terminal import Terminal
 from gate import Gate
 from runway import Runway
@@ -98,8 +99,7 @@ def createGates(airportsData: dict) -> Gate:
 def createRunways(airportsData: dict) -> Runway:
     allRunways = {}
 
-    for airport in airportsData.get('airports', []):
-        for runway in airport.get('runways', []):
+    for runway in airportsData.get('airports', []):
             object = Runway(
                 runway.get("id", "NULL"),
                 runway.get("length", "NULL"),
@@ -113,3 +113,29 @@ def createRunways(airportsData: dict) -> Runway:
             allRunways[runway.get("id")] = object
 
     return allRunways
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+def createAirCorridors(airCorridorsData: dict) -> AirCorridor:
+    allAirCorridors = {}
+
+    for airCorridor in airCorridorsData.get('air_corridors', []):
+        object = AirCorridor(
+            airCorridor.get("id", "NULL"),
+            airCorridor.get("air_corridor_code", "NULL"),
+            airCorridor.get("from_airport", "NULL"),
+            airCorridor.get("to_airport", "NULL"),
+            airCorridor.get("aircrafts", "NULL"),
+            airCorridor.get("altitude", "NULL"),
+            airCorridor.get("distance", "NULL"),
+            airCorridor.get("direction", "BIDIRECTIONAL"),
+            airCorridor.get("status", "OPEN"),
+            airCorridor.get("max_capacity", "NULL"),
+            airCorridor.get("created_at", "NULL"),
+            airCorridor.get("updated_at", "NULL")
+        )
+
+        allAirCorridors[airCorridor.get("id")] = object
+
+    return allAirCorridors

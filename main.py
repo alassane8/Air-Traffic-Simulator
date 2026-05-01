@@ -19,6 +19,10 @@ def main() -> int:
     airportsData = loadData.loadAirportsData()
     initLogs.success("Airport data loaded")
 
+    initLogs.loading("Fetching air corridor data")
+    airCorridorsData = loadData.loadedAirCorridorsData()
+    initLogs.success("Air corridor data loaded")
+
     initLogs.phase("Building system objects")
 
     initLogs.loading("Assembling aerial units")
@@ -28,6 +32,10 @@ def main() -> int:
     initLogs.loading("Initializing airport hubs")
     airports = createObjects.createAirports(airportsData)
     initLogs.success(f"{len(airports)} airports online")
+
+    initLogs.loading("Defining air corridors")
+    airCorridors = createObjects.createAirCorridors(airCorridorsData)
+    initLogs.success(f"{len(airCorridors)} air corridors operational")
 
     initLogs.loading("Deploying terminals")
     terminals = createObjects.createTerminals(airportsData)
