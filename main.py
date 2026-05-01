@@ -55,7 +55,7 @@ def main() -> int:
     time.sleep(0.5)
     initLogs.log(">>> READY FOR DEPLOYMENT", 0.04)
 
-    simulator.initializeAircraftsPositions(aircrafts, gates)
+    simulator.initializeAircraftsPositions(aircrafts, gates, terminals)
 
     return 0
 

@@ -61,10 +61,10 @@ def createTerminals(airportsData: dict) -> Terminal:
                 terminal.get("terminal_code", "NULL"),
                 terminal.get("terminal_airport", "NULL"),
                 terminal.get("max_planes", "NULL"),
+                terminal.get("planes_on_deck", 0),
+                terminal.get("status", "OPEN"),
                 terminal.get("created_at", "NULL"),
                 terminal.get("updated_at", "NULL"),
-                terminal.get("planes_on_deck", "0"),
-                terminal.get("status", "OPEN")
             )
 
             allTerminals[terminal.get("id")] = object
