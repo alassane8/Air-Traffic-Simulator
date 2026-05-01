@@ -14,6 +14,8 @@ def createAircrafts(aircraftsData: dict)-> Aircraft:
             aircraft.get("aircraft_code", "NULL"),
             aircraft.get("seats", "NULL"),
             aircraft.get("passengers", "NULL"),
+            aircraft.get("aircraft_type", "NULL"),
+            aircraft.get("cruising_speed", "NULL"),
             aircraft.get("created_at", "NULL"),
             aircraft.get("updated_at", "NULL")
         )
@@ -75,11 +77,12 @@ def createGates(airportsData: dict) -> Gate:
     allGates = {}
 
     for airport in airportsData.get('airports', []):
-        for gate in airport.get('terminals', []):
-            object = Terminal(
+        for gate in airport.get('gates', []):
+            object = Gate(
                 gate.get("id", "NULL"),
                 gate.get("gate_code", "NULL"),
                 gate.get("terminal", "NULL"),
+                gate.get("aircraft_id", "NULL"),
                 gate.get("status", "FREE"),
                 gate.get("created_at", "NULL"),
                 gate.get("updated_at", "NULL")
