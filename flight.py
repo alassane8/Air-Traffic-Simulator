@@ -1,14 +1,33 @@
 from dataclasses import dataclass, field
 from datetime import datetime
+from enum import Enum
+
+
+class FlightStatus(str, Enum):
+    PLANNED = "PLANNED"
+    BOARDING = "BOARDING"
+    ROLLING = "ROLLING"
+    TAKEOFF = "TAKEOFF"
+    CRUISE = "CRUISE"
+    APPROCH = "APPROCH"
+    LANDING = "LANDING"
+
+
+class FlightPriority(str, Enum):
+    EMERGENCY = "EMERGENCY"
+    FUEL_CRITICAL = "FUEL_CRITICAL"
+    MEDICAL = "MEDICAL"
+    DELAY = "DELAY"
+    NORMAL = "NORMAL"
 
 
 @dataclass
 class Flight:
     id: str
-    flight_code: str
-    flight_status: str # "PLANIFIÉ" | "EMBARQUEMENT" | "ROULAGE" | "DÉCOLLAGE" | "CROISIÈRE" | "APPROCHE" | "ATTERRISSAGE"
+    flight_code: str 
+    flight_status: FlightStatus
     aircraft_code: str
-    priority: str  # "URGENCE" | "CARBURANT_CRITIQUE" | "MÉDICAL" | "RETARD" | "NORMAL"
+    priority: FlightPriority
     estimated_departure_time: datetime = field(default_factory=datetime.now)
     estimated_arrival_time: datetime = field(default_factory=datetime.now)
     departure_time: datetime = field(default_factory=datetime.now)

@@ -1,16 +1,21 @@
 # models/terminal.py
 from dataclasses import dataclass, field
-from typing import List
+from enum import Enum
 from datetime import datetime
 
+
+class TerminalStatus(str, Enum):
+    OPEN = "OPEN"
+    CLOSED = "CLOSED"
+    MAINTENANCE = "MAINTENANCE"
 
 @dataclass
 class Terminal:
     id: str
     terminal_code: str
-    terminal_airport: str  # référence à Airport.id
+    airport_id: str  # référence à Airport.id
     max_planes: int
     planes_on_deck: int
-    status: str            # "OPEN" | "CLOSED" | "MAINTENANCE"
+    status: TerminalStatus
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
