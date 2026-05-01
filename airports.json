@@ -13,6 +13,8 @@
           "terminal_code": "T1",
           "terminal_airport": "apt-001",
           "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -21,6 +23,8 @@
           "terminal_code": "T2A",
           "terminal_airport": "apt-001",
           "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -29,6 +33,8 @@
           "terminal_code": "T2B",
           "terminal_airport": "apt-001",
           "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -37,6 +43,8 @@
           "terminal_code": "T2C",
           "terminal_airport": "apt-001",
           "max_planes": 16,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -45,25 +53,27 @@
           "terminal_code": "T3",
           "terminal_airport": "apt-001",
           "max_planes": 10,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         }
       ],
       "runways": [
-        { "id": "rwy-cdg-1", "length": 4215, "heading": 270, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-cdg-2", "length": 2700, "heading": 270, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-cdg-3", "length": 4200, "heading": 90, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-cdg-4", "length": 2700, "heading": 90, "closed": true, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        { "id": "rwy-cdg-1", "length": 4215, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-cdg-2", "length": 2700, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-cdg-3", "length": 4200, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-cdg-4", "length": 2700, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ],
       "gates": [
-        { "id": "gate-cdg-1", "gate_code": "A01", "terminal": "term-cdg-1", "aircraft_id": null, "status": "OCCUPIED", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-cdg-1", "gate_code": "A01", "terminal": "term-cdg-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-cdg-2", "gate_code": "A02", "terminal": "term-cdg-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-3", "gate_code": "A03", "terminal": "term-cdg-1", "aircraft_id": null, "status": "MAINTENANCE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-4", "gate_code": "B01", "terminal": "term-cdg-2", "aircraft_id": null, "status": "OCCUPIED", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-cdg-3", "gate_code": "A03", "terminal": "term-cdg-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-cdg-4", "gate_code": "B01", "terminal": "term-cdg-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-cdg-5", "gate_code": "B02", "terminal": "term-cdg-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-cdg-6", "gate_code": "C01", "terminal": "term-cdg-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-cdg-7", "gate_code": "C02", "terminal": "term-cdg-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-8", "gate_code": "F01", "terminal": "term-cdg-5", "aircraft_id": null, "status": "OCCUPIED", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        { "id": "gate-cdg-8", "gate_code": "F01", "terminal": "term-cdg-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ]
     },
     {
@@ -79,6 +89,8 @@
           "terminal_code": "OUEST",
           "terminal_airport": "apt-002",
           "max_planes": 15,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -87,18 +99,20 @@
           "terminal_code": "SUD",
           "terminal_airport": "apt-002",
           "max_planes": 12,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         }
       ],
       "runways": [
-        { "id": "rwy-ory-1", "length": 3650, "heading": 80, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ory-2", "length": 2400, "heading": 260, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        { "id": "rwy-ory-1", "length": 3650, "heading": 80, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-ory-2", "length": 2400, "heading": 260, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ],
       "gates": [
-        { "id": "gate-ory-1", "gate_code": "W01", "terminal": "term-ory-1", "aircraft_id": null, "status": "OCCUPIED", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-ory-1", "gate_code": "W01", "terminal": "term-ory-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-ory-2", "gate_code": "W02", "terminal": "term-ory-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ory-3", "gate_code": "W03", "terminal": "term-ory-1", "aircraft_id": null, "status": "MAINTENANCE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-ory-3", "gate_code": "W03", "terminal": "term-ory-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-ory-4", "gate_code": "S01", "terminal": "term-ory-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-ory-5", "gate_code": "S02", "terminal": "term-ory-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-ory-6", "gate_code": "S03", "terminal": "term-ory-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
@@ -117,6 +131,8 @@
           "terminal_code": "T1",
           "terminal_airport": "apt-003",
           "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -125,6 +141,8 @@
           "terminal_code": "T4",
           "terminal_airport": "apt-003",
           "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -133,6 +151,8 @@
           "terminal_code": "T5",
           "terminal_airport": "apt-003",
           "max_planes": 22,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -141,6 +161,8 @@
           "terminal_code": "T7",
           "terminal_airport": "apt-003",
           "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         },
@@ -149,20 +171,22 @@
           "terminal_code": "T8",
           "terminal_airport": "apt-003",
           "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
           "created_at": "2024-01-01T00:00:00Z",
           "updated_at": "2024-01-01T00:00:00Z"
         }
       ],
       "runways": [
-        { "id": "rwy-jfk-1", "length": 4442, "heading": 44, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-jfk-2", "length": 3682, "heading": 44, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-jfk-3", "length": 2560, "heading": 224, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-jfk-4", "length": 3048, "heading": 134, "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        { "id": "rwy-jfk-1", "length": 4442, "heading": 44, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-jfk-2", "length": 3682, "heading": 44, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-jfk-3", "length": 2560, "heading": 224, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-jfk-4", "length": 3048, "heading": 134, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ],
       "gates": [
-        { "id": "gate-jfk-1", "gate_code": "A01", "terminal": "term-jfk-1", "aircraft_id": null, "status": "OCCUPIED", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-jfk-1", "gate_code": "A01", "terminal": "term-jfk-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-jfk-2", "gate_code": "B01", "terminal": "term-jfk-4", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-jfk-3", "gate_code": "C01", "terminal": "term-jfk-5", "aircraft_id": null, "status": "MAINTENANCE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-jfk-3", "gate_code": "C01", "terminal": "term-jfk-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-jfk-4", "gate_code": "D01", "terminal": "term-jfk-7", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-jfk-5", "gate_code": "E01", "terminal": "term-jfk-8", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ]
