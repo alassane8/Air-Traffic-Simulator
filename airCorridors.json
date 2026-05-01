@@ -1,0 +1,46 @@
+{
+  "air_corridors": [
+    {
+      "id": "cor-001",
+      "air_corridor_code": "JFK-CDG",
+      "from_airport": "apt-003",
+      "to_airport": "apt-001",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 5831,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "cor-002",
+      "air_corridor_code": "CDG-ORY",
+      "from_airport": "apt-001",
+      "to_airport": "apt-002",
+      "aircrafts": [],
+      "altitude": "FL080",
+      "distance": 35,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 10,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "cor-003",
+      "air_corridor_code": "ORY-JFK",
+      "from_airport": "apt-002",
+      "to_airport": "apt-003",
+      "aircrafts": [],
+      "altitude": "FL340",
+      "distance": 5849,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
