@@ -3,48 +3,51 @@ import loadData
 import createObjects
 import initLogs 
 import time
+import simulator
 
 def main() -> int:
     initLogs.log(">>> BOOT SEQUENCE INITIATED...", 0.04)
     time.sleep(0.8)
 
-    initLogs.phase("Chargement des modules de données")
+    initLogs.phase("Loading data modules")
 
-    initLogs.loading("Récupération des données aéronautiques")
+    initLogs.loading("Fetching aeronautical data")
     aircraftsData = loadData.loadAircraftData()
-    initLogs.success("Données avions chargées")
+    initLogs.success("Aircraft data loaded")
 
-    initLogs.loading("Récupération des infrastructures aéroportuaires")
+    initLogs.loading("Fetching airport infrastructure")
     airportsData = loadData.loadAirportsData()
-    initLogs.success("Données aéroports chargées")
+    initLogs.success("Airport data loaded")
 
-    initLogs.phase("Construction des objets système")
+    initLogs.phase("Building system objects")
 
-    initLogs.loading("Assemblage des unités aériennes")
+    initLogs.loading("Assembling aerial units")
     aircrafts = createObjects.createAircrafts(aircraftsData)
-    initLogs.success(f"{len(aircrafts)} appareils opérationnels")
+    initLogs.success(f"{len(aircrafts)} aircraft operational")
 
-    initLogs.loading("Initialisation des hubs aéroportuaires")
+    initLogs.loading("Initializing airport hubs")
     airports = createObjects.createAirports(airportsData)
-    initLogs.success(f"{len(airports)} aéroports en ligne")
+    initLogs.success(f"{len(airports)} airports online")
 
-    initLogs.loading("Déploiement des terminaux")
+    initLogs.loading("Deploying terminals")
     terminals = createObjects.createTerminals(airportsData)
-    initLogs.success(f"{len(terminals)} terminaux actifs")
+    initLogs.success(f"{len(terminals)} terminals active")
 
-    initLogs.loading("Activation des portes d’embarquement")
+    initLogs.loading("Activating boarding gates")
     gates = createObjects.createGates(airportsData)
-    initLogs.success(f"{len(gates)} portes prêtes")
+    initLogs.success(f"{len(gates)} gates ready")
 
-    initLogs.loading("Synchronisation des pistes")
+    initLogs.loading("Synchronizing runways")
     runways = createObjects.createRunways(airportsData)
-    initLogs.success(f"{len(runways)} pistes opérationnelles")
+    initLogs.success(f"{len(runways)} runways operational")
 
-    initLogs.phase("Système prêt")
+    initLogs.phase("System ready")
 
     initLogs.log(">>> ALL SYSTEMS NOMINAL", 0.04)
     time.sleep(0.5)
     initLogs.log(">>> READY FOR DEPLOYMENT", 0.04)
+
+    simulator.initializeAircraftsPositions(aircrafts, gates)
 
     return 0
 
