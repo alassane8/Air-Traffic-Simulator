@@ -1,4 +1,3 @@
-from json.tool import main
 import loadData
 import createObjects
 import initLogs 
@@ -12,16 +11,20 @@ def main() -> int:
     initLogs.phase("Loading data modules")
 
     initLogs.loading("Fetching aeronautical data")
-    aircraftsData = loadData.loadAircraftData()
+    aircraftsData = loadData.loadData('aircrafts.json')
     initLogs.success("Aircraft data loaded")
 
     initLogs.loading("Fetching airport infrastructure")
-    airportsData = loadData.loadAirportsData()
+    airportsData = loadData.loadData('airports.json')
     initLogs.success("Airport data loaded")
 
     initLogs.loading("Fetching air corridor data")
-    airCorridorsData = loadData.loadedAirCorridorsData()
+    airCorridorsData = loadData.loadData('airCorridors.json')
     initLogs.success("Air corridor data loaded")
+
+    initLogs.loading("Fetching airlines data")
+    airlinesData = loadData.loadData('airlines.json')
+    initLogs.success("Airline data loaded")
 
     initLogs.phase("Building system objects")
 
@@ -40,6 +43,10 @@ def main() -> int:
     initLogs.loading("Deploying terminals")
     terminals = createObjects.createTerminals(airportsData)
     initLogs.success(f"{len(terminals)} terminals active")
+
+    initLogs.loading("Instanciating airlines")
+    airlines = createObjects.createAirlines(airlinesData)
+    initLogs.success(f"{len(airlines)} airlines active")
 
     initLogs.loading("Activating boarding gates")
     gates = createObjects.createGates(airportsData)

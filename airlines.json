@@ -1,0 +1,67 @@
+{
+  "airlines": [
+    {
+      "id": "al-001",
+      "name": "Air France",
+      "iata_code": "AF",
+      "icao_code": "AFR",
+      "country": "France",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-002",
+      "name": "EasyJet",
+      "iata_code": "U2",
+      "icao_code": "EZY",
+      "country": "United Kingdom",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-003",
+      "name": "Lufthansa",
+      "iata_code": "LH",
+      "icao_code": "DLH",
+      "country": "Germany",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-004",
+      "name": "Ryanair",
+      "iata_code": "FR",
+      "icao_code": "RYR",
+      "country": "Ireland",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-005",
+      "name": "Emirates",
+      "iata_code": "EK",
+      "icao_code": "UAE",
+      "country": "United Arab Emirates",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-006",
+      "name": "Delta Air Lines",
+      "iata_code": "DL",
+      "icao_code": "DAL",
+      "country": "United States",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-007",
+      "name": "British Airways",
+      "iata_code": "BA",
+      "icao_code": "BAW",
+      "country": "United Kingdom",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  ]
+}

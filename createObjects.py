@@ -3,6 +3,7 @@ from airport import Airport
 from airCorridor import AirCorridor
 from terminal import Terminal
 from gate import Gate
+from airline import Airline
 from runway import Runway
 
 
@@ -70,6 +71,27 @@ def createTerminals(airportsData: dict) -> Terminal:
             allTerminals[terminal.get("id")] = object
 
     return allTerminals
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+def createAirlines(airlinesData: dict) -> Airline:
+    allAirlines = {}
+
+    for airline in airlinesData.get('airlines', []):
+        object = Terminal(
+            airline.get("id", "NULL"),
+            airline.get("name", "NULL"),
+            airline.get("iata_code", "NULL"),
+            airline.get("icao_code", "NULL"),
+            airline.get("country", "NULL"),
+            airline.get("created_at", "NULL"),
+            airline.get("updated_at", "NULL"),
+        )
+
+        allAirlines[airline.get("id")] = object
+
+    return allAirlines
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

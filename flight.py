@@ -26,12 +26,9 @@ class Flight:
     id: str
     flight_code: str 
     flight_status: FlightStatus
+    airline_id: str
     aircraft_code: str
     priority: FlightPriority
-    estimated_departure_time: datetime = field(default_factory=datetime.now)
-    estimated_arrival_time: datetime = field(default_factory=datetime.now)
-    departure_time: datetime = field(default_factory=datetime.now)
-    arrival_time: datetime = field(default_factory=datetime.now)
     depart_airport_code: str
     depart_terminal_code:str
     depart_gate_code: str
@@ -41,5 +38,9 @@ class Flight:
     arrival_terminal_code:str
     arrival_gate_code: str
     arrival_runway_code: str
+    estimated_departure_time: datetime = field(default_factory=datetime.now)
+    estimated_arrival_time: datetime = field(default_factory=datetime.now)
+    departure_time: datetime = field(default_factory=datetime.now)
+    arrival_time: datetime = field(default_factory=datetime.now)
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
