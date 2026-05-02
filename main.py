@@ -3,6 +3,7 @@ import createObjects
 import initLogs 
 import time
 import simulator
+import scheduler
 
 def main() -> int:
     initLogs.log(">>> BOOT SEQUENCE INITIATED...", 0.04)
@@ -62,7 +63,13 @@ def main() -> int:
     time.sleep(0.5)
     initLogs.log(">>> READY FOR DEPLOYMENT", 0.04)
 
-    simulator.initializeAircraftsPositions(aircrafts, gates, terminals)
+    gates_to_initialize = gates.copy()
+    aircrafts_to_initialize = aircrafts.copy()
+    terminals_to_initialize = terminals.copy()
+
+    occupied_gates = simulator.initializeAircraftsPositions(aircrafts_to_initialize, gates_to_initialize, terminals_to_initialize)
+
+    scheduler.schedule_flights(terminals,aircrafts, airlines, runways, occupied_gates)
 
     return 0
 
