@@ -3,14 +3,20 @@ from datetime import datetime
 from enum import Enum
 
 
-class FlightStatus(str, Enum):
-    PLANNED = "PLANNED"
-    BOARDING = "BOARDING"
-    ROLLING = "ROLLING"
-    TAKEOFF = "TAKEOFF"
-    CRUISE = "CRUISE"
-    APPROCH = "APPROCH"
-    LANDING = "LANDING"
+class FlightStatus(Enum):
+    PLANNED   = ("PLANNED", 0)
+    BOARDING  = ("BOARDING", 1200)   # 20 min
+    LINEUP  = ("LINEUP", 600)      # 10 min
+    TAKEOFF   = ("TAKEOFF", 60)      # 1 min
+    CLIMBING   = ("CLIMBING", 60)      # 1 min
+    CRUISE    = ("CRUISE", None)     # durée variable selon corridor
+    DESCENDING  = ("DESCENDING", 600)    # 10 min
+    LANDING   = ("LANDING", 90)      # 90 sec
+    PARKED   = ("PARKED", 90)      # 90 sec
+
+    def __init__(self, label: str, duration_seconds: int | None):
+        self.label = label
+        self.duration_seconds = duration_seconds
 
 
 class FlightPriority(str, Enum):
