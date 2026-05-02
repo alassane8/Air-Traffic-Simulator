@@ -11,13 +11,13 @@ def log(message: str, delay: float = 0.02):
 def phase(title: str):
     print()
     log(f"[INIT] :: {title}", 0.03)
-    time.sleep(0.5)
+    time.sleep(0.1)
 
 def success(message: str):
     log(f"[OK] :: {message}", 0.02)
-    time.sleep(0.3)
+    time.sleep(0.1)
 
-def loading(message: str, duration: float = 1.5, width: int = 30):
+def loading(message: str, duration: float = 1, width: int = 30):
     log(f"[LOADING] :: {message}", 0.02)
     steps = width
     for i in range(steps + 1):

@@ -38,7 +38,7 @@ def initializeAircraftsPositions(aircrafts: dict, gates: dict, terminals: dict) 
             terminal_to_update.planes_on_deck += 1 
             terminal_to_update.updated_at = datetime.now
 
-        print(f"Aircraft {selected_aircraft.id} with {selected_aircraft.passengers} on board placed in {selected_gate.id} ready for takeoff")
+        print(f"Aircraft {selected_aircraft.id} with {selected_aircraft.passengers} on board placed in {selected_gate.id} {selected_gate.terminal} ready for takeoff")
 
         del remaining_gates[selected_gate.id]
         del remaining_aircrafts[selected_aircraft.id]
