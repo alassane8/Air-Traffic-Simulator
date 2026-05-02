@@ -79,7 +79,7 @@ def createAirlines(airlinesData: dict) -> Airline:
     allAirlines = {}
 
     for airline in airlinesData.get('airlines', []):
-        object = Terminal(
+        object = Airline(
             airline.get("id", "NULL"),
             airline.get("name", "NULL"),
             airline.get("iata_code", "NULL"),
@@ -121,13 +121,16 @@ def createGates(airportsData: dict) -> Gate:
 def createRunways(airportsData: dict) -> Runway:
     allRunways = {}
 
-    for runway in airportsData.get('airports', []):
+    for airport in airportsData.get('airports', []):
+        for runway in airport.get('runways', []):
             object = Runway(
                 runway.get("id", "NULL"),
+                runway.get("airport_id", "NULL"),
                 runway.get("length", "NULL"),
                 runway.get("heading", "NULL"),
-                runway.get("current_aircraft", None),
                 runway.get("status", "FREE"),
+                runway.get("current_aircraft", None),
+                runway.get("scheduled_flights", []),
                 runway.get("created_at", "NULL"),
                 runway.get("updated_at", "NULL")
             )
@@ -148,7 +151,7 @@ def createAirCorridors(airCorridorsData: dict) -> AirCorridor:
             airCorridor.get("air_corridor_code", "NULL"),
             airCorridor.get("from_airport", "NULL"),
             airCorridor.get("to_airport", "NULL"),
-            airCorridor.get("aircrafts", "NULL"),
+            airCorridor.get("aircrafts", []),
             airCorridor.get("altitude", "NULL"),
             airCorridor.get("distance", "NULL"),
             airCorridor.get("direction", "BIDIRECTIONAL"),
