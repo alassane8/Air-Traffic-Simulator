@@ -49,6 +49,206 @@
       "cruising_speed": 903,
       "created_at": "2024-01-02T14:00:00Z",
       "updated_at": "2024-01-02T14:00:00Z"
+    },
+    {
+      "id": "ac-006",
+      "aircraft_code": "A321",
+      "seats": 220,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 903,
+      "cruising_speed": 833,
+      "created_at": "2024-01-02T15:00:00Z",
+      "updated_at": "2024-01-02T15:00:00Z"
+    },
+    {
+      "id": "ac-007",
+      "aircraft_code": "A319",
+      "seats": 140,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 903,
+      "cruising_speed": 833,
+      "created_at": "2024-01-02T16:00:00Z",
+      "updated_at": "2024-01-02T16:00:00Z"
+    },
+    {
+      "id": "ac-008",
+      "aircraft_code": "B737 MAX",
+      "seats": 178,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 839,
+      "cruising_speed": 839,
+      "created_at": "2024-01-02T17:00:00Z",
+      "updated_at": "2024-01-02T17:00:00Z"
+    },
+    {
+      "id": "ac-009",
+      "aircraft_code": "B757",
+      "seats": 200,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 935,
+      "cruising_speed": 850,
+      "created_at": "2024-01-02T18:00:00Z",
+      "updated_at": "2024-01-02T18:00:00Z"
+    },
+    {
+      "id": "ac-010",
+      "aircraft_code": "E190",
+      "seats": 100,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 870,
+      "cruising_speed": 823,
+      "created_at": "2024-01-02T19:00:00Z",
+      "updated_at": "2024-01-02T19:00:00Z"
+    },
+    {
+      "id": "ac-011",
+      "aircraft_code": "E175",
+      "seats": 80,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 870,
+      "cruising_speed": 823,
+      "created_at": "2024-01-02T20:00:00Z",
+      "updated_at": "2024-01-02T20:00:00Z"
+    },
+    {
+      "id": "ac-012",
+      "aircraft_code": "CRJ900",
+      "seats": 90,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 882,
+      "cruising_speed": 829,
+      "created_at": "2024-01-02T21:00:00Z",
+      "updated_at": "2024-01-02T21:00:00Z"
+    },
+    {
+      "id": "ac-013",
+      "aircraft_code": "B787-9",
+      "seats": 296,
+      "aircraft_type": "LARGE",
+      "maximum_speed": 954,
+      "cruising_speed": 903,
+      "created_at": "2024-01-02T22:00:00Z",
+      "updated_at": "2024-01-02T22:00:00Z"
+    },
+    {
+      "id": "ac-014",
+      "aircraft_code": "B777X",
+      "seats": 426,
+      "aircraft_type": "LARGE",
+      "maximum_speed": 950,
+      "cruising_speed": 905,
+      "created_at": "2024-01-02T23:00:00Z",
+      "updated_at": "2024-01-02T23:00:00Z"
+    },
+    {
+      "id": "ac-015",
+      "aircraft_code": "A330-300",
+      "seats": 277,
+      "aircraft_type": "LARGE",
+      "maximum_speed": 913,
+      "cruising_speed": 871,
+      "created_at": "2024-01-03T00:00:00Z",
+      "updated_at": "2024-01-03T00:00:00Z"
+    },
+    {
+      "id": "ac-016",
+      "aircraft_code": "A340-600",
+      "seats": 380,
+      "aircraft_type": "LARGE",
+      "maximum_speed": 913,
+      "cruising_speed": 871,
+      "created_at": "2024-01-03T01:00:00Z",
+      "updated_at": "2024-01-03T01:00:00Z"
+    },
+    {
+      "id": "ac-017",
+      "aircraft_code": "B747-8",
+      "seats": 467,
+      "aircraft_type": "LARGE",
+      "maximum_speed": 988,
+      "cruising_speed": 903,
+      "created_at": "2024-01-03T02:00:00Z",
+      "updated_at": "2024-01-03T02:00:00Z"
+    },
+    {
+      "id": "ac-018",
+      "aircraft_code": "B747-400F",
+      "seats": 0,
+      "aircraft_type": "CARGO",
+      "maximum_speed": 988,
+      "cruising_speed": 907,
+      "created_at": "2024-01-03T03:00:00Z",
+      "updated_at": "2024-01-03T03:00:00Z"
+    },
+    {
+      "id": "ac-019",
+      "aircraft_code": "B777F",
+      "seats": 0,
+      "aircraft_type": "CARGO",
+      "maximum_speed": 905,
+      "cruising_speed": 861,
+      "created_at": "2024-01-03T04:00:00Z",
+      "updated_at": "2024-01-03T04:00:00Z"
+    },
+    {
+      "id": "ac-020",
+      "aircraft_code": "A330-200F",
+      "seats": 0,
+      "aircraft_type": "CARGO",
+      "maximum_speed": 913,
+      "cruising_speed": 871,
+      "created_at": "2024-01-03T05:00:00Z",
+      "updated_at": "2024-01-03T05:00:00Z"
+    },
+    {
+      "id": "ac-021",
+      "aircraft_code": "B767-300F",
+      "seats": 0,
+      "aircraft_type": "CARGO",
+      "maximum_speed": 851,
+      "cruising_speed": 851,
+      "created_at": "2024-01-03T06:00:00Z",
+      "updated_at": "2024-01-03T06:00:00Z"
+    },
+    {
+      "id": "ac-022",
+      "aircraft_code": "AN-124",
+      "seats": 0,
+      "aircraft_type": "CARGO",
+      "maximum_speed": 865,
+      "cruising_speed": 800,
+      "created_at": "2024-01-03T07:00:00Z",
+      "updated_at": "2024-01-03T07:00:00Z"
+    },
+    {
+      "id": "ac-023",
+      "aircraft_code": "C-17",
+      "seats": 0,
+      "aircraft_type": "CARGO",
+      "maximum_speed": 833,
+      "cruising_speed": 648,
+      "created_at": "2024-01-03T08:00:00Z",
+      "updated_at": "2024-01-03T08:00:00Z"
+    },
+    {
+      "id": "ac-024",
+      "aircraft_code": "ATR 72",
+      "seats": 70,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 510,
+      "cruising_speed": 465,
+      "created_at": "2024-01-03T09:00:00Z",
+      "updated_at": "2024-01-03T09:00:00Z"
+    },
+    {
+      "id": "ac-025",
+      "aircraft_code": "Dash 8 Q400",
+      "seats": 78,
+      "aircraft_type": "NARROW",
+      "maximum_speed": 667,
+      "cruising_speed": 556,
+      "created_at": "2024-01-03T10:00:00Z",
+      "updated_at": "2024-01-03T10:00:00Z"
     }
   ]
 }

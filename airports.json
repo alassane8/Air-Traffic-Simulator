@@ -8,56 +8,11 @@
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        {
-          "id": "term-cdg-1",
-          "terminal_code": "T1",
-          "terminal_airport": "apt-001",
-          "max_planes": 20,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-cdg-2",
-          "terminal_code": "T2A",
-          "terminal_airport": "apt-001",
-          "max_planes": 18,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-cdg-3",
-          "terminal_code": "T2B",
-          "terminal_airport": "apt-001",
-          "max_planes": 18,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-cdg-4",
-          "terminal_code": "T2C",
-          "terminal_airport": "apt-001",
-          "max_planes": 16,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-cdg-5",
-          "terminal_code": "T3",
-          "terminal_airport": "apt-001",
-          "max_planes": 10,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        }
+        { "id": "term-cdg-1", "terminal_code": "T1", "terminal_airport": "apt-001", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-cdg-2", "terminal_code": "T2A", "terminal_airport": "apt-001", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-cdg-3", "terminal_code": "T2B", "terminal_airport": "apt-001", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-cdg-4", "terminal_code": "T2C", "terminal_airport": "apt-001", "max_planes": 16, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-cdg-5", "terminal_code": "T3", "terminal_airport": "apt-001", "max_planes": 10, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ],
       "runways": [
         { "id": "rwy-cdg-1", "airport_id": "apt-001", "length": 4215, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
@@ -84,26 +39,8 @@
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        {
-          "id": "term-ory-1",
-          "terminal_code": "OUEST",
-          "terminal_airport": "apt-002",
-          "max_planes": 15,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-ory-2",
-          "terminal_code": "SUD",
-          "terminal_airport": "apt-002",
-          "max_planes": 12,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        }
+        { "id": "term-ory-1", "terminal_code": "OUEST", "terminal_airport": "apt-002", "max_planes": 15, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-ory-2", "terminal_code": "SUD", "terminal_airport": "apt-002", "max_planes": 12, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ],
       "runways": [
         { "id": "rwy-ory-1", "airport_id": "apt-002", "length": 3650, "heading": 80, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
@@ -126,56 +63,11 @@
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        {
-          "id": "term-jfk-1",
-          "terminal_code": "T1",
-          "terminal_airport": "apt-003",
-          "max_planes": 20,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-jfk-4",
-          "terminal_code": "T4",
-          "terminal_airport": "apt-003",
-          "max_planes": 25,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-jfk-5",
-          "terminal_code": "T5",
-          "terminal_airport": "apt-003",
-          "max_planes": 22,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-jfk-7",
-          "terminal_code": "T7",
-          "terminal_airport": "apt-003",
-          "max_planes": 18,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        },
-        {
-          "id": "term-jfk-8",
-          "terminal_code": "T8",
-          "terminal_airport": "apt-003",
-          "max_planes": 30,
-          "planes_on_deck": 0,
-          "status": "OPEN",
-          "created_at": "2024-01-01T00:00:00Z",
-          "updated_at": "2024-01-01T00:00:00Z"
-        }
+        { "id": "term-jfk-1", "terminal_code": "T1", "terminal_airport": "apt-003", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-jfk-4", "terminal_code": "T4", "terminal_airport": "apt-003", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-jfk-5", "terminal_code": "T5", "terminal_airport": "apt-003", "max_planes": 22, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-jfk-7", "terminal_code": "T7", "terminal_airport": "apt-003", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-jfk-8", "terminal_code": "T8", "terminal_airport": "apt-003", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ],
       "runways": [
         { "id": "rwy-jfk-1", "airport_id": "apt-003", "length": 4442, "heading": 44, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
@@ -189,6 +81,224 @@
         { "id": "gate-jfk-3", "gate_code": "C01", "terminal": "term-jfk-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-jfk-4", "gate_code": "D01", "terminal": "term-jfk-7", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
         { "id": "gate-jfk-5", "gate_code": "E01", "terminal": "term-jfk-8", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-004",
+      "airport_code": "LHR",
+      "lat": 51.4700,
+      "long": -0.4543,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-lhr-2", "terminal_code": "T2", "terminal_airport": "apt-004", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-lhr-3", "terminal_code": "T3", "terminal_airport": "apt-004", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-lhr-4", "terminal_code": "T4", "terminal_airport": "apt-004", "max_planes": 22, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-lhr-5", "terminal_code": "T5", "terminal_airport": "apt-004", "max_planes": 35, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-lhr-1", "airport_id": "apt-004", "length": 3902, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-lhr-2", "airport_id": "apt-004", "length": 3660, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-lhr-1", "gate_code": "A01", "terminal": "term-lhr-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lhr-2", "gate_code": "A02", "terminal": "term-lhr-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lhr-3", "gate_code": "B01", "terminal": "term-lhr-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lhr-4", "gate_code": "C01", "terminal": "term-lhr-4", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lhr-5", "gate_code": "D01", "terminal": "term-lhr-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lhr-6", "gate_code": "D02", "terminal": "term-lhr-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-005",
+      "airport_code": "DXB",
+      "lat": 25.2532,
+      "long": 55.3657,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-dxb-1", "terminal_code": "T1", "terminal_airport": "apt-005", "max_planes": 40, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-dxb-2", "terminal_code": "T2", "terminal_airport": "apt-005", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-dxb-3", "terminal_code": "T3", "terminal_airport": "apt-005", "max_planes": 50, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-dxb-1", "airport_id": "apt-005", "length": 4000, "heading": 120, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-dxb-2", "airport_id": "apt-005", "length": 4000, "heading": 300, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-dxb-1", "gate_code": "A01", "terminal": "term-dxb-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-dxb-2", "gate_code": "A02", "terminal": "term-dxb-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-dxb-3", "gate_code": "B01", "terminal": "term-dxb-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-dxb-4", "gate_code": "C01", "terminal": "term-dxb-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-dxb-5", "gate_code": "C02", "terminal": "term-dxb-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-dxb-6", "gate_code": "C03", "terminal": "term-dxb-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-006",
+      "airport_code": "FRA",
+      "lat": 50.0379,
+      "long": 8.5622,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-fra-1", "terminal_code": "T1", "terminal_airport": "apt-006", "max_planes": 35, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-fra-2", "terminal_code": "T2", "terminal_airport": "apt-006", "max_planes": 40, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-fra-1", "airport_id": "apt-006", "length": 4000, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-fra-2", "airport_id": "apt-006", "length": 4000, "heading": 250, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-fra-3", "airport_id": "apt-006", "length": 3750, "heading": 180, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-fra-4", "airport_id": "apt-006", "length": 4000, "heading": 360, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-fra-1", "gate_code": "A01", "terminal": "term-fra-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-fra-2", "gate_code": "A02", "terminal": "term-fra-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-fra-3", "gate_code": "B01", "terminal": "term-fra-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-fra-4", "gate_code": "B02", "terminal": "term-fra-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-007",
+      "airport_code": "AMS",
+      "lat": 52.3086,
+      "long": 4.7639,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-ams-1", "terminal_code": "T1", "terminal_airport": "apt-007", "max_planes": 45, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-ams-1", "airport_id": "apt-007", "length": 3800, "heading": 180, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-ams-2", "airport_id": "apt-007", "length": 3400, "heading": 220, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-ams-3", "airport_id": "apt-007", "length": 3453, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-ams-4", "airport_id": "apt-007", "length": 2014, "heading": 40, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-ams-5", "airport_id": "apt-007", "length": 3500, "heading": 320, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-ams-6", "airport_id": "apt-007", "length": 3400, "heading": 360, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-ams-1", "gate_code": "A01", "terminal": "term-ams-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-ams-2", "gate_code": "A02", "terminal": "term-ams-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-ams-3", "gate_code": "A03", "terminal": "term-ams-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-008",
+      "airport_code": "SIN",
+      "lat": 1.3644,
+      "long": 103.9915,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-sin-1", "terminal_code": "T1", "terminal_airport": "apt-008", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-sin-2", "terminal_code": "T2", "terminal_airport": "apt-008", "max_planes": 28, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-sin-3", "terminal_code": "T3", "terminal_airport": "apt-008", "max_planes": 35, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-sin-4", "terminal_code": "T4", "terminal_airport": "apt-008", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-sin-1", "airport_id": "apt-008", "length": 4000, "heading": 20, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-sin-2", "airport_id": "apt-008", "length": 4000, "heading": 200, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-sin-1", "gate_code": "A01", "terminal": "term-sin-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-sin-2", "gate_code": "B01", "terminal": "term-sin-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-sin-3", "gate_code": "C01", "terminal": "term-sin-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-sin-4", "gate_code": "D01", "terminal": "term-sin-4", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-009",
+      "airport_code": "HND",
+      "lat": 35.5494,
+      "long": 139.7798,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-hnd-1", "terminal_code": "T1", "terminal_airport": "apt-009", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-hnd-2", "terminal_code": "T2", "terminal_airport": "apt-009", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-hnd-3", "terminal_code": "T3", "terminal_airport": "apt-009", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-hnd-1", "airport_id": "apt-009", "length": 3000, "heading": 160, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-hnd-2", "airport_id": "apt-009", "length": 3360, "heading": 340, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-hnd-3", "airport_id": "apt-009", "length": 3000, "heading": 40, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-hnd-4", "airport_id": "apt-009", "length": 2500, "heading": 220, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-hnd-1", "gate_code": "A01", "terminal": "term-hnd-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-hnd-2", "gate_code": "B01", "terminal": "term-hnd-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-hnd-3", "gate_code": "C01", "terminal": "term-hnd-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-010",
+      "airport_code": "LAX",
+      "lat": 33.9425,
+      "long": -118.4081,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-lax-1", "terminal_code": "T1", "terminal_airport": "apt-010", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-lax-2", "terminal_code": "T2", "terminal_airport": "apt-010", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-lax-3", "terminal_code": "T3", "terminal_airport": "apt-010", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-lax-b", "terminal_code": "TB", "terminal_airport": "apt-010", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-lax-1", "airport_id": "apt-010", "length": 3685, "heading": 250, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-lax-2", "airport_id": "apt-010", "length": 3685, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-lax-3", "airport_id": "apt-010", "length": 3382, "heading": 250, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-lax-4", "airport_id": "apt-010", "length": 3382, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-lax-1", "gate_code": "A01", "terminal": "term-lax-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lax-2", "gate_code": "B01", "terminal": "term-lax-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lax-3", "gate_code": "C01", "terminal": "term-lax-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-lax-4", "gate_code": "D01", "terminal": "term-lax-b", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-011",
+      "airport_code": "SYD",
+      "lat": -33.9399,
+      "long": 151.1753,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-syd-1", "terminal_code": "T1", "terminal_airport": "apt-011", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-syd-2", "terminal_code": "T2", "terminal_airport": "apt-011", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-syd-3", "terminal_code": "T3", "terminal_airport": "apt-011", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-syd-1", "airport_id": "apt-011", "length": 3962, "heading": 160, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-syd-2", "airport_id": "apt-011", "length": 2530, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-syd-3", "airport_id": "apt-011", "length": 3962, "heading": 340, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-syd-1", "gate_code": "A01", "terminal": "term-syd-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-syd-2", "gate_code": "B01", "terminal": "term-syd-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-syd-3", "gate_code": "C01", "terminal": "term-syd-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ]
+    },
+    {
+      "id": "apt-012",
+      "airport_code": "GRU",
+      "lat": -23.4356,
+      "long": -46.4731,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        { "id": "term-gru-1", "terminal_code": "T1", "terminal_airport": "apt-012", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-gru-2", "terminal_code": "T2", "terminal_airport": "apt-012", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "term-gru-3", "terminal_code": "T3", "terminal_airport": "apt-012", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "runways": [
+        { "id": "rwy-gru-1", "airport_id": "apt-012", "length": 3700, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "rwy-gru-2", "airport_id": "apt-012", "length": 3000, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+      ],
+      "gates": [
+        { "id": "gate-gru-1", "gate_code": "A01", "terminal": "term-gru-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-gru-2", "gate_code": "B01", "terminal": "term-gru-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
+        { "id": "gate-gru-3", "gate_code": "C01", "terminal": "term-gru-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
       ]
     }
   ]

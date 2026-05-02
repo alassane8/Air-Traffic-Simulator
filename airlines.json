@@ -62,6 +62,213 @@
       "country": "United Kingdom",
       "created_at": "2024-01-01T10:00:00Z",
       "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-008",
+      "name": "American Airlines",
+      "iata_code": "AA",
+      "icao_code": "AAL",
+      "country": "United States",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-009",
+      "name": "United Airlines",
+      "iata_code": "UA",
+      "icao_code": "UAL",
+      "country": "United States",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-010",
+      "name": "Southwest Airlines",
+      "iata_code": "WN",
+      "icao_code": "SWA",
+      "country": "United States",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-011",
+      "name": "Qatar Airways",
+      "iata_code": "QR",
+      "icao_code": "QTR",
+      "country": "Qatar",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-012",
+      "name": "Singapore Airlines",
+      "iata_code": "SQ",
+      "icao_code": "SIA",
+      "country": "Singapore",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-013",
+      "name": "Cathay Pacific",
+      "iata_code": "CX",
+      "icao_code": "CPA",
+      "country": "Hong Kong",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-014",
+      "name": "Japan Airlines",
+      "iata_code": "JL",
+      "icao_code": "JAL",
+      "country": "Japan",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-015",
+      "name": "ANA All Nippon Airways",
+      "iata_code": "NH",
+      "icao_code": "ANA",
+      "country": "Japan",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-016",
+      "name": "Korean Air",
+      "iata_code": "KE",
+      "icao_code": "KAL",
+      "country": "South Korea",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-017",
+      "name": "Turkish Airlines",
+      "iata_code": "TK",
+      "icao_code": "THY",
+      "country": "Turkey",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-018",
+      "name": "KLM Royal Dutch Airlines",
+      "iata_code": "KL",
+      "icao_code": "KLM",
+      "country": "Netherlands",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-019",
+      "name": "Swiss International Air Lines",
+      "iata_code": "LX",
+      "icao_code": "SWR",
+      "country": "Switzerland",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-020",
+      "name": "Iberia",
+      "iata_code": "IB",
+      "icao_code": "IBE",
+      "country": "Spain",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-021",
+      "name": "Alitalia",
+      "iata_code": "AZ",
+      "icao_code": "AZA",
+      "country": "Italy",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-022",
+      "name": "TAP Air Portugal",
+      "iata_code": "TP",
+      "icao_code": "TAP",
+      "country": "Portugal",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-023",
+      "name": "Etihad Airways",
+      "iata_code": "EY",
+      "icao_code": "ETD",
+      "country": "United Arab Emirates",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-024",
+      "name": "Air Canada",
+      "iata_code": "AC",
+      "icao_code": "ACA",
+      "country": "Canada",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-025",
+      "name": "LATAM Airlines",
+      "iata_code": "LA",
+      "icao_code": "LAN",
+      "country": "Chile",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-026",
+      "name": "GOL Linhas Aéreas",
+      "iata_code": "G3",
+      "icao_code": "GLO",
+      "country": "Brazil",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-027",
+      "name": "Qantas",
+      "iata_code": "QF",
+      "icao_code": "QFA",
+      "country": "Australia",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-028",
+      "name": "Air New Zealand",
+      "iata_code": "NZ",
+      "icao_code": "ANZ",
+      "country": "New Zealand",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-029",
+      "name": "Wizz Air",
+      "iata_code": "W6",
+      "icao_code": "WZZ",
+      "country": "Hungary",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-030",
+      "name": "Vueling",
+      "iata_code": "VY",
+      "icao_code": "VLG",
+      "country": "Spain",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
     }
   ]
 }
