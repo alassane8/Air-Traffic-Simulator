@@ -1,5 +1,6 @@
 from datetime import datetime
 import random
+from aircraft import AircraftType
 from gate import GateStatus
 from terminal import TerminalStatus
 
@@ -14,7 +15,11 @@ def initializeAircraftsPositions(aircrafts: dict, gates: dict, terminals: dict) 
     while remaining_aircrafts:
         selected_aircraft = random.choice(list(remaining_aircrafts.values()))
 
-        selected_aircraft.passengers = random.randrange(selected_aircraft.seats)
+        if selected_aircraft.seats > 0:
+            selected_aircraft.passengers = random.randrange(selected_aircraft.seats)
+        else: 
+            selected_aircraft.passengers = 0
+
         selected_aircraft.updated_at = datetime.now
         
         selected_gate = random.choice(list(remaining_gates.values()))

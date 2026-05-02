@@ -75,9 +75,8 @@ def schedule_flights(
             choosed_runway = random.choice(list(airport_runways.values()))
             
         elif aircraft_type == AircraftType.LARGE:
-            for r in airport_runways.values():
-                if r.id != shortest_runway.id:
-                    choosed_runway = random.choice(r)
+            eligible = [r for r in airport_runways.values() if r.id != shortest_runway.id]
+            choosed_runway = random.choice(eligible)
             
         else:
             choosed_runway = longest_runway
