@@ -53,7 +53,8 @@ def scheduler(runways: dict, airports: dict, aircrafts: dict, airCorridors: dict
     
     for runway in runways.values():
         scheduled_flights = runway.scheduled_flights
-        sorted_scheduled_flights = sortFlightsByPriority(scheduled_flights)
+        departure_flights = [f for f in scheduled_flights if f.runway_usage == RunwayUsageType.DEPARTURE]
+        sorted_scheduled_flights = sortFlightsByPriority(departure_flights)
 
         initFlightEstimatedDepartureTime(sorted_scheduled_flights)
 
@@ -61,9 +62,9 @@ def scheduler(runways: dict, airports: dict, aircrafts: dict, airCorridors: dict
             air_corridor = initCorridor(airCorridors, flight.depart_terminal_code, airports, flight.aircraft_code)
             
             if air_corridor is None:
-                print(f"[WARN] Aucun corridor pour le vol {flight.flight_code} depuis {flight.depart_terminal_code}")
+                print(f"[WARN] Aucun corridor pour {flight.flight_code}")
                 continue
-            
+
             flight.corridor_code = air_corridor.air_corridor_code
             flight.arrival_airport_code = air_corridor.to_airport
 
