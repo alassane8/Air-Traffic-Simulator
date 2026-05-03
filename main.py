@@ -6,7 +6,7 @@ from scheduler import flight_scheduler
 import simulator
 
 def main() -> int:
-    initLogs.log(">>> BOOT SEQUENCE INITIATED...", 0.04)
+    initLogs.log(">>> BOOT SEQUENCE INITIATED...")
     time.sleep(0.8)
 
     initLogs.phase("Loading data modules")
@@ -59,9 +59,9 @@ def main() -> int:
 
     initLogs.phase("System ready")
 
-    initLogs.log(">>> ALL SYSTEMS NOMINAL", 0.04)
+    initLogs.log(">>> ALL SYSTEMS NOMINAL")
     time.sleep(0.5)
-    initLogs.log(">>> READY FOR DEPLOYMENT", 0.04)
+    initLogs.log(">>> READY FOR DEPLOYMENT")
 
     gates_to_initialize = gates.copy()
     aircrafts_to_initialize = aircrafts.copy()
@@ -77,36 +77,13 @@ def main() -> int:
     
     flight_scheduler.scheduler(runways, airports, aircrafts, airCorridors)
 
-    for runway in runways.values():
-        print(f"\n{'='*60}")
-        print(f"RUNWAY: {runway.id}")
-        print(f"{'='*60}")
-        
-        if not runway.scheduled_flights:
-            print("  Aucun vol schedulé")
-            continue
 
-        for flight in runway.scheduled_flights:
-            print(f"\n  ✈ {flight.flight_code}")
-            print(f"    Priorité        : {flight.priority.label}")
-            print(f"    Usage Runway    : {flight.runway_usage.label}")
-            print(f"    Départ airport  : {flight.depart_airport_code}")
-            print(f"    Arrivée airport : {flight.arrival_airport_code}")
-            print(f"    EST. départ     : {flight.estimated_departure_time}")
-            print(f"    EST. arrivée    : {flight.estimated_arrival_time}")
-            print(f"    Corridor        : {flight.corridor_code}")
-            print(f"    {'─'*40}")
+    initLogs.log_runways(runways)
 
-    total = sum(len(r.scheduled_flights) for r in runways.values())
-    departures = sum(1 for r in runways.values() for f in r.scheduled_flights if f.runway_usage.value == "DEPARTURE")
-    arrivals = sum(1 for r in runways.values() for f in r.scheduled_flights if f.runway_usage.value == "ARRIVAL")
-
-    print(f"\nTotal entrées runways : {total}")
-    print(f"Départs              : {departures}")
-    print(f"Arrivées             : {arrivals}")
 
     return 0
 
 
 if __name__ == '__main__':
     main()
+
