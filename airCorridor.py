@@ -20,7 +20,7 @@ class AirCorridor:
     air_corridor_code: str
     from_airport: str
     to_airport: str
-    distance: str
+    distance: float
     altitude: str
     direction: CorridorDirection
     status: CorridorStatus
