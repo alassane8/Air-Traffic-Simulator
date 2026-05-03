@@ -38,11 +38,9 @@ def createAirports(airportsData: dict) -> Airport:
             airport.get("airport_code", "NULL"),
             airport.get("lat", "NULL"),
             airport.get("long", "NULL"),
-            airport.get("created_at", "NULL"),
-            airport.get("updated_at", "NULL"),
-            airport.get("terminals", "NULL"),
-            airport.get("runways", "NULL"),
-            airport.get("gates", "NULL")
+            airport.get("terminals", []),
+            airport.get("gates", []),
+            airport.get("runways", []),
         )
 
         allAirports[airport.get("id")] = object
@@ -151,12 +149,12 @@ def createAirCorridors(airCorridorsData: dict) -> AirCorridor:
             airCorridor.get("air_corridor_code", "NULL"),
             airCorridor.get("from_airport", "NULL"),
             airCorridor.get("to_airport", "NULL"),
-            airCorridor.get("aircrafts", []),
+            airCorridor.get("distance", "NULL"),   # ← distance en 5e
             airCorridor.get("altitude", "NULL"),
-            airCorridor.get("distance", "NULL"),
             airCorridor.get("direction", "BIDIRECTIONAL"),
             airCorridor.get("status", "OPEN"),
             airCorridor.get("max_capacity", "NULL"),
+            airCorridor.get("aircrafts", []),       # ← aircrafts en 10e
             airCorridor.get("created_at", "NULL"),
             airCorridor.get("updated_at", "NULL")
         )
@@ -164,3 +162,17 @@ def createAirCorridors(airCorridorsData: dict) -> AirCorridor:
         allAirCorridors[airCorridor.get("id")] = object
 
     return allAirCorridors
+
+
+def updateAirportsWithRunways(airports: dict, runways: dict):
+    for airport in airports.values():
+        airport.runways = [r for r in runways.values() if r.airport_id == airport.id]
+
+def updateAirportsWithGates(airports: dict, gates: dict):
+    for airport in airports.values():
+        terminals_ids = [t.id for t in airport.terminals]
+        airport.gates = [g for g in gates.values() if g.terminal in terminals_ids]
+
+def updateAirportsWithTerminals(airports: dict, terminals: dict):
+    for airport in airports.values():
+        airport.terminals = [t for t in terminals.values() if t.airport_id == airport.id]
