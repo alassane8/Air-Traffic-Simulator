@@ -2,8 +2,8 @@ import loadData
 import createObjects
 import initLogs 
 import time
+from scheduler import flight_scheduler
 import simulator
-import scheduler
 
 def main() -> int:
     initLogs.log(">>> BOOT SEQUENCE INITIATED...", 0.04)
@@ -69,7 +69,34 @@ def main() -> int:
 
     occupied_gates = simulator.initializeAircraftsPositions(aircrafts_to_initialize, gates_to_initialize, terminals_to_initialize)
 
-    scheduler.schedule_flights(terminals,aircrafts, airlines, runways, occupied_gates)
+    createObjects.updateAirportsWithTerminals(airports, terminals)
+    createObjects.updateAirportsWithGates(airports, gates)
+    createObjects.updateAirportsWithRunways(airports, runways)
+
+    flight_scheduler.schedule_flights(terminals,aircrafts, airlines, runways, occupied_gates)
+    
+    flight_scheduler.scheduler(runways, airports, aircrafts, airCorridors)
+
+    for runway in runways.values():
+        print(f"\n{'='*60}")
+        print(f"RUNWAY: {runway.id}")
+        print(f"{'='*60}")
+        
+        if not runway.scheduled_flights:
+            print("  Aucun vol schedulé")
+            continue
+
+        for flight in runway.scheduled_flights:
+            print(f"\n  ✈ {flight.flight_code}")
+            print(f"    ID              : {flight.id}")
+            print(f"    Priorité        : {flight.priority.label}")
+            print(f"    Usage Runway    : {flight.runway_usage.label}")
+            print(f"    Départ airport  : {flight.depart_airport_code}")
+            print(f"    Arrivée airport : {flight.arrival_airport_code}")
+            print(f"    EST. départ     : {flight.estimated_departure_time}")
+            print(f"    EST. arrivée    : {flight.estimated_arrival_time}")
+            print(f"    Corridor        : {flight.corridor_code}")
+            print(f"    {'─'*40}")
 
     return 0
 
