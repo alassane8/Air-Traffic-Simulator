@@ -29,14 +29,18 @@ Comparaison priorité des vol pour voir ou l'avion se situe dans liste runway Li
     si emergency = dernier des emergency etc etc
 
 définition heure de départ 5 min après dernier vol de la prioriter => estimated arrival time calculated
-Association à la liste runway arrival: 
+definir temps de vol pour chaque vol
+definir heure d'arrivee
+Association à la liste runway arrival en fonction du arrival time: 
     taille de la piste en fonction de taille avion 
+    trier par heure d'arriver sur runway
     prioriter du vol 
-    heure d'arriver 
+    heure d'arriver
 
 avion en haut de la liste décolle/attéris => apparait en bas liste arrival runway de aeroport d'arrivé
 ou vont les avions une fois décoller et supprimer de la liste ? historique de vol qui log tous le parcours de l'avion. 
 ( Une liste par runway par aeroport ) 
+
 """
 from datetime import datetime
 import random
@@ -85,6 +89,20 @@ def schedule_flights(
         created_Flight = creatingFlight(airline, gate, terminals, choosed_runway_id)
         choosed_runway.scheduled_flights.append(created_Flight)
 
+
+    for runway in runways.values():
+        print(" ")
+        print(" ")
+        print(f"Runway {runway.id}   : {runway.scheduled_flights}")
+        print(" ")
+        print(" ")
+
+    """
+    trier par ordre de prioriter
+    Comparaison priorité des vol pour voir ou l'avion se situe dans liste runway Lineup
+    si normal = dernier des normal 
+    si emergency = dernier des emergency etc etc
+    """
         # created_Flight.estimated_departure_time = 
         # created_Flight.estimated_arrival_time = 
         # created_Flight.departure_time = 
@@ -94,7 +112,6 @@ def schedule_flights(
         # created_Flight.arrival_terminal_code =
         # created_Flight.arrival_gate_code = 
         # created_Flight.arrival_gate_code = 
-
 
 def creatingFlight(airline: Airline, gate: Gate, terminals: dict, choosed_runway_id: str) -> Flight:
 
@@ -132,29 +149,6 @@ def initFlightPriority() -> FlightPriority:
                     FlightPriority.DELAY, 
                     FlightPriority.NORMAL
                     ], weights=[1, 2, 3, 10, 84])[0]
-
-def initRunwayDeparture(aircraft: Aircraft, terminal: Terminal, runways: dict) -> Runway:
-    airport_runways = {}
-    airport_id = terminal.airport_id
-    aircraft_type = aircraft.aircraft_type
-    
-    for runway in runways.values():
-        if runway.airport_id == airport_id:
-            airport_runways[runway.length] = runway
-
-    smallest_runway = min(airport_runways.keys())
-    longest_runway = max(airport_runways.keys())
-
-    if aircraft_type == AircraftType.NARROW:
-        return random.choice(list(airport_runways.values()))
-    
-    elif aircraft_type == AircraftType.LARGE:
-        del airport_runways[smallest_runway]
-        return random.choice(list(airport_runways.values()))
-    
-    else:
-        return airport_runways[longest_runway]
-    
 
 def initCorridor(airCorridors: dict, departure_terminal: Terminal, arrival_terminal: Terminal, aircraft: Aircraft) -> AirCorridor:
 
