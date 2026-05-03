@@ -88,7 +88,6 @@ def main() -> int:
 
         for flight in runway.scheduled_flights:
             print(f"\n  ✈ {flight.flight_code}")
-            print(f"    ID              : {flight.id}")
             print(f"    Priorité        : {flight.priority.label}")
             print(f"    Usage Runway    : {flight.runway_usage.label}")
             print(f"    Départ airport  : {flight.depart_airport_code}")
@@ -97,6 +96,14 @@ def main() -> int:
             print(f"    EST. arrivée    : {flight.estimated_arrival_time}")
             print(f"    Corridor        : {flight.corridor_code}")
             print(f"    {'─'*40}")
+
+    total = sum(len(r.scheduled_flights) for r in runways.values())
+    departures = sum(1 for r in runways.values() for f in r.scheduled_flights if f.runway_usage.value == "DEPARTURE")
+    arrivals = sum(1 for r in runways.values() for f in r.scheduled_flights if f.runway_usage.value == "ARRIVAL")
+
+    print(f"\nTotal entrées runways : {total}")
+    print(f"Départs              : {departures}")
+    print(f"Arrivées             : {arrivals}")
 
     return 0
 
