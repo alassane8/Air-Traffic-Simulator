@@ -19,10 +19,10 @@ def initCorridor(airCorridors: dict, departure_terminal_id: str, airports: dict,
         return None
 
     for airCorridor in airCorridors.values():
-        is_available = len(airCorridor.aircrafts) < airCorridor.max_capacity
-        is_correct_departure_terminal = airCorridor.direction == CorridorDirection.BIDIRECTIONAL and airCorridor.to_airport != departure_airport.id
-        is_open = airCorridor.status == CorridorStatus.OPEN
-        is_bidirectional = airCorridor.direction == CorridorDirection.BIDIRECTIONAL
+        is_available = airCorridor.has_capacity()
+        is_correct_departure_terminal = airCorridor.to_airport != departure_airport.id
+        is_open = airCorridor.is_open()
+        is_bidirectional = airCorridor.is_direction_allowed(airCorridor.from_airport, airCorridor.to_airport)
 
         if is_available and is_correct_departure_terminal and is_open and is_bidirectional:
             airCorridor.aircrafts.append(aircraft)

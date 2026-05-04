@@ -2,15 +2,14 @@ from datetime import datetime
 import random
 
 from aircraft import AircraftType
-from flight import Flight, RunwayUsageType
+from flightHelpers import isDeparting, sortByPriority
 from scheduler.corridor_manager import initCorridor
-from scheduler.flight_sorter import sortFlightsByPriority
 from scheduler.flight_timing import initFlightCruisingTime, initFlightEstimatedArrivalTime, initFlightEstimatedDepartureTime
 from scheduler.fligth_factory import creatingFlight
 from scheduler.runway_manager import initRunwayArrival
 
 
-def schedule_flights(terminals: dict, aircrafts: dict, airlines: dict, runways: dict, occupied_gates: list) -> dict:
+def schedule_flights(terminals: dict, aircrafts: dict, airlines: dict, runways: dict, occupied_gates: list, edges: dict, nodes: dict) -> dict:
     
     allFlights = {}
 
@@ -31,18 +30,21 @@ def schedule_flights(terminals: dict, aircrafts: dict, airlines: dict, runways: 
 
         if aircraft_type == AircraftType.NARROW:
             choosed_runway = random.choice(list(airport_runways.values()))
+            # algo  for shortest path to runnway args(choosed_runway, gate, edges, nodes)
             
         elif aircraft_type == AircraftType.LARGE:
             eligible = [r for r in airport_runways.values() if r.id != shortest_runway.id]
             choosed_runway = random.choice(eligible)
+            # algo  for shortest path to runnway args(choosed_runway, gate, edges, nodes)
             
         else:
             choosed_runway = longest_runway
+            # algo  for shortest path to runnway args(choosed_runway, gate, edges, nodes)
 
         choosed_runway_id = choosed_runway.id
         created_Flight = creatingFlight(airline, gate, terminals, choosed_runway_id)
         allFlights[created_Flight.id] = created_Flight
-        choosed_runway.scheduled_flights.append(created_Flight)
+        choosed_runway.add_flight(created_Flight)
         
 
     return allFlights
@@ -53,8 +55,8 @@ def scheduler(runways: dict, airports: dict, aircrafts: dict, airCorridors: dict
     
     for runway in runways.values():
         scheduled_flights = runway.scheduled_flights
-        departure_flights = [f for f in scheduled_flights if f.runway_usage == RunwayUsageType.DEPARTURE]
-        sorted_scheduled_flights = sortFlightsByPriority(departure_flights)
+        departure_flights = [f for f in scheduled_flights if isDeparting(f)]
+        sorted_scheduled_flights = sortByPriority(departure_flights)
 
         initFlightEstimatedDepartureTime(sorted_scheduled_flights)
 
@@ -78,7 +80,7 @@ def scheduler(runways: dict, airports: dict, aircrafts: dict, airCorridors: dict
         for runway in runways.values():
             runway.scheduled_flights.sort(
                 key=lambda f: (
-                    f.estimated_departure_time if f.runway_usage == RunwayUsageType.DEPARTURE
+                    f.estimated_departure_time if isDeparting(f)
                     else f.estimated_arrival_time
                 ) or datetime.max
             )

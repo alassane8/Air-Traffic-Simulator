@@ -16,12 +16,9 @@ def initFlightEstimatedDepartureTime(scheduled_flights: list) -> datetime:
         
     return None
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 def initFlightCruisingTime(aircraft: Aircraft, corridor: AirCorridor) -> float:
     return float(corridor.distance) / float(aircraft.maximum_speed)
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 def initFlightEstimatedArrivalTime(flight: Flight, cruising_time: datetime) -> datetime:
     return flight.estimated_departure_time + timedelta(seconds=FlightStatus.CLIMBING.duration_seconds + 

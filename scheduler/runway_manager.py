@@ -12,6 +12,6 @@ def initRunwayArrival(airCorridor: AirCorridor, airports: dict, flight: Flight):
     arrival_flight = copy.copy(flight)
     arrival_flight.runway_usage = RunwayUsageType.ARRIVAL
 
-    arrival_runway.scheduled_flights.append(arrival_flight)
+    arrival_runway.add_flight(arrival_flight)
 
     return arrival_runway

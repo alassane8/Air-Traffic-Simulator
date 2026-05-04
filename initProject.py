@@ -82,13 +82,15 @@ def initSimulatorData():
     aircrafts_to_initialize = aircrafts.copy()
     terminals_to_initialize = terminals.copy()
 
-    occupied_gates = simulator.initializeAircraftsPositions(aircrafts_to_initialize, gates_to_initialize, terminals_to_initialize)
+    occupied_gates = simulator.initializeAircraftsPositions(aircrafts_to_initialize, gates, terminals_to_initialize)
 
     createObjects.updateAirportsWithTerminals(airports, terminals)
     createObjects.updateAirportsWithGates(airports, gates)
     createObjects.updateAirportsWithRunways(airports, runways)
 
-    flight_scheduler.schedule_flights(terminals, aircrafts, airlines, runways, occupied_gates)
+    # boucle infini 
+
+    flight_scheduler.schedule_flights(terminals, aircrafts, airlines, runways, occupied_gates, edges, nodes)
 
     flight_scheduler.scheduler(runways, airports, aircrafts, airCorridors)
 

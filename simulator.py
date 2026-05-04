@@ -14,28 +14,23 @@ def initializeAircraftsPositions(aircrafts: dict, gates: dict, terminals: dict) 
     while remaining_aircrafts:
         selected_aircraft = random.choice(list(remaining_aircrafts.values()))
 
-        if selected_aircraft.seats > 0:
-            selected_aircraft.passengers = random.randrange(selected_aircraft.seats)
+        if selected_aircraft.has_capacity():
+            selected_aircraft.load_passengers(random.randrange(selected_aircraft.seats))
         else: 
-            selected_aircraft.passengers = 0
-
-        selected_aircraft.updated_at = datetime.now
+            selected_aircraft.load_passengers(0)
         
         selected_gate = random.choice(list(remaining_gates.values()))
 
-        while selected_gate.status == GateStatus.OCCUPIED:
+        while selected_gate.is_occupied():
             selected_gate = random.choice(list(remaining_gates.values()))
 
-        selected_gate.status = GateStatus.OCCUPIED
-        selected_gate.aircraft_id = selected_aircraft.id
-        selected_gate.updated_at = datetime.now
+        selected_gate.assign_aircraft(selected_aircraft.id)
         occupied_gates.append(selected_gate)
 
         terminal_to_update = terminals[selected_gate.terminal]
 
-        if terminal_to_update.planes_on_deck < terminal_to_update.max_planes and terminal_to_update.status == TerminalStatus.OPEN :
-            terminal_to_update.planes_on_deck += 1 
-            terminal_to_update.updated_at = datetime.now
+        if terminal_to_update.can_accept_plane() and terminal_to_update.is_open() :
+            terminal_to_update.add_plane()
 
         print(f"Aircraft {selected_aircraft.id} with {selected_aircraft.passengers} on board placed in {selected_gate.id} {selected_gate.terminal} ready for takeoff")
 
