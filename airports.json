@@ -4,302 +4,3584 @@
       "id": "apt-001",
       "airport_code": "CDG",
       "lat": 49.0097,
-      "long": 2.5479,
+      "lon": 2.5479,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-cdg-1", "terminal_code": "T1", "terminal_airport": "apt-001", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-cdg-2", "terminal_code": "T2A", "terminal_airport": "apt-001", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-cdg-3", "terminal_code": "T2B", "terminal_airport": "apt-001", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-cdg-4", "terminal_code": "T2C", "terminal_airport": "apt-001", "max_planes": 16, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-cdg-5", "terminal_code": "T3", "terminal_airport": "apt-001", "max_planes": 10, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-cdg-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-001",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-cdg-2",
+          "terminal_code": "T2A",
+          "terminal_airport": "apt-001",
+          "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-cdg-3",
+          "terminal_code": "T2B",
+          "terminal_airport": "apt-001",
+          "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-cdg-4",
+          "terminal_code": "T2C",
+          "terminal_airport": "apt-001",
+          "max_planes": 16,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-cdg-5",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-001",
+          "max_planes": 10,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-cdg-1", "airport_id": "apt-001", "length": 4215, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-cdg-2", "airport_id": "apt-001", "length": 2700, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-cdg-3", "airport_id": "apt-001", "length": 4200, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-cdg-4", "airport_id": "apt-001", "length": 2700, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-cdg-1",
+          "airport_id": "apt-001",
+          "length": 4215,
+          "heading": 270,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-cdg-2",
+          "airport_id": "apt-001",
+          "length": 2700,
+          "heading": 270,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-cdg-3",
+          "airport_id": "apt-001",
+          "length": 4200,
+          "heading": 90,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-cdg-4",
+          "airport_id": "apt-001",
+          "length": 2700,
+          "heading": 90,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-cdg-1", "gate_code": "A01", "terminal": "term-cdg-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-2", "gate_code": "A02", "terminal": "term-cdg-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-3", "gate_code": "A03", "terminal": "term-cdg-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-4", "gate_code": "B01", "terminal": "term-cdg-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-5", "gate_code": "B02", "terminal": "term-cdg-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-6", "gate_code": "C01", "terminal": "term-cdg-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-7", "gate_code": "C02", "terminal": "term-cdg-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-cdg-8", "gate_code": "F01", "terminal": "term-cdg-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-cdg-1",
+          "gate_code": "A01",
+          "terminal": "term-cdg-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-2",
+          "gate_code": "A02",
+          "terminal": "term-cdg-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-3",
+          "gate_code": "A03",
+          "terminal": "term-cdg-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-4",
+          "gate_code": "B01",
+          "terminal": "term-cdg-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-5",
+          "gate_code": "B02",
+          "terminal": "term-cdg-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-6",
+          "gate_code": "C01",
+          "terminal": "term-cdg-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-7",
+          "gate_code": "C02",
+          "terminal": "term-cdg-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cdg-8",
+          "gate_code": "F01",
+          "terminal": "term-cdg-5",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-cdg-gate-1",
+            "type": "gate",
+            "ref": "gate-cdg-1",
+            "lat": 49.0094,
+            "lon": 2.5503
+          },
+          {
+            "id": "n-cdg-gate-2",
+            "type": "gate",
+            "ref": "gate-cdg-2",
+            "lat": 49.0098,
+            "lon": 2.551
+          },
+          {
+            "id": "n-cdg-gate-3",
+            "type": "gate",
+            "ref": "gate-cdg-3",
+            "lat": 49.0102,
+            "lon": 2.5498
+          },
+          {
+            "id": "n-cdg-gate-4",
+            "type": "gate",
+            "ref": "gate-cdg-4",
+            "lat": 49.0142,
+            "lon": 2.5601
+          },
+          {
+            "id": "n-cdg-gate-5",
+            "type": "gate",
+            "ref": "gate-cdg-5",
+            "lat": 49.0148,
+            "lon": 2.5612
+          },
+          {
+            "id": "n-cdg-gate-6",
+            "type": "gate",
+            "ref": "gate-cdg-6",
+            "lat": 49.0155,
+            "lon": 2.5595
+          },
+          {
+            "id": "n-cdg-gate-7",
+            "type": "gate",
+            "ref": "gate-cdg-7",
+            "lat": 49.0138,
+            "lon": 2.558
+          },
+          {
+            "id": "n-cdg-gate-8",
+            "type": "gate",
+            "ref": "gate-cdg-8",
+            "lat": 49.0132,
+            "lon": 2.557
+          },
+          {
+            "id": "n-cdg-int-A",
+            "type": "intersection",
+            "lat": 49.0088,
+            "lon": 2.548
+          },
+          {
+            "id": "n-cdg-int-B",
+            "type": "intersection",
+            "lat": 49.011,
+            "lon": 2.549
+          },
+          {
+            "id": "n-cdg-int-C",
+            "type": "intersection",
+            "lat": 49.0135,
+            "lon": 2.555
+          },
+          {
+            "id": "n-cdg-int-D",
+            "type": "intersection",
+            "lat": 49.015,
+            "lon": 2.556
+          },
+          {
+            "id": "n-cdg-int-E",
+            "type": "intersection",
+            "lat": 49.012,
+            "lon": 2.553
+          },
+          {
+            "id": "n-cdg-int-F",
+            "type": "intersection",
+            "lat": 49.0075,
+            "lon": 2.546
+          },
+          {
+            "id": "n-cdg-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-1",
+            "lat": 49.0089,
+            "lon": 2.5201
+          },
+          {
+            "id": "n-cdg-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-1",
+            "lat": 49.0089,
+            "lon": 2.575
+          },
+          {
+            "id": "n-cdg-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-2",
+            "lat": 49.006,
+            "lon": 2.525
+          },
+          {
+            "id": "n-cdg-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-2",
+            "lat": 49.006,
+            "lon": 2.568
+          },
+          {
+            "id": "n-cdg-rwy3-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-3",
+            "lat": 49.016,
+            "lon": 2.52
+          },
+          {
+            "id": "n-cdg-rwy3-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-3",
+            "lat": 49.016,
+            "lon": 2.575
+          },
+          {
+            "id": "n-cdg-rwy4-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-4",
+            "lat": 49.018,
+            "lon": 2.525
+          },
+          {
+            "id": "n-cdg-rwy4-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-cdg-4",
+            "lat": 49.018,
+            "lon": 2.568
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-cdg-gate-1",
+            "to_node_id": "n-cdg-int-A",
+            "taxiway": "J",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-cdg-gate-2",
+            "to_node_id": "n-cdg-int-A",
+            "taxiway": "J",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-cdg-gate-3",
+            "to_node_id": "n-cdg-int-B",
+            "taxiway": "K",
+            "distance_m": 220
+          },
+          {
+            "from_node_id": "n-cdg-gate-4",
+            "to_node_id": "n-cdg-int-C",
+            "taxiway": "W",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-cdg-gate-5",
+            "to_node_id": "n-cdg-int-D",
+            "taxiway": "W",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-cdg-gate-6",
+            "to_node_id": "n-cdg-int-D",
+            "taxiway": "V",
+            "distance_m": 210
+          },
+          {
+            "from_node_id": "n-cdg-gate-7",
+            "to_node_id": "n-cdg-int-C",
+            "taxiway": "V",
+            "distance_m": 190
+          },
+          {
+            "from_node_id": "n-cdg-gate-8",
+            "to_node_id": "n-cdg-int-E",
+            "taxiway": "U",
+            "distance_m": 170
+          },
+          {
+            "from_node_id": "n-cdg-int-A",
+            "to_node_id": "n-cdg-int-B",
+            "taxiway": "B",
+            "distance_m": 350
+          },
+          {
+            "from_node_id": "n-cdg-int-B",
+            "to_node_id": "n-cdg-int-E",
+            "taxiway": "B",
+            "distance_m": 400
+          },
+          {
+            "from_node_id": "n-cdg-int-E",
+            "to_node_id": "n-cdg-int-C",
+            "taxiway": "B",
+            "distance_m": 300
+          },
+          {
+            "from_node_id": "n-cdg-int-C",
+            "to_node_id": "n-cdg-int-D",
+            "taxiway": "N",
+            "distance_m": 250
+          },
+          {
+            "from_node_id": "n-cdg-int-A",
+            "to_node_id": "n-cdg-int-F",
+            "taxiway": "A",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-cdg-int-F",
+            "to_node_id": "n-cdg-rwy1-thr-W",
+            "taxiway": "A",
+            "distance_m": 450
+          },
+          {
+            "from_node_id": "n-cdg-int-A",
+            "to_node_id": "n-cdg-rwy2-thr-W",
+            "taxiway": "S",
+            "distance_m": 520
+          },
+          {
+            "from_node_id": "n-cdg-int-B",
+            "to_node_id": "n-cdg-rwy1-thr-E",
+            "taxiway": "R",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-cdg-int-D",
+            "to_node_id": "n-cdg-rwy3-thr-E",
+            "taxiway": "T",
+            "distance_m": 480
+          },
+          {
+            "from_node_id": "n-cdg-int-D",
+            "to_node_id": "n-cdg-rwy4-thr-E",
+            "taxiway": "T",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-cdg-int-C",
+            "to_node_id": "n-cdg-rwy3-thr-W",
+            "taxiway": "P",
+            "distance_m": 600
+          }
+        ]
+      }
     },
     {
       "id": "apt-002",
       "airport_code": "ORY",
       "lat": 48.7233,
-      "long": 2.3794,
+      "lon": 2.3794,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-ory-1", "terminal_code": "OUEST", "terminal_airport": "apt-002", "max_planes": 15, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-ory-2", "terminal_code": "SUD", "terminal_airport": "apt-002", "max_planes": 12, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-ory-1",
+          "terminal_code": "OUEST",
+          "terminal_airport": "apt-002",
+          "max_planes": 15,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-ory-2",
+          "terminal_code": "SUD",
+          "terminal_airport": "apt-002",
+          "max_planes": 12,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-ory-1", "airport_id": "apt-002", "length": 3650, "heading": 80, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ory-2", "airport_id": "apt-002", "length": 2400, "heading": 260, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-ory-1",
+          "airport_id": "apt-002",
+          "length": 3650,
+          "heading": 80,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-ory-2",
+          "airport_id": "apt-002",
+          "length": 2400,
+          "heading": 260,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-ory-1", "gate_code": "W01", "terminal": "term-ory-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ory-2", "gate_code": "W02", "terminal": "term-ory-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ory-3", "gate_code": "W03", "terminal": "term-ory-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ory-4", "gate_code": "S01", "terminal": "term-ory-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ory-5", "gate_code": "S02", "terminal": "term-ory-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ory-6", "gate_code": "S03", "terminal": "term-ory-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-ory-1",
+          "gate_code": "W01",
+          "terminal": "term-ory-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ory-2",
+          "gate_code": "W02",
+          "terminal": "term-ory-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ory-3",
+          "gate_code": "W03",
+          "terminal": "term-ory-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ory-4",
+          "gate_code": "S01",
+          "terminal": "term-ory-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ory-5",
+          "gate_code": "S02",
+          "terminal": "term-ory-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ory-6",
+          "gate_code": "S03",
+          "terminal": "term-ory-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-ory-gate-1",
+            "type": "gate",
+            "ref": "gate-ory-1",
+            "lat": 48.7253,
+            "lon": 2.3654
+          },
+          {
+            "id": "n-ory-gate-2",
+            "type": "gate",
+            "ref": "gate-ory-2",
+            "lat": 48.7258,
+            "lon": 2.3665
+          },
+          {
+            "id": "n-ory-gate-3",
+            "type": "gate",
+            "ref": "gate-ory-3",
+            "lat": 48.7244,
+            "lon": 2.3742
+          },
+          {
+            "id": "n-ory-gate-4",
+            "type": "gate",
+            "ref": "gate-ory-4",
+            "lat": 48.7248,
+            "lon": 2.375
+          },
+          {
+            "id": "n-ory-gate-5",
+            "type": "gate",
+            "ref": "gate-ory-5",
+            "lat": 48.7262,
+            "lon": 2.376
+          },
+          {
+            "id": "n-ory-gate-6",
+            "type": "gate",
+            "ref": "gate-ory-6",
+            "lat": 48.7268,
+            "lon": 2.377
+          },
+          {
+            "id": "n-ory-int-A",
+            "type": "intersection",
+            "lat": 48.725,
+            "lon": 2.368
+          },
+          {
+            "id": "n-ory-int-B",
+            "type": "intersection",
+            "lat": 48.7255,
+            "lon": 2.373
+          },
+          {
+            "id": "n-ory-int-C",
+            "type": "intersection",
+            "lat": 48.726,
+            "lon": 2.38
+          },
+          {
+            "id": "n-ory-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-ory-1",
+            "lat": 48.7262,
+            "lon": 2.34
+          },
+          {
+            "id": "n-ory-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-ory-1",
+            "lat": 48.7262,
+            "lon": 2.405
+          },
+          {
+            "id": "n-ory-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-ory-2",
+            "lat": 48.723,
+            "lon": 2.35
+          },
+          {
+            "id": "n-ory-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-ory-2",
+            "lat": 48.723,
+            "lon": 2.398
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-ory-gate-1",
+            "to_node_id": "n-ory-int-A",
+            "taxiway": "A",
+            "distance_m": 220
+          },
+          {
+            "from_node_id": "n-ory-gate-2",
+            "to_node_id": "n-ory-int-A",
+            "taxiway": "A",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-ory-gate-3",
+            "to_node_id": "n-ory-int-B",
+            "taxiway": "B",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-ory-gate-4",
+            "to_node_id": "n-ory-int-B",
+            "taxiway": "B",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-ory-gate-5",
+            "to_node_id": "n-ory-int-C",
+            "taxiway": "C",
+            "distance_m": 190
+          },
+          {
+            "from_node_id": "n-ory-gate-6",
+            "to_node_id": "n-ory-int-C",
+            "taxiway": "C",
+            "distance_m": 210
+          },
+          {
+            "from_node_id": "n-ory-int-A",
+            "to_node_id": "n-ory-int-B",
+            "taxiway": "M",
+            "distance_m": 480
+          },
+          {
+            "from_node_id": "n-ory-int-B",
+            "to_node_id": "n-ory-int-C",
+            "taxiway": "M",
+            "distance_m": 420
+          },
+          {
+            "from_node_id": "n-ory-int-A",
+            "to_node_id": "n-ory-rwy1-thr-W",
+            "taxiway": "R1",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-ory-int-C",
+            "to_node_id": "n-ory-rwy1-thr-E",
+            "taxiway": "R1",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-ory-int-A",
+            "to_node_id": "n-ory-rwy2-thr-W",
+            "taxiway": "R2",
+            "distance_m": 380
+          },
+          {
+            "from_node_id": "n-ory-int-C",
+            "to_node_id": "n-ory-rwy2-thr-E",
+            "taxiway": "R2",
+            "distance_m": 360
+          }
+        ]
+      }
     },
     {
       "id": "apt-003",
       "airport_code": "JFK",
       "lat": 40.6413,
-      "long": -73.7781,
+      "lon": -73.7781,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-jfk-1", "terminal_code": "T1", "terminal_airport": "apt-003", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-jfk-4", "terminal_code": "T4", "terminal_airport": "apt-003", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-jfk-5", "terminal_code": "T5", "terminal_airport": "apt-003", "max_planes": 22, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-jfk-7", "terminal_code": "T7", "terminal_airport": "apt-003", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-jfk-8", "terminal_code": "T8", "terminal_airport": "apt-003", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-jfk-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-003",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-jfk-4",
+          "terminal_code": "T4",
+          "terminal_airport": "apt-003",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-jfk-5",
+          "terminal_code": "T5",
+          "terminal_airport": "apt-003",
+          "max_planes": 22,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-jfk-7",
+          "terminal_code": "T7",
+          "terminal_airport": "apt-003",
+          "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-jfk-8",
+          "terminal_code": "T8",
+          "terminal_airport": "apt-003",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-jfk-1", "airport_id": "apt-003", "length": 4442, "heading": 44, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-jfk-2", "airport_id": "apt-003", "length": 3682, "heading": 44, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-jfk-3", "airport_id": "apt-003", "length": 2560, "heading": 224, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-jfk-4", "airport_id": "apt-003", "length": 3048, "heading": 134, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-jfk-1",
+          "airport_id": "apt-003",
+          "length": 4442,
+          "heading": 44,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-jfk-2",
+          "airport_id": "apt-003",
+          "length": 3682,
+          "heading": 44,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-jfk-3",
+          "airport_id": "apt-003",
+          "length": 2560,
+          "heading": 224,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-jfk-4",
+          "airport_id": "apt-003",
+          "length": 3048,
+          "heading": 134,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-jfk-1", "gate_code": "A01", "terminal": "term-jfk-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-jfk-2", "gate_code": "B01", "terminal": "term-jfk-4", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-jfk-3", "gate_code": "C01", "terminal": "term-jfk-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-jfk-4", "gate_code": "D01", "terminal": "term-jfk-7", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-jfk-5", "gate_code": "E01", "terminal": "term-jfk-8", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-jfk-1",
+          "gate_code": "A01",
+          "terminal": "term-jfk-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jfk-2",
+          "gate_code": "B01",
+          "terminal": "term-jfk-4",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jfk-3",
+          "gate_code": "C01",
+          "terminal": "term-jfk-5",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jfk-4",
+          "gate_code": "D01",
+          "terminal": "term-jfk-7",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jfk-5",
+          "gate_code": "E01",
+          "terminal": "term-jfk-8",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-jfk-gate-1",
+            "type": "gate",
+            "ref": "gate-jfk-1",
+            "lat": 40.6425,
+            "lon": -73.7872
+          },
+          {
+            "id": "n-jfk-gate-2",
+            "type": "gate",
+            "ref": "gate-jfk-2",
+            "lat": 40.6441,
+            "lon": -73.783
+          },
+          {
+            "id": "n-jfk-gate-3",
+            "type": "gate",
+            "ref": "gate-jfk-3",
+            "lat": 40.6452,
+            "lon": -73.779
+          },
+          {
+            "id": "n-jfk-gate-4",
+            "type": "gate",
+            "ref": "gate-jfk-4",
+            "lat": 40.6398,
+            "lon": -73.781
+          },
+          {
+            "id": "n-jfk-gate-5",
+            "type": "gate",
+            "ref": "gate-jfk-5",
+            "lat": 40.638,
+            "lon": -73.777
+          },
+          {
+            "id": "n-jfk-int-A",
+            "type": "intersection",
+            "lat": 40.643,
+            "lon": -73.785
+          },
+          {
+            "id": "n-jfk-int-B",
+            "type": "intersection",
+            "lat": 40.6445,
+            "lon": -73.781
+          },
+          {
+            "id": "n-jfk-int-C",
+            "type": "intersection",
+            "lat": 40.641,
+            "lon": -73.78
+          },
+          {
+            "id": "n-jfk-int-D",
+            "type": "intersection",
+            "lat": 40.639,
+            "lon": -73.784
+          },
+          {
+            "id": "n-jfk-int-E",
+            "type": "intersection",
+            "lat": 40.642,
+            "lon": -73.776
+          },
+          {
+            "id": "n-jfk-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-1",
+            "lat": 40.6395,
+            "lon": -73.805
+          },
+          {
+            "id": "n-jfk-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-1",
+            "lat": 40.6395,
+            "lon": -73.755
+          },
+          {
+            "id": "n-jfk-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-2",
+            "lat": 40.637,
+            "lon": -73.8
+          },
+          {
+            "id": "n-jfk-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-2",
+            "lat": 40.637,
+            "lon": -73.756
+          },
+          {
+            "id": "n-jfk-rwy3-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-3",
+            "lat": 40.629,
+            "lon": -73.773
+          },
+          {
+            "id": "n-jfk-rwy3-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-3",
+            "lat": 40.648,
+            "lon": -73.773
+          },
+          {
+            "id": "n-jfk-rwy4-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-4",
+            "lat": 40.629,
+            "lon": -73.781
+          },
+          {
+            "id": "n-jfk-rwy4-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-jfk-4",
+            "lat": 40.648,
+            "lon": -73.781
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-jfk-gate-1",
+            "to_node_id": "n-jfk-int-A",
+            "taxiway": "B",
+            "distance_m": 310
+          },
+          {
+            "from_node_id": "n-jfk-gate-2",
+            "to_node_id": "n-jfk-int-B",
+            "taxiway": "B",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-jfk-gate-3",
+            "to_node_id": "n-jfk-int-B",
+            "taxiway": "D",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-jfk-gate-4",
+            "to_node_id": "n-jfk-int-C",
+            "taxiway": "K",
+            "distance_m": 240
+          },
+          {
+            "from_node_id": "n-jfk-gate-5",
+            "to_node_id": "n-jfk-int-D",
+            "taxiway": "K",
+            "distance_m": 220
+          },
+          {
+            "from_node_id": "n-jfk-int-A",
+            "to_node_id": "n-jfk-int-B",
+            "taxiway": "NA",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-jfk-int-B",
+            "to_node_id": "n-jfk-int-E",
+            "taxiway": "NA",
+            "distance_m": 450
+          },
+          {
+            "from_node_id": "n-jfk-int-A",
+            "to_node_id": "n-jfk-int-D",
+            "taxiway": "SA",
+            "distance_m": 480
+          },
+          {
+            "from_node_id": "n-jfk-int-D",
+            "to_node_id": "n-jfk-int-C",
+            "taxiway": "SA",
+            "distance_m": 420
+          },
+          {
+            "from_node_id": "n-jfk-int-C",
+            "to_node_id": "n-jfk-int-E",
+            "taxiway": "EA",
+            "distance_m": 380
+          },
+          {
+            "from_node_id": "n-jfk-int-A",
+            "to_node_id": "n-jfk-rwy1-thr-W",
+            "taxiway": "J",
+            "distance_m": 700
+          },
+          {
+            "from_node_id": "n-jfk-int-E",
+            "to_node_id": "n-jfk-rwy1-thr-E",
+            "taxiway": "J",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-jfk-int-D",
+            "to_node_id": "n-jfk-rwy2-thr-W",
+            "taxiway": "H",
+            "distance_m": 650
+          },
+          {
+            "from_node_id": "n-jfk-int-E",
+            "to_node_id": "n-jfk-rwy3-thr-N",
+            "taxiway": "Z",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-jfk-int-C",
+            "to_node_id": "n-jfk-rwy4-thr-N",
+            "taxiway": "Z",
+            "distance_m": 520
+          }
+        ]
+      }
     },
     {
       "id": "apt-004",
       "airport_code": "LHR",
-      "lat": 51.4700,
-      "long": -0.4543,
+      "lat": 51.47,
+      "lon": -0.4543,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-lhr-2", "terminal_code": "T2", "terminal_airport": "apt-004", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-lhr-3", "terminal_code": "T3", "terminal_airport": "apt-004", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-lhr-4", "terminal_code": "T4", "terminal_airport": "apt-004", "max_planes": 22, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-lhr-5", "terminal_code": "T5", "terminal_airport": "apt-004", "max_planes": 35, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-lhr-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-004",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-lhr-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-004",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-lhr-4",
+          "terminal_code": "T4",
+          "terminal_airport": "apt-004",
+          "max_planes": 22,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-lhr-5",
+          "terminal_code": "T5",
+          "terminal_airport": "apt-004",
+          "max_planes": 35,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-lhr-1", "airport_id": "apt-004", "length": 3902, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-lhr-2", "airport_id": "apt-004", "length": 3660, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-lhr-1",
+          "airport_id": "apt-004",
+          "length": 3902,
+          "heading": 270,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-lhr-2",
+          "airport_id": "apt-004",
+          "length": 3660,
+          "heading": 90,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-lhr-1", "gate_code": "A01", "terminal": "term-lhr-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lhr-2", "gate_code": "A02", "terminal": "term-lhr-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lhr-3", "gate_code": "B01", "terminal": "term-lhr-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lhr-4", "gate_code": "C01", "terminal": "term-lhr-4", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lhr-5", "gate_code": "D01", "terminal": "term-lhr-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lhr-6", "gate_code": "D02", "terminal": "term-lhr-5", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-lhr-1",
+          "gate_code": "A01",
+          "terminal": "term-lhr-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lhr-2",
+          "gate_code": "A02",
+          "terminal": "term-lhr-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lhr-3",
+          "gate_code": "B01",
+          "terminal": "term-lhr-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lhr-4",
+          "gate_code": "C01",
+          "terminal": "term-lhr-4",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lhr-5",
+          "gate_code": "D01",
+          "terminal": "term-lhr-5",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lhr-6",
+          "gate_code": "D02",
+          "terminal": "term-lhr-5",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-lhr-gate-1",
+            "type": "gate",
+            "ref": "gate-lhr-1",
+            "lat": 51.4736,
+            "lon": -0.4578
+          },
+          {
+            "id": "n-lhr-gate-2",
+            "type": "gate",
+            "ref": "gate-lhr-2",
+            "lat": 51.4742,
+            "lon": -0.456
+          },
+          {
+            "id": "n-lhr-gate-3",
+            "type": "gate",
+            "ref": "gate-lhr-3",
+            "lat": 51.4728,
+            "lon": -0.4862
+          },
+          {
+            "id": "n-lhr-gate-4",
+            "type": "gate",
+            "ref": "gate-lhr-4",
+            "lat": 51.4718,
+            "lon": -0.4848
+          },
+          {
+            "id": "n-lhr-gate-5",
+            "type": "gate",
+            "ref": "gate-lhr-5",
+            "lat": 51.4755,
+            "lon": -0.462
+          },
+          {
+            "id": "n-lhr-gate-6",
+            "type": "gate",
+            "ref": "gate-lhr-6",
+            "lat": 51.4762,
+            "lon": -0.454
+          },
+          {
+            "id": "n-lhr-int-A",
+            "type": "intersection",
+            "lat": 51.474,
+            "lon": -0.459
+          },
+          {
+            "id": "n-lhr-int-B",
+            "type": "intersection",
+            "lat": 51.473,
+            "lon": -0.464
+          },
+          {
+            "id": "n-lhr-int-C",
+            "type": "intersection",
+            "lat": 51.472,
+            "lon": -0.482
+          },
+          {
+            "id": "n-lhr-int-D",
+            "type": "intersection",
+            "lat": 51.476,
+            "lon": -0.47
+          },
+          {
+            "id": "n-lhr-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-lhr-1",
+            "lat": 51.4775,
+            "lon": -0.515
+          },
+          {
+            "id": "n-lhr-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-lhr-1",
+            "lat": 51.4775,
+            "lon": -0.435
+          },
+          {
+            "id": "n-lhr-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-lhr-2",
+            "lat": 51.47,
+            "lon": -0.51
+          },
+          {
+            "id": "n-lhr-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-lhr-2",
+            "lat": 51.47,
+            "lon": -0.438
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-lhr-gate-1",
+            "to_node_id": "n-lhr-int-A",
+            "taxiway": "A1",
+            "distance_m": 250
+          },
+          {
+            "from_node_id": "n-lhr-gate-2",
+            "to_node_id": "n-lhr-int-A",
+            "taxiway": "A1",
+            "distance_m": 230
+          },
+          {
+            "from_node_id": "n-lhr-gate-3",
+            "to_node_id": "n-lhr-int-C",
+            "taxiway": "L",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-lhr-gate-4",
+            "to_node_id": "n-lhr-int-C",
+            "taxiway": "L",
+            "distance_m": 220
+          },
+          {
+            "from_node_id": "n-lhr-gate-5",
+            "to_node_id": "n-lhr-int-D",
+            "taxiway": "N4",
+            "distance_m": 190
+          },
+          {
+            "from_node_id": "n-lhr-gate-6",
+            "to_node_id": "n-lhr-int-A",
+            "taxiway": "N4",
+            "distance_m": 210
+          },
+          {
+            "from_node_id": "n-lhr-int-A",
+            "to_node_id": "n-lhr-int-B",
+            "taxiway": "N1",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-lhr-int-B",
+            "to_node_id": "n-lhr-int-C",
+            "taxiway": "N1",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-lhr-int-A",
+            "to_node_id": "n-lhr-int-D",
+            "taxiway": "S1",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-lhr-int-D",
+            "to_node_id": "n-lhr-int-B",
+            "taxiway": "S1",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-lhr-int-B",
+            "to_node_id": "n-lhr-rwy1-thr-W",
+            "taxiway": "W1",
+            "distance_m": 1200
+          },
+          {
+            "from_node_id": "n-lhr-int-A",
+            "to_node_id": "n-lhr-rwy1-thr-E",
+            "taxiway": "E1",
+            "distance_m": 950
+          },
+          {
+            "from_node_id": "n-lhr-int-C",
+            "to_node_id": "n-lhr-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 1100
+          },
+          {
+            "from_node_id": "n-lhr-int-C",
+            "to_node_id": "n-lhr-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 900
+          }
+        ]
+      }
     },
     {
       "id": "apt-005",
       "airport_code": "DXB",
       "lat": 25.2532,
-      "long": 55.3657,
+      "lon": 55.3657,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-dxb-1", "terminal_code": "T1", "terminal_airport": "apt-005", "max_planes": 40, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-dxb-2", "terminal_code": "T2", "terminal_airport": "apt-005", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-dxb-3", "terminal_code": "T3", "terminal_airport": "apt-005", "max_planes": 50, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-dxb-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-005",
+          "max_planes": 40,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-dxb-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-005",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-dxb-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-005",
+          "max_planes": 50,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-dxb-1", "airport_id": "apt-005", "length": 4000, "heading": 120, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-dxb-2", "airport_id": "apt-005", "length": 4000, "heading": 300, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-dxb-1",
+          "airport_id": "apt-005",
+          "length": 4000,
+          "heading": 120,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-dxb-2",
+          "airport_id": "apt-005",
+          "length": 4000,
+          "heading": 300,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-dxb-1", "gate_code": "A01", "terminal": "term-dxb-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-dxb-2", "gate_code": "A02", "terminal": "term-dxb-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-dxb-3", "gate_code": "B01", "terminal": "term-dxb-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-dxb-4", "gate_code": "C01", "terminal": "term-dxb-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-dxb-5", "gate_code": "C02", "terminal": "term-dxb-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-dxb-6", "gate_code": "C03", "terminal": "term-dxb-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-dxb-1",
+          "gate_code": "A01",
+          "terminal": "term-dxb-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-dxb-2",
+          "gate_code": "A02",
+          "terminal": "term-dxb-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-dxb-3",
+          "gate_code": "B01",
+          "terminal": "term-dxb-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-dxb-4",
+          "gate_code": "C01",
+          "terminal": "term-dxb-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-dxb-5",
+          "gate_code": "C02",
+          "terminal": "term-dxb-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-dxb-6",
+          "gate_code": "C03",
+          "terminal": "term-dxb-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-dxb-gate-1",
+            "type": "gate",
+            "ref": "gate-dxb-1",
+            "lat": 25.2548,
+            "lon": 55.3601
+          },
+          {
+            "id": "n-dxb-gate-2",
+            "type": "gate",
+            "ref": "gate-dxb-2",
+            "lat": 25.2555,
+            "lon": 55.362
+          },
+          {
+            "id": "n-dxb-gate-3",
+            "type": "gate",
+            "ref": "gate-dxb-3",
+            "lat": 25.256,
+            "lon": 55.3648
+          },
+          {
+            "id": "n-dxb-gate-4",
+            "type": "gate",
+            "ref": "gate-dxb-4",
+            "lat": 25.2532,
+            "lon": 55.358
+          },
+          {
+            "id": "n-dxb-gate-5",
+            "type": "gate",
+            "ref": "gate-dxb-5",
+            "lat": 25.2528,
+            "lon": 55.356
+          },
+          {
+            "id": "n-dxb-gate-6",
+            "type": "gate",
+            "ref": "gate-dxb-6",
+            "lat": 25.254,
+            "lon": 55.37
+          },
+          {
+            "id": "n-dxb-int-A",
+            "type": "intersection",
+            "lat": 25.2545,
+            "lon": 55.359
+          },
+          {
+            "id": "n-dxb-int-B",
+            "type": "intersection",
+            "lat": 25.2552,
+            "lon": 55.364
+          },
+          {
+            "id": "n-dxb-int-C",
+            "type": "intersection",
+            "lat": 25.2535,
+            "lon": 55.367
+          },
+          {
+            "id": "n-dxb-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-dxb-1",
+            "lat": 25.258,
+            "lon": 55.31
+          },
+          {
+            "id": "n-dxb-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-dxb-1",
+            "lat": 25.258,
+            "lon": 55.42
+          },
+          {
+            "id": "n-dxb-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-dxb-2",
+            "lat": 25.251,
+            "lon": 55.315
+          },
+          {
+            "id": "n-dxb-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-dxb-2",
+            "lat": 25.251,
+            "lon": 55.415
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-dxb-gate-1",
+            "to_node_id": "n-dxb-int-A",
+            "taxiway": "A",
+            "distance_m": 300
+          },
+          {
+            "from_node_id": "n-dxb-gate-2",
+            "to_node_id": "n-dxb-int-B",
+            "taxiway": "A",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-dxb-gate-3",
+            "to_node_id": "n-dxb-int-B",
+            "taxiway": "B",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-dxb-gate-4",
+            "to_node_id": "n-dxb-int-A",
+            "taxiway": "C",
+            "distance_m": 220
+          },
+          {
+            "from_node_id": "n-dxb-gate-5",
+            "to_node_id": "n-dxb-int-A",
+            "taxiway": "C",
+            "distance_m": 240
+          },
+          {
+            "from_node_id": "n-dxb-gate-6",
+            "to_node_id": "n-dxb-int-C",
+            "taxiway": "D",
+            "distance_m": 210
+          },
+          {
+            "from_node_id": "n-dxb-int-A",
+            "to_node_id": "n-dxb-int-B",
+            "taxiway": "M",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-dxb-int-B",
+            "to_node_id": "n-dxb-int-C",
+            "taxiway": "M",
+            "distance_m": 450
+          },
+          {
+            "from_node_id": "n-dxb-int-A",
+            "to_node_id": "n-dxb-rwy1-thr-W",
+            "taxiway": "W1",
+            "distance_m": 1400
+          },
+          {
+            "from_node_id": "n-dxb-int-C",
+            "to_node_id": "n-dxb-rwy1-thr-E",
+            "taxiway": "E1",
+            "distance_m": 1300
+          },
+          {
+            "from_node_id": "n-dxb-int-A",
+            "to_node_id": "n-dxb-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 1350
+          },
+          {
+            "from_node_id": "n-dxb-int-C",
+            "to_node_id": "n-dxb-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 1250
+          }
+        ]
+      }
     },
     {
       "id": "apt-006",
       "airport_code": "FRA",
       "lat": 50.0379,
-      "long": 8.5622,
+      "lon": 8.5622,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-fra-1", "terminal_code": "T1", "terminal_airport": "apt-006", "max_planes": 35, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-fra-2", "terminal_code": "T2", "terminal_airport": "apt-006", "max_planes": 40, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-fra-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-006",
+          "max_planes": 35,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-fra-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-006",
+          "max_planes": 40,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-fra-1", "airport_id": "apt-006", "length": 4000, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-fra-2", "airport_id": "apt-006", "length": 4000, "heading": 250, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-fra-3", "airport_id": "apt-006", "length": 3750, "heading": 180, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-fra-4", "airport_id": "apt-006", "length": 4000, "heading": 360, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-fra-1",
+          "airport_id": "apt-006",
+          "length": 4000,
+          "heading": 70,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-fra-2",
+          "airport_id": "apt-006",
+          "length": 4000,
+          "heading": 250,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-fra-3",
+          "airport_id": "apt-006",
+          "length": 3750,
+          "heading": 180,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-fra-4",
+          "airport_id": "apt-006",
+          "length": 4000,
+          "heading": 360,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-fra-1", "gate_code": "A01", "terminal": "term-fra-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-fra-2", "gate_code": "A02", "terminal": "term-fra-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-fra-3", "gate_code": "B01", "terminal": "term-fra-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-fra-4", "gate_code": "B02", "terminal": "term-fra-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-fra-1",
+          "gate_code": "A01",
+          "terminal": "term-fra-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-fra-2",
+          "gate_code": "A02",
+          "terminal": "term-fra-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-fra-3",
+          "gate_code": "B01",
+          "terminal": "term-fra-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-fra-4",
+          "gate_code": "B02",
+          "terminal": "term-fra-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-fra-gate-1",
+            "type": "gate",
+            "ref": "gate-fra-1",
+            "lat": 50.0335,
+            "lon": 8.5708
+          },
+          {
+            "id": "n-fra-gate-2",
+            "type": "gate",
+            "ref": "gate-fra-2",
+            "lat": 50.0342,
+            "lon": 8.5725
+          },
+          {
+            "id": "n-fra-gate-3",
+            "type": "gate",
+            "ref": "gate-fra-3",
+            "lat": 50.038,
+            "lon": 8.562
+          },
+          {
+            "id": "n-fra-gate-4",
+            "type": "gate",
+            "ref": "gate-fra-4",
+            "lat": 50.0388,
+            "lon": 8.564
+          },
+          {
+            "id": "n-fra-int-A",
+            "type": "intersection",
+            "lat": 50.033,
+            "lon": 8.568
+          },
+          {
+            "id": "n-fra-int-B",
+            "type": "intersection",
+            "lat": 50.036,
+            "lon": 8.566
+          },
+          {
+            "id": "n-fra-int-C",
+            "type": "intersection",
+            "lat": 50.0395,
+            "lon": 8.56
+          },
+          {
+            "id": "n-fra-int-D",
+            "type": "intersection",
+            "lat": 50.032,
+            "lon": 8.555
+          },
+          {
+            "id": "n-fra-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-1",
+            "lat": 50.0268,
+            "lon": 8.525
+          },
+          {
+            "id": "n-fra-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-1",
+            "lat": 50.0268,
+            "lon": 8.605
+          },
+          {
+            "id": "n-fra-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-2",
+            "lat": 50.0302,
+            "lon": 8.52
+          },
+          {
+            "id": "n-fra-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-2",
+            "lat": 50.0302,
+            "lon": 8.6
+          },
+          {
+            "id": "n-fra-rwy3-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-3",
+            "lat": 50.043,
+            "lon": 8.53
+          },
+          {
+            "id": "n-fra-rwy3-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-3",
+            "lat": 50.043,
+            "lon": 8.61
+          },
+          {
+            "id": "n-fra-rwy4-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-4",
+            "lat": 50.046,
+            "lon": 8.535
+          },
+          {
+            "id": "n-fra-rwy4-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-fra-4",
+            "lat": 50.046,
+            "lon": 8.605
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-fra-gate-1",
+            "to_node_id": "n-fra-int-A",
+            "taxiway": "N1",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-fra-gate-2",
+            "to_node_id": "n-fra-int-A",
+            "taxiway": "N1",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-fra-gate-3",
+            "to_node_id": "n-fra-int-B",
+            "taxiway": "N5",
+            "distance_m": 240
+          },
+          {
+            "from_node_id": "n-fra-gate-4",
+            "to_node_id": "n-fra-int-C",
+            "taxiway": "N5",
+            "distance_m": 220
+          },
+          {
+            "from_node_id": "n-fra-int-A",
+            "to_node_id": "n-fra-int-B",
+            "taxiway": "M",
+            "distance_m": 700
+          },
+          {
+            "from_node_id": "n-fra-int-B",
+            "to_node_id": "n-fra-int-C",
+            "taxiway": "M",
+            "distance_m": 650
+          },
+          {
+            "from_node_id": "n-fra-int-A",
+            "to_node_id": "n-fra-int-D",
+            "taxiway": "S",
+            "distance_m": 380
+          },
+          {
+            "from_node_id": "n-fra-int-D",
+            "to_node_id": "n-fra-rwy1-thr-W",
+            "taxiway": "W1",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-fra-int-A",
+            "to_node_id": "n-fra-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 750
+          },
+          {
+            "from_node_id": "n-fra-int-A",
+            "to_node_id": "n-fra-rwy1-thr-E",
+            "taxiway": "E1",
+            "distance_m": 900
+          },
+          {
+            "from_node_id": "n-fra-int-C",
+            "to_node_id": "n-fra-rwy3-thr-W",
+            "taxiway": "W3",
+            "distance_m": 850
+          },
+          {
+            "from_node_id": "n-fra-int-C",
+            "to_node_id": "n-fra-rwy4-thr-W",
+            "taxiway": "W4",
+            "distance_m": 900
+          }
+        ]
+      }
     },
     {
       "id": "apt-007",
       "airport_code": "AMS",
       "lat": 52.3086,
-      "long": 4.7639,
+      "lon": 4.7639,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-ams-1", "terminal_code": "T1", "terminal_airport": "apt-007", "max_planes": 45, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-ams-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-007",
+          "max_planes": 45,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-ams-1", "airport_id": "apt-007", "length": 3800, "heading": 180, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ams-2", "airport_id": "apt-007", "length": 3400, "heading": 220, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ams-3", "airport_id": "apt-007", "length": 3453, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ams-4", "airport_id": "apt-007", "length": 2014, "heading": 40, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ams-5", "airport_id": "apt-007", "length": 3500, "heading": 320, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-ams-6", "airport_id": "apt-007", "length": 3400, "heading": 360, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-ams-1",
+          "airport_id": "apt-007",
+          "length": 3800,
+          "heading": 180,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-ams-2",
+          "airport_id": "apt-007",
+          "length": 3400,
+          "heading": 220,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-ams-3",
+          "airport_id": "apt-007",
+          "length": 3453,
+          "heading": 270,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-ams-4",
+          "airport_id": "apt-007",
+          "length": 2014,
+          "heading": 40,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-ams-5",
+          "airport_id": "apt-007",
+          "length": 3500,
+          "heading": 320,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-ams-6",
+          "airport_id": "apt-007",
+          "length": 3400,
+          "heading": 360,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-ams-1", "gate_code": "A01", "terminal": "term-ams-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ams-2", "gate_code": "A02", "terminal": "term-ams-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-ams-3", "gate_code": "A03", "terminal": "term-ams-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-ams-1",
+          "gate_code": "A01",
+          "terminal": "term-ams-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ams-2",
+          "gate_code": "A02",
+          "terminal": "term-ams-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-ams-3",
+          "gate_code": "A03",
+          "terminal": "term-ams-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-ams-gate-1",
+            "type": "gate",
+            "ref": "gate-ams-1",
+            "lat": 52.3094,
+            "lon": 4.7625
+          },
+          {
+            "id": "n-ams-gate-2",
+            "type": "gate",
+            "ref": "gate-ams-2",
+            "lat": 52.31,
+            "lon": 4.764
+          },
+          {
+            "id": "n-ams-gate-3",
+            "type": "gate",
+            "ref": "gate-ams-3",
+            "lat": 52.3088,
+            "lon": 4.761
+          },
+          {
+            "id": "n-ams-int-A",
+            "type": "intersection",
+            "lat": 52.3095,
+            "lon": 4.758
+          },
+          {
+            "id": "n-ams-int-B",
+            "type": "intersection",
+            "lat": 52.311,
+            "lon": 4.755
+          },
+          {
+            "id": "n-ams-int-C",
+            "type": "intersection",
+            "lat": 52.308,
+            "lon": 4.756
+          },
+          {
+            "id": "n-ams-int-D",
+            "type": "intersection",
+            "lat": 52.307,
+            "lon": 4.77
+          },
+          {
+            "id": "n-ams-int-E",
+            "type": "intersection",
+            "lat": 52.312,
+            "lon": 4.772
+          },
+          {
+            "id": "n-ams-rwy1-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-1",
+            "lat": 52.34,
+            "lon": 4.738
+          },
+          {
+            "id": "n-ams-rwy1-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-1",
+            "lat": 52.285,
+            "lon": 4.738
+          },
+          {
+            "id": "n-ams-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-2",
+            "lat": 52.302,
+            "lon": 4.71
+          },
+          {
+            "id": "n-ams-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-2",
+            "lat": 52.302,
+            "lon": 4.81
+          },
+          {
+            "id": "n-ams-rwy3-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-3",
+            "lat": 52.318,
+            "lon": 4.715
+          },
+          {
+            "id": "n-ams-rwy3-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-3",
+            "lat": 52.318,
+            "lon": 4.805
+          },
+          {
+            "id": "n-ams-rwy4-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-4",
+            "lat": 52.326,
+            "lon": 4.69
+          },
+          {
+            "id": "n-ams-rwy4-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-4",
+            "lat": 52.326,
+            "lon": 4.8
+          },
+          {
+            "id": "n-ams-rwy5-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-5",
+            "lat": 52.335,
+            "lon": 4.79
+          },
+          {
+            "id": "n-ams-rwy5-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-5",
+            "lat": 52.29,
+            "lon": 4.79
+          },
+          {
+            "id": "n-ams-rwy6-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-6",
+            "lat": 52.32,
+            "lon": 4.805
+          },
+          {
+            "id": "n-ams-rwy6-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-ams-6",
+            "lat": 52.296,
+            "lon": 4.78
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-ams-gate-1",
+            "to_node_id": "n-ams-int-A",
+            "taxiway": "E",
+            "distance_m": 350
+          },
+          {
+            "from_node_id": "n-ams-gate-2",
+            "to_node_id": "n-ams-int-E",
+            "taxiway": "E",
+            "distance_m": 320
+          },
+          {
+            "from_node_id": "n-ams-gate-3",
+            "to_node_id": "n-ams-int-D",
+            "taxiway": "F",
+            "distance_m": 340
+          },
+          {
+            "from_node_id": "n-ams-int-A",
+            "to_node_id": "n-ams-int-B",
+            "taxiway": "N",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-ams-int-A",
+            "to_node_id": "n-ams-int-C",
+            "taxiway": "S",
+            "distance_m": 480
+          },
+          {
+            "from_node_id": "n-ams-int-B",
+            "to_node_id": "n-ams-int-E",
+            "taxiway": "NE",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-ams-int-C",
+            "to_node_id": "n-ams-int-D",
+            "taxiway": "SE",
+            "distance_m": 580
+          },
+          {
+            "from_node_id": "n-ams-int-B",
+            "to_node_id": "n-ams-rwy3-thr-W",
+            "taxiway": "W3",
+            "distance_m": 900
+          },
+          {
+            "from_node_id": "n-ams-int-B",
+            "to_node_id": "n-ams-rwy4-thr-W",
+            "taxiway": "W4",
+            "distance_m": 1200
+          },
+          {
+            "from_node_id": "n-ams-int-A",
+            "to_node_id": "n-ams-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-ams-int-E",
+            "to_node_id": "n-ams-rwy5-thr-N",
+            "taxiway": "N5",
+            "distance_m": 750
+          },
+          {
+            "from_node_id": "n-ams-int-D",
+            "to_node_id": "n-ams-rwy6-thr-S",
+            "taxiway": "S6",
+            "distance_m": 700
+          },
+          {
+            "from_node_id": "n-ams-int-C",
+            "to_node_id": "n-ams-rwy1-thr-S",
+            "taxiway": "S1",
+            "distance_m": 950
+          }
+        ]
+      }
     },
     {
       "id": "apt-008",
       "airport_code": "SIN",
       "lat": 1.3644,
-      "long": 103.9915,
+      "lon": 103.9915,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-sin-1", "terminal_code": "T1", "terminal_airport": "apt-008", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-sin-2", "terminal_code": "T2", "terminal_airport": "apt-008", "max_planes": 28, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-sin-3", "terminal_code": "T3", "terminal_airport": "apt-008", "max_planes": 35, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-sin-4", "terminal_code": "T4", "terminal_airport": "apt-008", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-sin-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-008",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-sin-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-008",
+          "max_planes": 28,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-sin-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-008",
+          "max_planes": 35,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-sin-4",
+          "terminal_code": "T4",
+          "terminal_airport": "apt-008",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-sin-1", "airport_id": "apt-008", "length": 4000, "heading": 20, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-sin-2", "airport_id": "apt-008", "length": 4000, "heading": 200, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-sin-1",
+          "airport_id": "apt-008",
+          "length": 4000,
+          "heading": 20,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-sin-2",
+          "airport_id": "apt-008",
+          "length": 4000,
+          "heading": 200,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-sin-1", "gate_code": "A01", "terminal": "term-sin-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-sin-2", "gate_code": "B01", "terminal": "term-sin-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-sin-3", "gate_code": "C01", "terminal": "term-sin-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-sin-4", "gate_code": "D01", "terminal": "term-sin-4", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-sin-1",
+          "gate_code": "A01",
+          "terminal": "term-sin-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-sin-2",
+          "gate_code": "B01",
+          "terminal": "term-sin-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-sin-3",
+          "gate_code": "C01",
+          "terminal": "term-sin-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-sin-4",
+          "gate_code": "D01",
+          "terminal": "term-sin-4",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-sin-gate-1",
+            "type": "gate",
+            "ref": "gate-sin-1",
+            "lat": 1.3548,
+            "lon": 103.9848
+          },
+          {
+            "id": "n-sin-gate-2",
+            "type": "gate",
+            "ref": "gate-sin-2",
+            "lat": 1.3562,
+            "lon": 103.987
+          },
+          {
+            "id": "n-sin-gate-3",
+            "type": "gate",
+            "ref": "gate-sin-3",
+            "lat": 1.358,
+            "lon": 103.992
+          },
+          {
+            "id": "n-sin-gate-4",
+            "type": "gate",
+            "ref": "gate-sin-4",
+            "lat": 1.354,
+            "lon": 103.99
+          },
+          {
+            "id": "n-sin-int-A",
+            "type": "intersection",
+            "lat": 1.3555,
+            "lon": 103.9855
+          },
+          {
+            "id": "n-sin-int-B",
+            "type": "intersection",
+            "lat": 1.357,
+            "lon": 103.989
+          },
+          {
+            "id": "n-sin-int-C",
+            "type": "intersection",
+            "lat": 1.3545,
+            "lon": 103.993
+          },
+          {
+            "id": "n-sin-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-sin-1",
+            "lat": 1.36,
+            "lon": 103.958
+          },
+          {
+            "id": "n-sin-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-sin-1",
+            "lat": 1.36,
+            "lon": 104.018
+          },
+          {
+            "id": "n-sin-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-sin-2",
+            "lat": 1.352,
+            "lon": 103.96
+          },
+          {
+            "id": "n-sin-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-sin-2",
+            "lat": 1.352,
+            "lon": 104.016
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-sin-gate-1",
+            "to_node_id": "n-sin-int-A",
+            "taxiway": "A1",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-sin-gate-2",
+            "to_node_id": "n-sin-int-A",
+            "taxiway": "A1",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-sin-gate-3",
+            "to_node_id": "n-sin-int-B",
+            "taxiway": "B1",
+            "distance_m": 300
+          },
+          {
+            "from_node_id": "n-sin-gate-4",
+            "to_node_id": "n-sin-int-C",
+            "taxiway": "C1",
+            "distance_m": 270
+          },
+          {
+            "from_node_id": "n-sin-int-A",
+            "to_node_id": "n-sin-int-B",
+            "taxiway": "M1",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-sin-int-B",
+            "to_node_id": "n-sin-int-C",
+            "taxiway": "M1",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-sin-int-A",
+            "to_node_id": "n-sin-rwy1-thr-W",
+            "taxiway": "W1",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-sin-int-C",
+            "to_node_id": "n-sin-rwy1-thr-E",
+            "taxiway": "E1",
+            "distance_m": 750
+          },
+          {
+            "from_node_id": "n-sin-int-A",
+            "to_node_id": "n-sin-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 750
+          },
+          {
+            "from_node_id": "n-sin-int-C",
+            "to_node_id": "n-sin-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 700
+          }
+        ]
+      }
     },
     {
       "id": "apt-009",
       "airport_code": "HND",
       "lat": 35.5494,
-      "long": 139.7798,
+      "lon": 139.7798,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-hnd-1", "terminal_code": "T1", "terminal_airport": "apt-009", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-hnd-2", "terminal_code": "T2", "terminal_airport": "apt-009", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-hnd-3", "terminal_code": "T3", "terminal_airport": "apt-009", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-hnd-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-009",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-hnd-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-009",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-hnd-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-009",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-hnd-1", "airport_id": "apt-009", "length": 3000, "heading": 160, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-hnd-2", "airport_id": "apt-009", "length": 3360, "heading": 340, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-hnd-3", "airport_id": "apt-009", "length": 3000, "heading": 40, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-hnd-4", "airport_id": "apt-009", "length": 2500, "heading": 220, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-hnd-1",
+          "airport_id": "apt-009",
+          "length": 3000,
+          "heading": 160,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-hnd-2",
+          "airport_id": "apt-009",
+          "length": 3360,
+          "heading": 340,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-hnd-3",
+          "airport_id": "apt-009",
+          "length": 3000,
+          "heading": 40,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-hnd-4",
+          "airport_id": "apt-009",
+          "length": 2500,
+          "heading": 220,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-hnd-1", "gate_code": "A01", "terminal": "term-hnd-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-hnd-2", "gate_code": "B01", "terminal": "term-hnd-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-hnd-3", "gate_code": "C01", "terminal": "term-hnd-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-hnd-1",
+          "gate_code": "A01",
+          "terminal": "term-hnd-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-hnd-2",
+          "gate_code": "B01",
+          "terminal": "term-hnd-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-hnd-3",
+          "gate_code": "C01",
+          "terminal": "term-hnd-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-hnd-gate-1",
+            "type": "gate",
+            "ref": "gate-hnd-1",
+            "lat": 35.553,
+            "lon": 139.774
+          },
+          {
+            "id": "n-hnd-gate-2",
+            "type": "gate",
+            "ref": "gate-hnd-2",
+            "lat": 35.5548,
+            "lon": 139.776
+          },
+          {
+            "id": "n-hnd-gate-3",
+            "type": "gate",
+            "ref": "gate-hnd-3",
+            "lat": 35.548,
+            "lon": 139.772
+          },
+          {
+            "id": "n-hnd-int-A",
+            "type": "intersection",
+            "lat": 35.551,
+            "lon": 139.773
+          },
+          {
+            "id": "n-hnd-int-B",
+            "type": "intersection",
+            "lat": 35.554,
+            "lon": 139.77
+          },
+          {
+            "id": "n-hnd-int-C",
+            "type": "intersection",
+            "lat": 35.549,
+            "lon": 139.78
+          },
+          {
+            "id": "n-hnd-int-D",
+            "type": "intersection",
+            "lat": 35.556,
+            "lon": 139.765
+          },
+          {
+            "id": "n-hnd-rwy1-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-1",
+            "lat": 35.57,
+            "lon": 139.768
+          },
+          {
+            "id": "n-hnd-rwy1-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-1",
+            "lat": 35.532,
+            "lon": 139.768
+          },
+          {
+            "id": "n-hnd-rwy2-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-2",
+            "lat": 35.568,
+            "lon": 139.78
+          },
+          {
+            "id": "n-hnd-rwy2-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-2",
+            "lat": 35.535,
+            "lon": 139.78
+          },
+          {
+            "id": "n-hnd-rwy3-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-3",
+            "lat": 35.558,
+            "lon": 139.795
+          },
+          {
+            "id": "n-hnd-rwy3-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-3",
+            "lat": 35.543,
+            "lon": 139.75
+          },
+          {
+            "id": "n-hnd-rwy4-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-4",
+            "lat": 35.546,
+            "lon": 139.798
+          },
+          {
+            "id": "n-hnd-rwy4-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-hnd-4",
+            "lat": 35.56,
+            "lon": 139.748
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-hnd-gate-1",
+            "to_node_id": "n-hnd-int-A",
+            "taxiway": "A",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-hnd-gate-2",
+            "to_node_id": "n-hnd-int-B",
+            "taxiway": "B",
+            "distance_m": 300
+          },
+          {
+            "from_node_id": "n-hnd-gate-3",
+            "to_node_id": "n-hnd-int-A",
+            "taxiway": "A",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-hnd-int-A",
+            "to_node_id": "n-hnd-int-B",
+            "taxiway": "N",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-hnd-int-A",
+            "to_node_id": "n-hnd-int-C",
+            "taxiway": "E",
+            "distance_m": 480
+          },
+          {
+            "from_node_id": "n-hnd-int-B",
+            "to_node_id": "n-hnd-int-D",
+            "taxiway": "NW",
+            "distance_m": 450
+          },
+          {
+            "from_node_id": "n-hnd-int-B",
+            "to_node_id": "n-hnd-rwy1-thr-N",
+            "taxiway": "W1",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-hnd-int-D",
+            "to_node_id": "n-hnd-rwy1-thr-N",
+            "taxiway": "W1",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-hnd-int-C",
+            "to_node_id": "n-hnd-rwy2-thr-S",
+            "taxiway": "E2",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-hnd-int-B",
+            "to_node_id": "n-hnd-rwy3-thr-W",
+            "taxiway": "W3",
+            "distance_m": 650
+          },
+          {
+            "from_node_id": "n-hnd-int-C",
+            "to_node_id": "n-hnd-rwy3-thr-E",
+            "taxiway": "E3",
+            "distance_m": 700
+          },
+          {
+            "from_node_id": "n-hnd-int-D",
+            "to_node_id": "n-hnd-rwy4-thr-W",
+            "taxiway": "W4",
+            "distance_m": 580
+          }
+        ]
+      }
     },
     {
       "id": "apt-010",
       "airport_code": "LAX",
       "lat": 33.9425,
-      "long": -118.4081,
+      "lon": -118.4081,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-lax-1", "terminal_code": "T1", "terminal_airport": "apt-010", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-lax-2", "terminal_code": "T2", "terminal_airport": "apt-010", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-lax-3", "terminal_code": "T3", "terminal_airport": "apt-010", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-lax-b", "terminal_code": "TB", "terminal_airport": "apt-010", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-lax-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-010",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-lax-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-010",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-lax-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-010",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-lax-b",
+          "terminal_code": "TB",
+          "terminal_airport": "apt-010",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-lax-1", "airport_id": "apt-010", "length": 3685, "heading": 250, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-lax-2", "airport_id": "apt-010", "length": 3685, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-lax-3", "airport_id": "apt-010", "length": 3382, "heading": 250, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-lax-4", "airport_id": "apt-010", "length": 3382, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-lax-1",
+          "airport_id": "apt-010",
+          "length": 3685,
+          "heading": 250,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-lax-2",
+          "airport_id": "apt-010",
+          "length": 3685,
+          "heading": 70,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-lax-3",
+          "airport_id": "apt-010",
+          "length": 3382,
+          "heading": 250,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-lax-4",
+          "airport_id": "apt-010",
+          "length": 3382,
+          "heading": 70,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-lax-1", "gate_code": "A01", "terminal": "term-lax-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lax-2", "gate_code": "B01", "terminal": "term-lax-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lax-3", "gate_code": "C01", "terminal": "term-lax-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-lax-4", "gate_code": "D01", "terminal": "term-lax-b", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-lax-1",
+          "gate_code": "A01",
+          "terminal": "term-lax-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lax-2",
+          "gate_code": "B01",
+          "terminal": "term-lax-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lax-3",
+          "gate_code": "C01",
+          "terminal": "term-lax-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-lax-4",
+          "gate_code": "D01",
+          "terminal": "term-lax-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-lax-gate-1",
+            "type": "gate",
+            "ref": "gate-lax-1",
+            "lat": 33.9445,
+            "lon": -118.4078
+          },
+          {
+            "id": "n-lax-gate-2",
+            "type": "gate",
+            "ref": "gate-lax-2",
+            "lat": 33.946,
+            "lon": -118.4055
+          },
+          {
+            "id": "n-lax-gate-3",
+            "type": "gate",
+            "ref": "gate-lax-3",
+            "lat": 33.9432,
+            "lon": -118.409
+          },
+          {
+            "id": "n-lax-gate-4",
+            "type": "gate",
+            "ref": "gate-lax-4",
+            "lat": 33.9418,
+            "lon": -118.403
+          },
+          {
+            "id": "n-lax-int-A",
+            "type": "intersection",
+            "lat": 33.945,
+            "lon": -118.407
+          },
+          {
+            "id": "n-lax-int-B",
+            "type": "intersection",
+            "lat": 33.944,
+            "lon": -118.404
+          },
+          {
+            "id": "n-lax-int-C",
+            "type": "intersection",
+            "lat": 33.9425,
+            "lon": -118.406
+          },
+          {
+            "id": "n-lax-int-D",
+            "type": "intersection",
+            "lat": 33.9465,
+            "lon": -118.402
+          },
+          {
+            "id": "n-lax-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-1",
+            "lat": 33.9502,
+            "lon": -118.438
+          },
+          {
+            "id": "n-lax-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-1",
+            "lat": 33.9502,
+            "lon": -118.38
+          },
+          {
+            "id": "n-lax-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-2",
+            "lat": 33.9478,
+            "lon": -118.435
+          },
+          {
+            "id": "n-lax-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-2",
+            "lat": 33.9478,
+            "lon": -118.382
+          },
+          {
+            "id": "n-lax-rwy3-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-3",
+            "lat": 33.942,
+            "lon": -118.432
+          },
+          {
+            "id": "n-lax-rwy3-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-3",
+            "lat": 33.942,
+            "lon": -118.384
+          },
+          {
+            "id": "n-lax-rwy4-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-4",
+            "lat": 33.9395,
+            "lon": -118.43
+          },
+          {
+            "id": "n-lax-rwy4-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-lax-4",
+            "lat": 33.9395,
+            "lon": -118.386
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-lax-gate-1",
+            "to_node_id": "n-lax-int-A",
+            "taxiway": "AA",
+            "distance_m": 300
+          },
+          {
+            "from_node_id": "n-lax-gate-2",
+            "to_node_id": "n-lax-int-D",
+            "taxiway": "AA",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-lax-gate-3",
+            "to_node_id": "n-lax-int-C",
+            "taxiway": "BB",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-lax-gate-4",
+            "to_node_id": "n-lax-int-B",
+            "taxiway": "BB",
+            "distance_m": 240
+          },
+          {
+            "from_node_id": "n-lax-int-A",
+            "to_node_id": "n-lax-int-B",
+            "taxiway": "N",
+            "distance_m": 700
+          },
+          {
+            "from_node_id": "n-lax-int-B",
+            "to_node_id": "n-lax-int-C",
+            "taxiway": "N",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-lax-int-A",
+            "to_node_id": "n-lax-int-D",
+            "taxiway": "NA",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-lax-int-A",
+            "to_node_id": "n-lax-rwy1-thr-W",
+            "taxiway": "W1",
+            "distance_m": 1000
+          },
+          {
+            "from_node_id": "n-lax-int-D",
+            "to_node_id": "n-lax-rwy1-thr-E",
+            "taxiway": "E1",
+            "distance_m": 850
+          },
+          {
+            "from_node_id": "n-lax-int-A",
+            "to_node_id": "n-lax-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 950
+          },
+          {
+            "from_node_id": "n-lax-int-C",
+            "to_node_id": "n-lax-rwy3-thr-W",
+            "taxiway": "W3",
+            "distance_m": 900
+          },
+          {
+            "from_node_id": "n-lax-int-C",
+            "to_node_id": "n-lax-rwy4-thr-W",
+            "taxiway": "W4",
+            "distance_m": 850
+          }
+        ]
+      }
     },
     {
       "id": "apt-011",
       "airport_code": "SYD",
       "lat": -33.9399,
-      "long": 151.1753,
+      "lon": 151.1753,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-syd-1", "terminal_code": "T1", "terminal_airport": "apt-011", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-syd-2", "terminal_code": "T2", "terminal_airport": "apt-011", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-syd-3", "terminal_code": "T3", "terminal_airport": "apt-011", "max_planes": 18, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-syd-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-011",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-syd-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-011",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-syd-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-011",
+          "max_planes": 18,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-syd-1", "airport_id": "apt-011", "length": 3962, "heading": 160, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-syd-2", "airport_id": "apt-011", "length": 2530, "heading": 70, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-syd-3", "airport_id": "apt-011", "length": 3962, "heading": 340, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-syd-1",
+          "airport_id": "apt-011",
+          "length": 3962,
+          "heading": 160,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-syd-2",
+          "airport_id": "apt-011",
+          "length": 2530,
+          "heading": 70,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-syd-3",
+          "airport_id": "apt-011",
+          "length": 3962,
+          "heading": 340,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-syd-1", "gate_code": "A01", "terminal": "term-syd-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-syd-2", "gate_code": "B01", "terminal": "term-syd-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-syd-3", "gate_code": "C01", "terminal": "term-syd-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-syd-1",
+          "gate_code": "A01",
+          "terminal": "term-syd-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-syd-2",
+          "gate_code": "B01",
+          "terminal": "term-syd-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-syd-3",
+          "gate_code": "C01",
+          "terminal": "term-syd-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-syd-gate-1",
+            "type": "gate",
+            "ref": "gate-syd-1",
+            "lat": -33.9388,
+            "lon": 151.1762
+          },
+          {
+            "id": "n-syd-gate-2",
+            "type": "gate",
+            "ref": "gate-syd-2",
+            "lat": -33.9372,
+            "lon": 151.178
+          },
+          {
+            "id": "n-syd-gate-3",
+            "type": "gate",
+            "ref": "gate-syd-3",
+            "lat": -33.94,
+            "lon": 151.1745
+          },
+          {
+            "id": "n-syd-int-A",
+            "type": "intersection",
+            "lat": -33.9385,
+            "lon": 151.175
+          },
+          {
+            "id": "n-syd-int-B",
+            "type": "intersection",
+            "lat": -33.9368,
+            "lon": 151.18
+          },
+          {
+            "id": "n-syd-int-C",
+            "type": "intersection",
+            "lat": -33.941,
+            "lon": 151.172
+          },
+          {
+            "id": "n-syd-rwy1-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-syd-1",
+            "lat": -33.912,
+            "lon": 151.177
+          },
+          {
+            "id": "n-syd-rwy1-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-syd-1",
+            "lat": -33.965,
+            "lon": 151.177
+          },
+          {
+            "id": "n-syd-rwy2-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-syd-2",
+            "lat": -33.915,
+            "lon": 151.19
+          },
+          {
+            "id": "n-syd-rwy2-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-syd-2",
+            "lat": -33.962,
+            "lon": 151.19
+          },
+          {
+            "id": "n-syd-rwy3-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-syd-3",
+            "lat": -33.946,
+            "lon": 151.15
+          },
+          {
+            "id": "n-syd-rwy3-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-syd-3",
+            "lat": -33.932,
+            "lon": 151.21
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-syd-gate-1",
+            "to_node_id": "n-syd-int-A",
+            "taxiway": "A",
+            "distance_m": 280
+          },
+          {
+            "from_node_id": "n-syd-gate-2",
+            "to_node_id": "n-syd-int-B",
+            "taxiway": "B",
+            "distance_m": 260
+          },
+          {
+            "from_node_id": "n-syd-gate-3",
+            "to_node_id": "n-syd-int-C",
+            "taxiway": "C",
+            "distance_m": 300
+          },
+          {
+            "from_node_id": "n-syd-int-A",
+            "to_node_id": "n-syd-int-B",
+            "taxiway": "N1",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-syd-int-A",
+            "to_node_id": "n-syd-int-C",
+            "taxiway": "S1",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-syd-int-A",
+            "to_node_id": "n-syd-rwy1-thr-S",
+            "taxiway": "W1",
+            "distance_m": 700
+          },
+          {
+            "from_node_id": "n-syd-int-B",
+            "to_node_id": "n-syd-rwy2-thr-S",
+            "taxiway": "E2",
+            "distance_m": 650
+          },
+          {
+            "from_node_id": "n-syd-int-A",
+            "to_node_id": "n-syd-rwy3-thr-W",
+            "taxiway": "W3",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-syd-int-B",
+            "to_node_id": "n-syd-rwy3-thr-E",
+            "taxiway": "E3",
+            "distance_m": 850
+          }
+        ]
+      }
     },
     {
       "id": "apt-012",
       "airport_code": "GRU",
       "lat": -23.4356,
-      "long": -46.4731,
+      "lon": -46.4731,
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "terminals": [
-        { "id": "term-gru-1", "terminal_code": "T1", "terminal_airport": "apt-012", "max_planes": 20, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-gru-2", "terminal_code": "T2", "terminal_airport": "apt-012", "max_planes": 25, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "term-gru-3", "terminal_code": "T3", "terminal_airport": "apt-012", "max_planes": 30, "planes_on_deck": 0, "status": "OPEN", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "term-gru-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-012",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-gru-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-012",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-gru-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-012",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "runways": [
-        { "id": "rwy-gru-1", "airport_id": "apt-012", "length": 3700, "heading": 90, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "rwy-gru-2", "airport_id": "apt-012", "length": 3000, "heading": 270, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
+        {
+          "id": "rwy-gru-1",
+          "airport_id": "apt-012",
+          "length": 3700,
+          "heading": 90,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-gru-2",
+          "airport_id": "apt-012",
+          "length": 3000,
+          "heading": 270,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
       ],
       "gates": [
-        { "id": "gate-gru-1", "gate_code": "A01", "terminal": "term-gru-1", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-gru-2", "gate_code": "B01", "terminal": "term-gru-2", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" },
-        { "id": "gate-gru-3", "gate_code": "C01", "terminal": "term-gru-3", "aircraft_id": null, "status": "FREE", "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z" }
-      ]
+        {
+          "id": "gate-gru-1",
+          "gate_code": "A01",
+          "terminal": "term-gru-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-gru-2",
+          "gate_code": "B01",
+          "terminal": "term-gru-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-gru-3",
+          "gate_code": "C01",
+          "terminal": "term-gru-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-gru-gate-1",
+            "type": "gate",
+            "ref": "gate-gru-1",
+            "lat": -23.4298,
+            "lon": -46.4768
+          },
+          {
+            "id": "n-gru-gate-2",
+            "type": "gate",
+            "ref": "gate-gru-2",
+            "lat": -23.4312,
+            "lon": -46.475
+          },
+          {
+            "id": "n-gru-gate-3",
+            "type": "gate",
+            "ref": "gate-gru-3",
+            "lat": -23.428,
+            "lon": -46.479
+          },
+          {
+            "id": "n-gru-int-A",
+            "type": "intersection",
+            "lat": -23.4295,
+            "lon": -46.476
+          },
+          {
+            "id": "n-gru-int-B",
+            "type": "intersection",
+            "lat": -23.432,
+            "lon": -46.472
+          },
+          {
+            "id": "n-gru-int-C",
+            "type": "intersection",
+            "lat": -23.427,
+            "lon": -46.48
+          },
+          {
+            "id": "n-gru-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-gru-1",
+            "lat": -23.425,
+            "lon": -46.51
+          },
+          {
+            "id": "n-gru-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-gru-1",
+            "lat": -23.425,
+            "lon": -46.44
+          },
+          {
+            "id": "n-gru-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-gru-2",
+            "lat": -23.435,
+            "lon": -46.505
+          },
+          {
+            "id": "n-gru-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-gru-2",
+            "lat": -23.435,
+            "lon": -46.442
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-gru-gate-1",
+            "to_node_id": "n-gru-int-A",
+            "taxiway": "A",
+            "distance_m": 290
+          },
+          {
+            "from_node_id": "n-gru-gate-2",
+            "to_node_id": "n-gru-int-B",
+            "taxiway": "B",
+            "distance_m": 270
+          },
+          {
+            "from_node_id": "n-gru-gate-3",
+            "to_node_id": "n-gru-int-C",
+            "taxiway": "C",
+            "distance_m": 310
+          },
+          {
+            "from_node_id": "n-gru-int-A",
+            "to_node_id": "n-gru-int-B",
+            "taxiway": "M",
+            "distance_m": 650
+          },
+          {
+            "from_node_id": "n-gru-int-A",
+            "to_node_id": "n-gru-int-C",
+            "taxiway": "M",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-gru-int-A",
+            "to_node_id": "n-gru-rwy1-thr-W",
+            "taxiway": "W1",
+            "distance_m": 950
+          },
+          {
+            "from_node_id": "n-gru-int-B",
+            "to_node_id": "n-gru-rwy1-thr-E",
+            "taxiway": "E1",
+            "distance_m": 880
+          },
+          {
+            "from_node_id": "n-gru-int-C",
+            "to_node_id": "n-gru-rwy2-thr-W",
+            "taxiway": "W2",
+            "distance_m": 900
+          },
+          {
+            "from_node_id": "n-gru-int-B",
+            "to_node_id": "n-gru-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 850
+          }
+        ]
+      }
     }
   ]
 }
