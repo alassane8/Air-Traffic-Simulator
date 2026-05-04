@@ -1,6 +1,5 @@
 from datetime import datetime
 import random
-from aircraft import AircraftType
 from gate import GateStatus
 from terminal import TerminalStatus
 
