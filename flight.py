@@ -41,7 +41,7 @@ class FlightPriority(Enum):
 @dataclass
 class Flight:
     id: str
-    flight_code: str 
+    flight_code: str
     flight_status: FlightStatus
     airline_id: str
     aircraft_code: str
@@ -56,9 +56,11 @@ class Flight:
     arrival_gate_code: str
     arrival_runway_code: str
     runway_usage: RunwayUsageType = RunwayUsageType.DEPARTURE
+
     estimated_departure_time: datetime = field(default_factory=datetime.now)
     estimated_arrival_time: datetime = field(default_factory=datetime.now)
     departure_time: datetime = field(default_factory=datetime.now)
     arrival_time: datetime = field(default_factory=datetime.now)
+
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
