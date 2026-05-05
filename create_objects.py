@@ -4,9 +4,9 @@ import uuid
 
 from aircraft import Aircraft, AircraftType
 from airport import Airport
-from airCorridor import AirCorridor, CorridorDirection, CorridorStatus
+from air_corridor import AirCorridor, CorridorDirection, CorridorStatus
 from edge import Edge
-from node import Node
+from node import Node, NodeStatus
 from terminal import Terminal, TerminalStatus
 from gate import Gate, GateStatus
 from airline import Airline
@@ -14,7 +14,7 @@ from runway import Runway, RunwayStatus
 from waypoint import Waypoint, WaypointStatus
 
 
-def createAircrafts(aircraftsData: dict)-> Aircraft:
+def create_aircrafts(aircraftsData: dict)-> Aircraft:
     allAircrafts = {}
 
     for aircraft in aircraftsData.get("aircrafts", []):
@@ -37,7 +37,7 @@ def createAircrafts(aircraftsData: dict)-> Aircraft:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createAirports(airportsData: dict) -> Airport:
+def create_airports(airportsData: dict) -> Airport:
     allAirports = {}
 
     for airport in airportsData.get('airports', []):
@@ -61,7 +61,7 @@ def createAirports(airportsData: dict) -> Airport:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createTerminals(airportsData: dict) -> Terminal:
+def create_terminals(airportsData: dict) -> Terminal:
     allTerminals = {}
 
     for airport in airportsData.get('airports', []):
@@ -84,7 +84,7 @@ def createTerminals(airportsData: dict) -> Terminal:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createAirlines(airlinesData: dict) -> Airline:
+def create_airlines(airlinesData: dict) -> Airline:
     allAirlines = {}
 
     for airline in airlinesData.get('airlines', []):
@@ -105,7 +105,7 @@ def createAirlines(airlinesData: dict) -> Airline:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createGates(airportsData: dict) -> Gate:
+def create_gates(airportsData: dict) -> Gate:
     allGates = {}
 
     for airport in airportsData.get('airports', []):
@@ -127,7 +127,7 @@ def createGates(airportsData: dict) -> Gate:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createRunways(airportsData: dict) -> Runway:
+def create_runways(airportsData: dict) -> Runway:
     allRunways = {}
 
     for airport in airportsData.get('airports', []):
@@ -151,7 +151,7 @@ def createRunways(airportsData: dict) -> Runway:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createAirCorridors(airCorridorsData: dict) -> AirCorridor:
+def create_air_corridors(airCorridorsData: dict) -> AirCorridor:
     allAirCorridors = {}
 
     for airCorridor in airCorridorsData.get('air_corridors', []):
@@ -178,7 +178,7 @@ def createAirCorridors(airCorridorsData: dict) -> AirCorridor:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createWaypoints(airCorridorsData: dict) -> Waypoint:
+def create_waypoints(airCorridorsData: dict) -> Waypoint:
     allWaypoints = {}
 
     
@@ -202,7 +202,7 @@ def createWaypoints(airCorridorsData: dict) -> Waypoint:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-def createEdges(airportsData: dict) -> Edge:
+def create_edges(airportsData: dict) -> Edge:
     allEdges = {}
 
     for airport in airportsData.get('airports', []):
@@ -221,7 +221,7 @@ def createEdges(airportsData: dict) -> Edge:
     return allEdges
 
 
-def createNodes(airportsData: dict) -> Node:
+def create_nodes(airportsData: dict) -> Node:
     allNodes = {}
 
     for airport in airportsData.get('airports', []):
@@ -232,6 +232,7 @@ def createNodes(airportsData: dict) -> Node:
                 node.get("ref", "NULL"),
                 node.get("lat", "NULL"),
                 node.get("lon", "NULL"),
+                node.get("status", NodeStatus.OPEN),
                 node.get("created_at", datetime.now),
                 node.get("updated_at", datetime.now)
             )
@@ -240,15 +241,15 @@ def createNodes(airportsData: dict) -> Node:
     return allNodes
 
 
-def updateAirportsWithRunways(airports: dict, runways: dict):
+def update_airports_with_runways(airports: dict, runways: dict):
     for airport in airports.values():
         airport.runways = [r for r in runways.values() if r.airport_id == airport.id]
 
-def updateAirportsWithGates(airports: dict, gates: dict):
+def update_airports_with_gates(airports: dict, gates: dict):
     for airport in airports.values():
         terminals_ids = [t.id for t in airport.terminals]
         airport.gates = [g for g in gates.values() if g.terminal in terminals_ids]
 
-def updateAirportsWithTerminals(airports: dict, terminals: dict):
+def update_airports_with_terminals(airports: dict, terminals: dict):
     for airport in airports.values():
         airport.terminals = [t for t in terminals.values() if t.airport_id == airport.id]

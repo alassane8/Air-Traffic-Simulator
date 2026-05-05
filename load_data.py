@@ -1,5 +1,5 @@
 import json
 
-def loadData(filename: str) -> dict:
+def load_data(filename: str) -> dict:
     with open(filename, 'r') as file:
         return json.load(file)
