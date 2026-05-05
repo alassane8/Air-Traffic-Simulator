@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
+from typing import Optional
 
 class RunwayUsageType(Enum):
     DEPARTURE = "DEPARTURE"
     ARRIVAL = "ARRIVAL"
-    
 
     def __init__(self, label: str):
         self.label = label
 
 class FlightStatus(Enum):
-    PLANNED   = ("PLANNED", 0)
-    BOARDING  = ("BOARDING", 120)
-    LINEUP  = ("LINEUP", 60)
-    TAKEOFF   = ("TAKEOFF", 6)
+    PLANNED    = ("PLANNED", 0)
+    BOARDING   = ("BOARDING", 120)
+    LINEUP     = ("LINEUP", 60)
+    TAKEOFF    = ("TAKEOFF", 6)
     CLIMBING   = ("CLIMBING", 6)
-    CRUISE    = ("CRUISE", None)
-    DESCENDING  = ("DESCENDING", 60)
-    LANDING   = ("LANDING", 9)
-    PARKED   = ("PARKED", 9)
+    CRUISE     = ("CRUISE", None)
+    DESCENDING = ("DESCENDING", 60)
+    LANDING    = ("LANDING", 9)
+    PARKED     = ("PARKED", 9)
 
     def __init__(self, label: str, duration_seconds: int | None):
         self.label = label
@@ -27,11 +27,11 @@ class FlightStatus(Enum):
 
 
 class FlightPriority(Enum):
-    EMERGENCY = ("EMERGENCY", 1)
+    EMERGENCY     = ("EMERGENCY", 1)
     FUEL_CRITICAL = ("FUEL_CRITICAL", 2)
-    MEDICAL = ("MEDICAL", 3)
-    DELAY = ("DELAY", 4)
-    NORMAL = ("NORMAL", 5)
+    MEDICAL       = ("MEDICAL", 3)
+    DELAY         = ("DELAY", 4)
+    NORMAL        = ("NORMAL", 5)
 
     def __init__(self, label: str, order: int):
         self.label = label
@@ -47,12 +47,12 @@ class Flight:
     aircraft_code: str
     priority: FlightPriority
     depart_airport_code: str
-    depart_terminal_code:str
+    depart_terminal_code: str
     depart_gate_code: str
     depart_runway_code: str
     corridor_code: str
     arrival_airport_code: str
-    arrival_terminal_code:str
+    arrival_terminal_code: str
     arrival_gate_code: str
     arrival_runway_code: str
     runway_usage: RunwayUsageType = RunwayUsageType.DEPARTURE
@@ -62,5 +62,42 @@ class Flight:
     departure_time: datetime = field(default_factory=datetime.now)
     arrival_time: datetime = field(default_factory=datetime.now)
 
+    lat: float = 0.0
+    lon: float = 0.0
+    altitude_ft: float = 0.0
+    heading: float = 0.0
+    speed_knots: float = 0.0
+
+    dest_lat: float = 0.0
+    dest_lon: float = 0.0
+
+    fuel_kg: float = 0.0
+    fuel_burn_rate_kg_per_s: float = 0.0
+
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
+    
+    @property
+    def is_airborne(self) -> bool:
+        return self.flight_status in (
+            FlightStatus.CLIMBING,
+            FlightStatus.CRUISE,
+            FlightStatus.DESCENDING,
+        )
+
+    @property
+    def effective_heading(self) -> float:
+        """Retourne le cap de déviation si actif, sinon le cap normal."""
+        if (self.conflict_avoidance_heading is not None
+                and self.conflict_avoidance_until
+                and datetime.now() < self.conflict_avoidance_until):
+            return self.conflict_avoidance_heading
+        return self.heading
+
+    @property
+    def is_fuel_critical(self) -> bool:
+        """Passe en FUEL_CRITICAL si moins de 30 min de carburant restant."""
+        if self.fuel_burn_rate_kg_per_s <= 0:
+            return False
+        remaining_seconds = self.fuel_kg / self.fuel_burn_rate_kg_per_s
+        return remaining_seconds < 1800  # 30 min
