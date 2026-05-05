@@ -1,5 +1,5 @@
 
-from airCorridor import AirCorridor, CorridorDirection, CorridorStatus
+from air_corridor import AirCorridor, CorridorDirection, CorridorStatus
 from aircraft import Aircraft
 
 

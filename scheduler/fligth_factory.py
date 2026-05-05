@@ -17,7 +17,7 @@ def creatingFlight(airline: Airline, gate: Gate, terminals: dict, choosed_runway
             priority=initFlightPriority(),
             depart_airport_code=terminals[gate.terminal].airport_id,
             depart_terminal_code=gate.terminal,
-            depart_gate_code=gate.gate_code,
+            depart_gate_code=gate.id,
             depart_runway_code=choosed_runway_id,
             corridor_code=None,
             arrival_airport_code=None,

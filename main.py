@@ -1,8 +1,8 @@
-from initProject import initSimulatorData
+from init_project import init_simulator_data
 
 def main() -> int:
 
-    initSimulatorData()
+    init_simulator_data()
 
     return 0
 

@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from airCorridor import AirCorridor
+from air_corridor import AirCorridor
 from aircraft import Aircraft
 from flight import Flight, FlightStatus
 
