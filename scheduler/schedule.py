@@ -27,7 +27,7 @@ def simulation(terminals: dict[Terminal], aircrafts: dict[Aircraft], airports: d
 
         runway_manager.assign_flight_to_arrival_runway(runways, airports, aircrafts, airCorridors)
             
-        # init_logs.log_runways(runways)
+        init_logs.log_runways(runways)
 
         # phase de decollage taxi Algoritm A* -> piste de decollage -> init lat/lon de l'avion 
         for flight in new_departures.values():

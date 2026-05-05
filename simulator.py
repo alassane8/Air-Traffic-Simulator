@@ -30,8 +30,6 @@ def assign_aircrafts_to_gates(aircrafts: dict, gates: dict, terminals: dict) -> 
         if terminal.can_accept_plane() and terminal.is_open():
             terminal.add_plane()
 
-        print(f"Aircraft {selected_aircraft.id} with {selected_aircraft.passengers} on board placed in {selected_gate.id} {selected_gate.terminal} ready for takeoff")
-
         unassigned_aircraft_ids.discard(aircraft_id)
         unassigned_gate_ids.discard(gate_id)
 
