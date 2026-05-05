@@ -31,9 +31,8 @@ def simulation(terminals: dict[Terminal], aircrafts: dict[Aircraft], airports: d
 
         # phase de decollage taxi Algoritm A* -> piste de decollage -> init lat/lon de l'avion 
         for flight in new_departures.values():
-            print(len(f))
             print(get_path_to_runway(flight, nodes, edges))
-
+        #       enlever l'avion de la runway une fois decoller
         #     takeoff(flight)
             occupied_gates.remove(gates[flight.depart_gate_code])
             
