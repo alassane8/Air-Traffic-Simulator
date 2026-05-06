@@ -12,7 +12,6 @@ class RunwayUsageType(Enum):
 
 class FlightStatus(Enum):
     PLANNED    = ("PLANNED", 0)
-    BOARDING   = ("BOARDING", 120)
     LINEUP     = ("LINEUP", 60)
     TAKEOFF    = ("TAKEOFF", 6)
     CLIMBING   = ("CLIMBING", 6)
@@ -24,7 +23,6 @@ class FlightStatus(Enum):
     def __init__(self, label: str, duration_seconds: int | None):
         self.label = label
         self.duration_seconds = duration_seconds
-
 
 class FlightPriority(Enum):
     EMERGENCY     = ("EMERGENCY", 1)
@@ -73,6 +71,8 @@ class Flight:
 
     fuel_kg: float = 0.0
     fuel_burn_rate_kg_per_s: float = 0.0
+
+    time_spent: float = 0.0
 
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)

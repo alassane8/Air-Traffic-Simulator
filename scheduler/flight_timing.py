@@ -9,7 +9,6 @@ def initFlightEstimatedDepartureTime(scheduled_flights: list) -> datetime:
     for flight in range(len(scheduled_flights)):
         if flight == 0:
             scheduled_flights[flight].estimated_departure_time = datetime.now() + timedelta(seconds=FlightStatus.PLANNED.duration_seconds +
-                                                                                        FlightStatus.BOARDING.duration_seconds +
                                                                                         FlightStatus.LINEUP.duration_seconds)
         else:
             scheduled_flights[flight].estimated_departure_time = scheduled_flights[flight - 1].estimated_departure_time + timedelta(seconds=FlightStatus.TAKEOFF.duration_seconds)
