@@ -4,7 +4,8 @@ import copy
 
 from air_corridor import AirCorridor
 from aircraft import AircraftType
-from flight import Flight, RunwayUsageType
+from airport import Airport
+from flight import Flight, FlightStatus, RunwayUsageType
 from flight_helpers import isDeparting, sortByPriority
 from scheduler.corridor_manager import initCorridor
 from scheduler.flight_timing import initFlightCruisingTime, initFlightEstimatedArrivalTime, initFlightEstimatedDepartureTime
@@ -13,7 +14,7 @@ from scheduler.fligth_factory import creatingFlight
 
 def assign_flight_to_departure_runway(terminals: dict, aircrafts: dict, airlines: dict, runways: dict, occupied_gates: list, edges: dict, nodes: dict) -> dict:
     
-    allFlights = {}
+    departure_flights = {}
 
     for gate in occupied_gates:
         terminal = terminals[gate.terminal]
@@ -32,24 +33,21 @@ def assign_flight_to_departure_runway(terminals: dict, aircrafts: dict, airlines
 
         if aircraft_type == AircraftType.NARROW:
             choosed_runway = random.choice(list(airport_runways.values()))
-            # algo  for shortest path to runnway args(choosed_runway, gate, edges, nodes)
             
         elif aircraft_type == AircraftType.LARGE:
             eligible = [r for r in airport_runways.values() if r.id != shortest_runway.id]
             choosed_runway = random.choice(eligible)
-            # algo  for shortest path to runnway args(choosed_runway, gate, edges, nodes)
             
         else:
             choosed_runway = longest_runway
-            # algo  for shortest path to runnway args(choosed_runway, gate, edges, nodes)
-
+            
         choosed_runway_id = choosed_runway.id
-        created_Flight = creatingFlight(airline, gate, terminals, choosed_runway_id)
-        allFlights[created_Flight.id] = created_Flight
-        choosed_runway.add_flight(created_Flight)
-        
+        created_flight = creatingFlight(airline, gate, terminals, choosed_runway_id)
+        departure_flights[created_flight.id] = created_flight
+        choosed_runway.add_flight(created_flight)
+        created_flight.status = FlightStatus.PLANNED
 
-    return allFlights
+    return departure_flights
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,6 +70,8 @@ def assign_flight_to_arrival_runway(runways: dict, airports: dict, aircrafts: di
 
             flight.corridor_code = air_corridor.air_corridor_code
             flight.arrival_airport_code = air_corridor.to_airport
+            flight.dest_lat = get_arrival_airport_lat(flight, airports)
+            flight.dest_lon = get_arrival_airport_lon(flight, airports)
 
             aircraft = aircrafts[flight.aircraft_code]
             cruising_time = initFlightCruisingTime(aircraft, air_corridor)
@@ -93,11 +93,30 @@ def assign_flight_to_arrival_runway(runways: dict, airports: dict, aircrafts: di
             
 def initRunwayArrival(airCorridor: AirCorridor, airports: dict, flight: Flight):
     arrival_airport = airports[airCorridor.to_airport]
+
+    # Vérifier si le vol est déjà schedulé sur une runway d'arrivée
+    for runway in arrival_airport.runways:
+        if any(f.id == flight.id for f in runway.scheduled_flights):
+            return runway  # déjà assigné, rien à faire
+
+    # Première fois — on assigne
     arrival_runway = random.choice(arrival_airport.runways)
-
-    arrival_flight = copy.copy(flight)
-    arrival_flight.runway_usage = RunwayUsageType.ARRIVAL
-
-    arrival_runway.add_flight(arrival_flight)
+    flight.runway_usage = RunwayUsageType.ARRIVAL  # on modifie le vol original, pas une copie
+    arrival_runway.add_flight(flight)
 
     return arrival_runway
+
+def get_arrival_airport_lat(flight: Flight, airports: dict[Airport]) -> str:
+
+    for airport in airports.values():
+        if airport.id == flight.arrival_airport_code:
+            return airport.lat
+    return None
+
+
+def get_arrival_airport_lon(flight: Flight, airports: dict[Airport]) -> str:
+
+    for airport in airports.values():
+        if airport.id == flight.arrival_airport_code:
+            return airport.lon
+    return None
