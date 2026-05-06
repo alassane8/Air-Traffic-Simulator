@@ -26,3 +26,6 @@ class Waypoint:
 
     def is_open(self) -> bool:
         return self.status == WaypointStatus.OPEN
+    
+    def is_closed(self) -> bool:
+        return self.status == WaypointStatus.CLOSED
