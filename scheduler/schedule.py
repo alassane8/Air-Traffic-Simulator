@@ -22,13 +22,12 @@ from waypoint import Waypoint
 def simulation(terminals: dict[Terminal], waypoints: dict[Waypoint], aircrafts: dict[Aircraft], airports: dict[Airport], airCorridors: dict[AirCorridor], airlines: dict[Airline], runways: dict[Runway], occupied_gates: list[Gate], edges: dict[Edge], nodes: dict[Node], gates: dict[Gate]):
     TICK_INTERVAL = 1.0
     active_flights = []
-        
+
+    new_departures = runway_manager.assign_flight_to_departure_runway(terminals, aircrafts, airlines, runways, occupied_gates, edges, nodes)
+    runway_manager.assign_flight_to_arrival_runway(runways, airports, aircrafts, airCorridors)
+
     while True:
         tick_start = time.time()
-    
-        new_departures = runway_manager.assign_flight_to_departure_runway(terminals, aircrafts, airlines, runways, occupied_gates, edges, nodes)
-
-        runway_manager.assign_flight_to_arrival_runway(runways, airports, aircrafts, airCorridors)
             
         init_logs.log_runways(runways)
 
