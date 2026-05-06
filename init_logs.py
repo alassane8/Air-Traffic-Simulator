@@ -28,25 +28,25 @@ def loading(message: str, duration: float = 1, width: int = 30):
 
 
 def log_runways(runways: dict):
-    for runway in runways.values():
-        print(f"\n{'='*60}")
-        print(f"RUNWAY: {runway.id}")
-        print(f"{'='*60}")
+    # for runway in runways.values():
+    #     print(f"\n{'='*60}")
+    #     print(f"RUNWAY: {runway.id}")
+    #     print(f"{'='*60}")
         
-        if not runway.scheduled_flights:
-            print("  Aucun vol schedulé")
-            continue
+    #     if not runway.scheduled_flights:
+    #         print("  Aucun vol schedulé")
+    #         continue
 
-        for flight in runway.scheduled_flights:
-            print(f"\n  ✈ {flight.flight_code}")
-            print(f"    Priorité        : {flight.priority.label}")
-            print(f"    Usage Runway    : {flight.runway_usage.label}")
-            print(f"    Départ airport  : {flight.depart_airport_code}")
-            print(f"    Arrivée airport : {flight.arrival_airport_code}")
-            print(f"    EST. départ     : {flight.estimated_departure_time}")
-            print(f"    EST. arrivée    : {flight.estimated_arrival_time}")
-            print(f"    Corridor        : {flight.corridor_code}")
-            print(f"    {'─'*40}")
+        # for flight in runway.scheduled_flights:
+        #     print(f"\n  ✈ {flight.flight_code}")
+        #     print(f"    Priorité        : {flight.priority.label}")
+        #     print(f"    Usage Runway    : {flight.runway_usage.label}")
+        #     print(f"    Départ airport  : {flight.depart_airport_code}")
+        #     print(f"    Arrivée airport : {flight.arrival_airport_code}")
+        #     print(f"    EST. départ     : {flight.estimated_departure_time}")
+        #     print(f"    EST. arrivée    : {flight.estimated_arrival_time}")
+        #     print(f"    Corridor        : {flight.corridor_code}")
+        #     print(f"    {'─'*40}")
 
     total = sum(len(r.scheduled_flights) for r in runways.values())
     departures = sum(1 for r in runways.values() for f in r.scheduled_flights if f.runway_usage.value == "DEPARTURE")

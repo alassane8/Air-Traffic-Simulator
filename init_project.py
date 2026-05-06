@@ -82,6 +82,6 @@ def init_simulator_data():
     create_objects.update_airports_with_runways(airports, runways)
 
     occupied_gates = simulator.assign_aircrafts_to_gates(aircrafts, gates, terminals)
-
-    schedule.simulation(terminals, aircrafts, airports, airCorridors, airlines, runways, occupied_gates, edges, nodes, gates)
+    
+    schedule.simulation(terminals, waypoints, aircrafts, airports, airCorridors, airlines, runways, occupied_gates, edges, nodes, gates)
 
