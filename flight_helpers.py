@@ -1,5 +1,5 @@
 from flight import Flight, FlightStatus, FlightPriority, RunwayUsageType
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 # ── STATUS ──────────────────────────────────────────────────────────────────
@@ -93,11 +93,10 @@ def getFlightDuration(flight: Flight) -> float | None:
         return delta.total_seconds() / 60
     return None
 
-def getEstimatedDuration(flight: Flight) -> float | None:
-    """Returns estimated flight duration in minutes."""
+def getEstimatedDuration(flight: Flight) -> timedelta | None:
     if flight.estimated_departure_time and flight.estimated_arrival_time:
-        delta = flight.estimated_arrival_time - flight.estimated_departure_time
-        return delta.total_seconds() / 60
+        return flight.estimated_arrival_time - flight.estimated_departure_time
+
     return None
 
 def getDelayMinutes(flight: Flight) -> float:

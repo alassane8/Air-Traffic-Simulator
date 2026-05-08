@@ -20,7 +20,7 @@ def initFlightCruisingTime(aircraft: Aircraft, corridor: AirCorridor) -> float:
 
 
 def initFlightEstimatedArrivalTime(flight: Flight, cruising_time: datetime) -> datetime:
-    return flight.estimated_departure_time + timedelta(seconds=FlightStatus.CLIMBING.duration_seconds + 
+    return flight.departure_time + timedelta(seconds=FlightStatus.CLIMBING.duration_seconds + 
                                                        cruising_time + 
                                                        FlightStatus.DESCENDING.duration_seconds + 
                                                        FlightStatus.LANDING.duration_seconds)

@@ -5,8 +5,18 @@ from terminal import TerminalStatus
 
 def assign_aircrafts_to_gates(aircrafts: dict, gates: dict, terminals: dict) -> list:
     """
-    Placement aleatoire des avions dans les portes des aeroports
+    Random placements of aircrafts in terminal's gates
+
+    Args: 
+        aircrafts: aircraft dict
+        gates: gates dict
+        terminals: terminal dict
+    
+    Return: 
+        List of occupied gates by aircrafts
+
     """
+    
     unassigned_aircraft_ids = set(aircrafts.keys())
     unassigned_gate_ids = set(gates.keys())
     occupied_gates = []

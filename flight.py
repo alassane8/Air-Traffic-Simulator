@@ -12,11 +12,11 @@ class RunwayUsageType(Enum):
 
 class FlightStatus(Enum):
     PLANNED    = ("PLANNED", 0)
-    LINEUP     = ("LINEUP", 60)
+    LINEUP     = ("LINEUP", 10)
     TAKEOFF    = ("TAKEOFF", 6)
     CLIMBING   = ("CLIMBING", 6)
     CRUISE     = ("CRUISE", None)
-    DESCENDING = ("DESCENDING", 60)
+    DESCENDING = ("DESCENDING", 6)
     LANDING    = ("LANDING", 9)
     PARKED     = ("PARKED", 9)
 
@@ -77,6 +77,14 @@ class Flight:
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
     
+    @property
+    def status(self) -> 'FlightStatus':
+        return self.flight_status
+
+    @status.setter
+    def status(self, value: 'FlightStatus'):
+        self.flight_status = value
+
     @property
     def is_airborne(self) -> bool:
         return self.flight_status in (
