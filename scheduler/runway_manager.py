@@ -1,13 +1,11 @@
 from datetime import datetime
 import random
 
-from air_corridor import AirCorridor
 from aircraft import AircraftType
-from airport import Airport
 from flight import Flight, FlightStatus, RunwayUsageType
 from flight_helpers import isDeparting, sortByPriority
 from scheduler.corridor_manager import initCorridor
-from scheduler.flight_timing import initFlightCruisingTime, initFlightEstimatedArrivalTime, initFlightEstimatedDepartureTime
+from scheduler.flight_timing import initFlightEstimatedDepartureTime
 from scheduler.fligth_factory import creatingFlight
 
 
