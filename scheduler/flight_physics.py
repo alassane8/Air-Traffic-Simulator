@@ -3,7 +3,7 @@ from datetime import datetime
 from flight import Flight
 
 
-def update_position(flight: Flight, TICK_INTERVAL: float):
+def update_position(flight: Flight, SIM_TICK: float):
     """
     Déplace le vol d'un tick vers sa destination.
     La vitesse est calculée pour atteindre dest_lat/dest_lon
@@ -19,7 +19,8 @@ def update_position(flight: Flight, TICK_INTERVAL: float):
     dlon = lon2 - lon1
 
     a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
-    a = max(0.0, min(1.0, a))  # clamp pour éviter les erreurs sqrt de flottants
+    a = max(0.0, min(1.0, a))
+    
     distance_km = 6371 * 2 * math.asin(math.sqrt(a))
 
     if distance_km < 1e-6:
@@ -35,9 +36,9 @@ def update_position(flight: Flight, TICK_INTERVAL: float):
         speed_km_s = distance_km / remaining_seconds
     else:
         # ETA dépassé ou non défini → vitesse de croisière fixe
-        speed_km_s = (flight.speed_knots * 1.852) / 3600
+        speed_km_s = flight.speed_km_h  / 3600
 
-    dist_tick = speed_km_s * TICK_INTERVAL
+    dist_tick = speed_km_s * SIM_TICK
 
     if distance_km <= dist_tick:
         flight.lat = flight.dest_lat
@@ -69,3 +70,14 @@ def has_reached_destination(flight: Flight) -> bool:
         abs(flight.lat - flight.dest_lat) < 1e-6 and
         abs(flight.lon - flight.dest_lon) < 1e-6
     )
+
+def get_distance_km(flight: Flight) -> float:
+    lat1, lon1 = math.radians(flight.lat), math.radians(flight.lon)
+    lat2, lon2 = math.radians(flight.dest_lat), math.radians(flight.dest_lon)
+
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+
+    a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+    a = max(0.0, min(1.0, a))
+    return 6371 * 2 * math.asin(math.sqrt(a))
