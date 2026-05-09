@@ -70,3 +70,14 @@ def find_path_graph(
                 heapq.heappush(open_heap, (tentative_g + h(neighbor_id), tentative_g, neighbor_id, current))
 
     return []
+
+def path_total_distance(path: list[str], nodes: dict, edges: dict) -> float:
+    graph = build_adjacency(nodes, edges)
+    total = 0.0
+    for i in range(len(path) - 1):
+        current, next_node = path[i], path[i + 1]
+        for neighbor_id, dist in graph[current]:
+            if neighbor_id == next_node:
+                total += dist
+                break
+    return total
