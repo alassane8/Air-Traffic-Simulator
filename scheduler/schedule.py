@@ -30,7 +30,7 @@ def simulation(
     active_flights = []
 
     new_departures = runway_manager.assign_flight_to_departure_runway(
-        terminals, aircrafts, airlines, runways, occupied_gates, airports, airCorridors
+        terminals, aircrafts, airlines, runways, occupied_gates, airports, airCorridors, existing_departures={}
     )
 
     while True:
@@ -41,13 +41,13 @@ def simulation(
         runway_simulation(new_departures, occupied_gates, active_flights, terminals, nodes, edges, runways, gates, airports, aircrafts, airCorridors, TIME_SCALE, TICK_INTERVAL)
 
         flight_simulation(active_flights, TICK_INTERVAL, TIME_SCALE, SIM_TICK, airCorridors, airports, aircrafts, runways)
-        
-        landing_simulation(active_flights, occupied_gates, new_departures, aircrafts, airlines, airCorridors, terminals, runways, airports, nodes, edges, TICK_INTERVAL)
+
+        landing_simulation(active_flights, occupied_gates, new_departures, aircrafts, airlines, airCorridors, terminals, runways, airports, nodes, edges, gates, TICK_INTERVAL)
 
         elapsed = time.time() - tick_start
         time.sleep(max(0, TICK_INTERVAL - elapsed))
 
-def _takeoff(flight: Flight, depart_runway: object, terminals: dict[Terminal], gates: dict, occupied_gates: list, active_flights: list, new_departures: dict, airports: dict):
+def _takeoff(flight: Flight, depart_runway: object, terminals: dict, gates: dict, occupied_gates: list, active_flights: list, new_departures: dict, airports: dict):
     """Le vol décolle : quitte la runway de départ, entre dans active_flights."""
     advanceStatus(flight)   # → CLIMBING
     flight.time_spent = 0
@@ -62,27 +62,11 @@ def _takeoff(flight: Flight, depart_runway: object, terminals: dict[Terminal], g
     else:
         raise ValueError(f"Aéroport de départ '{flight.depart_airport_code}' introuvable pour {flight.flight_code}")
 
+    new_departures.pop(flight.id, None)
+
     # Retirer de la runway de départ
     if flight in depart_runway.scheduled_flights:
         depart_runway.scheduled_flights.remove(flight)
-
-    # Libérer la gate
-    gate = gates.get(flight.depart_gate_code)
-    if gate and gate in occupied_gates:
-        occupied_gates.remove(gate)
-        gate.release_aircraft()
-    
-    terminal = next(
-        (t for t in terminals.values() 
-        if t.terminal_code == flight.depart_terminal_code 
-        and t.airport_id == flight.depart_airport_code),
-        None
-    )
-    if terminal:
-        terminal.remove_plane()
-            
-    # Retirer de la file d'attente de départ
-    new_departures.pop(flight.id, None)
 
     if flight not in active_flights:
         active_flights.append(flight)
@@ -97,14 +81,12 @@ def _start_descent(flight: Flight, airCorridors: dict, aircrafts: dict):
                 corridor.aircrafts.remove(aircraft)
             break
 
-    # Retirer de la runway d'arrivée scheduled_flights — il sera remis en LANDING
     advanceStatus(flight)   # → DESCENDING
     flight.time_spent = 0
 
 
 def _land(flight: Flight, runways: dict, active_flights: list):
     """Le vol atterrit : retirer de la runway d'arrivée et de active_flights."""
-    # Retirer de la runway d'arrivée
     for runway in runways.values():
         if runway.id == flight.arrival_runway_code:
             if flight in runway.scheduled_flights:
@@ -113,10 +95,6 @@ def _land(flight: Flight, runways: dict, active_flights: list):
 
     advanceStatus(flight)
     flight.time_spent = 0
-
-    if flight in active_flights:
-        active_flights.remove(flight)
-
 
 # ── UTILITAIRES ───────────────────────────────────────────────────────────────
 
@@ -134,10 +112,11 @@ def get_path_to_runway(flight: Flight, nodes: dict, edges: dict) -> List[str]:
 
     return find_path_graph(nodes, edges, start_id, goal_id)
 
-def runway_simulation(new_departures: dict[Flight], occupied_gates: list[Gate], active_flights,
-                      terminals: dict[Terminal], nodes: dict[Node], edges: dict[Edge], runways: dict[Runway], gates: dict[Gate], airports: dict[Airport], aircrafts: dict[Aircraft], airCorridors: dict[AirCorridor], 
+def runway_simulation(new_departures: dict, occupied_gates: list, active_flights: list,
+                      terminals: dict, nodes: dict, edges: dict, runways: dict, gates: dict,
+                      airports: dict, aircrafts: dict, airCorridors: dict,
                       TIME_SCALE: float, TICK_INTERVAL: float):
-              
+
         for flight in list(new_departures.values()):
             get_path_to_runway(flight, nodes, edges)
 
@@ -159,6 +138,21 @@ def runway_simulation(new_departures: dict[Flight], occupied_gates: list[Gate], 
                 flight.time_spent = 0
 
             elif flight.status == FlightStatus.LINEUP:
+                # Libérer la gate une seule fois, au premier tick de LINEUP
+                if flight.time_spent == 0:
+                    gate = gates.get(flight.depart_gate_code)
+                    if gate and gate in occupied_gates:
+                        occupied_gates.remove(gate)
+                        gate.release_aircraft()
+                    terminal = next(
+                        (t for t in terminals.values()
+                        if t.terminal_code == flight.depart_terminal_code
+                        and t.airport_id == flight.depart_airport_code),
+                        None
+                    )
+                    if terminal:
+                        terminal.remove_plane()
+
                 flight.time_spent += TICK_INTERVAL
                 if flight.time_spent >= FlightStatus.LINEUP.duration_seconds:
                     advanceStatus(flight)   # → TAKEOFF
@@ -168,23 +162,23 @@ def runway_simulation(new_departures: dict[Flight], occupied_gates: list[Gate], 
                 flight.time_spent += TICK_INTERVAL
                 if flight.time_spent >= FlightStatus.TAKEOFF.duration_seconds:
                     _takeoff(flight, depart_runway, terminals, gates, occupied_gates, active_flights, new_departures, airports)
-                    
+
                     aircraft = aircrafts.get(flight.aircraft_code)
                     air_corridor = next(
                         (c for c in airCorridors.values() if c.air_corridor_code == flight.corridor_code),
                         None
                     )
-                    
+
                     if aircraft and air_corridor:
                         cruising_time = initFlightCruisingTime(aircraft, air_corridor, TIME_SCALE)
                         flight.estimated_arrival_time = initFlightEstimatedArrivalTime(flight, cruising_time)
                     else:
                         print(f"[WARN] {flight.flight_code} : aircraft={aircraft} corridor={air_corridor}")
 
-def flight_simulation(active_flights, 
-                          TICK_INTERVAL: float, TIME_SCALE: float, SIM_TICK: float, 
-                          airCorridors: dict[AirCorridor], airports: dict[Airport], aircrafts: dict[Aircraft], runways: dict[Runway]):
-        
+def flight_simulation(active_flights: list,
+                      TICK_INTERVAL: float, TIME_SCALE: float, SIM_TICK: float,
+                      airCorridors: dict, airports: dict, aircrafts: dict, runways: dict):
+
         for flight in list(active_flights):
 
             if flight.status == FlightStatus.CLIMBING:
@@ -195,11 +189,11 @@ def flight_simulation(active_flights,
                     aircraft = aircrafts.get(flight.aircraft_code)
                     if aircraft:
                         flight.speed_km_h = aircraft.cruising_speed
+                runway_manager.assign_arrival_runway(flight, airports)
 
             elif flight.status == FlightStatus.CRUISE:
                 flight.time_spent += SIM_TICK
 
-                arrival_runway = runway_manager.assign_arrival_runway(flight, airports)
                 flight_physics.update_position(flight, SIM_TICK)
 
                 if not flight_physics.has_reached_destination(flight):
@@ -207,7 +201,7 @@ def flight_simulation(active_flights,
                     speed_km_s = flight.speed_km_h / 3600
                     seconds_left = (distance_restante / speed_km_s) / TIME_SCALE
                     flight.estimated_arrival_time = datetime.now() + timedelta(seconds=seconds_left)
-                    
+
                 if flight_physics.has_reached_destination(flight):
                     _start_descent(flight, airCorridors, aircrafts)
 
@@ -216,57 +210,114 @@ def flight_simulation(active_flights,
                 if flight.time_spent >= FlightStatus.DESCENDING.duration_seconds:
                     advanceStatus(flight)
                     flight.time_spent = 0
-                    
 
-def landing_simulation(active_flights, occupied_gates, new_departures,
-                       aircrafts: dict[Aircraft], airlines: dict[Airline], airCorridors: dict[AirCorridor], terminals: dict[Terminal], runways: dict[Runway], airports: dict[Airport], nodes: dict[Node], edges: dict[Edge], 
+
+def landing_simulation(active_flights: list, occupied_gates: list, new_departures: dict,
+                       aircrafts: dict, airlines: dict, airCorridors: dict, terminals: dict,
+                       runways: dict, airports: dict, nodes: dict, edges: dict, gates: dict,
                        TICK_INTERVAL: float):
 
-    for flight in list(active_flights):    
-        available_gates = {}
-        best_gate = None
-        best_distance = float("inf")
-        
+    for flight in list(active_flights):
         arrival_airport = airports.get(flight.arrival_airport_code)
-        
+
         if flight.status == FlightStatus.LANDING:
             flight.time_spent += TICK_INTERVAL
-            
+
             if flight.time_spent >= FlightStatus.LANDING.duration_seconds:
-                best_gate = find_best_landing_gate(best_distance, arrival_airport, available_gates, runways, nodes, edges, terminals, flight)
-                _land(flight, runways, active_flights)
+
+                # ── FIX : guard si arrival_runway_code est None ──
+                if not flight.arrival_runway_code:
+                    print(f"[WARN] {flight.flight_code} en LANDING sans runway d'arrivée, on réessaie l'assignation")
+                    assigned = runway_manager.assign_arrival_runway(flight, airports)
+                    if not assigned:
+                        # Toujours pas de runway : on bloque et on attend
+                        flight.time_spent = FlightStatus.LANDING.duration_seconds
+                        continue
+
+                best_distance = float("inf")
+                available_gates = {}
+                best_gate = find_best_landing_gate(
+                    best_distance, arrival_airport, available_gates,
+                    runways, nodes, edges, terminals, flight
+                )
+
+                if best_gate is None:
+                    # ── FIX : compteur anti-deadlock ──
+                    flight._gate_wait_ticks = getattr(flight, '_gate_wait_ticks', 0) + 1
+                    if flight._gate_wait_ticks % 30 == 0:
+                        print(f"[WARN] {flight.flight_code} bloqué en attente de gate "
+                              f"depuis {flight._gate_wait_ticks} ticks")
+                    flight.time_spent = FlightStatus.LANDING.duration_seconds
+                    continue
+
+                # Réinitialiser le compteur d'attente si on a trouvé une gate
+                flight._gate_wait_ticks = 0
+
+                # Stocker la gate sur le vol pour la retrouver au tick TAXI
+                flight._landing_gate = best_gate
+
+                _land(flight, runways, active_flights)   # retire de active_flights et passe ARRIVED
                 flight.arrival_gate_code = best_gate.id
                 flight.arrival_terminal_code = best_gate.terminal
-                advanceStatus(flight)
-                flight.time_spent = 0
 
         elif flight.status == FlightStatus.TAXI:
             flight.time_spent += TICK_INTERVAL
-            
-            if flight.time_spent >= FlightStatus.TAXI.duration_seconds:
-                best_gate.assign_aircraft(flight.aircraft_id)
-                advanceStatus(flight)
-                occupied_gates.append(best_gate)
-                new_departures = runway_manager.assign_flight_to_departure_runway(
-                    terminals, aircrafts, airlines, runways, occupied_gates, airports, airCorridors
-                )
-                new_departures.update(new_departures)
 
-def find_best_landing_gate(best_distance, arrival_airport, available_gates, runways, nodes, edges, terminals, flight) -> Gate:
+            if flight.time_spent >= FlightStatus.TAXI.duration_seconds:
+                gate = gates.get(flight.arrival_gate_code)
+                
+                if gate:
+                    gate.assign_aircraft(flight.aircraft_code)
+                    if gate not in occupied_gates:  
+                        occupied_gates.append(gate)
+
+                    arrival_terminal = terminals.get(gate.terminal)
+                    if arrival_terminal:
+                        arrival_terminal.add_plane()
+
+                advanceStatus(flight)
+
+                if flight in active_flights:
+                    active_flights.remove(flight)
+
+                freshly_assigned = runway_manager.assign_flight_to_departure_runway(
+                    terminals, aircrafts, airlines, runways, occupied_gates, airports, airCorridors,
+                    existing_departures=new_departures
+                )
+                new_departures.update(freshly_assigned)
+
+def find_best_landing_gate(best_distance: float, arrival_airport, available_gates: dict,
+                           runways: dict, nodes: dict, edges: dict, terminals: dict,
+                           flight: Flight) -> Gate:
+
+    if arrival_airport is None:
+        return None
+
     for gate in arrival_airport.gates:
         if gate.is_free():
             available_gates[gate.id] = gate
 
     ref_to_node_id = {node.ref: node.id for node in nodes.values()}
 
+    # ── FIX : guard si arrival_runway_code est None ──
+    if not flight.arrival_runway_code:
+        return None
+
     runway = runways.get(flight.arrival_runway_code)
+    if not runway:
+        print(f"[WARN] Runway d'arrivée '{flight.arrival_runway_code}' introuvable pour {flight.flight_code}")
+        return None
+
     start_id = ref_to_node_id.get(runway.id)
     if not start_id:
         return None
+
     best_gate = None
-    print(available_gates)
+
     for gate in available_gates.values():
-        terminal = terminals[gate.terminal]
+        terminal = terminals.get(gate.terminal)
+        if terminal is None:
+            continue
         if not terminal.can_accept_plane() or not terminal.is_open():
             continue
 
