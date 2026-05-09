@@ -17,6 +17,7 @@ def isOnGround(flight: Flight) -> bool:
         FlightStatus.PLANNED,
         FlightStatus.LINEUP,
         FlightStatus.LANDING,
+        FlightStatus.TAXI,
         FlightStatus.PARKED,
     )
 
@@ -59,6 +60,7 @@ DEPARTURE_SEQUENCE = [
     FlightStatus.CRUISE,
     FlightStatus.DESCENDING,
     FlightStatus.LANDING,
+    FlightStatus.TAXI,
     FlightStatus.PARKED,
 ]
 

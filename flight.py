@@ -17,8 +17,9 @@ class FlightStatus(Enum):
     CLIMBING   = ("CLIMBING", 6)
     CRUISE     = ("CRUISE", None)
     DESCENDING = ("DESCENDING", 6)
-    LANDING    = ("LANDING", 9)
-    PARKED     = ("PARKED", 9)
+    LANDING    = ("LANDING", 6)
+    TAXI       = ("TAXI", 10)
+    PARKED     = ("PARKED", None)
 
     def __init__(self, label: str, duration_seconds: int | None):
         self.label = label
@@ -64,7 +65,7 @@ class Flight:
     lon: float = 0.0
     altitude_ft: float = 0.0
     heading: float = 0.0
-    speed_knots: float = 0.0
+    speed_km_h: float = 0.0
 
     dest_lat: float = 0.0
     dest_lon: float = 0.0
