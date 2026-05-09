@@ -336,6 +336,30 @@
             "distance_m": 260
           },
           {
+            "from_node_id": "n-cdg-int-F",
+            "to_node_id": "n-cdg-rwy2-thr-E",
+            "taxiway": "SE",
+            "distance_m": 580
+          },
+          {
+            "from_node_id": "n-cdg-int-C",
+            "to_node_id": "n-cdg-rwy3-thr-W",
+            "taxiway": "TW",
+            "distance_m": 520
+          },
+          {
+            "from_node_id": "n-cdg-int-D",
+            "to_node_id": "n-cdg-rwy4-thr-W",
+            "taxiway": "TW4",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-cdg-int-D",
+            "to_node_id": "n-cdg-rwy4-thr-E",
+            "taxiway": "TE4",
+            "distance_m": 620
+          },
+          {
             "from_node_id": "n-cdg-gate-3",
             "to_node_id": "n-cdg-int-B",
             "taxiway": "K",
@@ -986,6 +1010,24 @@
             "to_node_id": "n-jfk-int-A",
             "taxiway": "B",
             "distance_m": 310
+          },
+          {
+            "from_node_id": "n-jfk-int-E",
+            "to_node_id": "n-jfk-rwy2-thr-E",
+            "taxiway": "H2",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-jfk-int-C",
+            "to_node_id": "n-jfk-rwy3-thr-S",
+            "taxiway": "Z3",
+            "distance_m": 580
+          },
+          {
+            "from_node_id": "n-jfk-int-D",
+            "to_node_id": "n-jfk-rwy4-thr-S",
+            "taxiway": "Z4",
+            "distance_m": 560
           },
           {
             "from_node_id": "n-jfk-gate-2",
@@ -1902,6 +1944,24 @@
             "distance_m": 240
           },
           {
+            "from_node_id": "n-fra-int-C",
+            "to_node_id": "n-fra-rwy3-thr-E",
+            "taxiway": "E3",
+            "distance_m": 870
+          },
+          {
+            "from_node_id": "n-fra-int-C",
+            "to_node_id": "n-fra-rwy4-thr-E",
+            "taxiway": "E4",
+            "distance_m": 920
+          },
+          {
+            "from_node_id": "n-fra-int-A",
+            "to_node_id": "n-fra-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 880
+          },
+          {
             "from_node_id": "n-fra-gate-4",
             "to_node_id": "n-fra-int-C",
             "taxiway": "N5",
@@ -2206,6 +2266,48 @@
             "to_node_id": "n-ams-int-A",
             "taxiway": "E",
             "distance_m": 350
+          },
+          {
+            "from_node_id": "n-ams-int-E",
+            "to_node_id": "n-ams-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 850
+          },
+          {
+            "from_node_id": "n-ams-int-E",
+            "to_node_id": "n-ams-rwy3-thr-E",
+            "taxiway": "E3",
+            "distance_m": 900
+          },
+          {
+            "from_node_id": "n-ams-int-E",
+            "to_node_id": "n-ams-rwy4-thr-E",
+            "taxiway": "E4",
+            "distance_m": 950
+          },
+          {
+            "from_node_id": "n-ams-int-B",
+            "to_node_id": "n-ams-rwy1-thr-N",
+            "taxiway": "N1",
+            "distance_m": 1100
+          },
+          {
+            "from_node_id": "n-ams-int-C",
+            "to_node_id": "n-ams-rwy1-thr-S",
+            "taxiway": "S1b",
+            "distance_m": 1000
+          },
+          {
+            "from_node_id": "n-ams-int-D",
+            "to_node_id": "n-ams-rwy5-thr-S",
+            "taxiway": "S5",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-ams-int-B",
+            "to_node_id": "n-ams-rwy6-thr-N",
+            "taxiway": "N6",
+            "distance_m": 750
           },
           {
             "from_node_id": "n-ams-gate-2",
@@ -2761,6 +2863,24 @@
           },
           {
             "from_node_id": "n-hnd-int-A",
+            "to_node_id": "n-hnd-rwy1-thr-S",
+            "taxiway": "S1",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-hnd-int-C",
+            "to_node_id": "n-hnd-rwy2-thr-N",
+            "taxiway": "N2",
+            "distance_m": 580
+          },
+          {
+            "from_node_id": "n-hnd-int-C",
+            "to_node_id": "n-hnd-rwy4-thr-E",
+            "taxiway": "E4",
+            "distance_m": 620
+          },
+          {
+            "from_node_id": "n-hnd-int-A",
             "to_node_id": "n-hnd-int-B",
             "taxiway": "N",
             "distance_m": 500
@@ -3066,6 +3186,24 @@
             "distance_m": 280
           },
           {
+            "from_node_id": "n-lax-int-D",
+            "to_node_id": "n-lax-rwy2-thr-E",
+            "taxiway": "E2",
+            "distance_m": 800
+          },
+          {
+            "from_node_id": "n-lax-int-B",
+            "to_node_id": "n-lax-rwy3-thr-E",
+            "taxiway": "E3",
+            "distance_m": 750
+          },
+          {
+            "from_node_id": "n-lax-int-B",
+            "to_node_id": "n-lax-rwy4-thr-E",
+            "taxiway": "E4",
+            "distance_m": 700
+          },
+          {
             "from_node_id": "n-lax-gate-3",
             "to_node_id": "n-lax-int-C",
             "taxiway": "BB",
@@ -3333,6 +3471,18 @@
             "to_node_id": "n-syd-int-B",
             "taxiway": "N1",
             "distance_m": 600
+          },
+          {
+            "from_node_id": "n-syd-int-B",
+            "to_node_id": "n-syd-rwy1-thr-N",
+            "taxiway": "N1",
+            "distance_m": 750
+          },
+          {
+            "from_node_id": "n-syd-int-B",
+            "to_node_id": "n-syd-rwy2-thr-N",
+            "taxiway": "N2",
+            "distance_m": 700
           },
           {
             "from_node_id": "n-syd-int-A",
