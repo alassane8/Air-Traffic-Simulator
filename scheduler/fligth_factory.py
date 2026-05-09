@@ -6,14 +6,21 @@ from flight import Flight, FlightPriority, FlightStatus, RunwayUsageType
 from gate import Gate
 
 
-def creatingFlight(airline: Airline, gate: Gate, terminals: dict, choosed_runway_id: str) -> Flight:
+def creatingFlight(airline: Airline, gate: Gate, terminals: dict, choosed_runway_id: str, aircraft=None) -> Flight:
+        """
+        Crée un vol depuis une gate.
+        aircraft doit être passé explicitement pour garantir que flight.aircraft_code
+        contient toujours l'UUID stable de l'avion, même si gate.aircraft_id est None
+        (ce qui arrive après gate.release_aircraft() au moment du LINEUP).
+        """
+        aircraft_id = aircraft.id if aircraft is not None else gate.aircraft_id
 
         return Flight(
             id=uuid.uuid4(),
             flight_code=initFlightCode(airline),
             flight_status=FlightStatus.PLANNED,
             airline_id=airline.id,
-            aircraft_code=gate.aircraft_id,
+            aircraft_code=aircraft_id,
             priority=initFlightPriority(),
             depart_airport_code=terminals[gate.terminal].airport_id,
             depart_terminal_code=gate.terminal,

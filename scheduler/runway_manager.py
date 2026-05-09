@@ -9,30 +9,80 @@ from scheduler.flight_timing import initFlightEstimatedDepartureTime
 from scheduler.fligth_factory import creatingFlight
 
 
+# ── HELPERS INTERNES ──────────────────────────────────────────────────────────
+
+def _find_aircraft(gate, aircrafts: dict):
+    """
+    Retrouve l'objet Aircraft associé à une gate.
+
+    Au boot, gate.aircraft_id contient l'UUID de l'avion (clé du dict aircrafts).
+    Après un atterrissage, schedule.py appelle gate.assign_aircraft(flight.aircraft_code),
+    qui stocke le CODE (ex: "B737") et non l'UUID → la recherche directe échoue.
+    Ce helper essaie d'abord par id, puis par aircraft_code en fallback.
+    """
+    if gate.aircraft_id is None:
+        return None
+
+    # Recherche principale : gate.aircraft_id == clé du dict (UUID)
+    aircraft = aircrafts.get(gate.aircraft_id)
+    if aircraft is not None:
+        return aircraft
+
+    # Fallback : gate.aircraft_id contient le aircraft_code (après atterrissage)
+    for a in aircrafts.values():
+        if a.aircraft_code == gate.aircraft_id or a.id == gate.aircraft_id:
+            return a
+
+    return None
+
+
 # ── DÉPART ───────────────────────────────────────────────────────────────────
 
 def assign_flight_to_departure_runway(
     terminals: dict, aircrafts: dict, airlines: dict, runways: dict,
-    occupied_gates: list, airports: dict, airCorridors: dict
+    occupied_gates: list, airports: dict, airCorridors: dict, existing_departures=None
 ) -> dict:
     """
     Crée les vols de départ, les assigne à une runway de départ,
     et initialise le corridor + aéroport d'arrivée.
     La runway d'arrivée sera choisie pendant le cruise.
     """
+    existing_departures = existing_departures or {}
     departure_flights = {}
 
+    # Gates déjà associées à un vol actif
+    gates_already_assigned = {
+        f.depart_gate_code for f in existing_departures.values()
+    }
+    occupied_gates[:] = [g for g in occupied_gates if g.is_occupied() and g.aircraft_id is not None]
+
+
     for gate in occupied_gates:
-        terminal = terminals[gate.terminal]
+        if gate.id in gates_already_assigned:
+            continue
+
+        terminal = terminals.get(gate.terminal)
+        if terminal is None:
+            print(f"[WARN] Terminal '{gate.terminal}' introuvable pour gate {gate.id}, ignoré")
+            continue
+
         airport_id = terminal.airport_id
-        airport_runways = {}
-        aircraft = aircrafts.get(gate.aircraft_id)
+
+        # ── FIX : recherche robuste de l'aircraft (UUID ou aircraft_code) ──
+        aircraft = _find_aircraft(gate, aircrafts)
+        if aircraft is None:
+            print(f"[WARN] Aircraft introuvable pour gate {gate.id} "
+                  f"(aircraft_id={gate.aircraft_id!r}), vol ignoré")
+            continue
+
         airline = random.choice(list(airlines.values()))
         aircraft_type = aircraft.aircraft_type
 
-        for runway in runways.values():
-            if runway.airport_id == airport_id:
-                airport_runways[runway.id] = runway
+        airport_runways = {
+            runway.id: runway
+            for runway in runways.values()
+            if runway.airport_id == airport_id
+        }
 
         if not airport_runways:
             continue
@@ -48,7 +98,9 @@ def assign_flight_to_departure_runway(
         else:
             chosen_runway = longest_runway
 
-        created_flight = creatingFlight(airline, gate, terminals, chosen_runway.id)
+        # On passe l'aircraft directement pour que flight.aircraft_code = aircraft.id (UUID stable)
+        # et non gate.aircraft_id qui peut valoir None si la gate a déjà été libérée
+        created_flight = creatingFlight(airline, gate, terminals, chosen_runway.id, aircraft)
 
         # Initialiser le corridor et la destination (sans runway d'arrivée)
         air_corridor = initCorridor(airCorridors, gate.terminal, airports, aircraft)
@@ -56,11 +108,11 @@ def assign_flight_to_departure_runway(
             print(f"[WARN] Aucun corridor pour le vol depuis {gate.id}")
             continue
 
-        created_flight.corridor_code         = air_corridor.air_corridor_code
-        created_flight.arrival_airport_code  = air_corridor.to_airport
-        created_flight.dest_lat              = _get_airport_lat(created_flight.arrival_airport_code, airports)
-        created_flight.dest_lon              = _get_airport_lon(created_flight.arrival_airport_code, airports)
-        created_flight.status                = FlightStatus.PLANNED
+        created_flight.corridor_code        = air_corridor.air_corridor_code
+        created_flight.arrival_airport_code = air_corridor.to_airport
+        created_flight.dest_lat             = _get_airport_lat(created_flight.arrival_airport_code, airports)
+        created_flight.dest_lon             = _get_airport_lon(created_flight.arrival_airport_code, airports)
+        created_flight.status               = FlightStatus.PLANNED
 
         chosen_runway.add_flight(created_flight)
         departure_flights[created_flight.id] = created_flight
