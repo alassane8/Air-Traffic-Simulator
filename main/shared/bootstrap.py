@@ -11,19 +11,19 @@ def init_simulator_data():
     init_logger.phase("Loading data modules")
 
     init_logger.loading("Fetching aeronautical data")
-    aircrafts_data = data_loader.load_data("aircraft/aircrafts.json")
+    aircrafts_data = data_loader.load_data("config/aircrafts.json")
     init_logger.success("Aircraft data loaded")
 
     init_logger.loading("Fetching airport infrastructure")
-    airports_data = data_loader.load_data("airport/airports.json")
+    airports_data = data_loader.load_data("config/airports.json")
     init_logger.success("Airport data loaded")
 
     init_logger.loading("Fetching air corridor data")
-    air_corridors_data = data_loader.load_data("air_corridor/air_corridors.json")
+    air_corridors_data = data_loader.load_data("config/air_corridors.json")
     init_logger.success("Air corridor data loaded")
 
     init_logger.loading("Fetching airlines data")
-    airlines_data = data_loader.load_data("airline/airlines.json")
+    airlines_data = data_loader.load_data("config/airlines.json")
     init_logger.success("Airline data loaded")
 
     init_logger.phase("Building system objects")
@@ -35,9 +35,13 @@ def init_simulator_data():
     init_logger.loading("Initializing airport hubs")
     airports = object_factory.create_airports(airports_data)
     init_logger.success(f"{len(airports)} airports online")
+    
+    init_logger.loading("Plotting waypoints")
+    waypoints = object_factory.create_waypoints(air_corridors_data)
+    init_logger.success(f"{len(waypoints)} waypoints plotted")
 
     init_logger.loading("Defining air corridors")
-    air_corridors = object_factory.create_air_corridors(air_corridors_data)
+    air_corridors = object_factory.create_air_corridors(air_corridors_data, waypoints)
     init_logger.success(f"{len(air_corridors)} air corridors operational")
 
     init_logger.loading("Deploying terminals")
@@ -63,10 +67,6 @@ def init_simulator_data():
     init_logger.loading("Connecting taxiway edges")
     edges = object_factory.create_edges(airports_data)
     init_logger.success(f"{len(edges)} edges connected")
-
-    init_logger.loading("Plotting waypoints")
-    waypoints = object_factory.create_waypoints(air_corridors_data)
-    init_logger.success(f"{len(waypoints)} waypoints plotted")
 
     init_logger.phase("System ready")
     init_logger.log(">>> ALL SYSTEMS NOMINAL")
