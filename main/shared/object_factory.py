@@ -25,8 +25,8 @@ def create_aircrafts(aircrafts_data: dict) -> dict:
             aircraft.get("aircraft_type", random.choice(list(AircraftType))),
             aircraft.get("maximum_speed", 800),
             aircraft.get("cruising_speed", 700),
-            aircraft.get("created_at", datetime.now),
-            aircraft.get("updated_at", datetime.now),
+            aircraft.get("created_at", datetime.now()),
+            aircraft.get("updated_at", datetime.now()),
         )
         all_aircrafts[aircraft.get("id")] = obj
     return all_aircrafts
@@ -44,8 +44,8 @@ def create_airports(airports_data: dict) -> dict:
             airport.get("gates", []),
             airport.get("runways", []),
             airport.get("taxiway_graph", []),
-            airport.get("created_at", datetime.now),
-            airport.get("updated_at", datetime.now),
+            airport.get("created_at", datetime.now()),
+            airport.get("updated_at", datetime.now()),
         )
         all_airports[airport.get("id")] = obj
     return all_airports
@@ -62,8 +62,8 @@ def create_terminals(airports_data: dict) -> dict:
                 terminal.get("max_planes", 20),
                 terminal.get("planes_on_deck", 0),
                 terminal.get("status", TerminalStatus.OPEN),
-                terminal.get("created_at", datetime.now),
-                terminal.get("updated_at", datetime.now),
+                terminal.get("created_at", datetime.now()),
+                terminal.get("updated_at", datetime.now()),
             )
             all_terminals[terminal.get("id")] = obj
     return all_terminals
@@ -78,8 +78,8 @@ def create_airlines(airlines_data: dict) -> dict:
             airline.get("iata_code", "NULL"),
             airline.get("icao_code", "NULL"),
             airline.get("country", "NULL"),
-            airline.get("created_at", datetime.now),
-            airline.get("updated_at", datetime.now),
+            airline.get("created_at", datetime.now()),
+            airline.get("updated_at", datetime.now()),
         )
         all_airlines[airline.get("id")] = obj
     return all_airlines
@@ -95,8 +95,8 @@ def create_gates(airports_data: dict) -> dict:
                 gate.get("terminal", "NULL"),
                 gate.get("aircraft_id", "NULL"),
                 gate.get("status", GateStatus.FREE),
-                gate.get("created_at", datetime.now),
-                gate.get("updated_at", datetime.now),
+                gate.get("created_at", datetime.now()),
+                gate.get("updated_at", datetime.now()),
             )
             all_gates[gate.get("id")] = obj
     return all_gates
@@ -114,52 +114,74 @@ def create_runways(airports_data: dict) -> dict:
                 runway.get("status", RunwayStatus.FREE),
                 runway.get("current_aircraft", None),
                 runway.get("scheduled_flights", []),
-                runway.get("created_at", datetime.now),
-                runway.get("updated_at", datetime.now),
+                runway.get("created_at", datetime.now()),
+                runway.get("updated_at", datetime.now()),
             )
             all_runways[runway.get("id")] = obj
     return all_runways
 
-
-def create_air_corridors(air_corridors_data: dict) -> dict:
-    all_air_corridors = {}
-    for corridor in air_corridors_data.get("air_corridors", []):
-        obj = AirCorridor(
-            corridor.get("id", uuid.uuid4()),
-            corridor.get("air_corridor_code", "NULL"),
-            corridor.get("from_airport", "NULL"),
-            corridor.get("to_airport", "NULL"),
-            corridor.get("distance", "NULL"),
-            corridor.get("altitude", "NULL"),
-            corridor.get("direction", CorridorDirection.BIDIRECTIONAL),
-            corridor.get("status", CorridorStatus.OPEN),
-            corridor.get("max_capacity", 20),
-            corridor.get("aircrafts", []),
-            corridor.get("waypoints", []),
-            corridor.get("created_at", datetime.now),
-            corridor.get("updated_at", datetime.now),
-        )
-        all_air_corridors[corridor.get("id")] = obj
-    return all_air_corridors
-
-
 def create_waypoints(air_corridors_data: dict) -> dict:
     all_waypoints = {}
+
     for corridor in air_corridors_data.get("air_corridors", []):
         for waypoint in corridor.get("waypoints", []):
+
+            waypoint_id= (f"{corridor['id']}_{waypoint['id']}")
+
+            if waypoint_id in all_waypoints:
+                continue
+
             obj = Waypoint(
-                waypoint.get("id", uuid.uuid4()),
-                waypoint.get("lat", "NULL"),
-                waypoint.get("lon", "NULL"),
-                waypoint.get("min_alt_ft", "NULL"),
-                waypoint.get("max_alt_ft", "NULL"),
+                waypoint_id,
+                waypoint.get("lat"),
+                waypoint.get("lon"),
+                waypoint.get("min_alt_ft"),
+                waypoint.get("max_alt_ft"),
                 waypoint.get("status", WaypointStatus.OPEN),
-                waypoint.get("created_at", datetime.now),
-                waypoint.get("updated_at", datetime.now),
+                waypoint.get("created_at", datetime.now()),
+                waypoint.get("updated_at", datetime.now()),
             )
-            all_waypoints[waypoint.get("id")] = obj
+
+            all_waypoints[waypoint_id] = obj
+
     return all_waypoints
 
+
+def create_air_corridors(
+    air_corridors_data: dict,
+    all_waypoints: dict
+) -> dict:
+
+    all_air_corridors = {}
+
+    for corridor in air_corridors_data.get("air_corridors", []):
+        corridor_waypoints = []
+
+        for waypoint_data in corridor.get("waypoints", []):
+            waypoint_id = waypoint_data.get("id")
+
+            if waypoint_id in all_waypoints:
+                corridor_waypoints.append(all_waypoints[waypoint_id])
+
+        obj = AirCorridor(
+            corridor.get("id", str(uuid.uuid4())),
+            corridor.get("air_corridor_code"),
+            corridor.get("from_airport"),
+            corridor.get("to_airport"),
+            corridor.get("distance"),
+            corridor.get("altitude"),
+            corridor.get("direction",CorridorDirection.BIDIRECTIONAL),
+            corridor.get("status",CorridorStatus.OPEN),
+            corridor.get("max_capacity", 20),
+            corridor.get("aircrafts", []),
+            corridor_waypoints,
+            corridor.get("created_at",datetime.now()),
+            corridor.get("updated_at",datetime.now()),
+        )
+
+        all_air_corridors[corridor.get("id")] = obj
+
+    return all_air_corridors
 
 def create_edges(airports_data: dict) -> dict:
     all_edges = {}
@@ -171,8 +193,8 @@ def create_edges(airports_data: dict) -> dict:
                 edge.get("to_node_id", "NULL"),
                 edge.get("taxiway", "NULL"),
                 edge.get("distance_m", "NULL"),
-                edge.get("created_at", datetime.now),
-                edge.get("updated_at", datetime.now),
+                edge.get("created_at", datetime.now()),
+                edge.get("updated_at", datetime.now()),
             )
             all_edges[obj.id] = obj
     return all_edges
@@ -189,8 +211,8 @@ def create_nodes(airports_data: dict) -> dict:
                 node.get("lat", "NULL"),
                 node.get("lon", "NULL"),
                 node.get("status", NodeStatus.OPEN),
-                node.get("created_at", datetime.now),
-                node.get("updated_at", datetime.now),
+                node.get("created_at", datetime.now()),
+                node.get("updated_at", datetime.now()),
             )
             all_nodes[obj.id] = obj
     return all_nodes
