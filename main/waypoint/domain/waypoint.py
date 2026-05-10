@@ -11,7 +11,6 @@ class WaypointStatus(str, Enum):
 @dataclass
 class Waypoint:
     id: str
-    name: str
     lat: float
     lon: float
     min_alt_ft: int
