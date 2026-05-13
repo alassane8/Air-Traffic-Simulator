@@ -25,9 +25,6 @@ def assign_aircrafts_to_gates(aircrafts: dict, gates: dict, terminals: dict) -> 
         if not terminal.can_accept_plane() or not terminal.is_open():
             continue
 
-        if selected_aircraft.has_capacity():
-            selected_aircraft.load_passengers(random.randrange(selected_aircraft.seats))
-
         terminal.add_plane()
         selected_gate.assign_aircraft(selected_aircraft.id)
         occupied_gates.append(selected_gate)
