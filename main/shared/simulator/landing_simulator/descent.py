@@ -6,7 +6,7 @@ from flight.domain.flight import Flight
 def _do_start_descent(flight: Flight, air_corridors: dict, aircrafts: dict):
     for corridor in air_corridors.values():
         if corridor.air_corridor_code == flight.corridor_code:
-            aircraft = aircrafts.get(flight.aircraft_code)
+            aircraft = aircrafts.get(flight.aircraft_id)
             if aircraft and aircraft in corridor.aircrafts:
                 corridor.aircrafts.remove(aircraft)
             break

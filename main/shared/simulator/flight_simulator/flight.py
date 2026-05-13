@@ -24,7 +24,7 @@ def _tick_flight(
             if flight.time_spent >= FlightStatus.CLIMBING.duration_seconds:
                 advance_status(flight)
                 flight.time_spent = 0
-                aircraft = aircrafts.get(flight.aircraft_code)
+                aircraft = aircrafts.get(flight.aircraft_id)
                 if aircraft:
                     flight.speed_km_h = aircraft.cruising_speed
             assign_arrival_runway(flight, airports)

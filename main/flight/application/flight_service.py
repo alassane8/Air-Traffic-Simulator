@@ -117,7 +117,7 @@ def get_delay_minutes(flight: Flight) -> float:
 def format_flight(flight: Flight) -> str:
     return (
         f"[{flight.flight_code}] "
-        f"{flight.depart_airport_code} → {flight.arrival_airport_code} | "
+        f"{flight.depart_airport_id} → {flight.arrival_airport_code} | "
         f"Status: {flight.flight_status.label} | "
         f"Priority: {flight.priority.label}"
     )

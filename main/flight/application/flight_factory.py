@@ -9,7 +9,7 @@ from airport.domain.gate import Gate
 def create_flight(airline: Airline, gate: Gate, terminals: dict, chosen_runway_id: str, aircraft=None) -> Flight:
     """
     Crée un vol depuis une gate.
-    aircraft doit être passé explicitement pour garantir que flight.aircraft_code
+    aircraft doit être passé explicitement pour garantir que flight.aircraft_id
     contient toujours l'UUID stable de l'avion, même si gate.aircraft_id est None
     (ce qui arrive après gate.release_aircraft() au moment du LINEUP).
     """
@@ -20,9 +20,9 @@ def create_flight(airline: Airline, gate: Gate, terminals: dict, chosen_runway_i
         flight_code=_init_flight_code(airline),
         flight_status=FlightStatus.PLANNED,
         airline_id=airline.id,
-        aircraft_code=aircraft_id,
+        aircraft_id=aircraft_id,
         priority=_init_flight_priority(),
-        depart_airport_code=terminals[gate.terminal].airport_id,
+        depart_airport_id=terminals[gate.terminal].airport_id,
         depart_terminal_code=gate.terminal,
         depart_gate_code=gate.id,
         depart_runway_code=chosen_runway_id,

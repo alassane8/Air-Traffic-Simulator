@@ -64,7 +64,7 @@ def _tick_landing(
                 gate = gates.get(flight.arrival_gate_code)
 
                 if gate:
-                    gate.assign_aircraft(flight.aircraft_code)
+                    gate.assign_aircraft(flight.aircraft_id)
                     if gate not in occupied_gates:
                         occupied_gates.append(gate)
                     arrival_terminal = terminals.get(gate.terminal)

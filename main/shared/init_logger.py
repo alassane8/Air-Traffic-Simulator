@@ -47,7 +47,7 @@ def log_runways(runways: dict):
             print(f"    Priorité        : {flight.priority.label}")
             print(f"    Status          : {flight.status.label}")
             print(f"    Usage Runway    : {flight.runway_usage.label}")
-            print(f"    Départ airport  : {flight.depart_airport_code}")
+            print(f"    Départ airport  : {flight.depart_airport_id}")
             print(f"    LAT             : {flight.lat}")
             print(f"    LON             : {flight.lon}")
             print(f"    dest lat        : {flight.dest_lat}")

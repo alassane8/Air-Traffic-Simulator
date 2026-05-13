@@ -14,7 +14,7 @@ from air_corridor.application.corridor_service import find_corridor_for_departur
 def _find_aircraft(gate, aircrafts: dict):
     """
     Retrouve l'objet Aircraft associé à une gate.
-    Essaie d'abord par id (UUID), puis par aircraft_code en fallback.
+    Essaie par id (UUID).
     """
     if gate.aircraft_id is None:
         return None
@@ -24,7 +24,7 @@ def _find_aircraft(gate, aircrafts: dict):
         return aircraft
 
     for a in aircrafts.values():
-        if a.aircraft_code == gate.aircraft_id or a.id == gate.aircraft_id:
+        if a.id == gate.aircraft_id:
             return a
 
     return None
@@ -133,7 +133,7 @@ def assign_flight_to_departure_runway(
     for runway in runways.values():
         dep_flights = sort_by_priority([
             f for f in runway.scheduled_flights
-            if is_departing(f) and f.depart_airport_code == runway.airport_id
+            if is_departing(f) and f.depart_airport_id == runway.airport_id
         ])
         init_flight_estimated_departure_time(dep_flights)
         runway.scheduled_flights.sort(
