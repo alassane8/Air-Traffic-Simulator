@@ -3,41 +3,9 @@ from datetime import datetime
 from enum import Enum
 from typing import Optional
 
-
-class RunwayUsageType(Enum):
-    DEPARTURE = "DEPARTURE"
-    ARRIVAL = "ARRIVAL"
-
-    def __init__(self, label: str):
-        self.label = label
-
-
-class FlightStatus(Enum):
-    PLANNED    = ("PLANNED", 0)
-    LINEUP     = ("LINEUP", 10)
-    TAKEOFF    = ("TAKEOFF", 6)
-    CLIMBING   = ("CLIMBING", 6)
-    CRUISE     = ("CRUISE", None)
-    DESCENDING = ("DESCENDING", 6)
-    LANDING    = ("LANDING", 6)
-    TAXI       = ("TAXI", 10)
-    PARKED     = ("PARKED", None)
-
-    def __init__(self, label: str, duration_seconds: int | None):
-        self.label = label
-        self.duration_seconds = duration_seconds
-
-
-class FlightPriority(Enum):
-    EMERGENCY     = ("EMERGENCY", 1)
-    FUEL_CRITICAL = ("FUEL_CRITICAL", 2)
-    MEDICAL       = ("MEDICAL", 3)
-    DELAY         = ("DELAY", 4)
-    NORMAL        = ("NORMAL", 5)
-
-    def __init__(self, label: str, order: int):
-        self.label = label
-        self.order = order
+from main.flight.domain.enums.flight_priority import FlightPriority
+from main.flight.domain.enums.flight_status import FlightStatus
+from main.flight.domain.enums.runway_usage_type import RunwayUsageType
 
 
 @dataclass
@@ -46,9 +14,9 @@ class Flight:
     flight_code: str
     flight_status: FlightStatus
     airline_id: str
-    aircraft_code: str
+    aircraft_id: str
     priority: FlightPriority
-    depart_airport_code: str
+    depart_airport_id: str
     depart_terminal_code: str
     depart_gate_code: str
     depart_runway_code: str

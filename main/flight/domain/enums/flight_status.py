@@ -2,6 +2,7 @@ from enum import Enum
 
 class FlightStatus(Enum):
     PLANNED    = ("PLANNED", 0)
+    BOARDING    = ("BOARDING", 10)
     LINEUP     = ("LINEUP", 10)
     TAKEOFF    = ("TAKEOFF", 6)
     CLIMBING   = ("CLIMBING", 6)
