@@ -3,17 +3,8 @@ from datetime import datetime
 from enum import Enum
 from typing import List
 
-
-class CorridorStatus(str, Enum):
-    OPEN = "OPEN"
-    CLOSED = "CLOSED"
-    RESTRICTED = "RESTRICTED"
-
-
-class CorridorDirection(str, Enum):
-    UNIDIRECTIONAL = "UNIDIRECTIONAL"
-    BIDIRECTIONAL = "BIDIRECTIONAL"
-
+from main.air_corridor.domain.air_corridor_direction import CorridorDirection
+from main.air_corridor.domain.air_corridor_status import CorridorStatus
 
 @dataclass
 class AirCorridor:

@@ -25,6 +25,12 @@ def create_aircrafts(aircrafts_data: dict) -> dict:
             aircraft.get("aircraft_type", random.choice(list(AircraftType))),
             aircraft.get("maximum_speed", 800),
             aircraft.get("cruising_speed", 700),
+            aircraft.get("operating_empty_weight_kg", 0),
+            aircraft.get("maximum_total_operating_weight_kg", 0),
+            aircraft.get("max_fuel_kg", 0),
+            aircraft.get("fuel_flow_cruise_kg_per_s", 0),
+            aircraft.get("wing_area_m2", 0),
+            aircraft.get("ld_ratio", 0),
             aircraft.get("created_at", datetime.now()),
             aircraft.get("updated_at", datetime.now()),
         )

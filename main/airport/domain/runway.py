@@ -3,13 +3,7 @@ from enum import Enum
 from typing import List, Optional
 from datetime import datetime
 
-
-class RunwayStatus(str, Enum):
-    FREE = "FREE"
-    OCCUPIED = "OCCUPIED"
-    CLOSED = "CLOSED"
-    MAINTENANCE = "MAINTENANCE"
-
+from main.airport.domain.enums.runway_status import RunwayStatus
 
 @dataclass
 class Runway:
