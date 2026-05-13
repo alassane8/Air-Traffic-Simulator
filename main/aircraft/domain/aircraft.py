@@ -2,12 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
-
-class AircraftType(str, Enum):
-    CARGOS = "CARGOS"
-    NARROW = "NARROW"
-    LARGE = "LARGE"
-
+from main.aircraft.domain.aircraft_type import AircraftType
 
 @dataclass
 class Aircraft:
@@ -18,6 +13,14 @@ class Aircraft:
     aircraft_type: AircraftType
     maximum_speed: float
     cruising_speed: float
+    operating_empty_weight_kg: float
+    maximum_total_operating_weight_kg: float
+    max_fuel_kg: float
+    fuel_flow_cruise_kg_per_s: float
+    base_rate_of_climb_ft_per_min: int
+    wing_area_m2: float
+    ld_ratio: float
+
 
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)

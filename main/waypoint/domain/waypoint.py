@@ -2,11 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
-
-class WaypointStatus(str, Enum):
-    OPEN = "OPEN"
-    CLOSED = "CLOSED"
-
+from main.waypoint.domain.waypoint_status import WaypointStatus
 
 @dataclass
 class Waypoint:

@@ -2,12 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from datetime import datetime
 
-
-class TerminalStatus(str, Enum):
-    OPEN = "OPEN"
-    CLOSED = "CLOSED"
-    MAINTENANCE = "MAINTENANCE"
-
+from main.airport.domain.enums.terminal_status import TerminalStatus
 
 @dataclass
 class Terminal:

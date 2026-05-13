@@ -2,18 +2,8 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
-
-class NodeStatus(str, Enum):
-    OPEN = "OPEN"
-    CLOSED = "CLOSED"
-
-
-class NodeType(str, Enum):
-    GATE = "gate"
-    INTERSECTION = "intersection"
-    RUNWAY_THRESHOLD = "runway_threshold"
-    WAYPOINT = "waypoint"
-
+from main.airport.domain.enums.node_status import NodeStatus
+from main.airport.domain.enums.node_type import NodeType
 
 @dataclass
 class Node:
