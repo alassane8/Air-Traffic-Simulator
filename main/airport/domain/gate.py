@@ -3,7 +3,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Optional
 
-from main.airport.domain.enums.gate_status import GateStatus
+from airport.domain.enums.gate_status import GateStatus
 
 
 @dataclass

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
-from main.waypoint.domain.waypoint_status import WaypointStatus
+from waypoint.domain.waypoint_status import WaypointStatus
 
 @dataclass
 class Waypoint:

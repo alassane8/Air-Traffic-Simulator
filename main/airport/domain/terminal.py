@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from datetime import datetime
 
-from main.airport.domain.enums.terminal_status import TerminalStatus
+from airport.domain.enums.terminal_status import TerminalStatus
 
 @dataclass
 class Terminal:

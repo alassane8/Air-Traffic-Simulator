@@ -3,7 +3,7 @@ from enum import Enum
 from typing import List, Optional
 from datetime import datetime
 
-from main.airport.domain.enums.runway_status import RunwayStatus
+from airport.domain.enums.runway_status import RunwayStatus
 
 @dataclass
 class Runway:

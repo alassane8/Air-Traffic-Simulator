@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
-from main.aircraft.domain.aircraft_type import AircraftType
+from aircraft.domain.aircraft_type import AircraftType
 
 @dataclass
 class Aircraft:

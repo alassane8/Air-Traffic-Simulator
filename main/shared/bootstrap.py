@@ -1,6 +1,7 @@
 import time
 
-from shared import data_loader, init_logger, object_factory, simulator
+from shared.simulator import simulator
+from shared import data_loader, init_logger, object_factory
 from airport.application.gate_assignment_service import assign_aircrafts_to_gates
 
 

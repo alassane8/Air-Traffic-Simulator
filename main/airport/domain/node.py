@@ -2,8 +2,8 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
-from main.airport.domain.enums.node_status import NodeStatus
-from main.airport.domain.enums.node_type import NodeType
+from airport.domain.enums.node_status import NodeStatus
+from airport.domain.enums.node_type import NodeType
 
 @dataclass
 class Node:
