@@ -25,6 +25,15 @@ class Aircraft:
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
 
+    BASE_FUEL_FLOW = {
+        "lineup":   0.2,   # kg/s
+        "takeoff":  2.8,   # kg/s  (pleine puissance)
+        "climb":    2.1,   # kg/s
+        "cruise":   0.85,  # kg/s  (régime normal)
+        "descent":  0.25,  # kg/s
+        "landing":  0.3,   # kg/s
+    }
+
     def is_full(self) -> bool:
         return self.passengers >= self.seats
 
