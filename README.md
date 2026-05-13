@@ -101,7 +101,6 @@ Les points suivants ont été identifiés mais volontairement mis de côté pour
 - **Capacité des runways en simultané** : une runway est marquée `OCCUPIED` pendant le décollage/atterrissage, mais la file d'attente ne tient pas compte des délais de dégagement réels.
 - **Consommation de carburant différenciée** : le champ `fuel_burn_rate_kg_per_s` existe dans le modèle `Flight` mais n'est pas encore calculé dynamiquement selon le type d'avion, la phase de vol ou la météo.
 - **Poids de l'avion** : le modèle `Aircraft` ne tient pas compte du poids au décollage (MTOW), ce qui simplifiait la sélection de runway (une narrow peut en théorie utiliser une courte piste, une large non).
-- **Heures réelles de départ/arrivée** : les compagnies, les créneaux horaires (slots) et les plans de vol réels ne sont pas modélisés.
 
 ---
 
