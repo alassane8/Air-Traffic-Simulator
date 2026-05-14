@@ -1,6 +1,10 @@
-# AeroSim
+# Air-Traffic-Simulator
 
-AeroSim est un simulateur de trafic aérien écrit en Python, conçu pour modéliser de manière réaliste le cycle de vie complet d'un vol, depuis l'assignation à une gate jusqu'à l'atterrissage et le retour à quai. Le projet est structuré selon une **architecture hexagonale** (Ports & Adapters), avec une séparation claire entre domaine, logique métier et infrastructure.
+La visualisation du simulateur est réalisée avec **pygame** pour le rendu graphique temps réel et **geopandas** pour l'affichage des côtes et la projection cartographique Mercator.
+
+![AeroSim Visualizer](screenshot.png)
+
+Air-Traffic-Simulator est un simulateur de trafic aérien écrit en Python, conçu pour modéliser de manière réaliste le cycle de vie complet d'un vol, depuis l'assignation à une gate jusqu'à l'atterrissage et le retour à quai. Le projet est structuré selon une **architecture hexagonale** (Ports & Adapters), avec une séparation claire entre domaine, logique métier et infrastructure.
 
 ---
 
