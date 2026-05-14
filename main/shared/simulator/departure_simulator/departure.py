@@ -17,12 +17,9 @@ def init_aircraft_boarding(
     air_corridors: dict,
 ) -> None:
     """
-    Initialise l'avion et le vol au moment du boarding (transition PLANNED →
-    LINEUP) :
+    Initialise l'avion et le vol au moment du boarding
       - charge le carburant calculé dans flight.fuel_kg
       - fixe flight.fuel_burn_rate_kg_per_s (utilisé par update_flight_fuel)
-
-    Appelé une seule fois, juste avant advance_status(flight) dans _tick_runway.
     """
     import datetime as _dt
 

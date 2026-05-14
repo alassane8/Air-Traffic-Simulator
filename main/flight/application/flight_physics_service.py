@@ -118,7 +118,7 @@ def update_flight_fuel(flight: Flight, tick_interval: float) -> None:
     if flight.fuel_burn_rate_kg_per_s <= 0:
         return
 
-    phase_name = flight.status.name  # e.g. "CRUISE", "CLIMBING" …
+    phase_name = flight.status.name
     factor = _FUEL_PHASE_FACTOR.get(phase_name, 1.0)
 
     burn = flight.fuel_burn_rate_kg_per_s * factor * tick_interval
@@ -130,3 +130,8 @@ def update_flight_fuel(flight: Flight, tick_interval: float) -> None:
         from flight.domain.enums.flight_priority import FlightPriority
         if flight.priority != FlightPriority.EMERGENCY:
             flight.priority = FlightPriority.FUEL_CRITICAL
+        
+
+def compute_v_stall(TOW_kg, rho, S_m2, CL_max):
+    g = 9.81
+    return math.sqrt((2 * TOW_kg * g) / (rho * S_m2 * CL_max))

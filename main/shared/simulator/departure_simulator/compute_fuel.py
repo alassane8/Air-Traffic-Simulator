@@ -1,4 +1,5 @@
 import math
+import random
 
 from air_corridor.domain.air_corridor import AirCorridor
 from aircraft.domain.aircraft import Aircraft
@@ -53,6 +54,7 @@ def compute_flight_fuel(
     if aircraft.is_cargo():
         payload_kg = CARGO_PAYLOAD_KG
     else:
+        aircraft.load_passengers(random.randrange(aircraft.seats))
         payload_kg = aircraft.passengers * AVG_PAX_WEIGHT_KG
 
     phase_durations = {

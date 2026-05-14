@@ -33,6 +33,12 @@ class Aircraft:
         "descent":  0.25,  # kg/s
         "landing":  0.3,   # kg/s
     }
+    
+    CL_max = {
+    "clean":       1.4,   # croisière, ailes propres
+    "takeoff":     2.0,   # flaps décollage partiellement sortis
+    "landing":     2.7,   # flaps + slats complètement sortis
+}
 
     def is_full(self) -> bool:
         return self.passengers >= self.seats

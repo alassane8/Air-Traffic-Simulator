@@ -34,7 +34,7 @@ class Flight:
 
     lat: float = 0.0
     lon: float = 0.0
-    altitude_ft: float = 0.0
+    altitude_m: float = 0.0
     heading: float = 0.0
     speed_km_h: float = 0.0
 
@@ -45,6 +45,9 @@ class Flight:
     fuel_burn_rate_kg_per_s: float = 0.0
 
     time_spent: float = 0.0
+
+    current_waypoint_index: int = 0
+    CL_max: float = 1.4
 
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
