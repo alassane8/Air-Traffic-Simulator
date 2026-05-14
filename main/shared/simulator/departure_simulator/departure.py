@@ -7,6 +7,7 @@ from flight.application.flight_timing_service import init_flight_cruising_time, 
 from flight.domain.flight import Flight, FlightStatus
 from air_corridor.domain.air_corridor import AirCorridor
 from aircraft.domain.aircraft import Aircraft
+from shared.simulator.departure_simulator.compute_fuel import compute_flight_fuel
 from shared.simulator.departure_simulator.takeoff import _do_takeoff
 from aircraft.domain.aircraft_type import AircraftType
 
@@ -64,15 +65,20 @@ def _tick_runway(
             continue
 
         if flight.status == FlightStatus.PLANNED:
-            # ── BOARDING : initialisation fuel avant de passer en LINEUP ──
-            aircraft = aircrafts.get(flight.aircraft_id)
-            if aircraft:
-                init_aircraft_boarding(aircraft, flight, air_corridors)
-            else:
-                print(f"[WARN] boarding {flight.flight_code} : aircraft introuvable (id={flight.aircraft_id})")
-
             advance_status(flight)
             flight.time_spent = 0
+
+        elif flight.status == FlightStatus.BOARDING:
+            if flight.time_spent == 0:
+                aircraft = aircrafts.get(flight.aircraft_id)
+                if aircraft:
+                    init_aircraft_boarding(aircraft, flight, air_corridors)
+                else:
+                    print(f"[WARN] boarding {flight.flight_code} : aircraft introuvable (id={flight.aircraft_id})")
+            flight.time_spent += tick_interval
+            if flight.time_spent >= FlightStatus.BOARDING.duration_seconds:
+                advance_status(flight)
+                flight.time_spent = 0
 
         elif flight.status == FlightStatus.LINEUP:
             if flight.time_spent == 0:
