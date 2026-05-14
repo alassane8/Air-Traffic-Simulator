@@ -1,18 +1,141 @@
-
-from typing import List
-
 import math
+from typing import List
 
 from airport.application.taxiway_pathfinding_service import find_path_graph
 from flight.application.flight_service import advance_status, is_departing
 from flight.application.flight_timing_service import init_flight_cruising_time, init_flight_estimated_arrival_time
 from flight.domain.flight import Flight, FlightStatus
-from main.air_corridor.domain.air_corridor import AirCorridor
-from main.aircraft.domain.aircraft import Aircraft
+from air_corridor.domain.air_corridor import AirCorridor
+from aircraft.domain.aircraft import Aircraft
 from shared.simulator.departure_simulator.takeoff import _do_takeoff
 from aircraft.domain.aircraft_type import AircraftType
 
 
+# ─────────────────────────────────────────────────────────────────
+#  FUEL INITIALISATION  (appelé au BOARDING)
+# ─────────────────────────────────────────────────────────────────
+
+def compute_flight_fuel(
+    aircraft: Aircraft,
+    flight: Flight,
+    air_corridors: dict,
+) -> tuple[float, float]:
+    """
+    Calcule le carburant total nécessaire (kg) et le fuel_burn_rate de
+    croisière (kg/s) à partir des caractéristiques de l'appareil et du vol.
+
+    Méthode :
+    ---------
+    1. Fuel des phases sol/transition (taxi, décollage, montée, descente,
+       atterrissage) : consommation fixe (BASE_FUEL_FLOW × durée phase).
+
+    2. Fuel croisière via la formule de Breguet Range (4 itérations pour
+       converger, car la masse initiale dépend du fuel lui-même) :
+
+           fuel_trip = W_initial × (1 - exp(-R × TSFC / (L/D × V)))
+
+         où :
+           R    = distance (m)
+           TSFC = Thrust Specific Fuel Consumption ≈ 0.000018 kg/(N·s)
+           L/D  = finesse aérodynamique (aircraft.ld_ratio)
+           V    = vitesse croisière (m/s)
+
+    3. total_fuel = (trip_fuel + phase_fuel) × (1 + 15 % réserve)
+       plafonné à aircraft.max_fuel_kg.
+
+    Retourne
+    --------
+    (total_fuel_kg, fuel_burn_rate_kg_per_s)
+    """
+
+    # ── Constantes ────────────────────────────────────────────────
+    TSFC = 0.000018           # kg/(N·s)
+    AVG_PAX_WEIGHT_KG = 95    # pax + bagage cabine
+    RESERVE_RATIO = 0.15      # réserve réglementaire ICAO
+    CARGO_PAYLOAD_KG = 100_000
+    g = 9.81                  # m/s²
+
+    # ── Corridor ──────────────────────────────────────────────────
+    air_corridor: AirCorridor | None = air_corridors.get(flight.corridor_code)
+    if air_corridor is None:
+        # Corridor pas encore assigné → sécurité : demi-réservoir
+        return aircraft.max_fuel_kg * 0.5, aircraft.BASE_FUEL_FLOW["cruise"]
+
+    distance_m = float(air_corridor.distance) * 1_000  # km → m
+
+    # ── Payload ───────────────────────────────────────────────────
+    if aircraft.is_cargo():
+        payload_kg = CARGO_PAYLOAD_KG
+    else:
+        payload_kg = aircraft.passengers * AVG_PAX_WEIGHT_KG
+
+    # ── Fuel des phases sol / transition (durée × débit) ──────────
+    phase_durations = {
+        "lineup":   FlightStatus.LINEUP.duration_seconds,
+        "takeoff":  FlightStatus.TAKEOFF.duration_seconds,
+        "climb":    FlightStatus.CLIMBING.duration_seconds,
+        "descent":  FlightStatus.DESCENDING.duration_seconds,
+        "landing":  FlightStatus.LANDING.duration_seconds,
+        "taxi":     FlightStatus.TAXI.duration_seconds,
+    }
+    phase_fuel_kg = sum(
+        aircraft.BASE_FUEL_FLOW.get(phase, 0.0) * duration
+        for phase, duration in phase_durations.items()
+    )
+
+    # ── Fuel croisière – formule de Breguet (résolution itérative) ─
+    speed_m_s = aircraft.cruising_speed / 3.6  # km/h → m/s
+    oew = aircraft.operating_empty_weight_kg
+
+    fuel_estimate_kg = 5_000.0
+    for _ in range(4):
+        w_initial_kg = oew + payload_kg + phase_fuel_kg + fuel_estimate_kg
+        breguet_exp = (distance_m * TSFC) / (aircraft.ld_ratio * speed_m_s)
+        trip_fuel_kg = w_initial_kg * (1 - math.exp(-breguet_exp))
+        fuel_estimate_kg = trip_fuel_kg
+
+    # ── Total avec réserve, plafonné au réservoir ──────────────────
+    total_fuel_kg = min(
+        (trip_fuel_kg + phase_fuel_kg) * (1 + RESERVE_RATIO),
+        aircraft.max_fuel_kg,
+    )
+
+    # ── Taux de consommation croisière ────────────────────────────
+    fuel_burn_rate_kg_per_s = (
+        aircraft.fuel_flow_cruise_kg_per_s
+        if aircraft.fuel_flow_cruise_kg_per_s > 0
+        else aircraft.BASE_FUEL_FLOW["cruise"]
+    )
+
+    return total_fuel_kg, fuel_burn_rate_kg_per_s
+
+
+def init_aircraft_boarding(
+    aircraft: Aircraft,
+    flight: Flight,
+    air_corridors: dict,
+) -> None:
+    """
+    Initialise l'avion et le vol au moment du boarding (transition PLANNED →
+    LINEUP) :
+      - charge le carburant calculé dans flight.fuel_kg
+      - fixe flight.fuel_burn_rate_kg_per_s (utilisé par update_flight_fuel)
+
+    Appelé une seule fois, juste avant advance_status(flight) dans _tick_runway.
+    """
+    import datetime as _dt
+
+    total_fuel_kg, burn_rate = compute_flight_fuel(aircraft, flight, air_corridors)
+
+    flight.fuel_kg = total_fuel_kg
+    flight.fuel_burn_rate_kg_per_s = burn_rate
+
+    aircraft.updated_at = _dt.datetime.now()
+
+
+# ─────────────────────────────────────────────────────────────────
+#  TICK PRINCIPAL
+# ─────────────────────────────────────────────────────────────────
 
 def _tick_runway(
     new_departures: dict,
@@ -38,13 +161,20 @@ def _tick_runway(
 
         departure_queue = [
             f for f in depart_runway.scheduled_flights
-            if is_departing(f) and f.depart_airport_code == depart_runway.airport_id
+            if is_departing(f) and f.depart_airport_id == depart_runway.airport_id
         ]
 
         if not departure_queue or departure_queue[0] != flight:
             continue
 
         if flight.status == FlightStatus.PLANNED:
+            # ── BOARDING : initialisation fuel avant de passer en LINEUP ──
+            aircraft = aircrafts.get(flight.aircraft_id)
+            if aircraft:
+                init_aircraft_boarding(aircraft, flight, air_corridors)
+            else:
+                print(f"[WARN] boarding {flight.flight_code} : aircraft introuvable (id={flight.aircraft_id})")
+
             advance_status(flight)
             flight.time_spent = 0
 
@@ -58,7 +188,7 @@ def _tick_runway(
                     (
                         t for t in terminals.values()
                         if t.terminal_code == flight.depart_terminal_code
-                        and t.airport_id == flight.depart_airport_code
+                        and t.airport_id == flight.depart_airport_id
                     ),
                     None,
                 )
@@ -108,46 +238,3 @@ def _get_path_to_runway(flight: Flight, nodes: dict, edges: dict) -> List[str]:
         )
 
     return find_path_graph(nodes, edges, start_id, goal_id)
-
-# def compute_flight_fuel(aircraft: Aircraft, flight: Flight, airCorridors: dict[AirCorridor]):
-#     reserve_ratio = .15
-#     TSFC = 0.000018
-#     avg_passenger_weight_kg = 95
-#     passenger_weight_kg = aircraft.passengers * avg_passenger_weight_kg
-#     air_corridor = airCorridors.get(flight.corridor_code)
-
-#     if aircraft.type == AircraftType.CARGOS:
-#         payload_kg = 100000
-#     if aircraft.is_passsenger():
-#         payload_kg = passenger_weight_kg
-    
-#     flight_time_h = flight.estimated_arrival_time - flight.estimated_departure_time
-
-#     total_fuel_kg = 5000
-
-#     total_operating_weight_kg = aircraft.operating_empty_weight_kg + total_fuel_kg + payload_kg
-
-#     fuel_kg = total_operating_weight_kg * (1 - math.exp(- (air_corridor.distance * TSFC) / (aircraft.ld_ratio * aircraft.cruising_speed)))
-
-#     load_factor = total_operating_weight_kg / aircraft.maximum_total_operating_weight_kg
-
-#     BASE_FUEL_FLOW = {
-#     "taxi":     0.2,   # kg/s
-#     "takeoff":  2.8,   # kg/s  (pleine puissance)
-#     "climb":    2.1,   # kg/s
-#     "cruise":   0.85,  # kg/s  (régime normal)
-#     "descent":  0.25,  # kg/s
-#     "landing":  0.3,   # kg/s
-#     }
-#     for phase in BASE_FUEL_FLOW:
-#         fuel_burn_rate_kg_per_s += BASE_FUEL_FLOW[phase] * (0.75 + 0.25 * load_factor)
-    
-#     trip_fuel = fuel_burn_rate_kg_per_s * (flight_time_h / 36000)
-
-#     total_fuel  = trip_fuel * 1.15
-
-#     # TSFC  = Thrust Specific Fuel Consumption (consommation spécifique)
-#     #         ≈ 0.000015 à 0.000018 kg/(N·s) pour un turbofan moderne
-#     # L/D   = Lift-to-Drag ratio (finesse aérodynamique)
-#     #         ≈ 17-18 pour un A320, ≈ 19-21 pour un B777
-#     # speed = vitesse de croisière en km/h (≈ 900 km/h soit Mach 0.82)

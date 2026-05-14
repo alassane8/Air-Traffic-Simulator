@@ -3,9 +3,9 @@ from datetime import datetime
 from enum import Enum
 from typing import Optional
 
-from main.flight.domain.enums.flight_priority import FlightPriority
-from main.flight.domain.enums.flight_status import FlightStatus
-from main.flight.domain.enums.runway_usage_type import RunwayUsageType
+from flight.domain.enums.flight_priority import FlightPriority
+from flight.domain.enums.flight_status import FlightStatus
+from flight.domain.enums.runway_usage_type import RunwayUsageType
 
 
 @dataclass

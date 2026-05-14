@@ -79,3 +79,54 @@ def get_distance_km(flight: Flight) -> float:
     a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
     a = max(0.0, min(1.0, a))
     return 6371 * 2 * math.asin(math.sqrt(a))
+
+
+# ─────────────────────────────────────────────────────────────────
+#  FUEL UPDATE  (appelé à chaque tick par _tick_flight)
+# ─────────────────────────────────────────────────────────────────
+
+# Facteurs de consommation par phase relatifs au taux croisière.
+# Le taux croisière stocké sur le vol est la référence (×1.0).
+_FUEL_PHASE_FACTOR = {
+    "LINEUP":     0.24,   # moteurs au ralenti / roulage
+    "TAKEOFF":    3.30,   # pleine puissance
+    "CLIMBING":   2.47,   # montée (≈ fuel_flow_climb / fuel_flow_cruise)
+    "CRUISE":     1.00,   # régime nominal – référence
+    "DESCENDING": 0.29,   # descente moteurs réduits
+    "LANDING":    0.35,   # approche / inverseurs
+    "TAXI":       0.24,   # roulage à l'arrivée
+}
+
+
+def update_flight_fuel(flight: Flight, tick_interval: float) -> None:
+    """
+    Décrémente flight.fuel_kg d'un tick selon la phase courante.
+
+    Le taux de base (flight.fuel_burn_rate_kg_per_s) représente la
+    consommation de croisière ; chaque phase applique un facteur
+    multiplicatif (_FUEL_PHASE_FACTOR).
+
+    Si le carburant tombe à 0 le vol est mis en FUEL_CRITICAL
+    (via flight.priority) – la logique de priorité existante prend
+    ensuite le relais.
+
+    Paramètres
+    ----------
+    flight        : Flight – vol à mettre à jour
+    tick_interval : float  – durée réelle du tick (secondes)
+    """
+    if flight.fuel_burn_rate_kg_per_s <= 0:
+        return
+
+    phase_name = flight.status.name  # e.g. "CRUISE", "CLIMBING" …
+    factor = _FUEL_PHASE_FACTOR.get(phase_name, 1.0)
+
+    burn = flight.fuel_burn_rate_kg_per_s * factor * tick_interval
+    flight.fuel_kg = max(0.0, flight.fuel_kg - burn)
+
+    # Mise à jour de la propriété is_fuel_critical (déjà sur Flight)
+    # → propagation de la priorité si nécessaire
+    if flight.fuel_kg == 0.0 or flight.is_fuel_critical:
+        from flight.domain.enums.flight_priority import FlightPriority
+        if flight.priority != FlightPriority.EMERGENCY:
+            flight.priority = FlightPriority.FUEL_CRITICAL
