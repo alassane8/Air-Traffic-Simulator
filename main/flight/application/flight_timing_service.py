@@ -13,6 +13,7 @@ def init_flight_estimated_departure_time(scheduled_flights: list) -> None:
                 + timedelta(
                     seconds=(
                         FlightStatus.PLANNED.duration_seconds
+                        + FlightStatus.BOARDING.duration_seconds
                         + FlightStatus.LINEUP.duration_seconds
                     )
                 )

@@ -16,6 +16,7 @@ def is_in_air(flight: Flight) -> bool:
 def is_on_ground(flight: Flight) -> bool:
     return flight.flight_status in (
         FlightStatus.PLANNED,
+        FlightStatus.BOARDING,
         FlightStatus.LINEUP,
         FlightStatus.LANDING,
         FlightStatus.TAXI,
@@ -59,6 +60,7 @@ def sort_by_priority(flights: list[Flight]) -> list[Flight]:
 
 DEPARTURE_SEQUENCE = [
     FlightStatus.PLANNED,
+    FlightStatus.BOARDING,
     FlightStatus.LINEUP,
     FlightStatus.TAKEOFF,
     FlightStatus.CLIMBING,
