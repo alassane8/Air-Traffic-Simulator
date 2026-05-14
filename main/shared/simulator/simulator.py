@@ -21,7 +21,7 @@ def run_simulation(
     nodes: dict,
     gates: dict,
 ):
-    TIME_SCALE = 60
+    TIME_SCALE = 20
     TICK_INTERVAL = 1.0
     SIM_TICK = TICK_INTERVAL * TIME_SCALE
     active_flights = []
@@ -45,7 +45,7 @@ def run_simulation(
         vis = Visualizer(airports_data)
         _vis_last_time = time.time() * 1000
         _vis_enabled = True
-        init_logger.log("[VISUALIZER] Radar display active")
+        init_logger.log("[VISUALIZER] Display active")
     except Exception as e:
         init_logger.log(f"[VISUALIZER] Could not start: {e}")
         vis = None
@@ -53,8 +53,6 @@ def run_simulation(
 
     while True:
         tick_start = time.time()
-
-        init_logger.log_runways(runways)
 
         _tick_runway(
             new_departures, occupied_gates, active_flights,
