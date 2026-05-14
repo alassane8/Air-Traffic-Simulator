@@ -180,7 +180,6 @@ class WorldMapRenderer:
     def draw(self, target: pygame.Surface):
         target.blit(self._bg_surf,    (0, 0))
         target.blit(self._grid_surf,  (0, 0))
-        self._draw_sweep(target)
         target.blit(self._coast_surf, (0, 0))
         target.blit(self._scan_surf,  (0, 0))
 

@@ -29,9 +29,11 @@ if _ROOT not in sys.path:
 
 import pygame
 
-from shared.adapter.visualizer.renderer.world_map    import WorldMapRenderer
-from shared.adapter.visualizer.renderer.airport_layer import AirportLayerRenderer
-from shared.adapter.visualizer.renderer.hud_overlay  import HUDOverlayRenderer
+from shared.adapter.visualizer.renderer.world_map       import WorldMapRenderer
+from shared.adapter.visualizer.renderer.airport_layer   import AirportLayerRenderer
+from shared.adapter.visualizer.renderer.hud_overlay     import HUDOverlayRenderer
+from shared.adapter.visualizer.renderer.flight_layer    import FlightLayerRenderer
+from shared.adapter.visualizer.renderer.flight_info_panel import FlightInfoPanelRenderer
 
 # ── Config ────────────────────────────────────────────────────────
 WIDTH      = 1400
@@ -53,7 +55,9 @@ class Visualizer:
             events = vis.handle_events()
             if not events:
                 break
-            vis.update(elapsed_ms, active_flights, tick, time_scale)
+            vis.update(elapsed_ms, active_flights, tick, time_scale,
+                       flights=active_flights_list,
+                       airlines=airlines_dict, aircrafts=aircrafts_dict)
             vis.draw()
             vis.tick()
     """
@@ -73,9 +77,16 @@ class Visualizer:
         self._h = height
 
         # Renderers
-        self._world_map = WorldMapRenderer(width, height)
-        self._airports  = AirportLayerRenderer(airports_data, width, height)
-        self._hud       = HUDOverlayRenderer(width, height)
+        self._world_map   = WorldMapRenderer(width, height)
+        self._airports    = AirportLayerRenderer(airports_data, width, height)
+        self._hud         = HUDOverlayRenderer(width, height)
+        self._flights_layer = FlightLayerRenderer(width, height)
+        self._flight_panel  = FlightInfoPanelRenderer(width, height)
+
+        # Live flight data (injected each frame via update())
+        self._active_flights: list = []
+        self._airlines:  dict = {}
+        self._aircrafts: dict = {}
 
         # Reverse geo lookup: pixel → lon/lat (for mouse coord display)
         self._last_mouse_lon = 0.0
@@ -110,25 +121,57 @@ class Visualizer:
             if event.type == pygame.QUIT:
                 return False
             if event.type == pygame.KEYDOWN:
-                if event.key in (pygame.K_ESCAPE, pygame.K_q):
+                if event.key == pygame.K_q:
                     return False
+                if event.key == pygame.K_ESCAPE:
+                    # ESC : désélectionner le vol, ne pas quitter
+                    self._flights_layer.deselect()
+                    self._flight_panel.clear()
             if event.type == pygame.MOUSEMOTION:
                 mx, my = pygame.mouse.get_pos()
                 lon, lat = self._pixel_to_geo(mx, my)
                 self._last_mouse_lon = lon
                 self._last_mouse_lat = lat
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                mx, my = event.pos
+                clicked = self._flights_layer.handle_click(mx, my, self._active_flights)
+                if clicked:
+                    self._flight_panel.set_flight(clicked, self._airlines, self._aircrafts)
+                else:
+                    self._flight_panel.clear()
         return True
 
     def update(self, elapsed_ms: float,
                active_flights: int = 0,
                tick_count:     int = 0,
-               time_scale:     int = 60):
-        """Advance all animations."""
+               time_scale:     int = 60,
+               flights:        list = None,
+               airlines:       dict = None,
+               aircrafts:      dict = None):
+        """Advance all animations. Pass flights list for live flight tracking."""
+        # Stocker les données de vol pour handle_events (clic) et draw
+        if flights is not None:
+            self._active_flights = flights
+        if airlines is not None:
+            self._airlines = airlines
+        if aircrafts is not None:
+            self._aircrafts = aircrafts
+
         self._world_map.update(elapsed_ms)
         self._airports.update(elapsed_ms)
+        self._flights_layer.update(elapsed_ms, self._active_flights)
+
+        # Mettre à jour le panel si un vol est sélectionné
+        selected_id = self._flights_layer.selected_id
+        if selected_id:
+            selected_flight = next((f for f in self._active_flights if f.id == selected_id), None)
+            self._flight_panel.update(elapsed_ms, selected_flight)
+        else:
+            self._flight_panel.update(elapsed_ms)
+
         self._hud.update(
             elapsed_ms,
-            active_flights = active_flights,
+            active_flights = len(self._active_flights),
             tick_count     = tick_count,
             time_scale     = time_scale,
             mouse_lon      = self._last_mouse_lon,
@@ -139,7 +182,9 @@ class Visualizer:
         """Render one frame to the screen."""
         self._world_map.draw(self._screen)
         self._airports.draw(self._screen)
+        self._flights_layer.draw(self._screen, self._active_flights)
         self._hud.draw(self._screen)
+        self._flight_panel.draw(self._screen)
         pygame.display.flip()
 
     def tick(self):

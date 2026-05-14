@@ -1,4 +1,6 @@
 import time
+import os
+import sys
 from airport.application.runway_assignment_service import assign_flight_to_departure_runway
 from shared.simulator.departure_simulator.departure import _tick_runway
 from shared.simulator.flight_simulator.flight import _tick_flight
@@ -23,11 +25,31 @@ def run_simulation(
     TICK_INTERVAL = 1.0
     SIM_TICK = TICK_INTERVAL * TIME_SCALE
     active_flights = []
+    tick_count = 0
 
     new_departures = assign_flight_to_departure_runway(
         terminals, aircrafts, airlines, runways, occupied_gates,
         airports, air_corridors, existing_departures={}
     )
+
+    # ── Initialisation du visualizer ──────────────────────────────
+    try:
+        import json
+        _here = os.path.dirname(os.path.abspath(__file__))
+        _root = os.path.abspath(os.path.join(_here, "..", "..", ".."))
+        airports_json_path = os.path.join(_root, "main", "config", "airports.json")
+        with open(airports_json_path, "r") as f:
+            airports_data = json.load(f)
+
+        from shared.adapter.visualizer.visualizer import Visualizer
+        vis = Visualizer(airports_data)
+        _vis_last_time = time.time() * 1000
+        _vis_enabled = True
+        init_logger.log("[VISUALIZER] Radar display active")
+    except Exception as e:
+        init_logger.log(f"[VISUALIZER] Could not start: {e}")
+        vis = None
+        _vis_enabled = False
 
     while True:
         tick_start = time.time()
@@ -50,6 +72,31 @@ def run_simulation(
             aircrafts, airlines, air_corridors, terminals,
             runways, airports, nodes, edges, gates, TICK_INTERVAL,
         )
+
+        tick_count += 1
+
+        # ── Mise à jour du visualizer ─────────────────────────────
+        if _vis_enabled and vis is not None:
+            now_ms = time.time() * 1000
+            elapsed_ms = now_ms - _vis_last_time
+            _vis_last_time = now_ms
+
+            if not vis.handle_events():
+                init_logger.log("[VISUALIZER] Window closed by user")
+                vis.quit()
+                vis = None
+                _vis_enabled = False
+            else:
+                vis.update(
+                    elapsed_ms,
+                    tick_count  = tick_count,
+                    time_scale  = TIME_SCALE,
+                    flights     = list(active_flights),
+                    airlines    = airlines,
+                    aircrafts   = aircrafts,
+                )
+                vis.draw()
+                vis.tick()
 
         elapsed = time.time() - tick_start
         time.sleep(max(0, TICK_INTERVAL - elapsed))
