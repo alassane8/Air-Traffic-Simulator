@@ -102,11 +102,7 @@ def _tick_runway(
         elif flight.status == FlightStatus.TAKEOFF:
             flight.time_spent += tick_interval
             if flight.time_spent >= FlightStatus.TAKEOFF.duration_seconds:
-                _do_takeoff(
-                    flight, depart_runway, terminals, gates,
-                    occupied_gates, active_flights, new_departures, airports,
-                )
-
+                _do_takeoff(flight, depart_runway, active_flights, new_departures, airports, air_corridors)
                 aircraft = aircrafts.get(flight.aircraft_id)
                 air_corridor = next(
                     (c for c in air_corridors.values() if c.air_corridor_code == flight.corridor_code),

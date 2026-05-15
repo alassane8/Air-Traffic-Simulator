@@ -6,13 +6,10 @@ from datetime import datetime
 def _do_takeoff(
     flight: Flight,
     depart_runway,
-    terminals: dict,
-    gates: dict,
-    occupied_gates: list,
     active_flights: list,
     new_departures: dict,
     airports: dict,
-    air_corridors: dict = None,
+    air_corridors: dict,
 ):
     advance_status(flight)
     flight.time_spent = 0
@@ -27,7 +24,6 @@ def _do_takeoff(
         raise ValueError(
             f"Aéroport de départ '{flight.depart_airport_id}' introuvable pour {flight.flight_code}"
         )
-
     flight.current_waypoint_index = 0
     if air_corridors:
         corridor = next(
