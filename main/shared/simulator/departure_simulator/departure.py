@@ -83,14 +83,7 @@ def _tick_runway(
                 if gate and gate in occupied_gates:
                     occupied_gates.remove(gate)
                     gate.release_aircraft()
-                terminal = next(
-                    (
-                        t for t in terminals.values()
-                        if t.terminal_code == flight.depart_terminal_code
-                        and t.airport_id == flight.depart_airport_id
-                    ),
-                    None,
-                )
+                    terminal = terminals[gate.terminal]
                 if terminal:
                     terminal.remove_plane()
 
