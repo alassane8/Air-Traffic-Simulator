@@ -26,7 +26,7 @@ Le simulateur repose sur plusieurs hypothèses de conception choisies pour maint
 Toute la donnée du simulateur est externalisée dans des fichiers JSON. Aucune valeur métier n'est codée en dur dans le code.
 
 ```
-AeroSim/main/
+Air-Traffic-Simulator/main/
 ├── config/aircrafts.json         → Flotte d'avions (type, vitesse, capacité, masse, finesse)
         ├── airports.json         → Aéroports, terminaux, gates, runways, taxiway graph
         ├── airlines.json         → Compagnies aériennes (IATA, ICAO, pays)
@@ -324,9 +324,9 @@ AeroSim/
 ## Lancement
 
 ```bash
-git clone <url_du_repo>
+git clone https://github.com/alassane8/Air-Traffic-Simulator.git
 pip install -r requirements.txt
 pip install --upgrade -r requirements.txt
-cd AeroSim/main
+cd Air-Traffic-Simulator/main
 python main.py
 ```

@@ -34,7 +34,7 @@ class HUDOverlayRenderer:
     """
 
     def __init__(self, width: int, height: int,
-                 sim_name: str = "AEROSIM",
+                 sim_name: str = "AIR TRAFFIC SIMULATOR",
                  version: str  = "v1.0"):
         self.w        = width
         self.h        = height
@@ -163,7 +163,7 @@ class HUDOverlayRenderer:
 
     def _draw_version_tag(self, surface: pygame.Surface):
         tag_lines = [
-            f"AEROSIM  {self.version}",
+            f"AIR TRAFFIC SIMULATOR  {self.version}",
             "ATC SIMULATION SYSTEM",
             "GNC / TRAJECTORY MODULE",
         ]

@@ -1,10 +1,9 @@
 """
 visualizer.py
 ─────────────
-Entry-point for the AeroSim radar-style visualizer.
+Entry-point for the Air-Traffic-Simulator radar-style visualizer.
 
 Run standalone:
-    cd AeroSim/main
     python shared/adapter/visualizer/visualizer.py
 
 Or import and drive from the simulator:
@@ -37,9 +36,9 @@ from shared.adapter.visualizer.renderer.flight_info_panel import FlightInfoPanel
 
 # ── Config ────────────────────────────────────────────────────────
 WIDTH      = 1400
-HEIGHT     = 800
+HEIGHT     = 1000
 FPS_TARGET = 60
-WINDOW_TITLE = "AEROSIM  //  ATC RADAR  //  GNC MODULE"
+WINDOW_TITLE = "AIR TRAFFIC SIMULATOR  //  ATC  //  GNC MODULE"
 
 
 class Visualizer:
@@ -217,8 +216,8 @@ class Visualizer:
         ping_scheduled = {code: i * 600 for i, code in enumerate(airport_codes)}
         elapsed_total  = 0
 
-        print(f"[AEROSIM] Visualizer running — {len(airport_codes)} airports loaded")
-        print("[AEROSIM] Press ESC or Q to quit")
+        print(f"[ATS] Visualizer running — {len(airport_codes)} airports loaded")
+        print("[ATS] Press ESC or Q to quit")
 
         while self._running:
             now        = pygame.time.get_ticks()
@@ -255,7 +254,7 @@ if __name__ == "__main__":
         airports_path = os.path.join("config", "airports.json")
 
     if not os.path.exists(airports_path):
-        print(f"[ERROR] airports.json not found. Run from AeroSim/main/")
+        print(f"[ERROR] airports.json not found. Run from Air-Traffic-Simulator/main/")
         sys.exit(1)
 
     vis = Visualizer.from_config_path(airports_path)
