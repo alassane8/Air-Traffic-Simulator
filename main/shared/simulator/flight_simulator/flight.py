@@ -58,26 +58,38 @@ def _get_corridor_waypoints(flight, air_corridors: dict):
     return []
 
 
-def _advance_to_next_waypoint(flight, waypoints: list, airports: dict) -> bool:
-    """
-    Passe au waypoint suivant ou, si dernier, vers l'aéroport d'arrivée.
-    Retourne True si on vient d'atteindre l'aéroport d'arrivée (dernier leg terminé).
-    """
+from datetime import datetime, timedelta
+
+def _advance_to_next_waypoint(flight, waypoints, airports) -> bool:
     flight.current_waypoint_index += 1
 
     if flight.current_waypoint_index < len(waypoints):
         wp = waypoints[flight.current_waypoint_index]
         flight.dest_lat = wp.lat
         flight.dest_lon = wp.lon
+
+        # Recalcul de l'ETA vers le prochain waypoint
+        distance_km = get_distance_km(flight)
+        speed_km_s = flight.speed_km_h / 3600
+        if speed_km_s > 0:
+            seconds_left = distance_km / speed_km_s
+            flight.estimated_arrival_time = datetime.now() + timedelta(seconds=seconds_left)
+
         return False
     else:
         arrival_airport = airports.get(flight.arrival_airport_code)
         if arrival_airport:
             flight.dest_lat = arrival_airport.lat
             flight.dest_lon = arrival_airport.lon
+
+            distance_km = get_distance_km(flight)
+            speed_km_s = flight.speed_km_h / 3600
+            if speed_km_s > 0:
+                seconds_left = distance_km / speed_km_s
+                flight.estimated_arrival_time = datetime.now() + timedelta(seconds=seconds_left)
+
         flight.current_waypoint_index = len(waypoints)
         return False
-    
 
 def _tick_flight(
     active_flights: list,
@@ -135,6 +147,10 @@ def _tick_flight(
                         target_alt = _target_altitude_m(waypoints[flight.current_waypoint_index])
                         _update_altitude_toward(flight, target_alt, aircraft, sim_tick)
                 else:
+                    arrival_airport = airports.get(flight.arrival_airport_code)
+                    if arrival_airport:
+                        flight.dest_lat = arrival_airport.lat
+                        flight.dest_lon = arrival_airport.lon
                     _do_start_descent(flight, air_corridors, aircrafts)
             else:
                 distance_restante = get_distance_km(flight)
@@ -151,6 +167,8 @@ def _tick_flight(
             flight.time_spent += tick_interval
             if aircraft:
                 _update_altitude_toward(flight, 0.0, aircraft, tick_interval)
+                # Continuer à avancer vers l'aéroport pendant la descente
+                update_position(flight, sim_tick)
             if flight.time_spent >= FlightStatus.DESCENDING.duration_seconds:
                 advance_status(flight)
                 flight.time_spent = 0

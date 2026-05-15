@@ -164,7 +164,7 @@ def create_air_corridors(
         corridor_waypoints = []
 
         for waypoint_data in corridor.get("waypoints", []):
-            waypoint_id = waypoint_data.get("id")
+            waypoint_id = f"{corridor.get('id')}_{waypoint_data.get('id')}"  # ← "cor-001_SHIPP"
 
             if waypoint_id in all_waypoints:
                 corridor_waypoints.append(all_waypoints[waypoint_id])
