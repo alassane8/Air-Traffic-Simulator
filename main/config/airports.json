@@ -3732,6 +3732,1299 @@
           }
         ]
       }
+    },
+    {
+      "id": "apt-013",
+      "airport_code": "NBO",
+      "lat": -1.3192,
+      "lon": 36.9275,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        {
+          "id": "term-nbo-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-013",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-nbo-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-013",
+          "max_planes": 15,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "runways": [
+        {
+          "id": "rwy-nbo-1",
+          "airport_id": "apt-013",
+          "length": 4117,
+          "heading": 60,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-nbo-2",
+          "airport_id": "apt-013",
+          "length": 3658,
+          "heading": 330,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "gates": [
+        {
+          "id": "gate-nbo-1",
+          "gate_code": "A01",
+          "terminal": "term-nbo-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-2",
+          "gate_code": "A02",
+          "terminal": "term-nbo-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-3",
+          "gate_code": "A03",
+          "terminal": "term-nbo-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-4",
+          "gate_code": "A04",
+          "terminal": "term-nbo-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-5",
+          "gate_code": "A05",
+          "terminal": "term-nbo-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-6",
+          "gate_code": "A06",
+          "terminal": "term-nbo-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-7",
+          "gate_code": "B01",
+          "terminal": "term-nbo-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-8",
+          "gate_code": "B02",
+          "terminal": "term-nbo-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-9",
+          "gate_code": "B03",
+          "terminal": "term-nbo-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-nbo-10",
+          "gate_code": "B04",
+          "terminal": "term-nbo-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-nbo-gate-1",
+            "type": "gate",
+            "ref": "gate-nbo-1",
+            "lat": -1.3188,
+            "lon": 36.927
+          },
+          {
+            "id": "n-nbo-gate-2",
+            "type": "gate",
+            "ref": "gate-nbo-2",
+            "lat": -1.3185,
+            "lon": 36.9278
+          },
+          {
+            "id": "n-nbo-gate-3",
+            "type": "gate",
+            "ref": "gate-nbo-3",
+            "lat": -1.3182,
+            "lon": 36.9285
+          },
+          {
+            "id": "n-nbo-gate-4",
+            "type": "gate",
+            "ref": "gate-nbo-4",
+            "lat": -1.3195,
+            "lon": 36.9268
+          },
+          {
+            "id": "n-nbo-gate-5",
+            "type": "gate",
+            "ref": "gate-nbo-5",
+            "lat": -1.3198,
+            "lon": 36.9275
+          },
+          {
+            "id": "n-nbo-gate-6",
+            "type": "gate",
+            "ref": "gate-nbo-6",
+            "lat": -1.3201,
+            "lon": 36.9282
+          },
+          {
+            "id": "n-nbo-gate-7",
+            "type": "gate",
+            "ref": "gate-nbo-7",
+            "lat": -1.3205,
+            "lon": 36.929
+          },
+          {
+            "id": "n-nbo-gate-8",
+            "type": "gate",
+            "ref": "gate-nbo-8",
+            "lat": -1.3208,
+            "lon": 36.9298
+          },
+          {
+            "id": "n-nbo-gate-9",
+            "type": "gate",
+            "ref": "gate-nbo-9",
+            "lat": -1.321,
+            "lon": 36.9305
+          },
+          {
+            "id": "n-nbo-gate-10",
+            "type": "gate",
+            "ref": "gate-nbo-10",
+            "lat": -1.3213,
+            "lon": 36.9312
+          },
+          {
+            "id": "n-nbo-int-A",
+            "type": "intersection",
+            "lat": -1.319,
+            "lon": 36.9272
+          },
+          {
+            "id": "n-nbo-int-B",
+            "type": "intersection",
+            "lat": -1.32,
+            "lon": 36.9285
+          },
+          {
+            "id": "n-nbo-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-nbo-1",
+            "lat": -1.318,
+            "lon": 36.915
+          },
+          {
+            "id": "n-nbo-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-nbo-1",
+            "lat": -1.318,
+            "lon": 36.942
+          },
+          {
+            "id": "n-nbo-rwy2-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-nbo-2",
+            "lat": -1.3,
+            "lon": 36.926
+          },
+          {
+            "id": "n-nbo-rwy2-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-nbo-2",
+            "lat": -1.338,
+            "lon": 36.926
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-nbo-gate-1",
+            "to_node_id": "n-nbo-int-A",
+            "taxiway": "A",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-nbo-gate-2",
+            "to_node_id": "n-nbo-int-A",
+            "taxiway": "A",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-nbo-gate-3",
+            "to_node_id": "n-nbo-int-A",
+            "taxiway": "A",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-nbo-gate-4",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 150
+          },
+          {
+            "from_node_id": "n-nbo-gate-5",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 140
+          },
+          {
+            "from_node_id": "n-nbo-gate-6",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-nbo-gate-7",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 170
+          },
+          {
+            "from_node_id": "n-nbo-gate-8",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-nbo-gate-9",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 190
+          },
+          {
+            "from_node_id": "n-nbo-gate-10",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "B",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-nbo-int-A",
+            "to_node_id": "n-nbo-int-B",
+            "taxiway": "C",
+            "distance_m": 350
+          },
+          {
+            "from_node_id": "n-nbo-int-A",
+            "to_node_id": "n-nbo-rwy1-thr-W",
+            "taxiway": "D",
+            "distance_m": 500
+          },
+          {
+            "from_node_id": "n-nbo-int-A",
+            "to_node_id": "n-nbo-rwy1-thr-E",
+            "taxiway": "E",
+            "distance_m": 520
+          },
+          {
+            "from_node_id": "n-nbo-int-B",
+            "to_node_id": "n-nbo-rwy2-thr-N",
+            "taxiway": "F",
+            "distance_m": 480
+          },
+          {
+            "from_node_id": "n-nbo-int-B",
+            "to_node_id": "n-nbo-rwy2-thr-S",
+            "taxiway": "F",
+            "distance_m": 500
+          }
+        ]
+      }
+    },
+    {
+      "id": "apt-014",
+      "airport_code": "CAI",
+      "lat": 30.1219,
+      "lon": 31.4056,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        {
+          "id": "term-cai-1",
+          "terminal_code": "T1",
+          "terminal_airport": "apt-014",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-cai-2",
+          "terminal_code": "T2",
+          "terminal_airport": "apt-014",
+          "max_planes": 20,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-cai-3",
+          "terminal_code": "T3",
+          "terminal_airport": "apt-014",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "runways": [
+        {
+          "id": "rwy-cai-1",
+          "airport_id": "apt-014",
+          "length": 4000,
+          "heading": 50,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-cai-2",
+          "airport_id": "apt-014",
+          "length": 4000,
+          "heading": 50,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-cai-3",
+          "airport_id": "apt-014",
+          "length": 3300,
+          "heading": 160,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "gates": [
+        {
+          "id": "gate-cai-1",
+          "gate_code": "A01",
+          "terminal": "term-cai-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-2",
+          "gate_code": "A02",
+          "terminal": "term-cai-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-3",
+          "gate_code": "A03",
+          "terminal": "term-cai-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-4",
+          "gate_code": "A04",
+          "terminal": "term-cai-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-5",
+          "gate_code": "A05",
+          "terminal": "term-cai-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-6",
+          "gate_code": "A06",
+          "terminal": "term-cai-1",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-7",
+          "gate_code": "B01",
+          "terminal": "term-cai-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-8",
+          "gate_code": "B02",
+          "terminal": "term-cai-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-9",
+          "gate_code": "B03",
+          "terminal": "term-cai-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-10",
+          "gate_code": "B04",
+          "terminal": "term-cai-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-11",
+          "gate_code": "B05",
+          "terminal": "term-cai-2",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-12",
+          "gate_code": "C01",
+          "terminal": "term-cai-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-13",
+          "gate_code": "C02",
+          "terminal": "term-cai-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-14",
+          "gate_code": "C03",
+          "terminal": "term-cai-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-15",
+          "gate_code": "C04",
+          "terminal": "term-cai-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-16",
+          "gate_code": "C05",
+          "terminal": "term-cai-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-cai-17",
+          "gate_code": "C06",
+          "terminal": "term-cai-3",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-cai-gate-1",
+            "type": "gate",
+            "ref": "gate-cai-1",
+            "lat": 30.1215,
+            "lon": 31.405
+          },
+          {
+            "id": "n-cai-gate-2",
+            "type": "gate",
+            "ref": "gate-cai-2",
+            "lat": 30.1218,
+            "lon": 31.4058
+          },
+          {
+            "id": "n-cai-gate-3",
+            "type": "gate",
+            "ref": "gate-cai-3",
+            "lat": 30.1221,
+            "lon": 31.4065
+          },
+          {
+            "id": "n-cai-gate-4",
+            "type": "gate",
+            "ref": "gate-cai-4",
+            "lat": 30.1225,
+            "lon": 31.4045
+          },
+          {
+            "id": "n-cai-gate-5",
+            "type": "gate",
+            "ref": "gate-cai-5",
+            "lat": 30.1228,
+            "lon": 31.4052
+          },
+          {
+            "id": "n-cai-gate-6",
+            "type": "gate",
+            "ref": "gate-cai-6",
+            "lat": 30.1231,
+            "lon": 31.406
+          },
+          {
+            "id": "n-cai-gate-7",
+            "type": "gate",
+            "ref": "gate-cai-7",
+            "lat": 30.121,
+            "lon": 31.407
+          },
+          {
+            "id": "n-cai-gate-8",
+            "type": "gate",
+            "ref": "gate-cai-8",
+            "lat": 30.1207,
+            "lon": 31.4078
+          },
+          {
+            "id": "n-cai-gate-9",
+            "type": "gate",
+            "ref": "gate-cai-9",
+            "lat": 30.1204,
+            "lon": 31.4085
+          },
+          {
+            "id": "n-cai-gate-10",
+            "type": "gate",
+            "ref": "gate-cai-10",
+            "lat": 30.1201,
+            "lon": 31.4092
+          },
+          {
+            "id": "n-cai-gate-11",
+            "type": "gate",
+            "ref": "gate-cai-11",
+            "lat": 30.1235,
+            "lon": 31.404
+          },
+          {
+            "id": "n-cai-gate-12",
+            "type": "gate",
+            "ref": "gate-cai-12",
+            "lat": 30.1238,
+            "lon": 31.4048
+          },
+          {
+            "id": "n-cai-gate-13",
+            "type": "gate",
+            "ref": "gate-cai-13",
+            "lat": 30.1241,
+            "lon": 31.4056
+          },
+          {
+            "id": "n-cai-gate-14",
+            "type": "gate",
+            "ref": "gate-cai-14",
+            "lat": 30.1244,
+            "lon": 31.4064
+          },
+          {
+            "id": "n-cai-gate-15",
+            "type": "gate",
+            "ref": "gate-cai-15",
+            "lat": 30.1247,
+            "lon": 31.4072
+          },
+          {
+            "id": "n-cai-gate-16",
+            "type": "gate",
+            "ref": "gate-cai-16",
+            "lat": 30.125,
+            "lon": 31.408
+          },
+          {
+            "id": "n-cai-gate-17",
+            "type": "gate",
+            "ref": "gate-cai-17",
+            "lat": 30.1253,
+            "lon": 31.4088
+          },
+          {
+            "id": "n-cai-int-A",
+            "type": "intersection",
+            "lat": 30.122,
+            "lon": 31.4055
+          },
+          {
+            "id": "n-cai-int-B",
+            "type": "intersection",
+            "lat": 30.1205,
+            "lon": 31.4075
+          },
+          {
+            "id": "n-cai-int-C",
+            "type": "intersection",
+            "lat": 30.124,
+            "lon": 31.406
+          },
+          {
+            "id": "n-cai-rwy1-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-cai-1",
+            "lat": 30.118,
+            "lon": 31.38
+          },
+          {
+            "id": "n-cai-rwy1-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-cai-1",
+            "lat": 30.128,
+            "lon": 31.43
+          },
+          {
+            "id": "n-cai-rwy2-thr-W",
+            "type": "runway_threshold",
+            "ref": "rwy-cai-2",
+            "lat": 30.115,
+            "lon": 31.382
+          },
+          {
+            "id": "n-cai-rwy2-thr-E",
+            "type": "runway_threshold",
+            "ref": "rwy-cai-2",
+            "lat": 30.125,
+            "lon": 31.432
+          },
+          {
+            "id": "n-cai-rwy3-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-cai-3",
+            "lat": 30.135,
+            "lon": 31.41
+          },
+          {
+            "id": "n-cai-rwy3-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-cai-3",
+            "lat": 30.105,
+            "lon": 31.41
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-cai-gate-1",
+            "to_node_id": "n-cai-int-A",
+            "taxiway": "A",
+            "distance_m": 200
+          },
+          {
+            "from_node_id": "n-cai-gate-2",
+            "to_node_id": "n-cai-int-A",
+            "taxiway": "A",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-cai-gate-3",
+            "to_node_id": "n-cai-int-A",
+            "taxiway": "A",
+            "distance_m": 210
+          },
+          {
+            "from_node_id": "n-cai-gate-4",
+            "to_node_id": "n-cai-int-A",
+            "taxiway": "A",
+            "distance_m": 190
+          },
+          {
+            "from_node_id": "n-cai-gate-5",
+            "to_node_id": "n-cai-int-A",
+            "taxiway": "A",
+            "distance_m": 175
+          },
+          {
+            "from_node_id": "n-cai-gate-6",
+            "to_node_id": "n-cai-int-A",
+            "taxiway": "A",
+            "distance_m": 185
+          },
+          {
+            "from_node_id": "n-cai-gate-7",
+            "to_node_id": "n-cai-int-B",
+            "taxiway": "B",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-cai-gate-8",
+            "to_node_id": "n-cai-int-B",
+            "taxiway": "B",
+            "distance_m": 155
+          },
+          {
+            "from_node_id": "n-cai-gate-9",
+            "to_node_id": "n-cai-int-B",
+            "taxiway": "B",
+            "distance_m": 170
+          },
+          {
+            "from_node_id": "n-cai-gate-10",
+            "to_node_id": "n-cai-int-B",
+            "taxiway": "B",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-cai-gate-11",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 150
+          },
+          {
+            "from_node_id": "n-cai-gate-12",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-cai-gate-13",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 155
+          },
+          {
+            "from_node_id": "n-cai-gate-14",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 165
+          },
+          {
+            "from_node_id": "n-cai-gate-15",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 170
+          },
+          {
+            "from_node_id": "n-cai-gate-16",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 175
+          },
+          {
+            "from_node_id": "n-cai-gate-17",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "C",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-cai-int-A",
+            "to_node_id": "n-cai-int-B",
+            "taxiway": "D",
+            "distance_m": 400
+          },
+          {
+            "from_node_id": "n-cai-int-A",
+            "to_node_id": "n-cai-int-C",
+            "taxiway": "E",
+            "distance_m": 380
+          },
+          {
+            "from_node_id": "n-cai-int-A",
+            "to_node_id": "n-cai-rwy1-thr-W",
+            "taxiway": "F",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-cai-int-A",
+            "to_node_id": "n-cai-rwy1-thr-E",
+            "taxiway": "G",
+            "distance_m": 620
+          },
+          {
+            "from_node_id": "n-cai-int-B",
+            "to_node_id": "n-cai-rwy2-thr-W",
+            "taxiway": "H",
+            "distance_m": 580
+          },
+          {
+            "from_node_id": "n-cai-int-C",
+            "to_node_id": "n-cai-rwy3-thr-N",
+            "taxiway": "I",
+            "distance_m": 550
+          },
+          {
+            "from_node_id": "n-cai-int-C",
+            "to_node_id": "n-cai-rwy3-thr-S",
+            "taxiway": "I",
+            "distance_m": 570
+          }
+        ]
+      }
+    },
+    {
+      "id": "apt-015",
+      "airport_code": "JNB",
+      "lat": -26.1367,
+      "lon": 28.2411,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "terminals": [
+        {
+          "id": "term-jnb-a",
+          "terminal_code": "A",
+          "terminal_airport": "apt-015",
+          "max_planes": 25,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "term-jnb-b",
+          "terminal_code": "B",
+          "terminal_airport": "apt-015",
+          "max_planes": 30,
+          "planes_on_deck": 0,
+          "status": "OPEN",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "runways": [
+        {
+          "id": "rwy-jnb-1",
+          "airport_id": "apt-015",
+          "length": 4418,
+          "heading": 30,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "rwy-jnb-2",
+          "airport_id": "apt-015",
+          "length": 3902,
+          "heading": 30,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "gates": [
+        {
+          "id": "gate-jnb-1",
+          "gate_code": "A01",
+          "terminal": "term-jnb-a",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-2",
+          "gate_code": "A02",
+          "terminal": "term-jnb-a",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-3",
+          "gate_code": "A03",
+          "terminal": "term-jnb-a",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-4",
+          "gate_code": "A04",
+          "terminal": "term-jnb-a",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-5",
+          "gate_code": "A05",
+          "terminal": "term-jnb-a",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-6",
+          "gate_code": "A06",
+          "terminal": "term-jnb-a",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-7",
+          "gate_code": "B01",
+          "terminal": "term-jnb-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-8",
+          "gate_code": "B02",
+          "terminal": "term-jnb-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-9",
+          "gate_code": "B03",
+          "terminal": "term-jnb-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-10",
+          "gate_code": "B04",
+          "terminal": "term-jnb-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-11",
+          "gate_code": "B05",
+          "terminal": "term-jnb-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        },
+        {
+          "id": "gate-jnb-12",
+          "gate_code": "B06",
+          "terminal": "term-jnb-b",
+          "aircraft_id": null,
+          "status": "FREE",
+          "created_at": "2024-01-01T00:00:00Z",
+          "updated_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "taxiway_graph": {
+        "nodes": [
+          {
+            "id": "n-jnb-gate-1",
+            "type": "gate",
+            "ref": "gate-jnb-1",
+            "lat": -26.1362,
+            "lon": 28.2405
+          },
+          {
+            "id": "n-jnb-gate-2",
+            "type": "gate",
+            "ref": "gate-jnb-2",
+            "lat": -26.1358,
+            "lon": 28.2412
+          },
+          {
+            "id": "n-jnb-gate-3",
+            "type": "gate",
+            "ref": "gate-jnb-3",
+            "lat": -26.1355,
+            "lon": 28.242
+          },
+          {
+            "id": "n-jnb-gate-4",
+            "type": "gate",
+            "ref": "gate-jnb-4",
+            "lat": -26.137,
+            "lon": 28.2402
+          },
+          {
+            "id": "n-jnb-gate-5",
+            "type": "gate",
+            "ref": "gate-jnb-5",
+            "lat": -26.1373,
+            "lon": 28.2409
+          },
+          {
+            "id": "n-jnb-gate-6",
+            "type": "gate",
+            "ref": "gate-jnb-6",
+            "lat": -26.1376,
+            "lon": 28.2417
+          },
+          {
+            "id": "n-jnb-gate-7",
+            "type": "gate",
+            "ref": "gate-jnb-7",
+            "lat": -26.138,
+            "lon": 28.2425
+          },
+          {
+            "id": "n-jnb-gate-8",
+            "type": "gate",
+            "ref": "gate-jnb-8",
+            "lat": -26.1383,
+            "lon": 28.2432
+          },
+          {
+            "id": "n-jnb-gate-9",
+            "type": "gate",
+            "ref": "gate-jnb-9",
+            "lat": -26.1386,
+            "lon": 28.244
+          },
+          {
+            "id": "n-jnb-gate-10",
+            "type": "gate",
+            "ref": "gate-jnb-10",
+            "lat": -26.1389,
+            "lon": 28.2448
+          },
+          {
+            "id": "n-jnb-gate-11",
+            "type": "gate",
+            "ref": "gate-jnb-11",
+            "lat": -26.1352,
+            "lon": 28.2428
+          },
+          {
+            "id": "n-jnb-gate-12",
+            "type": "gate",
+            "ref": "gate-jnb-12",
+            "lat": -26.1349,
+            "lon": 28.2435
+          },
+          {
+            "id": "n-jnb-int-A",
+            "type": "intersection",
+            "lat": -26.1365,
+            "lon": 28.241
+          },
+          {
+            "id": "n-jnb-int-B",
+            "type": "intersection",
+            "lat": -26.1378,
+            "lon": 28.243
+          },
+          {
+            "id": "n-jnb-rwy1-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-jnb-1",
+            "lat": -26.155,
+            "lon": 28.228
+          },
+          {
+            "id": "n-jnb-rwy1-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-jnb-1",
+            "lat": -26.115,
+            "lon": 28.255
+          },
+          {
+            "id": "n-jnb-rwy2-thr-S",
+            "type": "runway_threshold",
+            "ref": "rwy-jnb-2",
+            "lat": -26.153,
+            "lon": 28.231
+          },
+          {
+            "id": "n-jnb-rwy2-thr-N",
+            "type": "runway_threshold",
+            "ref": "rwy-jnb-2",
+            "lat": -26.117,
+            "lon": 28.257
+          }
+        ],
+        "edges": [
+          {
+            "from_node_id": "n-jnb-gate-1",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "A",
+            "distance_m": 170
+          },
+          {
+            "from_node_id": "n-jnb-gate-2",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "A",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-jnb-gate-3",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "A",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-jnb-gate-4",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "A",
+            "distance_m": 155
+          },
+          {
+            "from_node_id": "n-jnb-gate-5",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "A",
+            "distance_m": 150
+          },
+          {
+            "from_node_id": "n-jnb-gate-6",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "A",
+            "distance_m": 165
+          },
+          {
+            "from_node_id": "n-jnb-gate-7",
+            "to_node_id": "n-jnb-int-B",
+            "taxiway": "B",
+            "distance_m": 175
+          },
+          {
+            "from_node_id": "n-jnb-gate-8",
+            "to_node_id": "n-jnb-int-B",
+            "taxiway": "B",
+            "distance_m": 165
+          },
+          {
+            "from_node_id": "n-jnb-gate-9",
+            "to_node_id": "n-jnb-int-B",
+            "taxiway": "B",
+            "distance_m": 180
+          },
+          {
+            "from_node_id": "n-jnb-gate-10",
+            "to_node_id": "n-jnb-int-B",
+            "taxiway": "B",
+            "distance_m": 190
+          },
+          {
+            "from_node_id": "n-jnb-gate-11",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "C",
+            "distance_m": 160
+          },
+          {
+            "from_node_id": "n-jnb-gate-12",
+            "to_node_id": "n-jnb-int-A",
+            "taxiway": "C",
+            "distance_m": 170
+          },
+          {
+            "from_node_id": "n-jnb-int-A",
+            "to_node_id": "n-jnb-int-B",
+            "taxiway": "D",
+            "distance_m": 320
+          },
+          {
+            "from_node_id": "n-jnb-int-A",
+            "to_node_id": "n-jnb-rwy1-thr-S",
+            "taxiway": "E",
+            "distance_m": 580
+          },
+          {
+            "from_node_id": "n-jnb-int-A",
+            "to_node_id": "n-jnb-rwy1-thr-N",
+            "taxiway": "F",
+            "distance_m": 600
+          },
+          {
+            "from_node_id": "n-jnb-int-B",
+            "to_node_id": "n-jnb-rwy2-thr-S",
+            "taxiway": "G",
+            "distance_m": 560
+          },
+          {
+            "from_node_id": "n-jnb-int-B",
+            "to_node_id": "n-jnb-rwy2-thr-N",
+            "taxiway": "H",
+            "distance_m": 580
+          }
+        ]
+      }
     }
   ]
 }

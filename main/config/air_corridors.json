@@ -11102,12 +11102,6774 @@
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-01T00:00:00Z",
       "waypoints": [
-        { "id": "ADKAP", "lat": -12.8089, "lon": -40.3885, "min_alt_ft": 31000, "max_alt_ft": 33000, "status": "OPEN" },
-        { "id": "POMET", "lat": -2.0867, "lon": -34.7575, "min_alt_ft": 34000, "max_alt_ft": 36000, "status": "OPEN" },
-        { "id": "BIBAX", "lat": 8.5786, "lon": -29.2108, "min_alt_ft": 34000, "max_alt_ft": 36000, "status": "OPEN" },
-        { "id": "DOLIR", "lat": 19.3196, "lon": -23.3345, "min_alt_ft": 34000, "max_alt_ft": 36000, "status": "OPEN" },
-        { "id": "BEDRA", "lat": 29.7429, "lon": -16.6429, "min_alt_ft": 34000, "max_alt_ft": 36000, "status": "OPEN" },
-        { "id": "VELIB", "lat": 39.7891, "lon": -8.4154, "min_alt_ft": 31000, "max_alt_ft": 33000, "status": "OPEN" }
+        {
+          "id": "ADKAP",
+          "lat": -12.8089,
+          "lon": -40.3885,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -2.0867,
+          "lon": -34.7575,
+          "min_alt_ft": 34000,
+          "max_alt_ft": 36000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 8.5786,
+          "lon": -29.2108,
+          "min_alt_ft": 34000,
+          "max_alt_ft": 36000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 19.3196,
+          "lon": -23.3345,
+          "min_alt_ft": 34000,
+          "max_alt_ft": 36000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEDRA",
+          "lat": 29.7429,
+          "lon": -16.6429,
+          "min_alt_ft": 34000,
+          "max_alt_ft": 36000,
+          "status": "OPEN"
+        },
+        {
+          "id": "VELIB",
+          "lat": 39.7891,
+          "lon": -8.4154,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-068",
+      "air_corridor_code": "CDG-NBO",
+      "from_airport": "apt-001",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6495,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 40.6215,
+          "lon": 8.2778,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 32.2334,
+          "lon": 14.0078,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 23.8453,
+          "lon": 19.7377,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 15.4571,
+          "lon": 25.4676,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": 7.0689,
+          "lon": 31.1976,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-068b",
+      "air_corridor_code": "CDG-NBO",
+      "from_airport": "apt-001",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6495,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 40.6215,
+          "lon": 8.2778,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 32.2334,
+          "lon": 14.0078,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 23.8453,
+          "lon": 19.7377,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 15.4571,
+          "lon": 25.4676,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": 7.0689,
+          "lon": 31.1976,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-068c",
+      "air_corridor_code": "CDG-NBO",
+      "from_airport": "apt-001",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 6495,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 40.6215,
+          "lon": 8.2778,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 32.2334,
+          "lon": 14.0078,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 23.8453,
+          "lon": 19.7377,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 15.4571,
+          "lon": 25.4676,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": 7.0689,
+          "lon": 31.1976,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-069",
+      "air_corridor_code": "CDG-CAI",
+      "from_airport": "apt-001",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 3210,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 45.2321,
+          "lon": 8.3194,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 41.4546,
+          "lon": 14.091,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 37.677,
+          "lon": 19.8625,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 33.8995,
+          "lon": 25.6341,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-069b",
+      "air_corridor_code": "CDG-CAI",
+      "from_airport": "apt-001",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 3210,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 45.2321,
+          "lon": 8.3194,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 41.4546,
+          "lon": 14.091,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 37.677,
+          "lon": 19.8625,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 33.8995,
+          "lon": 25.6341,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-069c",
+      "air_corridor_code": "CDG-CAI",
+      "from_airport": "apt-001",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 3210,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 45.2321,
+          "lon": 8.3194,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 41.4546,
+          "lon": 14.091,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 37.677,
+          "lon": 19.8625,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 33.8995,
+          "lon": 25.6341,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-070",
+      "air_corridor_code": "CDG-JNB",
+      "from_airport": "apt-001",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 8737,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 38.2745,
+          "lon": 6.2184,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 27.5393,
+          "lon": 9.8888,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 16.8041,
+          "lon": 13.5593,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 6.0689,
+          "lon": 17.2297,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -4.6663,
+          "lon": 20.9002,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILED",
+          "lat": -15.4015,
+          "lon": 24.5706,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-070b",
+      "air_corridor_code": "CDG-JNB",
+      "from_airport": "apt-001",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 8737,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 38.2745,
+          "lon": 6.2184,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 27.5393,
+          "lon": 9.8888,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 16.8041,
+          "lon": 13.5593,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 6.0689,
+          "lon": 17.2297,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -4.6663,
+          "lon": 20.9002,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILED",
+          "lat": -15.4015,
+          "lon": 24.5706,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-070c",
+      "air_corridor_code": "CDG-JNB",
+      "from_airport": "apt-001",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 8737,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 38.2745,
+          "lon": 6.2184,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 27.5393,
+          "lon": 9.8888,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 16.8041,
+          "lon": 13.5593,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 6.0689,
+          "lon": 17.2297,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -4.6663,
+          "lon": 20.9002,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILED",
+          "lat": -15.4015,
+          "lon": 24.5706,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-071",
+      "air_corridor_code": "LHR-CAI",
+      "from_airport": "apt-004",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 3532,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 47.2004,
+          "lon": 5.9177,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 42.9308,
+          "lon": 12.2897,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 38.6611,
+          "lon": 18.6616,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 34.3915,
+          "lon": 25.0336,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-071b",
+      "air_corridor_code": "LHR-CAI",
+      "from_airport": "apt-004",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 3532,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 47.2004,
+          "lon": 5.9177,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 42.9308,
+          "lon": 12.2897,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 38.6611,
+          "lon": 18.6616,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 34.3915,
+          "lon": 25.0336,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-072",
+      "air_corridor_code": "LHR-NBO",
+      "from_airport": "apt-004",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6841,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 42.6718,
+          "lon": 5.776,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 33.8736,
+          "lon": 12.0063,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 25.0754,
+          "lon": 18.2366,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 16.2772,
+          "lon": 24.4669,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": 7.479,
+          "lon": 30.6972,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-072b",
+      "air_corridor_code": "LHR-NBO",
+      "from_airport": "apt-004",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6841,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 42.6718,
+          "lon": 5.776,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 33.8736,
+          "lon": 12.0063,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 25.0754,
+          "lon": 18.2366,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 16.2772,
+          "lon": 24.4669,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": 7.479,
+          "lon": 30.6972,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-073",
+      "air_corridor_code": "DXB-NBO",
+      "from_airport": "apt-005",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 3559,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 19.9387,
+          "lon": 51.6781,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 14.6242,
+          "lon": 47.9904,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 9.3098,
+          "lon": 44.3028,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 3.9953,
+          "lon": 40.6151,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-073b",
+      "air_corridor_code": "DXB-NBO",
+      "from_airport": "apt-005",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 3559,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 19.9387,
+          "lon": 51.6781,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 14.6242,
+          "lon": 47.9904,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 9.3098,
+          "lon": 44.3028,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 3.9953,
+          "lon": 40.6151,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-074",
+      "air_corridor_code": "DXB-CAI",
+      "from_airport": "apt-005",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL290",
+      "distance": 2416,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 26.4704,
+          "lon": 49.3757,
+          "min_alt_ft": 27000,
+          "max_alt_ft": 29000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 27.6876,
+          "lon": 43.3856,
+          "min_alt_ft": 27000,
+          "max_alt_ft": 29000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 28.9047,
+          "lon": 37.3956,
+          "min_alt_ft": 27000,
+          "max_alt_ft": 29000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-074b",
+      "air_corridor_code": "DXB-CAI",
+      "from_airport": "apt-005",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 2416,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 26.4704,
+          "lon": 49.3757,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 27.6876,
+          "lon": 43.3856,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 28.9047,
+          "lon": 37.3956,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-075",
+      "air_corridor_code": "NBO-JNB",
+      "from_airport": "apt-013",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL290",
+      "distance": 2912,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": -7.5236,
+          "lon": 34.7559,
+          "min_alt_ft": 27000,
+          "max_alt_ft": 29000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": -13.728,
+          "lon": 32.5843,
+          "min_alt_ft": 27000,
+          "max_alt_ft": 29000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": -19.9323,
+          "lon": 30.4127,
+          "min_alt_ft": 27000,
+          "max_alt_ft": 29000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-075b",
+      "air_corridor_code": "NBO-JNB",
+      "from_airport": "apt-013",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 2912,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": -7.5236,
+          "lon": 34.7559,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": -13.728,
+          "lon": 32.5843,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": -19.9323,
+          "lon": 30.4127,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-076",
+      "air_corridor_code": "CAI-NBO",
+      "from_airport": "apt-014",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 3545,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 23.8337,
+          "lon": 32.51,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 17.5455,
+          "lon": 33.6144,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 11.2572,
+          "lon": 34.7187,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 4.969,
+          "lon": 35.8231,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 31000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-076b",
+      "air_corridor_code": "CAI-NBO",
+      "from_airport": "apt-014",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 3545,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 23.8337,
+          "lon": 32.51,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 17.5455,
+          "lon": 33.6144,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 11.2572,
+          "lon": 34.7187,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": 4.969,
+          "lon": 35.8231,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-077",
+      "air_corridor_code": "CAI-JNB",
+      "from_airport": "apt-014",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6265,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 20.7455,
+          "lon": 30.8782,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 11.369,
+          "lon": 30.3508,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 1.9926,
+          "lon": 29.8233,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": -7.3838,
+          "lon": 29.2959,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -16.7603,
+          "lon": 28.7685,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-077b",
+      "air_corridor_code": "CAI-JNB",
+      "from_airport": "apt-014",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6265,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "AFNOR",
+          "lat": 20.7455,
+          "lon": 30.8782,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SAHEL",
+          "lat": 11.369,
+          "lon": 30.3508,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TROPI",
+          "lat": 1.9926,
+          "lon": 29.8233,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "EQUAT",
+          "lat": -7.3838,
+          "lon": 29.2959,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -16.7603,
+          "lon": 28.7685,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-078",
+      "air_corridor_code": "ORY-NBO",
+      "from_airport": "apt-002",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6479,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "MOPIV",
+          "lat": 45.5,
+          "lon": 8.2,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 37.5,
+          "lon": 13.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 31.5,
+          "lon": 20.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 23.5,
+          "lon": 25.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 14.0,
+          "lon": 30.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.5,
+          "lon": 33.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-078b",
+      "air_corridor_code": "ORY-NBO",
+      "from_airport": "apt-002",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6479,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "MOPIV",
+          "lat": 45.5,
+          "lon": 8.2,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 37.5,
+          "lon": 13.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 31.5,
+          "lon": 20.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 23.5,
+          "lon": 25.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 14.0,
+          "lon": 30.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.5,
+          "lon": 33.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-078c",
+      "air_corridor_code": "ORY-NBO",
+      "from_airport": "apt-002",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 6479,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "MOPIV",
+          "lat": 45.5,
+          "lon": 8.2,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 37.5,
+          "lon": 13.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 31.5,
+          "lon": 20.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 23.5,
+          "lon": 25.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 14.0,
+          "lon": 30.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.5,
+          "lon": 33.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-079",
+      "air_corridor_code": "ORY-CAI",
+      "from_airport": "apt-002",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 3205,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "MOPIV",
+          "lat": 45.5,
+          "lon": 8.2,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 41.5,
+          "lon": 14.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 33.0,
+          "lon": 22.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "CADOR",
+          "lat": 31.0,
+          "lon": 28.0,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-079b",
+      "air_corridor_code": "ORY-CAI",
+      "from_airport": "apt-002",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 3205,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "MOPIV",
+          "lat": 45.5,
+          "lon": 8.2,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 41.5,
+          "lon": 14.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 33.0,
+          "lon": 22.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "CADOR",
+          "lat": 31.0,
+          "lon": 28.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-079c",
+      "air_corridor_code": "ORY-CAI",
+      "from_airport": "apt-002",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 3205,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "MOPIV",
+          "lat": 45.5,
+          "lon": 8.2,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 41.5,
+          "lon": 14.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 33.0,
+          "lon": 22.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "CADOR",
+          "lat": 31.0,
+          "lon": 28.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-080",
+      "air_corridor_code": "ORY-JNB",
+      "from_airport": "apt-002",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 8713,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 41.5,
+          "lon": 1.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 34.0,
+          "lon": -2.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SOMAX",
+          "lat": 24.0,
+          "lon": 3.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 12.0,
+          "lon": 5.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 0.0,
+          "lon": 8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -12.0,
+          "lon": 12.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -23.0,
+          "lon": 18.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-080b",
+      "air_corridor_code": "ORY-JNB",
+      "from_airport": "apt-002",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 8713,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 41.5,
+          "lon": 1.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 34.0,
+          "lon": -2.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SOMAX",
+          "lat": 24.0,
+          "lon": 3.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 12.0,
+          "lon": 5.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 0.0,
+          "lon": 8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -12.0,
+          "lon": 12.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -23.0,
+          "lon": 18.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-080c",
+      "air_corridor_code": "ORY-JNB",
+      "from_airport": "apt-002",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 8713,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 41.5,
+          "lon": 1.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 34.0,
+          "lon": -2.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SOMAX",
+          "lat": 24.0,
+          "lon": 3.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 12.0,
+          "lon": 5.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 0.0,
+          "lon": 8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -12.0,
+          "lon": 12.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -23.0,
+          "lon": 18.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-081",
+      "air_corridor_code": "JFK-NBO",
+      "from_airport": "apt-003",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 11837,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SOMAX",
+          "lat": 52.0,
+          "lon": -22.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 55.0,
+          "lon": -8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 48.0,
+          "lon": 8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 38.5,
+          "lon": 17.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 25.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 12.0,
+          "lon": 32.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-081b",
+      "air_corridor_code": "JFK-NBO",
+      "from_airport": "apt-003",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 11837,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SOMAX",
+          "lat": 52.0,
+          "lon": -22.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 55.0,
+          "lon": -8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 48.0,
+          "lon": 8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 38.5,
+          "lon": 17.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 25.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 12.0,
+          "lon": 32.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-081c",
+      "air_corridor_code": "JFK-NBO",
+      "from_airport": "apt-003",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 11837,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SOMAX",
+          "lat": 52.0,
+          "lon": -22.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 55.0,
+          "lon": -8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 48.0,
+          "lon": 8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 38.5,
+          "lon": 17.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 25.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 12.0,
+          "lon": 32.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-082",
+      "air_corridor_code": "JFK-CAI",
+      "from_airport": "apt-003",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 9016,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SHIPP",
+          "lat": 48.0,
+          "lon": -55.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 53.0,
+          "lon": -30.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 55.0,
+          "lon": -8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KONAN",
+          "lat": 48.0,
+          "lon": 10.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TUVAL",
+          "lat": 40.0,
+          "lon": 20.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 35.0,
+          "lon": 27.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-082b",
+      "air_corridor_code": "JFK-CAI",
+      "from_airport": "apt-003",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 9016,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SHIPP",
+          "lat": 48.0,
+          "lon": -55.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 53.0,
+          "lon": -30.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 55.0,
+          "lon": -8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KONAN",
+          "lat": 48.0,
+          "lon": 10.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TUVAL",
+          "lat": 40.0,
+          "lon": 20.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 35.0,
+          "lon": 27.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-082c",
+      "air_corridor_code": "JFK-CAI",
+      "from_airport": "apt-003",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 9016,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SHIPP",
+          "lat": 48.0,
+          "lon": -55.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 53.0,
+          "lon": -30.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 55.0,
+          "lon": -8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KONAN",
+          "lat": 48.0,
+          "lon": 10.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TUVAL",
+          "lat": 40.0,
+          "lon": 20.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 35.0,
+          "lon": 27.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-083",
+      "air_corridor_code": "JFK-JNB",
+      "from_airport": "apt-003",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 12831,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SHIPP",
+          "lat": 35.0,
+          "lon": -65.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 22.0,
+          "lon": -55.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 10.0,
+          "lon": -40.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -2.0,
+          "lon": -25.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -12.0,
+          "lon": -10.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -22.0,
+          "lon": 5.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-083b",
+      "air_corridor_code": "JFK-JNB",
+      "from_airport": "apt-003",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 12831,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SHIPP",
+          "lat": 35.0,
+          "lon": -65.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 22.0,
+          "lon": -55.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 10.0,
+          "lon": -40.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -2.0,
+          "lon": -25.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -12.0,
+          "lon": -10.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -22.0,
+          "lon": 5.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-083c",
+      "air_corridor_code": "JFK-JNB",
+      "from_airport": "apt-003",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 12831,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SHIPP",
+          "lat": 35.0,
+          "lon": -65.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 22.0,
+          "lon": -55.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 10.0,
+          "lon": -40.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -2.0,
+          "lon": -25.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -12.0,
+          "lon": -10.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -22.0,
+          "lon": 5.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-084",
+      "air_corridor_code": "LHR-JNB",
+      "from_airport": "apt-004",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 9074,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 44.0,
+          "lon": 2.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 36.0,
+          "lon": -1.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 25.0,
+          "lon": 3.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 12.0,
+          "lon": 6.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.5,
+          "lon": 9.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -10.0,
+          "lon": 14.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -20.0,
+          "lon": 20.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-084b",
+      "air_corridor_code": "LHR-JNB",
+      "from_airport": "apt-004",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 9074,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 44.0,
+          "lon": 2.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 36.0,
+          "lon": -1.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 25.0,
+          "lon": 3.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 12.0,
+          "lon": 6.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.5,
+          "lon": 9.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -10.0,
+          "lon": 14.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -20.0,
+          "lon": 20.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-084c",
+      "air_corridor_code": "LHR-JNB",
+      "from_airport": "apt-004",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 9074,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 44.0,
+          "lon": 2.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 36.0,
+          "lon": -1.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 25.0,
+          "lon": 3.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 12.0,
+          "lon": 6.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.5,
+          "lon": 9.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -10.0,
+          "lon": 14.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -20.0,
+          "lon": 20.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-085",
+      "air_corridor_code": "DXB-JNB",
+      "from_airport": "apt-005",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6413,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "LALDO",
+          "lat": 19.0,
+          "lon": 48.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 11.0,
+          "lon": 43.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 38.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -8.0,
+          "lon": 35.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILED",
+          "lat": -18.0,
+          "lon": 31.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-085b",
+      "air_corridor_code": "DXB-JNB",
+      "from_airport": "apt-005",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6413,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "LALDO",
+          "lat": 19.0,
+          "lon": 48.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 11.0,
+          "lon": 43.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 38.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -8.0,
+          "lon": 35.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILED",
+          "lat": -18.0,
+          "lon": 31.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-085c",
+      "air_corridor_code": "DXB-JNB",
+      "from_airport": "apt-005",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 6413,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "LALDO",
+          "lat": 19.0,
+          "lon": 48.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 11.0,
+          "lon": 43.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 38.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -8.0,
+          "lon": 35.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILED",
+          "lat": -18.0,
+          "lon": 31.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-086",
+      "air_corridor_code": "FRA-NBO",
+      "from_airport": "apt-006",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6317,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "PIBER",
+          "lat": 44.0,
+          "lon": 12.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 38.0,
+          "lon": 17.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 29.0,
+          "lon": 22.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 20.0,
+          "lon": 27.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 11.0,
+          "lon": 31.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 35.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-086b",
+      "air_corridor_code": "FRA-NBO",
+      "from_airport": "apt-006",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6317,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "PIBER",
+          "lat": 44.0,
+          "lon": 12.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 38.0,
+          "lon": 17.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 29.0,
+          "lon": 22.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 20.0,
+          "lon": 27.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 11.0,
+          "lon": 31.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 35.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-086c",
+      "air_corridor_code": "FRA-NBO",
+      "from_airport": "apt-006",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 6317,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "PIBER",
+          "lat": 44.0,
+          "lon": 12.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 38.0,
+          "lon": 17.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KATEX",
+          "lat": 29.0,
+          "lon": 22.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 20.0,
+          "lon": 27.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 11.0,
+          "lon": 31.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 35.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-087",
+      "air_corridor_code": "FRA-CAI",
+      "from_airport": "apt-006",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 2922,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "PIBER",
+          "lat": 44.5,
+          "lon": 12.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 38.5,
+          "lon": 18.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 34.0,
+          "lon": 24.0,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "CADOR",
+          "lat": 31.5,
+          "lon": 28.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-087b",
+      "air_corridor_code": "FRA-CAI",
+      "from_airport": "apt-006",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 2922,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "PIBER",
+          "lat": 44.5,
+          "lon": 12.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 38.5,
+          "lon": 18.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 34.0,
+          "lon": 24.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "CADOR",
+          "lat": 31.5,
+          "lon": 28.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-087c",
+      "air_corridor_code": "FRA-CAI",
+      "from_airport": "apt-006",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 2922,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "PIBER",
+          "lat": 44.5,
+          "lon": 12.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 38.5,
+          "lon": 18.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 34.0,
+          "lon": 24.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "CADOR",
+          "lat": 31.5,
+          "lon": 28.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-088",
+      "air_corridor_code": "FRA-JNB",
+      "from_airport": "apt-006",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 8690,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 43.0,
+          "lon": 4.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 34.0,
+          "lon": 0.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SOMAX",
+          "lat": 23.0,
+          "lon": 3.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 11.0,
+          "lon": 5.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 0.0,
+          "lon": 9.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -11.0,
+          "lon": 14.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -21.0,
+          "lon": 20.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-088b",
+      "air_corridor_code": "FRA-JNB",
+      "from_airport": "apt-006",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 8690,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 43.0,
+          "lon": 4.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 34.0,
+          "lon": 0.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SOMAX",
+          "lat": 23.0,
+          "lon": 3.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 11.0,
+          "lon": 5.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 0.0,
+          "lon": 9.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -11.0,
+          "lon": 14.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -21.0,
+          "lon": 20.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-088c",
+      "air_corridor_code": "FRA-JNB",
+      "from_airport": "apt-006",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 8690,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 43.0,
+          "lon": 4.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 34.0,
+          "lon": 0.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "SOMAX",
+          "lat": 23.0,
+          "lon": 3.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 11.0,
+          "lon": 5.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 0.0,
+          "lon": 9.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -11.0,
+          "lon": 14.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -21.0,
+          "lon": 20.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-089",
+      "air_corridor_code": "AMS-NBO",
+      "from_airport": "apt-007",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 6677,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "HELEN",
+          "lat": 46.0,
+          "lon": 9.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 40.0,
+          "lon": 14.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 34.5,
+          "lon": 19.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 26.0,
+          "lon": 24.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 15.0,
+          "lon": 29.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.0,
+          "lon": 33.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-089b",
+      "air_corridor_code": "AMS-NBO",
+      "from_airport": "apt-007",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 6677,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "HELEN",
+          "lat": 46.0,
+          "lon": 9.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 40.0,
+          "lon": 14.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 34.5,
+          "lon": 19.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 26.0,
+          "lon": 24.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 15.0,
+          "lon": 29.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.0,
+          "lon": 33.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-089c",
+      "air_corridor_code": "AMS-NBO",
+      "from_airport": "apt-007",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 6677,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "HELEN",
+          "lat": 46.0,
+          "lon": 9.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 40.0,
+          "lon": 14.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 34.5,
+          "lon": 19.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 26.0,
+          "lon": 24.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 15.0,
+          "lon": 29.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.0,
+          "lon": 33.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-090",
+      "air_corridor_code": "AMS-CAI",
+      "from_airport": "apt-007",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL310",
+      "distance": 3287,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "HELEN",
+          "lat": 47.5,
+          "lon": 8.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 43.0,
+          "lon": 13.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 37.5,
+          "lon": 19.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 33.5,
+          "lon": 25.5,
+          "min_alt_ft": 29000,
+          "max_alt_ft": 33000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-090b",
+      "air_corridor_code": "AMS-CAI",
+      "from_airport": "apt-007",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL330",
+      "distance": 3287,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "HELEN",
+          "lat": 47.5,
+          "lon": 8.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 43.0,
+          "lon": 13.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 37.5,
+          "lon": 19.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 33.5,
+          "lon": 25.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-090c",
+      "air_corridor_code": "AMS-CAI",
+      "from_airport": "apt-007",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 3287,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "HELEN",
+          "lat": 47.5,
+          "lon": 8.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PIBER",
+          "lat": 43.0,
+          "lon": 13.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AMMAN",
+          "lat": 37.5,
+          "lon": 19.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 33.5,
+          "lon": 25.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-091",
+      "air_corridor_code": "AMS-JNB",
+      "from_airport": "apt-007",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 9017,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 43.5,
+          "lon": 3.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 35.0,
+          "lon": 0.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 24.0,
+          "lon": 3.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 11.5,
+          "lon": 6.5,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.0,
+          "lon": 10.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -10.5,
+          "lon": 15.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -21.0,
+          "lon": 21.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-091b",
+      "air_corridor_code": "AMS-JNB",
+      "from_airport": "apt-007",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 9017,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 43.5,
+          "lon": 3.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 35.0,
+          "lon": 0.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 24.0,
+          "lon": 3.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 11.5,
+          "lon": 6.5,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.0,
+          "lon": 10.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -10.5,
+          "lon": 15.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -21.0,
+          "lon": 21.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-091c",
+      "air_corridor_code": "AMS-JNB",
+      "from_airport": "apt-007",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 9017,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "BACAN",
+          "lat": 43.5,
+          "lon": 3.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BARSO",
+          "lat": 35.0,
+          "lon": 0.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 24.0,
+          "lon": 3.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 11.5,
+          "lon": 6.5,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.0,
+          "lon": 10.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -10.5,
+          "lon": 15.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -21.0,
+          "lon": 21.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-092",
+      "air_corridor_code": "SIN-NBO",
+      "from_airport": "apt-008",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 7462,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": 5.0,
+          "lon": 87.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": 4.0,
+          "lon": 76.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 3.5,
+          "lon": 65.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 4.0,
+          "lon": 54.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 3.0,
+          "lon": 44.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 2.0,
+          "lon": 38.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-092b",
+      "air_corridor_code": "SIN-NBO",
+      "from_airport": "apt-008",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 7462,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": 5.0,
+          "lon": 87.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": 4.0,
+          "lon": 76.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 3.5,
+          "lon": 65.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 4.0,
+          "lon": 54.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 3.0,
+          "lon": 44.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 2.0,
+          "lon": 38.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-092c",
+      "air_corridor_code": "SIN-NBO",
+      "from_airport": "apt-008",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 7462,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": 5.0,
+          "lon": 87.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": 4.0,
+          "lon": 76.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 3.5,
+          "lon": 65.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 4.0,
+          "lon": 54.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 3.0,
+          "lon": 44.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 2.0,
+          "lon": 38.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-093",
+      "air_corridor_code": "SIN-CAI",
+      "from_airport": "apt-008",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 8261,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": 10.0,
+          "lon": 92.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": 14.0,
+          "lon": 80.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 17.0,
+          "lon": 68.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 20.0,
+          "lon": 56.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 23.0,
+          "lon": 44.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 26.0,
+          "lon": 35.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-093b",
+      "air_corridor_code": "SIN-CAI",
+      "from_airport": "apt-008",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 8261,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": 10.0,
+          "lon": 92.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": 14.0,
+          "lon": 80.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 17.0,
+          "lon": 68.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 20.0,
+          "lon": 56.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 23.0,
+          "lon": 44.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 26.0,
+          "lon": 35.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-093c",
+      "air_corridor_code": "SIN-CAI",
+      "from_airport": "apt-008",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 8261,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": 10.0,
+          "lon": 92.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": 14.0,
+          "lon": 80.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 17.0,
+          "lon": 68.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 20.0,
+          "lon": 56.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 23.0,
+          "lon": 44.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 26.0,
+          "lon": 35.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-094",
+      "air_corridor_code": "SIN-JNB",
+      "from_airport": "apt-008",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 8657,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": -5.0,
+          "lon": 95.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -10.0,
+          "lon": 85.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -15.0,
+          "lon": 73.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": -18.0,
+          "lon": 60.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": -20.0,
+          "lon": 48.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -22.0,
+          "lon": 36.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-094b",
+      "air_corridor_code": "SIN-JNB",
+      "from_airport": "apt-008",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 8657,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": -5.0,
+          "lon": 95.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -10.0,
+          "lon": 85.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -15.0,
+          "lon": 73.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": -18.0,
+          "lon": 60.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": -20.0,
+          "lon": 48.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -22.0,
+          "lon": 36.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-094c",
+      "air_corridor_code": "SIN-JNB",
+      "from_airport": "apt-008",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 8657,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "SAMKO",
+          "lat": -5.0,
+          "lon": 95.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -10.0,
+          "lon": 85.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -15.0,
+          "lon": 73.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": -18.0,
+          "lon": 60.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": -20.0,
+          "lon": 48.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -22.0,
+          "lon": 36.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-095",
+      "air_corridor_code": "HND-NBO",
+      "from_airport": "apt-009",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 11253,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 35.0,
+          "lon": 120.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 30.0,
+          "lon": 108.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "OLRAK",
+          "lat": 25.0,
+          "lon": 92.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 18.0,
+          "lon": 76.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 10.0,
+          "lon": 60.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 42.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-095b",
+      "air_corridor_code": "HND-NBO",
+      "from_airport": "apt-009",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 11253,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 35.0,
+          "lon": 120.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 30.0,
+          "lon": 108.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "OLRAK",
+          "lat": 25.0,
+          "lon": 92.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 18.0,
+          "lon": 76.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 10.0,
+          "lon": 60.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 42.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-095c",
+      "air_corridor_code": "HND-NBO",
+      "from_airport": "apt-009",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 11253,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 35.0,
+          "lon": 120.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 30.0,
+          "lon": 108.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "OLRAK",
+          "lat": 25.0,
+          "lon": 92.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 18.0,
+          "lon": 76.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 10.0,
+          "lon": 60.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 3.0,
+          "lon": 42.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-096",
+      "air_corridor_code": "HND-CAI",
+      "from_airport": "apt-009",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 9562,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 38.0,
+          "lon": 122.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 33.0,
+          "lon": 105.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "OLRAK",
+          "lat": 27.0,
+          "lon": 88.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 24.0,
+          "lon": 70.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 26.0,
+          "lon": 52.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 28.0,
+          "lon": 36.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-096b",
+      "air_corridor_code": "HND-CAI",
+      "from_airport": "apt-009",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 9562,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 38.0,
+          "lon": 122.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 33.0,
+          "lon": 105.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "OLRAK",
+          "lat": 27.0,
+          "lon": 88.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 24.0,
+          "lon": 70.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 26.0,
+          "lon": 52.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 28.0,
+          "lon": 36.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-096c",
+      "air_corridor_code": "HND-CAI",
+      "from_airport": "apt-009",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 9562,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 38.0,
+          "lon": 122.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 33.0,
+          "lon": 105.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "OLRAK",
+          "lat": 27.0,
+          "lon": 88.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 24.0,
+          "lon": 70.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 26.0,
+          "lon": 52.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 28.0,
+          "lon": 36.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-097",
+      "air_corridor_code": "HND-JNB",
+      "from_airport": "apt-009",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 13523,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 25.0,
+          "lon": 132.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 10.0,
+          "lon": 130.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -5.0,
+          "lon": 120.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -18.0,
+          "lon": 100.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TESAT",
+          "lat": -28.0,
+          "lon": 75.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -28.0,
+          "lon": 45.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-097b",
+      "air_corridor_code": "HND-JNB",
+      "from_airport": "apt-009",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 13523,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 25.0,
+          "lon": 132.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 10.0,
+          "lon": 130.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -5.0,
+          "lon": 120.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -18.0,
+          "lon": 100.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TESAT",
+          "lat": -28.0,
+          "lon": 75.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -28.0,
+          "lon": 45.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-097c",
+      "air_corridor_code": "HND-JNB",
+      "from_airport": "apt-009",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 13523,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "CLARK",
+          "lat": 25.0,
+          "lon": 132.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NIPPI",
+          "lat": 10.0,
+          "lon": 130.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -5.0,
+          "lon": 120.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -18.0,
+          "lon": 100.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TESAT",
+          "lat": -28.0,
+          "lon": 75.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -28.0,
+          "lon": 45.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-098",
+      "air_corridor_code": "LAX-NBO",
+      "from_airport": "apt-010",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 15572,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 50.0,
+          "lon": -110.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 58.0,
+          "lon": -80.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RAFOX",
+          "lat": 60.0,
+          "lon": -40.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 56.0,
+          "lon": -10.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 42.0,
+          "lon": 15.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 26.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 10.0,
+          "lon": 31.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-098b",
+      "air_corridor_code": "LAX-NBO",
+      "from_airport": "apt-010",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 15572,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 50.0,
+          "lon": -110.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 58.0,
+          "lon": -80.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RAFOX",
+          "lat": 60.0,
+          "lon": -40.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 56.0,
+          "lon": -10.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 42.0,
+          "lon": 15.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 26.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 10.0,
+          "lon": 31.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-098c",
+      "air_corridor_code": "LAX-NBO",
+      "from_airport": "apt-010",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 15572,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 50.0,
+          "lon": -110.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 58.0,
+          "lon": -80.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RAFOX",
+          "lat": 60.0,
+          "lon": -40.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 56.0,
+          "lon": -10.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ROMEO",
+          "lat": 42.0,
+          "lon": 15.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 26.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOTAM",
+          "lat": 10.0,
+          "lon": 31.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-099",
+      "air_corridor_code": "LAX-CAI",
+      "from_airport": "apt-010",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 12218,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 52.0,
+          "lon": -105.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 60.0,
+          "lon": -75.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RAFOX",
+          "lat": 62.0,
+          "lon": -35.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 58.0,
+          "lon": -5.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 48.0,
+          "lon": 12.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TUVAL",
+          "lat": 38.0,
+          "lon": 22.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 33.0,
+          "lon": 28.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-099b",
+      "air_corridor_code": "LAX-CAI",
+      "from_airport": "apt-010",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 12218,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 52.0,
+          "lon": -105.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 60.0,
+          "lon": -75.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RAFOX",
+          "lat": 62.0,
+          "lon": -35.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 58.0,
+          "lon": -5.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 48.0,
+          "lon": 12.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TUVAL",
+          "lat": 38.0,
+          "lon": 22.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 33.0,
+          "lon": 28.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-099c",
+      "air_corridor_code": "LAX-CAI",
+      "from_airport": "apt-010",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 12218,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 52.0,
+          "lon": -105.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 60.0,
+          "lon": -75.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RAFOX",
+          "lat": 62.0,
+          "lon": -35.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MIMKU",
+          "lat": 58.0,
+          "lon": -5.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BEXET",
+          "lat": 48.0,
+          "lon": 12.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "TUVAL",
+          "lat": 38.0,
+          "lon": 22.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 33.0,
+          "lon": 28.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-100",
+      "air_corridor_code": "LAX-JNB",
+      "from_airport": "apt-010",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 16706,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 25.0,
+          "lon": -100.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 15.0,
+          "lon": -88.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 5.0,
+          "lon": -75.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": -5.0,
+          "lon": -55.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -15.0,
+          "lon": -35.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -22.0,
+          "lon": -10.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -25.0,
+          "lon": 12.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-100b",
+      "air_corridor_code": "LAX-JNB",
+      "from_airport": "apt-010",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 16706,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 25.0,
+          "lon": -100.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 15.0,
+          "lon": -88.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 5.0,
+          "lon": -75.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": -5.0,
+          "lon": -55.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -15.0,
+          "lon": -35.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -22.0,
+          "lon": -10.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -25.0,
+          "lon": 12.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-100c",
+      "air_corridor_code": "LAX-JNB",
+      "from_airport": "apt-010",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 16706,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "OSHNN",
+          "lat": 25.0,
+          "lon": -100.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ALCOR",
+          "lat": 15.0,
+          "lon": -88.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 5.0,
+          "lon": -75.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": -5.0,
+          "lon": -55.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -15.0,
+          "lon": -35.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ADKAP",
+          "lat": -22.0,
+          "lon": -10.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -25.0,
+          "lon": 12.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-101",
+      "air_corridor_code": "SYD-NBO",
+      "from_airport": "apt-011",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 12135,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -25.0,
+          "lon": 120.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -18.0,
+          "lon": 100.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -10.0,
+          "lon": 82.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -5.0,
+          "lon": 65.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": -2.0,
+          "lon": 50.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 0.5,
+          "lon": 38.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-101b",
+      "air_corridor_code": "SYD-NBO",
+      "from_airport": "apt-011",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 12135,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -25.0,
+          "lon": 120.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -18.0,
+          "lon": 100.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -10.0,
+          "lon": 82.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -5.0,
+          "lon": 65.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": -2.0,
+          "lon": 50.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 0.5,
+          "lon": 38.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-101c",
+      "air_corridor_code": "SYD-NBO",
+      "from_airport": "apt-011",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 12135,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -25.0,
+          "lon": 120.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -18.0,
+          "lon": 100.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -10.0,
+          "lon": 82.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -5.0,
+          "lon": 65.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": -2.0,
+          "lon": 50.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 0.5,
+          "lon": 38.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-102",
+      "air_corridor_code": "SYD-CAI",
+      "from_airport": "apt-011",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 14403,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -22.0,
+          "lon": 122.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -12.0,
+          "lon": 104.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -2.0,
+          "lon": 88.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 8.0,
+          "lon": 72.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 16.0,
+          "lon": 57.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 22.0,
+          "lon": 43.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 27.0,
+          "lon": 33.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-102b",
+      "air_corridor_code": "SYD-CAI",
+      "from_airport": "apt-011",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 14403,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -22.0,
+          "lon": 122.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -12.0,
+          "lon": 104.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -2.0,
+          "lon": 88.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 8.0,
+          "lon": 72.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 16.0,
+          "lon": 57.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 22.0,
+          "lon": 43.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 27.0,
+          "lon": 33.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-102c",
+      "air_corridor_code": "SYD-CAI",
+      "from_airport": "apt-011",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 14403,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -22.0,
+          "lon": 122.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -12.0,
+          "lon": 104.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -2.0,
+          "lon": 88.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": 8.0,
+          "lon": 72.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "PARAR",
+          "lat": 16.0,
+          "lon": 57.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "LALDO",
+          "lat": 22.0,
+          "lon": 43.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 27.0,
+          "lon": 33.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-103",
+      "air_corridor_code": "SYD-JNB",
+      "from_airport": "apt-011",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 11025,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -30.0,
+          "lon": 130.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -30.0,
+          "lon": 112.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -28.0,
+          "lon": 90.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -26.0,
+          "lon": 68.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -26.0,
+          "lon": 46.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-103b",
+      "air_corridor_code": "SYD-JNB",
+      "from_airport": "apt-011",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 11025,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -30.0,
+          "lon": 130.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -30.0,
+          "lon": 112.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -28.0,
+          "lon": 90.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -26.0,
+          "lon": 68.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -26.0,
+          "lon": 46.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-103c",
+      "air_corridor_code": "SYD-JNB",
+      "from_airport": "apt-011",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 11025,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "TESAT",
+          "lat": -30.0,
+          "lon": 130.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -30.0,
+          "lon": 112.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "IGARI",
+          "lat": -28.0,
+          "lon": 90.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ANITO",
+          "lat": -26.0,
+          "lon": 68.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -26.0,
+          "lon": 46.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-104",
+      "air_corridor_code": "GRU-NBO",
+      "from_airport": "apt-012",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 9276,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -15.0,
+          "lon": -35.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -5.0,
+          "lon": -20.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 5.0,
+          "lon": -5.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 12.0,
+          "lon": 10.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.0,
+          "lon": 28.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -1.0,
+          "lon": 36.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-104b",
+      "air_corridor_code": "GRU-NBO",
+      "from_airport": "apt-012",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 9276,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -15.0,
+          "lon": -35.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -5.0,
+          "lon": -20.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 5.0,
+          "lon": -5.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 12.0,
+          "lon": 10.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.0,
+          "lon": 28.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -1.0,
+          "lon": 36.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-104c",
+      "air_corridor_code": "GRU-NBO",
+      "from_airport": "apt-012",
+      "to_airport": "apt-013",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 9276,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -15.0,
+          "lon": -35.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -5.0,
+          "lon": -20.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 5.0,
+          "lon": -5.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 12.0,
+          "lon": 10.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "AGKIL",
+          "lat": 5.0,
+          "lon": 28.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "RIFTV",
+          "lat": -1.0,
+          "lon": 36.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-105",
+      "air_corridor_code": "GRU-CAI",
+      "from_airport": "apt-012",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 10217,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -10.0,
+          "lon": -32.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.0,
+          "lon": -20.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 10.0,
+          "lon": -8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 20.0,
+          "lon": 5.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 18.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 28.0,
+          "lon": 28.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-105b",
+      "air_corridor_code": "GRU-CAI",
+      "from_airport": "apt-012",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 10217,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -10.0,
+          "lon": -32.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.0,
+          "lon": -20.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 10.0,
+          "lon": -8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 20.0,
+          "lon": 5.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 18.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 28.0,
+          "lon": 28.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-105c",
+      "air_corridor_code": "GRU-CAI",
+      "from_airport": "apt-012",
+      "to_airport": "apt-014",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 10217,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -10.0,
+          "lon": -32.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": 0.0,
+          "lon": -20.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": 10.0,
+          "lon": -8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": 20.0,
+          "lon": 5.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "NILAK",
+          "lat": 25.0,
+          "lon": 18.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "KUMBI",
+          "lat": 28.0,
+          "lon": 28.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-106",
+      "air_corridor_code": "GRU-JNB",
+      "from_airport": "apt-012",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL350",
+      "distance": 7439,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -25.0,
+          "lon": -40.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -30.0,
+          "lon": -25.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": -32.0,
+          "lon": -8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": -30.0,
+          "lon": 8.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -27.0,
+          "lon": 20.0,
+          "min_alt_ft": 31000,
+          "max_alt_ft": 35000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-106b",
+      "air_corridor_code": "GRU-JNB",
+      "from_airport": "apt-012",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL370",
+      "distance": 7439,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -25.0,
+          "lon": -40.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -30.0,
+          "lon": -25.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": -32.0,
+          "lon": -8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": -30.0,
+          "lon": 8.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -27.0,
+          "lon": 20.0,
+          "min_alt_ft": 33000,
+          "max_alt_ft": 37000,
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "cor-106c",
+      "air_corridor_code": "GRU-JNB",
+      "from_airport": "apt-012",
+      "to_airport": "apt-015",
+      "aircrafts": [],
+      "altitude": "FL390",
+      "distance": 7439,
+      "direction": "BIDIRECTIONAL",
+      "status": "OPEN",
+      "max_capacity": 20,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "waypoints": [
+        {
+          "id": "ADKAP",
+          "lat": -25.0,
+          "lon": -40.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "POMET",
+          "lat": -30.0,
+          "lon": -25.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "BIBAX",
+          "lat": -32.0,
+          "lon": -8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "DOLIR",
+          "lat": -30.0,
+          "lon": 8.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        },
+        {
+          "id": "MPASS",
+          "lat": -27.0,
+          "lon": 20.0,
+          "min_alt_ft": 35000,
+          "max_alt_ft": 39000,
+          "status": "OPEN"
+        }
       ]
     }
   ]

@@ -227,7 +227,7 @@
     },
     {
       "id": "al-026",
-      "name": "GOL Linhas Aéreas",
+      "name": "GOL Linhas A\u00e9reas",
       "iata_code": "G3",
       "icao_code": "GLO",
       "country": "Brazil",
@@ -267,6 +267,51 @@
       "iata_code": "VY",
       "icao_code": "VLG",
       "country": "Spain",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-031",
+      "name": "Ethiopian Airlines",
+      "iata_code": "ET",
+      "icao_code": "ETH",
+      "country": "Ethiopia",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-032",
+      "name": "Kenya Airways",
+      "iata_code": "KQ",
+      "icao_code": "KQA",
+      "country": "Kenya",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-033",
+      "name": "EgyptAir",
+      "iata_code": "MS",
+      "icao_code": "MSR",
+      "country": "Egypt",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-034",
+      "name": "South African Airways",
+      "iata_code": "SA",
+      "icao_code": "SAA",
+      "country": "South Africa",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "al-035",
+      "name": "Royal Air Maroc",
+      "iata_code": "AT",
+      "icao_code": "RAM",
+      "country": "Morocco",
       "created_at": "2024-01-01T10:00:00Z",
       "updated_at": "2024-01-01T10:00:00Z"
     }
