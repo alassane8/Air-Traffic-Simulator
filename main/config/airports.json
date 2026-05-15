@@ -4494,6 +4494,12 @@
             "distance_m": 200
           },
           {
+            "from_node_id": "n-cai-int-B",
+            "to_node_id": "n-cai-rwy2-thr-E",
+            "taxiway": "AUTO",
+            "distance_m": 2409
+          },
+          {
             "from_node_id": "n-cai-gate-2",
             "to_node_id": "n-cai-int-A",
             "taxiway": "A",
