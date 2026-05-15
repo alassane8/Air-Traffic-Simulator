@@ -1,7 +1,8 @@
-
-
 from airport.application.gate_assignment_service import find_best_landing_gate
-from airport.application.runway_assignment_service import assign_arrival_runway, assign_flight_to_departure_runway
+from airport.application.runway_assignment_service import (
+    assign_arrival_runway,
+    assign_flight_to_departure_runway,
+)
 from flight.application.flight_service import advance_status
 from flight.domain.flight import FlightStatus
 from shared.simulator.landing_simulator.descent import _do_land
@@ -71,14 +72,16 @@ def _tick_landing(
                     if arrival_terminal:
                         arrival_terminal.add_plane()
 
-                advance_status(flight)
+                advance_status(flight)  # → PARKED
 
                 if flight in active_flights:
                     active_flights.remove(flight)
-
                 freshly_assigned = assign_flight_to_departure_runway(
                     terminals, aircrafts, airlines, runways,
                     occupied_gates, airports, air_corridors,
                     existing_departures=new_departures,
                 )
-                new_departures.update(freshly_assigned)
+                if freshly_assigned:
+                    new_departures.update(freshly_assigned)
+                else:
+                    print(f"[TURNAROUND] {flight.flight_code} garé à {flight.arrival_gate_code} — aucun corridor dispo")
