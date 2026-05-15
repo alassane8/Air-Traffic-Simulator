@@ -48,10 +48,8 @@ def _init_flight_priority() -> FlightPriority:
     return random.choices(
         [
             FlightPriority.EMERGENCY,
-            FlightPriority.FUEL_CRITICAL,
             FlightPriority.MEDICAL,
-            FlightPriority.DELAY,
             FlightPriority.NORMAL,
         ],
-        weights=[1, 2, 3, 10, 84],
+        weights=[10, 10, 80],
     )[0]
