@@ -3,7 +3,6 @@ flight_layer.py
 ───────────────
 Dessine les vols en cours sur la carte radar :
   - Icône avion (triangle orienté selon le cap)
-  - Trajet (ligne pointillée départ → destination)
   - Trail de trajet parcouru
   - Code vol (IATA)
   - Indicateur de statut coloré (CLIMBING / CRUISE / DESCENDING)
@@ -22,7 +21,6 @@ COLOR_CLIMBING   = (80,  220, 120, 230)   # vert clair
 COLOR_CRUISE     = (80,  180, 255, 230)   # bleu ciel
 COLOR_DESCENDING = (255, 180,  60, 230)   # ambre-orange
 COLOR_SELECTED   = (255, 255, 100, 255)   # jaune vif
-COLOR_ROUTE_DIM  = ( 80,  80, 100, 60)    # ligne route grisée
 COLOR_TRAIL      = (100, 200, 255, 120)   # trace de vol
 COLOR_FUEL_WARN  = (255,  50,  50, 220)   # rouge si fuel critique
 
@@ -101,19 +99,10 @@ class FlightMarker:
     def draw(self, surface: pygame.Surface, flight,
              font_small: pygame.font.Font, font_tiny: pygame.font.Font):
         px, py = geo_to_screen(flight.lon, flight.lat, self._map_w, self._map_h)
-        dest_px, dest_py = geo_to_screen(flight.dest_lon, flight.dest_lat,
-                                         self._map_w, self._map_h)
-        depart_px, depart_py = geo_to_screen(
-            _get_airport_lon(flight), _get_airport_lat(flight),
-            self._map_w, self._map_h
-        )
 
         color = _status_color(flight.flight_status, flight.is_fuel_critical)
         if self.selected:
             color = COLOR_SELECTED
-
-        # ── Route ligne pointillée ──────────────────────────────
-        _draw_dashed_line(surface, COLOR_ROUTE_DIM, (px, py), (dest_px, dest_py), dash=6, gap=4, map_w=self._map_w)
 
         # ── Trail ───────────────────────────────────────────────
         if len(self._trail) >= 2:
@@ -142,7 +131,6 @@ class FlightMarker:
         surface.blit(label_surf, (lx, ly))
 
         # Statut en dessous
-        status_text = flight.flight_status.label
         alt_ft = int(flight.altitude_m * 3.28084 / 100)  # flight level
         status_line = f"FL{alt_ft:03d}  {int(flight.speed_km_h)}kt"
         status_surf = font_tiny.render(status_line, True,
@@ -162,12 +150,6 @@ class FlightMarker:
 
 
 # ── Helpers ───────────────────────────────────────────────────────
-
-def _get_airport_lon(flight) -> float:
-    return getattr(flight, '_depart_lon', flight.lon)
-
-def _get_airport_lat(flight) -> float:
-    return getattr(flight, '_depart_lat', flight.lat)
 
 def _crosses_antimeridian(start: tuple, end: tuple, map_w: int) -> bool:
     """True si le segment traverse l'antiméridien (saut horizontal > moitié écran)."""

@@ -16,7 +16,7 @@ from datetime import datetime
 HUD_AMBER    = (255, 140,  0, 230)
 HUD_DIM      = (180,  80,  0, 160)
 HUD_RED      = (255,  50,  50, 200)
-HUD_GREEN    = ( 80, 220,  80, 200)
+HUD_WHITE    = (220, 220, 220, 220)
 HUD_BG       = (  0,   0,   0, 160)
 BRACKET_COL  = (220, 100,  0, 180)
 
@@ -25,7 +25,7 @@ LINE_H       = 17
 PANEL_W      = 260
 PANEL_H_EST  = 160
 
-HUD_BLUE     = ( 80, 160, 255, 200)
+HUD_YELLOW   = (255, 210,  60, 220)
 HUD_GREY     = (140, 140, 140, 180)
 
 
@@ -165,10 +165,10 @@ class HUDOverlayRenderer:
                 self._text(surface, text, self._font_main, HUD_AMBER, px + MARGIN, cursor_y)
                 cursor_y += LINE_H
             elif kind == "active":
-                self._text(surface, text, self._font_main, HUD_GREEN, px + MARGIN, cursor_y)
+                self._text(surface, text, self._font_main, HUD_WHITE, px + MARGIN, cursor_y)
                 cursor_y += LINE_H
             elif kind == "inactive":
-                self._text(surface, text, self._font_main, HUD_BLUE, px + MARGIN, cursor_y)
+                self._text(surface, text, self._font_main, HUD_YELLOW, px + MARGIN, cursor_y)
                 cursor_y += LINE_H
             elif kind == "parked":
                 self._text(surface, text, self._font_main, HUD_GREY, px + MARGIN, cursor_y)
