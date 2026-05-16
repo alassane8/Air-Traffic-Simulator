@@ -64,10 +64,8 @@ def _tick_landing(
             if flight.time_spent >= FlightStatus.TAXI.duration_seconds:
                 gate = gates.get(flight.arrival_gate_code)
 
-                if gate:
-                    gate.assign_aircraft(flight.aircraft_id)
-                    if gate not in occupied_gates:
-                        occupied_gates.append(gate)
+                if gate.assign_aircraft(flight.aircraft_id) and gate not in occupied_gates:
+                    occupied_gates.append(gate)
                     arrival_terminal = terminals.get(gate.terminal)
                     if arrival_terminal:
                         arrival_terminal.add_plane()
@@ -76,13 +74,21 @@ def _tick_landing(
 
                 if flight in active_flights:
                     active_flights.remove(flight)
-                    
+
                 freshly_assigned = assign_flight_to_departure_runway(
-                    terminals, aircrafts, airlines, runways,
-                    occupied_gates, airports, air_corridors,
-                    existing_departures=new_departures,
+                    terminals=terminals,
+                    aircrafts=aircrafts,
+                    airlines=airlines,
+                    runways=runways,
+                    occupied_gates=[gate],
+                    airports=airports,
+                    air_corridors=air_corridors
                 )
                 if freshly_assigned:
                     new_departures.update(freshly_assigned)
                 else:
-                    print(f"[TURNAROUND] {flight.flight_code} garé à {flight.arrival_gate_code} — aucun corridor dispo")
+                    print(
+                        f"[TURNAROUND] {flight.flight_code} garé à {flight.arrival_gate_code}"
+                        f" — terminal={gate.terminal}, aircraft_id={gate.aircraft_id}"
+                        f" — aucun corridor dispo"
+                    )

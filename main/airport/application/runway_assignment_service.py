@@ -17,17 +17,10 @@ def _find_aircraft(gate, aircrafts: dict):
     Essaie par id (UUID).
     """
     if gate.aircraft_id is None:
+        print(f"[WARN] Aircraft introuvable pour gate {gate.id}(aircraft_id={gate.aircraft_id!r}), vol ignoré")
         return None
-
-    aircraft = aircrafts.get(gate.aircraft_id)
-    if aircraft is not None:
-        return aircraft
-
-    for a in aircrafts.values():
-        if a.id == gate.aircraft_id:
-            return a
-
-    return None
+    else: 
+        return aircrafts.get(gate.aircraft_id)
 
 
 def _get_airport_lat(airport_id: str, airports: dict) -> float:
@@ -53,52 +46,24 @@ def assign_flight_to_departure_runway(
     runways: dict,
     occupied_gates: list,
     airports: dict,
-    air_corridors: dict,
-    existing_departures=None,
+    air_corridors: dict
 ) -> dict:
     """
     Crée les vols de départ, les assigne à une runway de départ,
     et initialise le corridor + aéroport d'arrivée.
     La runway d'arrivée sera choisie pendant le cruise.
     """
-    if existing_departures is None:
-        existing_departures = {}
-
     departure_flights = {}
 
-    gates_already_assigned = {
-        f.depart_gate_code for f in existing_departures.values()
-    }
-    occupied_gates[:] = [
-        g for g in occupied_gates if g.is_occupied() and g.aircraft_id is not None
-    ]
-
     for gate in occupied_gates:
-        if gate.id in gates_already_assigned:
-            continue
 
         terminal = terminals.get(gate.terminal)
-        if terminal is None:
-            print(f"[WARN] Terminal '{gate.terminal}' introuvable pour gate {gate.id}, ignoré")
-            continue
-
-        airport_id = terminal.airport_id
         aircraft = _find_aircraft(gate, aircrafts)
+
         if aircraft is None:
-            print(
-                f"[WARN] Aircraft introuvable pour gate {gate.id} "
-                f"(aircraft_id={gate.aircraft_id!r}), vol ignoré"
-            )
             continue
 
-        airline = random.choice(list(airlines.values()))
-        aircraft_type = aircraft.aircraft_type
-
-        airport_runways = {
-            runway.id: runway
-            for runway in runways.values()
-            if runway.airport_id == airport_id
-        }
+        airport_runways = {runway.id: runway for runway in runways.values() if runway.airport_id == terminal.airport_id}
 
         if not airport_runways:
             continue
@@ -106,19 +71,19 @@ def assign_flight_to_departure_runway(
         shortest_runway = min(airport_runways.values(), key=lambda r: r.length)
         longest_runway = max(airport_runways.values(), key=lambda r: r.length)
 
-        if aircraft_type == AircraftType.NARROW:
+        if aircraft.aircraft_type == AircraftType.NARROW:
             chosen_runway = random.choice(list(airport_runways.values()))
-        elif aircraft_type == AircraftType.LARGE:
+        elif aircraft.aircraft_type == AircraftType.LARGE:
             eligible = [r for r in airport_runways.values() if r.id != shortest_runway.id]
             chosen_runway = random.choice(eligible) if eligible else longest_runway
         else:
             chosen_runway = longest_runway
 
+        airline = random.choice(list(airlines.values()))
         created_flight = create_flight(airline, gate, terminals, chosen_runway.id, aircraft)
 
         air_corridor = find_corridor_for_departure(air_corridors, gate.terminal, airports, aircraft)
         if air_corridor is None:
-            print(f"[WARN] Aucun corridor pour le vol depuis {gate.id}")
             continue
 
         created_flight.corridor_code = air_corridor.air_corridor_code
