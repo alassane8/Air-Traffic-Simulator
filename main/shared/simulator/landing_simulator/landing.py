@@ -72,10 +72,11 @@ def _tick_landing(
                     if arrival_terminal:
                         arrival_terminal.add_plane()
 
-                advance_status(flight)  # → PARKED
+                advance_status(flight)
 
                 if flight in active_flights:
                     active_flights.remove(flight)
+                    
                 freshly_assigned = assign_flight_to_departure_runway(
                     terminals, aircrafts, airlines, runways,
                     occupied_gates, airports, air_corridors,
