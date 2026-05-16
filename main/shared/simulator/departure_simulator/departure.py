@@ -83,9 +83,9 @@ def _tick_runway(
                 if gate and gate in occupied_gates:
                     occupied_gates.remove(gate)
                     gate.release_aircraft()
-                    terminal = terminals[gate.terminal]
-                if terminal:
-                    terminal.remove_plane()
+                    terminal = terminals.get(gate.terminal)
+                    if terminal:
+                        terminal.remove_plane()
 
             flight.time_spent += tick_interval
             if flight.time_spent >= FlightStatus.LINEUP.duration_seconds:
