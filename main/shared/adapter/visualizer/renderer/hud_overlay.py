@@ -22,8 +22,11 @@ BRACKET_COL  = (220, 100,  0, 180)
 
 MARGIN       = 18
 LINE_H       = 17
-PANEL_W      = 240
+PANEL_W      = 260
 PANEL_H_EST  = 160
+
+HUD_BLUE     = ( 80, 160, 255, 200)
+HUD_GREY     = (140, 140, 140, 180)
 
 
 class HUDOverlayRenderer:
@@ -42,11 +45,13 @@ class HUDOverlayRenderer:
         self.version  = version
 
         # Live data (caller updates these)
-        self.active_flights  = 0
-        self.tick_count      = 0
-        self.time_scale      = 60
-        self.mouse_lon       = 0.0
-        self.mouse_lat       = 0.0
+        self.active_flights   = 0
+        self.inactive_flights = 0   # TAXI, BOARDING, PLANNED, LINEUP
+        self.parked_flights   = 0   # PARKED
+        self.tick_count       = 0
+        self.time_scale       = 60
+        self.mouse_lon        = 0.0
+        self.mouse_lat        = 0.0
 
         self._t = 0.0          # animation time (s)
 
@@ -104,11 +109,19 @@ class HUDOverlayRenderer:
     # ── Top-right status panel ────────────────────────────────────
 
     def _draw_status_panel(self, surface: pygame.Surface):
+        total = self.active_flights + self.inactive_flights + self.parked_flights
         lines = [
             ("PROJECT", None),
             (self.sim_name, "title"),
             ("", None),
-            (f"ACTIVE FLIGHTS   {self.active_flights:>4}", "data"),
+            # ── Flight counts ──────────────────────────────────────
+            (f"TOTAL FLIGHTS    {total:>4}", "total"),
+            ("", None),
+            (f"  AIRBORNE       {self.active_flights:>4}", "active"),
+            (f"  ON GROUND      {self.inactive_flights:>4}", "inactive"),
+            (f"  PARKED         {self.parked_flights:>4}", "parked"),
+            ("", None),
+            # ── Sim info ───────────────────────────────────────────
             (f"SIM TICK         {self.tick_count:>7}", "data"),
             (f"TIME SCALE       {self.time_scale:>4}x", "data"),
             ("", None),
@@ -148,6 +161,18 @@ class HUDOverlayRenderer:
                 pygame.draw.line(surface, (*HUD_DIM[:3], 120),
                                  (px + MARGIN, cursor_y),
                                  (px + PANEL_W - MARGIN, cursor_y), 1)
+            elif kind == "total":
+                self._text(surface, text, self._font_main, HUD_AMBER, px + MARGIN, cursor_y)
+                cursor_y += LINE_H
+            elif kind == "active":
+                self._text(surface, text, self._font_main, HUD_GREEN, px + MARGIN, cursor_y)
+                cursor_y += LINE_H
+            elif kind == "inactive":
+                self._text(surface, text, self._font_main, HUD_BLUE, px + MARGIN, cursor_y)
+                cursor_y += LINE_H
+            elif kind == "parked":
+                self._text(surface, text, self._font_main, HUD_GREY, px + MARGIN, cursor_y)
+                cursor_y += LINE_H
             elif kind == "data":
                 self._text(surface, text, self._font_main, HUD_AMBER, px + MARGIN, cursor_y)
                 cursor_y += LINE_H
@@ -207,14 +232,17 @@ class HUDOverlayRenderer:
     # ── Public API ────────────────────────────────────────────────
 
     def update(self, elapsed_ms: float, active_flights: int = 0,
+               inactive_flights: int = 0, parked_flights: int = 0,
                tick_count: int = 0, time_scale: int = 60,
                mouse_lon: float = 0.0, mouse_lat: float = 0.0):
-        self._t             += elapsed_ms / 1000.0
-        self.active_flights  = active_flights
-        self.tick_count      = tick_count
-        self.time_scale      = time_scale
-        self.mouse_lon       = mouse_lon
-        self.mouse_lat       = mouse_lat
+        self._t              += elapsed_ms / 1000.0
+        self.active_flights   = active_flights
+        self.inactive_flights = inactive_flights
+        self.parked_flights   = parked_flights
+        self.tick_count       = tick_count
+        self.time_scale       = time_scale
+        self.mouse_lon        = mouse_lon
+        self.mouse_lat        = mouse_lat
 
     def draw(self, surface: pygame.Surface):
         self._draw_screen_corners(surface)

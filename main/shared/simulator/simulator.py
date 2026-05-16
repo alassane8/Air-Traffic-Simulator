@@ -29,7 +29,7 @@ def run_simulation(
 
     new_departures = assign_flight_to_departure_runway(
         terminals, aircrafts, airlines, runways, occupied_gates,
-        airports, air_corridors, existing_departures={}
+        airports, air_corridors
     )
 
     # ── Initialisation du visualizer ──────────────────────────────
@@ -90,6 +90,7 @@ def run_simulation(
                     tick_count  = tick_count,
                     time_scale  = TIME_SCALE,
                     flights     = list(active_flights),
+                    departures  = new_departures,
                     airlines    = airlines,
                     aircrafts   = aircrafts,
                 )

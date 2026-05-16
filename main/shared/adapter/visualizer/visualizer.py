@@ -84,6 +84,7 @@ class Visualizer:
 
         # Live flight data (injected each frame via update())
         self._active_flights: list = []
+        self._departures:    dict = {}   # new_departures: PLANNED/BOARDING/LINEUP/TAKEOFF
         self._airlines:  dict = {}
         self._aircrafts: dict = {}
 
@@ -145,12 +146,15 @@ class Visualizer:
                tick_count:     int = 0,
                time_scale:     int = 60,
                flights:        list = None,
+               departures:     dict = None,
                airlines:       dict = None,
                aircrafts:      dict = None):
         """Advance all animations. Pass flights list for live flight tracking."""
         # Stocker les données de vol pour handle_events (clic) et draw
         if flights is not None:
             self._active_flights = flights
+        if departures is not None:
+            self._departures = departures
         if airlines is not None:
             self._airlines = airlines
         if aircrafts is not None:
@@ -168,13 +172,45 @@ class Visualizer:
         else:
             self._flight_panel.update(elapsed_ms)
 
+        # ── Calcul des compteurs par catégorie ────────────────────
+        # active_flights : TAXI, CLIMBING, CRUISE, DESCENDING, LANDING, TAKEOFF
+        # new_departures : PLANNED, BOARDING, LINEUP, TAKEOFF (avant décollage)
+        _AIRBORNE_STATUSES  = {"TAKEOFF", "CLIMBING", "CRUISE", "DESCENDING", "LANDING"}
+        _GROUND_ACTIVE      = {"TAXI"}
+        _INACTIVE_STATUSES  = {"PLANNED", "BOARDING", "LINEUP"}
+        _PARKED_STATUSES    = {"PARKED"}
+
+        n_airborne  = 0
+        n_inactive  = 0
+        n_ground    = 0   # TAXI (encore dans active_flights)
+        n_parked    = 0
+
+        for f in self._active_flights:
+            label = f.status.label if hasattr(f.status, "label") else str(f.status)
+            if label in _AIRBORNE_STATUSES:
+                n_airborne += 1
+            elif label in _GROUND_ACTIVE:
+                n_ground += 1
+            elif label in _PARKED_STATUSES:
+                n_parked += 1
+
+        for f in self._departures.values():
+            label = f.status.label if hasattr(f.status, "label") else str(f.status)
+            if label in _INACTIVE_STATUSES:
+                n_inactive += 1
+            elif label in _AIRBORNE_STATUSES:
+                # TAKEOFF dans new_departures avant _do_takeoff
+                n_airborne += 1
+
         self._hud.update(
             elapsed_ms,
-            active_flights = len(self._active_flights),
-            tick_count     = tick_count,
-            time_scale     = time_scale,
-            mouse_lon      = self._last_mouse_lon,
-            mouse_lat      = self._last_mouse_lat,
+            active_flights   = n_airborne,
+            inactive_flights = n_inactive + n_ground,  # ON GROUND = TAXI + PLANNED/BOARDING/LINEUP
+            parked_flights   = n_parked,
+            tick_count       = tick_count,
+            time_scale       = time_scale,
+            mouse_lon        = self._last_mouse_lon,
+            mouse_lat        = self._last_mouse_lat,
         )
 
     def draw(self):
