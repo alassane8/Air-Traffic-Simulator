@@ -236,7 +236,7 @@ $$\Delta m_{\text{fuel}} = \dot{m}_{\text{cruise}} \times k_\phi \times \Delta t
 
 **Alerte carburant critique :** si le carburant restant représente moins de 30 minutes d'autonomie croisière, une alerte est déclenchée :
 
-$$\frac{m_{\text{fuel}}}{\dot{m}_{\text{cruise}}} < 1800\,\text{s} \implies \texttt{FUEL\_CRITICAL}$$
+$$\frac{m_{\text{fuel}}}{\dot{m}_{\text{cruise}}} < 1800\,\text{s} \implies \mathtt{FUEL\_CRITICAL}$$
 
 **Fichier :** `flight/application/flight_physics_service.py` — `update_flight_fuel()`
 

@@ -73,7 +73,6 @@ def _advance_to_next_waypoint(flight, waypoints, airports) -> bool:
         flight.dest_lat = wp.lat
         flight.dest_lon = wp.lon
 
-        # Recalcul de l'ETA vers le prochain waypoint
         distance_km = get_distance_km(flight)
         speed_km_s = flight.speed_km_h / 3600
         if speed_km_s > 0:
@@ -160,6 +159,7 @@ def _tick_flight(
             else:
                 distance_restante = get_distance_km(flight)
                 speed_km_s = flight.speed_km_h / 3600
+                
                 if speed_km_s > 0:
                     seconds_left = (distance_restante / speed_km_s) / time_scale
                     flight.estimated_arrival_time = datetime.now() + timedelta(seconds=seconds_left)
@@ -170,10 +170,11 @@ def _tick_flight(
 
         elif flight.status == FlightStatus.DESCENDING:
             flight.time_spent += tick_interval
+
             if aircraft:
                 _update_altitude_toward(flight, 0.0, aircraft, tick_interval)
-                # Continuer à avancer vers l'aéroport pendant la descente
                 update_position(flight, sim_tick)
+
             if flight.time_spent >= FlightStatus.DESCENDING.duration_seconds:
                 advance_status(flight)
                 flight.time_spent = 0

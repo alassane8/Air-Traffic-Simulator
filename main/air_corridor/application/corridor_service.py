@@ -28,8 +28,6 @@ def find_corridor_for_departure(
         print(f"[ERROR] Aucun aéroport trouvé pour le terminal {departure_terminal_id}")
         return None
 
-    # Regrouper les corridors valides par destination
-    # clé = airport_id destination, valeur = liste de corridors
     by_destination: dict[str, list] = {}
 
     for corridor in air_corridors.values():
@@ -45,10 +43,8 @@ def find_corridor_for_departure(
         if not (departs_forward or departs_reverse):
             continue
 
-        # Déterminer la destination réelle
         dest = corridor.to_airport if departs_forward else corridor.from_airport
 
-        # Ne pas proposer un aller-retour vers soi-même
         if dest == departure_airport.id:
             continue
 
@@ -58,10 +54,8 @@ def find_corridor_for_departure(
         print(f"[ERROR] Aucun corridor disponible depuis l'aéroport {departure_airport.id}")
         return None
 
-    # 1. Choisir une destination au hasard (poids égaux)
     dest_chosen = random.choice(list(by_destination.keys()))
 
-    # 2. Parmi les FL disponibles pour cette destination, choisir au hasard
     corridor = random.choice(by_destination[dest_chosen])
 
     if aircraft not in corridor.aircrafts:
