@@ -19,13 +19,10 @@
 8. [Consommation par phase de vol](#8-consommation-par-phase-de-vol)
 9. [Navigation sphérique — formule de Haversine](#9-navigation-sphérique--formule-de-haversine)
 10. [Propagation de position — interpolation géodésique](#10-propagation-de-position--interpolation-géodésique)
-11. [Cap (heading)](#11-cap-heading)
-12. [Modèle de montée/descente](#12-modèle-de-montéedescente)
-13. [ETA complète du vol](#13-eta-complète-du-vol)
-14. [Rendu cartographique](#14-rendu-cartographique)
-15. [Pathfinding taxiway — algorithme A*](#15-pathfinding-taxiway--algorithme-a)
-16. [Gestion des corridors aériens](#16-gestion-des-corridors-aériens)
-17. [Constantes et paramètres de référence](#17-constantes-et-paramètres-de-référence)
+11. [Modèle de montée/descente](#12-modèle-de-montéedescente)
+12. [ETA complète du vol](#13-eta-complète-du-vol)
+13. [Pathfinding taxiway — algorithme A*](#15-pathfinding-taxiway--algorithme-a)
+14. [Constantes et paramètres de référence](#17-constantes-et-paramètres-de-référence)
 
 ---
 
@@ -298,19 +295,7 @@ $$v_{\text{km/s}} = \frac{d}{t_{\text{restant}}}$$
 
 ---
 
-## 11. Cap (heading)
-
-Le cap indique la direction vers laquelle pointe l'avion, affiché sous forme de triangle orienté dans le visualizer. Comme le trajet suit un grand cercle sur une sphère, ce cap change continuellement au fil du vol — un vol Paris–New York, par exemple, commence vers le nord-ouest et finit vers le sud-ouest.
-
-Le cap magnétique (azimut initial du grand cercle) est calculé par :
-
-$$\theta = \arctan2\!\left(\sin\Delta\lambda \cos\varphi_2,\; \cos\varphi_1\sin\varphi_2 - \sin\varphi_1\cos\varphi_2\cos\Delta\lambda\right)$$
-
-converti en degrés $[0°, 360°)$ pour l'affichage.
-
----
-
-## 12. Modèle de montée/descente
+## 11. Modèle de montée/descente
 
 Les avions ne passent pas instantanément d'une altitude à une autre : ils sont limités par leur **taux de montée** maximal, exprimé en pieds par minute. À chaque tick, le simulateur calcule de combien l'avion peut progresser vers l'altitude cible de son prochain waypoint, et plafonne ce déplacement si nécessaire.
 
@@ -334,7 +319,7 @@ $$h^{(k+1)} = \begin{cases} h_{\text{target}} & \text{si } |h_{\text{target}} - 
 
 ---
 
-## 13. ETA complète du vol
+## 12. ETA complète du vol
 
 L'heure d'arrivée estimée (ETA) est affichée dans le panneau d'information d'un vol sélectionné. Elle ne se contente pas de diviser la distance restante par la vitesse : elle somme les temps de tous les segments du trajet encore à parcourir, en ajoutant les durées fixes des phases terminales.
 
@@ -354,47 +339,7 @@ L'ETA est recalculée à chaque tick CRUISE pour intégrer les variations de vit
 
 ---
 
-## 14. Rendu cartographique
-
-### Projection de Mercator
-
-Le visualizer affiche une carte du monde en **projection de Mercator Web** (EPSG:3857), la même que Google Maps ou OpenStreetMap. Cette projection a la propriété de conserver les angles locaux (conformité), ce qui permet d'afficher correctement les caps des avions. En contrepartie, elle déforme les surfaces aux hautes latitudes et ne peut pas représenter les pôles.
-
-La latitude $\varphi$ est transformée en ordonnée normalisée $n_y \in [0, 1]$ :
-
-$$\psi(\varphi) = \ln\!\left(\tan\!\frac{\pi}{4} + \frac{\varphi}{2}\right), \qquad \psi_{\max} = \ln\!\left(\tan\!\frac{\pi}{4} + \frac{85°}{2}\right)$$
-
-$$\boxed{n_y = \frac{1}{2} - \frac{\psi(\varphi)}{2\,\psi_{\max}}}$$
-
-La longitude est projetée linéairement : $n_x = (\lambda + 180°) / 360°$
-
-La projection est clampée à $\pm 85°$ de latitude pour éviter la singularité aux pôles ($\psi \to \pm\infty$).
-
-**Projection inverse** (pixel → géographie, pour l'affichage des coordonnées sous le curseur) :
-
-$$\varphi = 2\arctan\!\left(e^{\psi}\right) - \frac{\pi}{2}, \qquad \psi = (1 - n_y) \times 2\psi_{\max} - \psi_{\max}$$
-
-### Zoom & pan
-
-Le zoom est centré sur la position du curseur : le point sous la souris reste fixe pendant le zoom. La transformation écran applique zoom et décalage de caméra :
-
-$$\begin{pmatrix} p_x \\ p_y \end{pmatrix} = \begin{pmatrix} (n_x \cdot W - c_x) \cdot z + c_x - \delta_x \\ (n_y \cdot H - c_y) \cdot z + c_y - \delta_y \end{pmatrix}$$
-
-avec $(c_x, c_y) = (W/2, H/2)$ le centre de la fenêtre, $z$ le facteur de zoom, $(\delta_x, \delta_y)$ le décalage de pan.
-
-**Zoom centré sur le curseur** — mise à jour du pan pour maintenir le point $(m_x, m_y)$ fixe après un changement $z \to z'$ :
-
-$$\delta_x' = \frac{z'}{z}\,(\delta_x + m_x - c_x) - (m_x - c_x), \qquad \delta_y' = \frac{z'}{z}\,(\delta_y + m_y - c_y) - (m_y - c_y)$$
-
-**Contrainte de pan** (empêcher de sortir de la carte) :
-
-$$|\delta_x| \leq \frac{(z-1) \cdot W}{2}, \qquad |\delta_y| \leq \frac{(z-1) \cdot H}{2}$$
-
-**Fichier :** `shared/adapter/visualizer/renderer/world_map.py`, `shared/adapter/visualizer/visualizer.py`
-
----
-
-## 15. Pathfinding taxiway — algorithme A*
+## 13. Pathfinding taxiway — algorithme A*
 
 Lorsqu'un avion reçoit une piste de départ, le simulateur doit calculer l'itinéraire optimal sur les taxiways qui le mènent de sa gate au seuil de piste. Ce graphe peut compter des dizaines de nœuds (intersections, gates, seuils) et d'arêtes (segments de taxiway). L'algorithme **A\*** est utilisé car il est optimal et bien plus rapide qu'une recherche exhaustive : son heuristique lui permet d'explorer en priorité les chemins qui semblent prometteurs.
 
@@ -420,29 +365,7 @@ L'heuristique est **admissible** car la distance à vol d'oiseau (haversine) ne 
 
 ---
 
-## 16. Gestion des corridors aériens
-
-Un corridor aérien est une route prédéfinie entre deux aéroports, avec une liste de waypoints, une altitude de croisière et une capacité maximale simultanée. Chaque avion qui décolle se voit assigner un corridor disponible vers une destination.
-
-**Sélection en deux étapes** — pour éviter que tous les vols convergent vers les mêmes destinations, la destination est tirée en premier, puis le corridor :
-
-1. Construire l'ensemble des destinations atteignables depuis l'aéroport de départ $A$ :
-
-$$\mathcal{D}(A) = \left\{ \text{dest}(c) \mid c \in \mathcal{C},\; c.\text{has\_capacity}() \wedge c.\text{is\_open}() \wedge (c.from = A \vee (c.dir = \text{BIDI} \wedge c.to = A)) \right\}$$
-
-2. Tirer uniformément une destination $d \sim \mathcal{U}(\mathcal{D}(A))$, puis tirer uniformément un corridor $c \sim \mathcal{U}(\{c \mid \text{dest}(c) = d\})$.
-
-Ce double tirage évite le biais qui surchargerait les destinations ayant le plus de corridors disponibles.
-
-**Support bidirectionnel :** un corridor $A \to B$ marqué `BIDIRECTIONAL` peut être emprunté dans les deux sens. Lorsqu'un vol part depuis $B$ :
-
-$$\text{arrival\_airport} = \begin{cases} c.to & \text{si } c.from = \text{depart} \\ c.from & \text{si } c.to = \text{depart} \land c.dir = \text{BIDI} \end{cases}$$
-
-**Fichier :** `air_corridor/application/corridor_service.py`
-
----
-
-## 17. Constantes et paramètres de référence
+## 14. Constantes et paramètres de référence
 
 | Constante | Valeur | Source |
 |---|---|---|
