@@ -87,7 +87,14 @@ def assign_flight_to_departure_runway(
             continue
 
         created_flight.corridor_code = air_corridor.air_corridor_code
-        created_flight.arrival_airport_code = air_corridor.to_airport
+        
+        depart_airport_id = terminals[gate.terminal].airport_id
+        if air_corridor.from_airport == depart_airport_id:
+            created_flight.arrival_airport_code = air_corridor.to_airport
+            created_flight.reverse_corridor = False
+        else:
+            created_flight.arrival_airport_code = air_corridor.from_airport
+            created_flight.reverse_corridor = True
         created_flight.dest_lat = _get_airport_lat(created_flight.arrival_airport_code, airports)
         created_flight.dest_lon = _get_airport_lon(created_flight.arrival_airport_code, airports)
         created_flight.status = FlightStatus.PLANNED

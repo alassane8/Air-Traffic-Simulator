@@ -48,13 +48,18 @@ def _update_v_stall(flight, aircraft) -> None:
         flight.speed_km_h = v_cruise_min
 
 def _get_corridor_waypoints(flight, air_corridors: dict):
-    """Retourne la liste des waypoints du corridor de ce vol (peut être vide)."""
+    """Retourne la liste des waypoints du corridor de ce vol.
+    Si le vol parcourt le corridor en sens inverse (reverse_corridor=True),
+    les waypoints sont retournés dans l'ordre inverse."""
     corridor = next(
         (c for c in air_corridors.values() if c.air_corridor_code == flight.corridor_code),
         None,
     )
     if corridor:
-        return corridor.waypoints
+        waypoints = corridor.waypoints
+        if getattr(flight, 'reverse_corridor', False):
+            return list(reversed(waypoints))
+        return waypoints
     return []
 
 

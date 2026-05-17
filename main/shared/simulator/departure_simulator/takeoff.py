@@ -31,7 +31,8 @@ def _do_takeoff(
             None,
         )
         if corridor and corridor.waypoints:
-            wp = corridor.waypoints[0]
+            waypoints = list(reversed(corridor.waypoints)) if getattr(flight, 'reverse_corridor', False) else corridor.waypoints
+            wp = waypoints[0]
             flight.dest_lat = wp.lat
             flight.dest_lon = wp.lon
             flight.altitude_m = (wp.min_alt_ft + wp.max_alt_ft) / 2 * 0.3048

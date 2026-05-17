@@ -47,6 +47,7 @@ class Flight:
     time_spent: float = 0.0
 
     current_waypoint_index: int = 0
+    reverse_corridor: bool = False
     CL_max: float = 1.4
 
     created_at: datetime = field(default_factory=datetime.now)
