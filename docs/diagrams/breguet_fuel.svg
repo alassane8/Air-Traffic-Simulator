@@ -1,0 +1,82 @@
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="13">
+
+  <rect width="720" height="380" fill="#0d1117" rx="10"/>
+
+  <text x="30" y="30" fill="#e6edf3" font-size="15" font-weight="bold">Modèle carburant — Équation de Breguet</text>
+
+  <!-- Formula -->
+  <rect x="30" y="45" width="660" height="52" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="46" y="68" fill="#79c0ff" font-size="13" font-weight="bold">m_fuel = W₀ × ( 1 − exp( −R × TSFC / (L/D × V) ) )</text>
+  <text x="46" y="87" fill="#8b949e" font-size="11">W₀ = (m_OEW + m_payload + m_phases + m_fuel) × g    ← dépendance circulaire → résolution itérative</text>
+
+  <!-- Left: iterative convergence diagram -->
+  <text x="30" y="125" fill="#e6edf3" font-size="13" font-weight="bold">Convergence itérative (point fixe, 4 passes)</text>
+
+  <!-- iter 0 init -->
+  <rect x="30" y="135" width="320" height="26" rx="4" fill="#21262d"/>
+  <rect x="30" y="135" width="32"  height="26" rx="4" fill="#1f6feb" opacity="0.5"/>
+  <text x="36"  y="153" fill="#8b949e" font-size="11">iter 0 (init)</text>
+  <text x="230" y="153" fill="#58a6ff" font-size="11">5 000 kg</text>
+
+  <rect x="30" y="167" width="320" height="26" rx="4" fill="#21262d"/>
+  <rect x="30" y="167" width="148" height="26" rx="4" fill="#1f6feb" opacity="0.6"/>
+  <text x="36"  y="185" fill="#8b949e" font-size="11">iter 1</text>
+  <text x="230" y="185" fill="#58a6ff" font-size="11">~23 000 kg</text>
+
+  <rect x="30" y="199" width="320" height="26" rx="4" fill="#21262d"/>
+  <rect x="30" y="199" width="192" height="26" rx="4" fill="#1f6feb" opacity="0.75"/>
+  <text x="36"  y="217" fill="#8b949e" font-size="11">iter 2</text>
+  <text x="230" y="217" fill="#58a6ff" font-size="11">~30 000 kg</text>
+
+  <rect x="30" y="231" width="320" height="26" rx="4" fill="#21262d"/>
+  <rect x="30" y="231" width="208" height="26" rx="4" fill="#1f6feb" opacity="0.85"/>
+  <text x="36"  y="249" fill="#8b949e" font-size="11">iter 3</text>
+  <text x="230" y="249" fill="#58a6ff" font-size="11">~32 500 kg</text>
+
+  <rect x="30" y="263" width="320" height="26" rx="4" fill="#21262d"/>
+  <rect x="30" y="263" width="214" height="26" rx="4" fill="#3fb950" opacity="0.8"/>
+  <text x="36"  y="281" fill="#8b949e" font-size="11">iter 4 ✓ convergé</text>
+  <text x="230" y="281" fill="#3fb950" font-size="11">~33 200 kg</text>
+
+  <text x="30" y="310" fill="#8b949e" font-size="11">Exemple : CDG→JFK  R=5 800 km  L/D=17  V=840 km/h</text>
+
+  <!-- ICAO reserve -->
+  <rect x="30" y="325" width="320" height="40" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="46" y="343" fill="#ffa657" font-size="12" font-weight="bold">Réserve ICAO Annexe 6 (+15 %)</text>
+  <text x="46" y="358" fill="#8b949e" font-size="11">m_total = min( (m_trip + m_phases) × 1.15,  m_fuel_max )</text>
+
+  <!-- Right: mass breakdown -->
+  <text x="390" y="125" fill="#e6edf3" font-size="13" font-weight="bold">Décomposition de la masse au décollage</text>
+
+  <!-- Stack bars (total = 330px height) -->
+  <!-- OEW  ~50% = 165px -->
+  <rect x="500" y="135" width="80" height="138" rx="0" fill="#1f6feb" opacity="0.7"/>
+  <text x="540" y="207" fill="#cae8ff" font-size="11" text-anchor="middle">OEW</text>
+  <text x="540" y="220" fill="#cae8ff" font-size="10" text-anchor="middle">~90 t</text>
+  <!-- payload ~15% = 50px -->
+  <rect x="500" y="273" width="80" height="50" rx="0" fill="#3fb950" opacity="0.7"/>
+  <text x="540" y="301" fill="#ccffd8" font-size="11" text-anchor="middle">Payload</text>
+  <text x="540" y="314" fill="#ccffd8" font-size="10" text-anchor="middle">~20 t</text>
+  <!-- fuel ~33% = 110px -->
+  <rect x="500" y="323" width="80" height="40" rx="0" fill="#ffa657" opacity="0.8"/>
+  <text x="540" y="347" fill="#fff8c5" font-size="11" text-anchor="middle">Fuel ~33 t</text>
+
+  <!-- Labels right -->
+  <line x1="582" y1="204" x2="610" y2="204" stroke="#30363d" stroke-width="0.8"/>
+  <text x="614" y="208" fill="#8b949e" font-size="11">Operating Empty Weight</text>
+  <line x1="582" y1="298" x2="610" y2="298" stroke="#30363d" stroke-width="0.8"/>
+  <text x="614" y="302" fill="#8b949e" font-size="11">Passagers + fret</text>
+  <line x1="582" y1="343" x2="610" y2="343" stroke="#30363d" stroke-width="0.8"/>
+  <text x="614" y="347" fill="#ffa657" font-size="11">Breguet + 15% ICAO</text>
+
+  <!-- Parameters table -->
+  <rect x="390" y="135" width="100" height="128" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="400" y="156" fill="#e6edf3" font-size="11" font-weight="bold">Paramètres</text>
+  <text x="400" y="174" fill="#8b949e" font-size="10">TSFC</text>
+  <text x="400" y="187" fill="#79c0ff" font-size="10">1.8×10⁻⁵ kg/N·s</text>
+  <text x="400" y="205" fill="#8b949e" font-size="10">L/D typique</text>
+  <text x="400" y="218" fill="#79c0ff" font-size="10">15 – 20</text>
+  <text x="400" y="236" fill="#8b949e" font-size="10">Réserve</text>
+  <text x="400" y="249" fill="#ffa657" font-size="10">15% (ICAO)</text>
+
+</svg>

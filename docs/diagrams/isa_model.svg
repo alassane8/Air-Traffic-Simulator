@@ -1,0 +1,97 @@
+<svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="13">
+
+  <!-- Background -->
+  <rect width="720" height="340" fill="#0d1117" rx="10"/>
+
+  <!-- Sky gradient column -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#1e6fa8"/>
+    </linearGradient>
+    <linearGradient id="densityGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e6fa8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1e6fa8" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Atmosphere column -->
+  <rect x="80" y="30" width="120" height="260" rx="6" fill="url(#sky)"/>
+
+  <!-- Density overlay -->
+  <rect x="80" y="30" width="120" height="260" rx="6" fill="url(#densityGrad)"/>
+
+  <!-- Altitude ticks + labels (left) -->
+  <g fill="#8b949e" font-size="11">
+    <!-- 11 000 m -->
+    <line x1="74" y1="30" x2="82" y2="30" stroke="#8b949e" stroke-width="1"/>
+    <text x="70" y="34" text-anchor="end">11 000 m</text>
+    <text x="70" y="46" text-anchor="end" fill="#555e6b">FL 360</text>
+    <!-- 8 000 m -->
+    <line x1="74" y1="101" x2="82" y2="101" stroke="#8b949e" stroke-width="1"/>
+    <text x="70" y="105" text-anchor="end">8 000 m</text>
+    <!-- 5 000 m -->
+    <line x1="74" y1="172" x2="82" y2="172" stroke="#8b949e" stroke-width="1"/>
+    <text x="70" y="176" text-anchor="end">5 000 m</text>
+    <!-- 2 000 m -->
+    <line x1="74" y1="243" x2="82" y2="243" stroke="#8b949e" stroke-width="1"/>
+    <text x="70" y="247" text-anchor="end">2 000 m</text>
+    <!-- 0 m -->
+    <line x1="74" y1="290" x2="82" y2="290" stroke="#8b949e" stroke-width="1"/>
+    <text x="70" y="294" text-anchor="end">0 m (sol)</text>
+  </g>
+
+  <!-- Vertical axis arrow -->
+  <line x1="80" y1="295" x2="80" y2="22" stroke="#8b949e" stroke-width="1"/>
+  <polygon points="80,18 76,26 84,26" fill="#8b949e"/>
+  <text x="55" y="168" fill="#8b949e" font-size="11" text-anchor="middle" transform="rotate(-90,55,168)">Altitude h (m)</text>
+
+  <!-- Density bars at different altitudes -->
+  <!-- rho at 0m = 1.225 => bar width 110 -->
+  <!-- rho at 2000m = 1.007 => 90 -->
+  <!-- rho at 5000m = 0.736 => 66 -->
+  <!-- rho at 8000m = 0.526 => 47 -->
+  <!-- rho at 11000m = 0.365 => 33 -->
+
+  <!-- Horizontal density bars -->
+  <rect x="210" y="283" width="110" height="14" rx="3" fill="#1e6fa8" opacity="0.9"/>
+  <rect x="210" y="236" width="90"  height="14" rx="3" fill="#1e6fa8" opacity="0.75"/>
+  <rect x="210" y="165" width="66"  height="14" rx="3" fill="#1e6fa8" opacity="0.6"/>
+  <rect x="210" y="94"  width="47"  height="14" rx="3" fill="#1e6fa8" opacity="0.45"/>
+  <rect x="210" y="23"  width="33"  height="14" rx="3" fill="#1e6fa8" opacity="0.3"/>
+
+  <!-- Density values -->
+  <text x="328" y="294" fill="#58a6ff" font-size="11">1.225 kg/m³  (100%)</text>
+  <text x="308" y="247" fill="#58a6ff" font-size="11">1.007 kg/m³  (82%)</text>
+  <text x="284" y="176" fill="#58a6ff" font-size="11">0.736 kg/m³  (60%)</text>
+  <text x="265" y="105" fill="#58a6ff" font-size="11">0.526 kg/m³  (43%)</text>
+  <text x="251" y="34"  fill="#58a6ff" font-size="11">0.365 kg/m³  (30%)</text>
+
+  <!-- Density axis label -->
+  <text x="265" y="318" fill="#8b949e" font-size="11" text-anchor="middle">← densité croissante</text>
+
+  <!-- Formula box -->
+  <rect x="390" y="25" width="315" height="95" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="405" y="48" fill="#e6edf3" font-size="13" font-weight="bold">Modèle ISA — Troposphère</text>
+  <text x="405" y="72" fill="#79c0ff" font-size="12">ρ(h) = 1.225 × max(0, 1 − 2.2558×10⁻⁵ h)⁴·²⁵⁶¹</text>
+  <text x="405" y="92" fill="#8b949e" font-size="11">avec  h en mètres,  ρ en kg/m³</text>
+  <text x="405" y="110" fill="#8b949e" font-size="11">ρ₀ = 1.225  |  Λ/T₀ = 2.2558×10⁻⁵  |  g/ΛR = 4.2561</text>
+
+  <!-- Constants box -->
+  <rect x="390" y="138" width="315" height="140" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="405" y="160" fill="#e6edf3" font-size="13" font-weight="bold">Constantes ISA standard</text>
+  <text x="405" y="182" fill="#8b949e" font-size="11">ρ₀ = 1.225 kg/m³   (densité sol, 15°C, 101 325 Pa)</text>
+  <text x="405" y="200" fill="#8b949e" font-size="11">T₀ = 288.15 K       (température sol)</text>
+  <text x="405" y="218" fill="#8b949e" font-size="11">Λ  = 0.0065 K/m    (gradient thermique)</text>
+  <text x="405" y="236" fill="#8b949e" font-size="11">g  = 9.80665 m/s²  (gravité standard)</text>
+  <text x="405" y="254" fill="#8b949e" font-size="11">R  = 287.058 J/kg·K (constante gaz, air sec)</text>
+  <text x="405" y="272" fill="#ffa657" font-size="11">→ utilisée dans Vs (§5) et Breguet (§7)</text>
+
+  <!-- Plane icon at FL360 -->
+  <text x="138" y="44" fill="#ffa657" font-size="16" text-anchor="middle">✈</text>
+
+  <!-- Temperature annotation -->
+  <rect x="390" y="295" width="315" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="405" y="315" fill="#8b949e" font-size="11">T(h) = 288.15 − 0.0065 × h   →   à 11 000 m : T = 216.7 K (−56°C)</text>
+
+</svg>
