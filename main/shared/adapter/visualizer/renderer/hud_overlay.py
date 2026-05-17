@@ -13,20 +13,19 @@ import pygame
 from datetime import datetime
 
 # ── Palette ──────────────────────────────────────────────────────
-HUD_AMBER    = (255, 140,  0, 230)
-HUD_DIM      = (180,  80,  0, 160)
+HUD_AMBER    = (  0, 200, 255, 230)
+HUD_DIM      = (  0, 120, 180, 160)
 HUD_RED      = (255,  50,  50, 200)
-HUD_WHITE    = (220, 220, 220, 220)
+HUD_WHITE    = (200, 240, 255, 220)
 HUD_BG       = (  0,   0,   0, 160)
-BRACKET_COL  = (220, 100,  0, 180)
+BRACKET_COL  = (  0, 200, 255, 180)
+HUD_YELLOW   = (  0, 240, 255, 220)
+HUD_GREY     = ( 80, 160, 180, 180)
 
 MARGIN       = 18
 LINE_H       = 17
 PANEL_W      = 260
 PANEL_H_EST  = 160
-
-HUD_YELLOW   = (255, 210,  60, 220)
-HUD_GREY     = (140, 140, 140, 180)
 
 
 class HUDOverlayRenderer:

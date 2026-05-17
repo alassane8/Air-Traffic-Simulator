@@ -18,13 +18,13 @@ from shared.adapter.visualizer.renderer.world_map import geo_to_screen
 
 # ── Palette ──────────────────────────────────────────────────────
 COLOR_CLIMBING   = (80,  220, 120, 230)   # vert clair
-COLOR_CRUISE     = (80,  180, 255, 230)   # bleu ciel
+COLOR_CRUISE     = (  0, 200, 255, 230)   # cyan principal
 COLOR_DESCENDING = (255, 180,  60, 230)   # ambre-orange
-COLOR_SELECTED   = (255, 255, 100, 255)   # jaune vif
-COLOR_TRAIL      = (100, 200, 255, 120)   # trace de vol
+COLOR_SELECTED   = (255, 255, 255, 255)   # blanc pur (highlight)
+# COLOR_TRAIL      = (  0, 200, 255,  90)   # trace cyan semi-transparente
 COLOR_FUEL_WARN  = (255,  50,  50, 220)   # rouge si fuel critique
 
-AIRCRAFT_SIZE  = 7     # demi-taille du triangle avion (px)
+AIRCRAFT_SIZE  = 5    # demi-taille du triangle avion (px)
 LABEL_OFFSET_X = 10
 LABEL_OFFSET_Y = -8
 HIT_RADIUS     = 14    # px pour détecter le clic
@@ -104,20 +104,20 @@ class FlightMarker:
         if self.selected:
             color = COLOR_SELECTED
 
-        # ── Trail ───────────────────────────────────────────────
-        if len(self._trail) >= 2:
-            n = len(self._trail)
-            for i in range(1, n):
-                if _crosses_antimeridian(self._trail[i - 1], self._trail[i], self._map_w):
-                    continue
-                alpha = int(130 * i / n)
-                pygame.draw.line(
-                    surface,
-                    (*COLOR_TRAIL[:3], alpha),
-                    self._trail[i - 1],
-                    self._trail[i],
-                    1,
-                )
+        # # ── Trail ───────────────────────────────────────────────
+        # if len(self._trail) >= 2:
+        #     n = len(self._trail)
+        #     for i in range(1, n):
+        #         if _crosses_antimeridian(self._trail[i - 1], self._trail[i], self._map_w):
+        #             continue
+        #         alpha = int(130 * i / n)
+        #         pygame.draw.line(
+        #             surface,
+        #             (*COLOR_TRAIL[:3], alpha),
+        #             self._trail[i - 1],
+        #             self._trail[i],
+        #             1,
+        #         )
 
         # ── Icône avion ─────────────────────────────────────────
         _draw_aircraft_icon(surface, px, py, flight.heading, color, self.selected)

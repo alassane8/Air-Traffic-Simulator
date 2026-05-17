@@ -14,10 +14,10 @@ import pygame
 from shapely.geometry import MultiPolygon, Polygon
 
 # ── Palette ──────────────────────────────────────────────────────
-BG          = (0,   0,   0)
-COAST       = (220, 100, 0,  180)
-COAST_GLOW  = (255, 140, 0,   40)
-SWEEP_COLOR = (255, 100, 0,   90)
+BG          = (  6,  14,  20)
+COAST       = (  0, 200, 255, 180)
+COAST_GLOW  = (  0, 200, 255,  40)
+SWEEP_COLOR = (  0, 160, 220,  90)
 
 # Cache : liste de polylignes, chacune = liste de (lon, lat) en degrés
 _GEO_LINES: list | None = None

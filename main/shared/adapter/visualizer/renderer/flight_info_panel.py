@@ -23,19 +23,19 @@ from flight.domain.enums.flight_status import FlightStatus
 
 # ── Palette ──────────────────────────────────────────────────────
 HUD_BG        = (  0,   0,   0, 185)
-HUD_AMBER     = (255, 160,   0, 235)
-HUD_DIM       = (160,  80,   0, 180)
-HUD_WHITE     = (220, 220, 220, 200)
+HUD_AMBER     = (  0, 200, 255, 235)
+HUD_DIM       = (  0, 100, 160, 180)
+HUD_WHITE     = (200, 240, 255, 200)
 HUD_GREEN     = ( 80, 220,  80, 220)
 HUD_RED       = (255,  60,  60, 220)
-HUD_BLUE      = ( 80, 180, 255, 220)
-HUD_ORANGE    = (255, 140,  40, 220)
-BRACKET_COL   = (220, 100,   0, 180)
+HUD_BLUE      = (  0, 200, 255, 220)
+HUD_ORANGE    = (  0, 160, 220, 220)
+BRACKET_COL   = (  0, 200, 255, 180)
 
 STATUS_COLORS = {
     FlightStatus.CLIMBING:   ( 80, 220, 120),
-    FlightStatus.CRUISE:     ( 80, 180, 255),
-    FlightStatus.DESCENDING: (255, 180,  60),
+    FlightStatus.CRUISE:     (  0, 200, 255),
+    FlightStatus.DESCENDING: (  0, 160, 220),
 }
 
 PANEL_W  = 320
