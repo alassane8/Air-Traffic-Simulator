@@ -82,7 +82,6 @@ La simulation avance par ticks discrets. Le temps simulé est découplé du temp
 
 $$\Delta t_{\text{sim}} = \Delta t_{\text{réel}} \times \tau_{\text{scale}} = 1 \times 20 = 20\,\text{s}$$
 
-![Boucle de simulation et cycle d'états](docs/diagrams/sim_loop_states.svg)
 
 La séquence d'exécution à chaque tick est :
 
@@ -114,7 +113,6 @@ Implémentée sous forme compacte :
 
 $$\boxed{\rho(h) = 1.225 \times \max\!\left(0,\; 1 - 2.2558 \times 10^{-5}\, h\right)^{4.2561} \quad [\text{kg/m}^3]}$$
 
-![Modèle atmosphérique ISA — densité en fonction de l'altitude](docs/diagrams/isa_model.svg)
 
 Les constantes numériques proviennent des paramètres ISA standard :
 - $2.2558 \times 10^{-5} = \Lambda / T_0 = 0.0065 / 288.15$
@@ -142,7 +140,6 @@ $$V_{\text{cruise,min}} = 1.3 \times V_s$$
 
 $$V_{\text{flight}} = \max\!\left(V_{\text{cruise,aircraft}},\; 1.3 \times V_s\right) \times 3.6 \quad [\text{km/h}]$$
 
-![Vitesse de décrochage Vs, marge 1.3× et configuration volets](docs/diagrams/vstall_safety.svg)
 
 | Symbole | Définition | Unité |
 |---|---|---|
@@ -182,7 +179,6 @@ $$m_{\text{fuel}}^{(k+1)} = \left(m_{\text{OEW}} + m_{\text{payload}} + m_{\text
 
 $$m_{\text{total}} = \min\!\left(\left(m_{\text{trip}} + m_{\text{phases}}\right) \times 1.15,\; m_{\text{fuel,max}}\right)$$
 
-![Équation de Breguet — convergence itérative et réserve ICAO](docs/diagrams/breguet_fuel.svg)
 
 | Symbole | Définition | Valeur/Unité |
 |---|---|---|
@@ -202,7 +198,6 @@ Un avion ne consomme pas à la même cadence selon ce qu'il fait : au décollage
 
 $$\dot{m}_{\text{fuel}}(\phi) = \dot{m}_{\text{cruise}} \times k_\phi \qquad \Delta m_{\text{fuel}} = \dot{m}_{\text{cruise}} \times k_\phi \times \Delta t_{\text{réel}}$$
 
-![Profil de consommation par phase de vol](docs/diagrams/fuel_phases.svg)
 
 | Phase $\phi$ | Facteur $k_\phi$ | Justification physique |
 |---|---|---|
@@ -238,7 +233,6 @@ $$f = \frac{v_{\text{km/s}} \times \Delta t_{\text{sim}}}{d} \qquad A = \frac{\s
 
 $$\varphi = \arctan2\!\left(z,\, \sqrt{x^2+y^2}\right) \qquad \lambda = \arctan2(y,\, x)$$
 
-![Haversine et Slerp géodésique — navigation sur grand cercle](docs/diagrams/haversine_slerp.svg)
 
 **Utilisations dans le projet :**
 - Distance entre aéroports pour le calcul de carburant (§7)
@@ -281,7 +275,6 @@ $$f(n) = g(n) + h(n)$$
 
 $$h(n) = 2 R_\oplus \arcsin\!\sqrt{\sin^2\!\frac{\Delta\varphi}{2} + \cos\varphi_n\cos\varphi_{\text{goal}}\sin^2\!\frac{\Delta\lambda}{2}}$$
 
-![Pathfinding A* sur le graphe de taxiways](docs/diagrams/astar_taxiway.svg)
 
 - $g(n)$ : coût cumulé depuis la gate (somme des distances en mètres)
 - $h(n)$ : heuristique admissible = haversine jusqu'à la piste (ne surestime jamais)
