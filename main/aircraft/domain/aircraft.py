@@ -64,7 +64,7 @@ class Aircraft:
         return True
 
     def is_cargo(self) -> bool:
-        return self.aircraft_type == AircraftType.CARGOS
+        return self.aircraft_type == AircraftType.CARGO
 
     def is_passenger(self) -> bool:
         return self.aircraft_type in {AircraftType.NARROW, AircraftType.LARGE}

@@ -1,7 +1,7 @@
 from enum import Enum
 
 class AircraftType(str, Enum):
-    CARGOS = "CARGOS"
+    CARGO = "CARGO"
     NARROW = "NARROW"
     LARGE = "LARGE"
 
