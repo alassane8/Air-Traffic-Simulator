@@ -71,7 +71,7 @@ class AirportMarker:
             surface.blit(ring, (px - cx, py - cy))
 
         # ── Cross-hair reticle arms ────────────────────────────────
-        arm = MARKER_SIZE + 6
+        arm = MARKER_SIZE + 3
         pygame.draw.line(surface, COLOR_RETICLE,
                          (px - arm, py), (px - MARKER_SIZE - 1, py), 1)
         pygame.draw.line(surface, COLOR_RETICLE,
@@ -82,26 +82,25 @@ class AirportMarker:
                          (px, py + MARKER_SIZE + 1), (px, py + arm), 1)
 
         # ── Blinking square marker ─────────────────────────────────
-        visible = self._blink_t < 0.85     # off for 15 % of cycle
+        visible = self._blink_t < 0.85
         if visible:
-            rect = pygame.Rect(px - MARKER_SIZE, py - MARKER_SIZE,
-                               MARKER_SIZE * 2, MARKER_SIZE * 2)
+            half = MARKER_SIZE // 2  # moitié de la taille originale
+            rect = pygame.Rect(px - half, py - half, half * 2, half * 2)
             pygame.draw.rect(surface, COLOR_MARKER, rect)
-            # inner bright core
-            inner = pygame.Rect(px - 2, py - 2, 4, 4)
+            inner = pygame.Rect(px - 1, py - 1, 2, 2)
             pygame.draw.rect(surface, (255, 200, 200), inner)
 
         # ── IATA label ─────────────────────────────────────────────
         label_surf = font_small.render(self.code, True, COLOR_LABEL)
-        lx = px + MARKER_SIZE + 6
+        lx = px + MARKER_SIZE + 4
         ly = py - label_surf.get_height() // 2
         surface.blit(label_surf, (lx, ly))
 
-        # ── Coordinate line ────────────────────────────────────────
-        lat_str = f"{abs(self.lat):.2f}{'N' if self.lat >= 0 else 'S'}"
-        lon_str = f"{abs(self.lon):.2f}{'E' if self.lon >= 0 else 'W'}"
-        coord_surf = font_tiny.render(f"{lat_str} {lon_str}", True, COLOR_COORDS)
-        surface.blit(coord_surf, (lx, ly + label_surf.get_height() + 1))
+        # # ── Coordinate line ────────────────────────────────────────
+        # lat_str = f"{abs(self.lat):.2f}{'N' if self.lat >= 0 else 'S'}"
+        # lon_str = f"{abs(self.lon):.2f}{'E' if self.lon >= 0 else 'W'}"
+        # coord_surf = font_tiny.render(f"{lat_str} {lon_str}", True, COLOR_COORDS)
+        # surface.blit(coord_surf, (lx, ly + label_surf.get_height() + 1))
 
 
 class AirportLayerRenderer:
@@ -147,14 +146,14 @@ class AirportLayerRenderer:
             # Try to load a monospace font; fall back to default
             for name in ["couriernew", "courier", "liberationmono", "dejavusansmono"]:
                 try:
-                    self._font_small = pygame.font.SysFont(name, 13, bold=True)
-                    self._font_tiny  = pygame.font.SysFont(name, 10)
+                    self._font_small = pygame.font.SysFont(name, 10, bold=True)
+                    self._font_tiny  = pygame.font.SysFont(name, 8)
                     break
                 except Exception:
                     pass
             if self._font_small is None:
-                self._font_small = pygame.font.Font(None, 16)
-                self._font_tiny  = pygame.font.Font(None, 13)
+                self._font_small = pygame.font.Font(None, 13)
+                self._font_tiny  = pygame.font.Font(None, 10)
 
     def trigger_ping(self, airport_code: str):
         """Call this when a flight departs or arrives at an airport."""
