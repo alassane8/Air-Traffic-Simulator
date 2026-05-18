@@ -198,8 +198,8 @@ class FlightInfoPanelRenderer:
         airline = self._airlines.get(flight.airline_id)
         aircraft = self._aircrafts.get(flight.aircraft_id)
         airline_name  = getattr(airline,  "name",    flight.airline_id)
-        aircraft_type = getattr(aircraft, "model",   flight.aircraft_id)
-        aircraft_reg  = getattr(aircraft, "registration", "—")
+        aircraft_id = getattr(aircraft, "model",   flight.aircraft_id)
+        aircraft_type  = getattr(aircraft, "registration", "—")
 
         # Fuel
         if flight.fuel_burn_rate_kg_per_s > 0:
@@ -233,31 +233,33 @@ class FlightInfoPanelRenderer:
 
             # ── Identité ────────────────────────────────────────
             ("SECTION", "── AIRCRAFT"),
-            ("ROW", "TYPE",         aircraft_type,    HUD_WHITE),
-            ("ROW", "REG",          aircraft_reg,     HUD_WHITE),
-            ("ROW", "PRIORITY",     flight.priority.name, HUD_AMBER),
+            ("ROW", "ID",         aircraft_id,            HUD_WHITE),
+            ("ROW", "CODE",       aircraft.aircraft_code, HUD_AMBER),
+            ("ROW", "TYPE",       aircraft.aircraft_type, HUD_WHITE),
+            ("ROW", "PRIORITY",   flight.priority.name,   HUD_AMBER),
+            ("ROW", "PASSENGERS",  aircraft.passengers,   HUD_WHITE),
             None,
 
             # ── Route ───────────────────────────────────────────
             ("SECTION", "── ROUTE"),
-            ("ROW", "FROM",         flight.depart_airport_id,   HUD_BLUE),
-            ("ROW", "TERMINAL",     flight.depart_terminal_code, HUD_DIM[:3] + (200,)),
-            ("ROW", "GATE",         flight.depart_gate_code,    HUD_WHITE),
-            ("ROW", "RUNWAY DEP",   flight.depart_runway_code,  HUD_WHITE),
-            ("ROW", "TO",           flight.arrival_airport_code, HUD_ORANGE),
+            ("ROW", "FROM",         flight.depart_airport_id,     HUD_BLUE),
+            ("ROW", "TERMINAL",     flight.depart_terminal_code,  HUD_DIM[:3] + (200,)),
+            ("ROW", "GATE",         flight.depart_gate_code,      HUD_WHITE),
+            ("ROW", "RUNWAY DEP",   flight.depart_runway_code,    HUD_WHITE),
+            ("ROW", "TO",           flight.arrival_airport_code,  HUD_ORANGE),
             ("ROW", "TERMINAL",     flight.arrival_terminal_code, HUD_DIM[:3] + (200,)),
-            ("ROW", "GATE",         flight.arrival_gate_code,   HUD_WHITE),
-            ("ROW", "RUNWAY ARR",   flight.arrival_runway_code, HUD_WHITE),
-            ("ROW", "CORRIDOR",     flight.corridor_code,       HUD_DIM[:3] + (200,)),
+            ("ROW", "GATE",         flight.arrival_gate_code,     HUD_WHITE),
+            ("ROW", "RUNWAY ARR",   flight.arrival_runway_code,   HUD_WHITE),
+            ("ROW", "CORRIDOR",     flight.corridor_code,         HUD_DIM[:3] + (200,)),
             None,
 
             # ── Navigation ──────────────────────────────────────
             ("SECTION", "── NAVIGATION"),
-            ("ROW", "LAT",          f"{flight.lat:+.4f}°",       HUD_WHITE),
-            ("ROW", "LON",          f"{flight.lon:+.4f}°",       HUD_WHITE),
-            ("ROW", "ALTITUDE",     f"FL{fl:03d}  ({alt_ft} ft)", HUD_WHITE),
+            ("ROW", "LAT",          f"{flight.lat:+.4f}°",         HUD_WHITE),
+            ("ROW", "LON",          f"{flight.lon:+.4f}°",         HUD_WHITE),
+            ("ROW", "ALTITUDE",     f"FL{fl:03d}  ({alt_ft} ft)",  HUD_WHITE),
             ("ROW", "ALT (m)",      f"{int(flight.altitude_m)} m", HUD_DIM[:3] + (180,)),
-            ("ROW", "HEADING",      f"{hdg:03d}°",                HUD_WHITE),
+            ("ROW", "HEADING",      f"{hdg:03d}°",                 HUD_WHITE),
             ("ROW", "SPEED",        f"{speed_kt} kt  ({int(flight.speed_km_h)} km/h)", HUD_WHITE),
             None,
 
