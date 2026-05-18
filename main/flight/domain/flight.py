@@ -74,4 +74,4 @@ class Flight:
         if self.fuel_burn_rate_kg_per_s <= 0:
             return False
         remaining_seconds = self.fuel_kg / self.fuel_burn_rate_kg_per_s
-        return remaining_seconds < 1800  # 30 min
+        return remaining_seconds < 120
