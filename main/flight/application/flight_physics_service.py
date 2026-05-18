@@ -2,7 +2,7 @@ import math
 from datetime import datetime
 
 from flight.domain.flight import Flight
-
+from flight.domain.enums.flight_priority import FlightPriority
 
 def update_position(flight: Flight, sim_tick: float) -> None:
     """
@@ -81,20 +81,14 @@ def get_distance_km(flight: Flight) -> float:
     return 6371 * 2 * math.asin(math.sqrt(a))
 
 
-# ─────────────────────────────────────────────────────────────────
-#  FUEL UPDATE  (appelé à chaque tick par _tick_flight)
-# ─────────────────────────────────────────────────────────────────
-
-# Facteurs de consommation par phase relatifs au taux croisière.
-# Le taux croisière stocké sur le vol est la référence (×1.0).
 _FUEL_PHASE_FACTOR = {
-    "LINEUP":     0.24,   # moteurs au ralenti / roulage
-    "TAKEOFF":    3.30,   # pleine puissance
-    "CLIMBING":   2.47,   # montée (≈ fuel_flow_climb / fuel_flow_cruise)
-    "CRUISE":     1.00,   # régime nominal – référence
-    "DESCENDING": 0.29,   # descente moteurs réduits
-    "LANDING":    0.35,   # approche / inverseurs
-    "TAXI":       0.24,   # roulage à l'arrivée
+    "LINEUP":     0.24,
+    "TAKEOFF":    3.30,
+    "CLIMBING":   2.47,
+    "CRUISE":     1.00,
+    "DESCENDING": 0.29,
+    "LANDING":    3.30,
+    "TAXI":       0.24,
 }
 
 
@@ -124,10 +118,7 @@ def update_flight_fuel(flight: Flight, tick_interval: float) -> None:
     burn = flight.fuel_burn_rate_kg_per_s * factor * tick_interval
     flight.fuel_kg = max(0.0, flight.fuel_kg - burn)
 
-    # Mise à jour de la propriété is_fuel_critical (déjà sur Flight)
-    # → propagation de la priorité si nécessaire
     if flight.fuel_kg == 0.0 or flight.is_fuel_critical:
-        from flight.domain.enums.flight_priority import FlightPriority
         if flight.priority != FlightPriority.EMERGENCY:
             flight.priority = FlightPriority.FUEL_CRITICAL
         
