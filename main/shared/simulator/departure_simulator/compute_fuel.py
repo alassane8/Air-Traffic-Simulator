@@ -41,15 +41,17 @@ def compute_flight_fuel(
     """
 
     TSFC = 0.000018           # kg/(N·s)
-    AVG_PAX_WEIGHT_KG = 95    # pax + bagage cabine
+    AVG_PAX_WEIGHT_KG = 95
     RESERVE_RATIO = 0.15      # réserve réglementaire ICAO
     CARGO_PAYLOAD_KG = 100_000
 
-    air_corridor: AirCorridor | None = air_corridors.get(flight.corridor_code)
-    if air_corridor is None:
-        return aircraft.max_fuel_kg * 0.5, aircraft.BASE_FUEL_FLOW["cruise"]
+    # air_corridor: AirCorridor | None = air_corridors.get(flight.corridor_code)
+    # if air_corridor is None:
+    #     return aircraft.max_fuel_kg * 0.5, aircraft.BASE_FUEL_FLOW["cruise"]
 
-    distance_m = float(air_corridor.distance) * 1_000
+    for air_corridor in air_corridors.values():
+        if air_corridor.air_corridor_code == flight.corridor_code: 
+            distance_m = float(air_corridor.distance) * 1_000
 
     if aircraft.is_cargo():
         payload_kg = CARGO_PAYLOAD_KG
