@@ -29,6 +29,7 @@ def create_aircrafts(aircrafts_data: dict) -> dict:
             aircraft.get("maximum_total_operating_weight_kg", 0),
             aircraft.get("max_fuel_kg", 0),
             aircraft.get("fuel_flow_cruise_kg_per_s", 0),
+            aircraft.get("base_rate_of_climb_ft_per_min", 0),
             aircraft.get("wing_area_m2", 0),
             aircraft.get("ld_ratio", 0),
             aircraft.get("created_at", datetime.now()),
