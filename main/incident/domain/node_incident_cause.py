@@ -1,0 +1,16 @@
+from enum import Enum
+
+class NodeIncidentCause(Enum):
+    FOREIGN_OBJECT_DEBRIS = ("FOREIGN_OBJECT_DEBRIS", .28)
+    SNOW_ICE_ACCUMULATION = ("SNOW_ICE_ACCUMULATION", .22)
+    CONSTRUCTION_WORK = ("CONSTRUCTION_WORK", .18)
+    WILDLIFE_INTRUSION = ("WILDLIFE_INTRUSION", .12)
+    EMERGENCY_RESPONSE = ("EMERGENCY_RESPONSE", .08)
+    PAVEMENT_FAILURE = ("PAVEMENT_FAILURE", .05)
+    GROUND_VEHICLE_ACCIDENT = ("GROUND_VEHICLE_ACCIDENT", .03)
+    FLOODED_SURFACE = ("FLOODED_SURFACE", .02)
+    FUEL_SPILL = ("FUEL_SPILL", .02)
+
+    def __init__(self, label: str, weight: float):
+        self.label = label
+        self.weight = weight
