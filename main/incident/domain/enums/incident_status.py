@@ -2,8 +2,9 @@ from enum import Enum
 
 
 class IncidentStatus(str, Enum):
-    ACTIVE = "ACTIVE"
-    INACTIVE = "INACTIVE"
+    ACTIVE   = "ACTIVE"
+    RESOLVED = "RESOLVED"
+    EXPIRED  = "EXPIRED"
 
     
     def __init__(self, label: str):
