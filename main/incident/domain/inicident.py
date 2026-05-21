@@ -1,8 +1,7 @@
 from dataclasses import dataclass, field
 import datetime
 import random
-from typing import Dict, Optional
-import uuid
+from typing import Optional
 from xml.dom import Node
 
 from airport.domain.enums.node_status import NodeStatus

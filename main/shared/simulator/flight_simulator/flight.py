@@ -11,7 +11,11 @@ from flight.application.flight_physics_service import (
 )
 from flight.application.flight_service import advance_status
 from flight.domain.flight import FlightStatus
+from airport.application.taxiway_pathfinding_service import find_path_graph, haversine
+from air_corridor.domain.simple_edge import SimpleEdge
+from waypoint.domain.waypoint_status import WaypointStatus
 from shared.simulator.landing_simulator.descent import _do_start_descent
+
 
 def _compute_rho(altitude_m: float) -> float:
     """Densité de l'air (kg/m³) via modèle ISA standard."""
@@ -62,8 +66,78 @@ def _get_corridor_waypoints(flight, air_corridors: dict):
         return waypoints
     return []
 
+def check_corridor_waypoints_and_reroute(flight, air_corridors: dict, all_waypoints: dict):
+    """
+    Vérifie le statut des waypoints du corridor du vol.
+    Si un waypoint est CLOSED, appelle find_path_graph pour recalculer le chemin
+    parmi tous les waypoints OPEN disponibles.
 
-from datetime import datetime, timedelta
+    Returns:
+        list: waypoints originaux si tous ouverts, sinon le nouveau chemin calculé par A*
+    """
+    waypoints = _get_corridor_waypoints(flight, air_corridors)
+
+    if not waypoints:
+        return []
+
+    closed_waypoints = [wp for wp in waypoints if wp.status == WaypointStatus.CLOSED]
+
+    if not closed_waypoints:
+        return waypoints
+
+    start_id = waypoints[0].id
+    goal_id = waypoints[-1].id
+
+    open_waypoints_nodes = {
+        wp_id: wp
+        for wp_id, wp in all_waypoints.items()
+        if wp.status == WaypointStatus.OPEN
+    }
+
+    open_waypoints_nodes[start_id] = waypoints[0]
+    open_waypoints_nodes[goal_id] = waypoints[-1]
+
+    edges = _build_proximity_edges(open_waypoints_nodes, k=5)
+
+    new_path_ids = find_path_graph(
+        nodes=open_waypoints_nodes,
+        edges=edges,
+        start_id=start_id,
+        goal_id=goal_id,
+    )
+
+    if not new_path_ids:
+        return waypoints
+
+    return [all_waypoints[wp_id] for wp_id in new_path_ids if wp_id in all_waypoints]
+
+def _build_proximity_edges(nodes: dict, k: int = 5) -> dict:
+    """
+    Construit des edges entre chaque noeud et ses k voisins les plus proches.
+    Utilisé quand il n'y a pas d'edges explicites entre waypoints.
+    """
+    edges = {}
+    node_list = list(nodes.items())
+    edge_id = 0
+
+    for i, (node_id, node) in enumerate(node_list):
+        distances = []
+        for other_id, other_node in node_list:
+            if other_id == node_id:
+                continue
+            dist = haversine(node.lat, node.lon, other_node.lat, other_node.lon)
+            distances.append((dist, other_id))
+
+        distances.sort()
+        for dist, neighbor_id in distances[:k]:
+            edges[edge_id] = SimpleEdge(
+                from_node_id=node_id,
+                to_node_id=neighbor_id,
+                distance_m=dist,
+            )
+            edge_id += 1
+
+    return edges
 
 def _advance_to_next_waypoint(flight, waypoints, airports) -> bool:
     flight.current_waypoint_index += 1
@@ -103,7 +177,7 @@ def _tick_flight(
     air_corridors: dict,
     airports: dict,
     aircrafts: dict,
-    runways: dict,
+    all_waypoints: dict
 ):
     for flight in list(active_flights):
         aircraft = aircrafts.get(flight.aircraft_id)
@@ -123,7 +197,10 @@ def _tick_flight(
             if flight.time_spent >= FlightStatus.CLIMBING.duration_seconds:
                 advance_status(flight)
                 flight.time_spent = 0
-
+                
+                flight.active_waypoints = check_corridor_waypoints_and_reroute(
+                    flight, air_corridors, all_waypoints,
+                )
                 v_cruise_min = v_stall * 1.3
                 flight.speed_km_h = (
                     aircraft.cruising_speed
@@ -140,7 +217,8 @@ def _tick_flight(
 
             update_position(flight, sim_tick)
 
-            waypoints = _get_corridor_waypoints(flight, air_corridors)
+            waypoints = getattr(flight, 'active_waypoints', None) \
+                        or _get_corridor_waypoints(flight, air_corridors)
             n_wp = len(waypoints)
 
             if has_reached_destination(flight):

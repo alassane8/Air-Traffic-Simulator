@@ -32,7 +32,6 @@ def run_simulation(
         airports, air_corridors
     )
 
-    # ── Initialisation du visualizer ──────────────────────────────
     try:
         import json
         _here = os.path.dirname(os.path.abspath(__file__))
@@ -62,7 +61,7 @@ def run_simulation(
 
         _tick_flight(
             active_flights, TICK_INTERVAL, TIME_SCALE, SIM_TICK,
-            air_corridors, airports, aircrafts, runways,
+            air_corridors, airports, aircrafts, waypoints
         )
 
         _tick_landing(
@@ -73,7 +72,6 @@ def run_simulation(
 
         tick_count += 1
 
-        # ── Mise à jour du visualizer ─────────────────────────────
         if _vis_enabled and vis is not None:
             now_ms = time.time() * 1000
             elapsed_ms = now_ms - _vis_last_time
