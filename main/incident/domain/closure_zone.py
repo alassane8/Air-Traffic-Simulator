@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 import datetime
 from typing import Optional
 from incident.domain.bounding_box import BoundingBox
-from main.incident.domain.enums.waypoint_incident_cause import WaypointIncidentCause
+from incident.domain.enums.waypoint_incident_cause import WaypointIncidentCause
 
 @dataclass
 class ClosureZone:

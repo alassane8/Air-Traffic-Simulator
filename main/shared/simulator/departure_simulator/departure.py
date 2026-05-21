@@ -7,6 +7,7 @@ from flight.application.flight_timing_service import init_flight_cruising_time, 
 from flight.domain.flight import Flight, FlightStatus
 from air_corridor.domain.air_corridor import AirCorridor
 from aircraft.domain.aircraft import Aircraft
+from main.airport.domain.enums.node_status import NodeStatus
 from shared.simulator.departure_simulator.compute_fuel import compute_flight_fuel
 from shared.simulator.departure_simulator.takeoff import _do_takeoff
 from aircraft.domain.aircraft_type import AircraftType
@@ -113,8 +114,9 @@ def _tick_runway(
 
 def _get_path_to_runway(flight: Flight, nodes: dict, edges: dict) -> List[str]:
     start_id = goal_id = None
+    opened_nodes = {n.id: n for n in nodes.values() if n.status == NodeStatus.OPEN}
 
-    for node in nodes.values():
+    for node in opened_nodes.values():
         if node.ref == flight.depart_gate_code:
             start_id = node.id
         elif node.ref == flight.depart_runway_code:
@@ -125,4 +127,4 @@ def _get_path_to_runway(flight: Flight, nodes: dict, edges: dict) -> List[str]:
             f"Gate '{flight.depart_gate_code}' ou runway '{flight.depart_runway_code}' introuvable"
         )
 
-    return find_path_graph(nodes, edges, start_id, goal_id)
+    return find_path_graph(opened_nodes, edges, start_id, goal_id)
