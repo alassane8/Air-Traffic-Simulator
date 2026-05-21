@@ -1,91 +1,84 @@
 from dataclasses import dataclass, field
 import datetime
 import random
-from typing import Dict
+from typing import Dict, Optional
 import uuid
 from xml.dom import Node
 
-from main.airport.domain.enums.node_status import NodeStatus
-from main.incident.domain.incident_status import IncidentStatus
-from main.incident.domain.node_incident_cause import NodeIncidentCause
-from main.incident.domain.waypoint_incident_cause import WaypointIncidentCause
-from main.waypoint.domain.waypoint import Waypoint
-from main.waypoint.domain.waypoint_status import WaypointStatus
+from airport.domain.enums.node_status import NodeStatus
+from incident.domain.enums.incident_status import IncidentStatus
+from incident.domain.enums.node_incident_cause import NodeIncidentCause
+from incident.domain.enums.waypoint_incident_cause import WaypointIncidentCause
+from waypoint.domain.waypoint import Waypoint
 
 
 @dataclass
 class Incident: 
     id: str
     incident_code: str
-    node_incident_cause: NodeIncidentCause
-    waypoint_incident_cause: WaypointIncidentCause
+    cause: NodeIncidentCause | WaypointIncidentCause
     status: IncidentStatus
-    nodes: Dict[Node]
-    node: Node
-    waypoints: Dict[Waypoint]
-    waypoint: Waypoint
-    
+
+    node: Optional[Node] = None
+    nodes: Optional[dict[str, Node]] = None
+    waypoint: Optional[Waypoint] = None
+    waypoints: Optional[dict[str, Waypoint]] = None
+
+    zone_id: Optional[str] = None
+
     created_at: datetime = field(default_factory=datetime.now)
     updated_at: datetime = field(default_factory=datetime.now)
+    expires_at: datetime = None
+
+
+    @property
+    def is_node_incident(self) -> bool:
+        return self.node is not None or self.nodes is not None
+
+    @property
+    def is_waypoint_incident(self) -> bool:
+        return self.waypoint is not None or self.waypoints is not None
+
+    @property
+    def is_zone_incident(self) -> bool:
+        """Incident multi-éléments (zone manager impliqué)."""
+        return (self.nodes is not None and len(self.nodes) > 1) or \
+               (self.waypoints is not None and len(self.waypoints) > 1)
+
+    def resolve(self) -> None:
+        self.status     = IncidentStatus.RESOLVED
+        self.updated_at = datetime.now()
 
     
-def intersection_incidient_code(node: Node, waypoint: Waypoint) -> str:
-        if node and node.is_intersection():
-            code_number = random.randrange(10,99)
-            code_type = "INT"
-        elif waypoint: 
-            code_number = random.randrange(10,99)
+    def pick_waypoint_incident_cause() -> WaypointIncidentCause:
+            causes  = list(WaypointIncidentCause)
+            weights = [c.weight for c in causes]
+            return random.choices(causes, weights=weights, k=1)[0]
+
+    def pick_node_incident_cause() -> NodeIncidentCause:
+            causes  = list(NodeIncidentCause)
+            weights = [c.weight for c in causes]
+            return random.choices(causes, weights=weights, k=1)[0]
+
+
+    @staticmethod
+    def _build_incident_code(
+        node:     Optional[Node],
+        waypoint: Optional[Waypoint],
+        is_zone:  bool = False,
+    ) -> str:
+        code_number = random.randrange(10, 99)
+
+        if is_zone:
+            prefix    = node.id if node else (waypoint.id if waypoint else "ZN")
+            code_type = "ZNT" if node else "ZWP"   # Zone-Node / Zone-Waypoint
+        elif node is not None:
+            prefix    = node.id
+            code_type = "INT" if node.is_intersection() else "NOD"
+        elif waypoint is not None:
+            prefix    = waypoint.id
             code_type = "WPT"
-        
-        return node.id + code_type + code_number
-    
-def pick_waypoint_incident_cause() -> WaypointIncidentCause:
-        causes  = list(WaypointIncidentCause)
-        weights = [c.weight for c in causes]
-        return random.choices(causes, weights=weights, k=1)[0]
+        else:
+            raise ValueError("node ou waypoint requis pour générer un code incident")
 
-def pick_node_incident_cause() -> NodeIncidentCause:
-        causes  = list(NodeIncidentCause)
-        weights = [c.weight for c in causes]
-        return random.choices(causes, weights=weights, k=1)[0]
-
-def create_node_incident(nodes: dict[Node]) -> Incident:
-        randomly_choosed_node = random.choice([
-            node for node in nodes.values()
-            if not node.is_runway_threshold() and node.is_gate() and not node.is_closed()])
-
-        randomly_choosed_node.status == NodeStatus.CLOSED
-
-        return Incident(id=uuid.uuid4(),
-                        incident_code=intersection_incidient_code(randomly_choosed_node, None),
-                        node_incident_cause=pick_node_incident_cause(),
-                        waypoint_incident_cause=pick_waypoint_incident_cause(),
-                        status= IncidentStatus.ACTIVE,
-                        nodes=None,
-                        node=randomly_choosed_node,
-                        waypoints=None,
-                        waypoint=None,
-                        created_at=datetime.now(),
-                        updated_at=datetime.now())
-
-    
-    # def create_nodes_incident(nodes: dict[Node]):
-        
-
-def create_waypoint_incident(waypoints: Waypoint)-> Incident:
-        randomly_choosed_waypoint = random.choice([
-            waypoint for waypoint in waypoints.values()
-            if not waypoint.is_closed() and not waypoint.is_near_airport()])
-
-        randomly_choosed_waypoint.status == WaypointStatus.CLOSED
-
-        return Incident(id=uuid.uuid4(),
-                        incident_code=intersection_incidient_code(None, randomly_choosed_waypoint),
-                        node_incident_cause=pick_node_incident_cause(),
-                        waypoint_incident_cause=pick_waypoint_incident_cause(),
-                        nodes=None,
-                        node=None,
-                        waypoints=None,
-                        waypoint=randomly_choosed_waypoint,
-                        created_at=datetime.now(),
-                        updated_at=datetime.now())
+        return f"{prefix}-{code_type}-{code_number}"
