@@ -7,7 +7,7 @@ from flight.application.flight_timing_service import init_flight_cruising_time, 
 from flight.domain.flight import Flight, FlightStatus
 from air_corridor.domain.air_corridor import AirCorridor
 from aircraft.domain.aircraft import Aircraft
-from main.airport.domain.enums.node_status import NodeStatus
+from airport.domain.enums.node_status import NodeStatus
 from shared.simulator.departure_simulator.compute_fuel import compute_flight_fuel
 from shared.simulator.departure_simulator.takeoff import _do_takeoff
 from aircraft.domain.aircraft_type import AircraftType
