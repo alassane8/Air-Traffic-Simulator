@@ -74,14 +74,8 @@ def init_simulator_data():
     time.sleep(0.5)
     init_logger.log(">>> READY FOR DEPLOYMENT")
 
-    object_factory.update_airports_with_terminals(airports, terminals)
-    object_factory.update_airports_with_gates(airports, gates)
-    object_factory.update_airports_with_runways(airports, runways)
-
-    occupied_gates = assign_aircrafts_to_gates(aircrafts, gates, terminals)
-
-    simulator.run_simulation(
-        terminals, waypoints, aircrafts, airports,
-        air_corridors, airlines, runways, occupied_gates,
-        edges, nodes, gates,
+    return (
+        airports, terminals, gates, runways,
+        aircrafts, waypoints, air_corridors,
+        airlines, edges, nodes
     )
