@@ -35,8 +35,8 @@ from shared.adapter.visualizer.renderer.flight_layer    import FlightLayerRender
 from shared.adapter.visualizer.renderer.flight_info_panel import FlightInfoPanelRenderer
 
 # ── Config ────────────────────────────────────────────────────────
-WIDTH      = 1400
-HEIGHT     = 1000
+WIDTH      = 1100
+HEIGHT     = 800
 FPS_TARGET = 60
 WINDOW_TITLE = "AIR TRAFFIC SIMULATOR  //  ATC  //  GNC MODULE"
 
