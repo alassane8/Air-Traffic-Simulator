@@ -17,15 +17,15 @@ HUD_AMBER    = (  0, 200, 255, 230)
 HUD_DIM      = (  0, 120, 180, 160)
 HUD_RED      = (255,  50,  50, 200)
 HUD_WHITE    = (200, 240, 255, 220)
-HUD_BG       = (  0,   0,   0, 160)
+HUD_BG       = (  0,   0,   0, 255)   # opaque
 BRACKET_COL  = (  0, 200, 255, 180)
 HUD_YELLOW   = (  0, 240, 255, 220)
 HUD_GREY     = ( 80, 160, 180, 180)
 
-MARGIN       = 18
-LINE_H       = 17
-PANEL_W      = 260
-PANEL_H_EST  = 160
+MARGIN       = 12   # réduit (était 18)
+LINE_H       = 14   # réduit (était 17)
+PANEL_W      = 210  # réduit (était 260)
+PANEL_H_EST  = 130  # réduit (était 160)
 
 
 class HUDOverlayRenderer:
@@ -65,17 +65,17 @@ class HUDOverlayRenderer:
         for name in ["couriernew", "courier", "liberationmono", "dejavusansmono",
                      "ubuntumono", "monospace"]:
             try:
-                self._font_title = pygame.font.SysFont(name, 16, bold=True)
-                self._font_main  = pygame.font.SysFont(name, 13, bold=True)
-                self._font_small = pygame.font.SysFont(name, 12)
-                self._font_tiny  = pygame.font.SysFont(name, 10)
+                self._font_title = pygame.font.SysFont(name, 13, bold=True)  # réduit (était 16)
+                self._font_main  = pygame.font.SysFont(name, 11, bold=True)  # réduit (était 13)
+                self._font_small = pygame.font.SysFont(name, 10)              # réduit (était 12)
+                self._font_tiny  = pygame.font.SysFont(name,  9)              # réduit (était 10)
                 return
             except Exception:
                 pass
-        self._font_title = pygame.font.Font(None, 20)
-        self._font_main  = pygame.font.Font(None, 16)
-        self._font_small = pygame.font.Font(None, 14)
-        self._font_tiny  = pygame.font.Font(None, 12)
+        self._font_title = pygame.font.Font(None, 16)
+        self._font_main  = pygame.font.Font(None, 13)
+        self._font_small = pygame.font.Font(None, 12)
+        self._font_tiny  = pygame.font.Font(None, 10)
 
     # ── Helpers ───────────────────────────────────────────────────
 
@@ -85,7 +85,7 @@ class HUDOverlayRenderer:
         return surf.get_height()
 
     def _bracket_rect(self, surface, rect: pygame.Rect,
-                      color=BRACKET_COL, size: int = 10, thick: int = 1):
+                      color=BRACKET_COL, size: int = 8, thick: int = 1):
         """Draw corner brackets around a rect."""
         x, y, w, h = rect
         segs = [
@@ -139,13 +139,13 @@ class HUDOverlayRenderer:
         px = self.w - PANEL_W - MARGIN
         py = MARGIN
 
-        # Background rect
+        # Background rect opaque
         bg = pygame.Surface((PANEL_W, ph), pygame.SRCALPHA)
         bg.fill(HUD_BG)
         surface.blit(bg, (px, py))
 
         # Bracket decoration
-        self._bracket_rect(surface, pygame.Rect(px, py, PANEL_W, ph), size=12, thick=1)
+        self._bracket_rect(surface, pygame.Rect(px, py, PANEL_W, ph), size=10, thick=1)
 
         # Render lines
         cursor_y = py + MARGIN
@@ -196,7 +196,7 @@ class HUDOverlayRenderer:
             color = HUD_AMBER if i == 0 else HUD_DIM
             font  = self._font_main if i == 0 else self._font_tiny
             self._text(surface, line, font, color, MARGIN, cursor_y)
-            cursor_y += LINE_H if i == 0 else 14
+            cursor_y += LINE_H if i == 0 else 12
 
     # ── Bottom-left coordinate readout ────────────────────────────
 
@@ -205,7 +205,7 @@ class HUDOverlayRenderer:
         lon_s = f"{abs(self.mouse_lon):.4f}{'E' if self.mouse_lon >= 0 else 'W'}"
         text  = f"CURSOR  {lat_s}  {lon_s}"
         self._text(surface, text, self._font_tiny, HUD_DIM,
-                   MARGIN, self.h - MARGIN - 12)
+                   MARGIN, self.h - MARGIN - 10)
 
     # ── Animated corner marks on screen edges ─────────────────────
 

@@ -1,28 +1,9 @@
-"""
-flight_info_panel.py
-────────────────────
-Panel d'information détaillé sur un vol sélectionné (clic sur la carte).
-
-Affiche en temps réel :
-  - Identité : code vol, compagnie, appareil
-  - Itinéraire : départ → arrivée (aéroports, terminaux, gates, pistes)
-  - Navigation : lat/lon, cap, altitude (ft + m), vitesse (kt + km/h)
-  - Physique : fuel restant, burn rate, autonomie restante
-  - Timing : départ estimé, arrivée estimée, time_spent
-  - Statut : badge coloré + waypoint courant
-  - Corridor aérien
-  - Priorité
-
-Style : panneau demi-transparent calé en bas à droite, brackets HUD.
-"""
-
 import math
 import pygame
 from datetime import datetime
 from flight.domain.enums.flight_status import FlightStatus
 
-# ── Palette ──────────────────────────────────────────────────────
-HUD_BG        = (  0,   0,   0, 185)
+HUD_BG        = (  0,   0,   0, 255)
 HUD_AMBER     = (  0, 200, 255, 235)
 HUD_DIM       = (  0, 100, 160, 180)
 HUD_WHITE     = (200, 240, 255, 200)
@@ -38,10 +19,10 @@ STATUS_COLORS = {
     FlightStatus.DESCENDING: (  0, 160, 220),
 }
 
-PANEL_W  = 320
-MARGIN   = 14
-LINE_H   = 16
-GAP      = 6
+PANEL_W  = 260
+MARGIN   = 10
+LINE_H   = 13
+GAP      = 4
 
 
 class FlightInfoPanelRenderer:
@@ -133,7 +114,7 @@ class FlightInfoPanelRenderer:
         px = self._w - PANEL_W - 18
         py = self._h - ph - 18
 
-        # Background
+        # Background opaque
         bg = pygame.Surface((PANEL_W, ph), pygame.SRCALPHA)
         bg.fill(HUD_BG)
         surface.blit(bg, (px, py))
